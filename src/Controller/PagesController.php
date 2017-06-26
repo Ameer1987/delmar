@@ -40,6 +40,12 @@ class PagesController extends AppController {
         $SocialLinks = TableRegistry::get('SocialLinks')->find('all');
         $this->set('SocialLinks', $SocialLinks->first());
 
+        $HomeSliders = TableRegistry::get('HomeSliders')->find('all');
+        $this->set('HomeSliders', $HomeSliders->toArray());
+
+        $HomeBoxes = TableRegistry::get('HomeBoxes')->find('all');
+        $this->set('HomeBoxes', $HomeBoxes->toArray());
+
         $this->set('dir', "ltr");
         $this->set('lang', "en");
     }
