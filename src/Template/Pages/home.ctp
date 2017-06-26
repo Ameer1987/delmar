@@ -71,21 +71,7 @@ $this->layout = false;
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8">
-                                <div class="widget no-border m-0">
-                                    <ul class="list-inline sm-text-center mt-5">
-                                        <li>
-                                            <a href="#" class="text-white">FAQ</a>
-                                        </li>
-                                        <li class="text-white">|</li>
-                                        <li>
-                                            <a href="#" class="text-white">Help Desk</a>
-                                        </li>
-                                        <li class="text-white">|</li>
-                                        <li>
-                                            <a href="#" class="text-white">Support</a>
-                                        </li>
-                                    </ul>
-                                </div>
+
                             </div>
                             <div class="col-md-4">
                                 <div class="widget no-border m-0">
