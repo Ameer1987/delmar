@@ -118,325 +118,121 @@ $this->layout = false;
                         <div class="rev_slider_wrapper">
                             <div class="rev_slider" data-version="5.0">
                                 <ul>
+                                    <?php $index = 0; ?>
+                                    <?php foreach ($HomeSliders as $HomeSlider): ?>
+                                        <?php $index ++; ?>
+                                        <?php $borderRadius = $HomeSlider['border'] == "circular" ? "border-radius:45px;" : "" ?>
+                                        <li data-index="rs-<?= $index ?>" data-transition="random" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-thumb="images/bg/bg14.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-description="">
+                                            <!-- MAIN IMAGE -->
+                                            <img src="images/bg/bg14.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                                            <!-- LAYERS -->
 
-                                    <!-- SLIDE 1 -->
-                                    <li data-index="rs-1" data-transition="random" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-thumb="images/bg/bg9.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-description="">
-                                        <!-- MAIN IMAGE -->
-                                        <img src="images/bg/bg9.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
-                                        <!-- LAYERS -->
+                                            <!-- LAYER NR. 1 -->
+                                            <div class="tp-caption tp-resizeme text-uppercase text-white bg-dark-transparent-5 pl-15 pr-15"
+                                                 id="rs-<?= $index ?>-layer-1"
 
-                                        <!-- LAYER NR. 1 -->
-                                        <div class="tp-caption tp-resizeme text-uppercase text-white bg-dark-transparent-5 pl-30 pr-30"
-                                             id="rs-1-layer-1"
+                                                 data-x="['<?= $HomeSlider['align'] ?>']"
+                                                 data-hoffset="['30']"
+                                                 data-y="['middle']"
+                                                 data-voffset="['-110']" 
+                                                 data-fontsize="['30']"
+                                                 data-lineheight="['50']"
 
-                                             data-x="['center']"
-                                             data-hoffset="['0']"
-                                             data-y="['middle']"
-                                             data-voffset="['-90']" 
-                                             data-fontsize="['28']"
-                                             data-lineheight="['54']"
-                                             data-width="none"
-                                             data-height="none"
-                                             data-whitespace="nowrap"
-                                             data-transform_idle="o:1;s:500"
-                                             data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                                             data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                                             data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                             data-start="1000" 
-                                             data-splitin="none" 
-                                             data-splitout="none" 
-                                             data-responsive_offset="on"
-                                             style="z-index: 7; white-space: nowrap; font-weight:600; border-radius:45px;">We Provide Total
-                                        </div>
+                                                 data-width="none"
+                                                 data-height="none"
+                                                 data-whitespace="nowrap"
+                                                 data-transform_idle="o:1;s:500"
+                                                 data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                                                 data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                                 data-start="1000" 
+                                                 data-splitin="none" 
+                                                 data-splitout="none" 
+                                                 data-responsive_offset="on"
+                                                 style="z-index: 7; white-space: nowrap; font-weight:600; <?= $borderRadius ?>">
+                                                     <?= $HomeSlider['layer1'] ?>
+                                            </div>
 
-                                        <!-- LAYER NR. 2 -->
-                                        <div class="tp-caption tp-resizeme text-uppercase text-white bg-theme-colored-transparent pl-40 pr-40"
-                                             id="rs-1-layer-2"
+                                            <!-- LAYER NR. 2 -->
+                                            <div class="tp-caption tp-resizeme text-uppercase text-white bg-theme-colored-transparent pl-15 pr-15"
+                                                 id="rs-<?= $index ?>-layer-2"
 
-                                             data-x="['center']"
-                                             data-hoffset="['0']"
-                                             data-y="['middle']"
-                                             data-voffset="['-20']"
-                                             data-fontsize="['48']"
-                                             data-lineheight="['70']"
-                                             data-width="none"
-                                             data-height="none"
-                                             data-whitespace="nowrap"
-                                             data-transform_idle="o:1;s:500"
-                                             data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                                             data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                                             data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                             data-start="1000" 
-                                             data-splitin="none" 
-                                             data-splitout="none" 
-                                             data-responsive_offset="on"
-                                             style="z-index: 7; white-space: nowrap; font-weight:600; border-radius:45px;">Health Care Solution 
-                                        </div>
+                                                 data-x="['<?= $HomeSlider['align'] ?>']"
+                                                 data-hoffset="['30']"
+                                                 data-y="['middle']"
+                                                 data-voffset="['-45']" 
+                                                 data-fontsize="['48']"
+                                                 data-lineheight="['70']"
 
-                                        <!-- LAYER NR. 3 -->
-                                        <div class="tp-caption tp-resizeme text-center text-black" 
-                                             id="rs-1-layer-3"
+                                                 data-width="none"
+                                                 data-height="none"
+                                                 data-whitespace="nowrap"
+                                                 data-transform_idle="o:1;s:500"
+                                                 data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                                                 data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                                 data-start="1000" 
+                                                 data-splitin="none" 
+                                                 data-splitout="none" 
+                                                 data-responsive_offset="on"
+                                                 style="z-index: 7; white-space: nowrap; font-weight:600; <?= $borderRadius ?>">
+                                                     <?= $HomeSlider['layer2'] ?>
+                                            </div>
 
-                                             data-x="['center']"
-                                             data-hoffset="['0']"
-                                             data-y="['middle']"
-                                             data-voffset="['50','60','70']"
-                                             data-fontsize="['16','18','24']"
-                                             data-lineheight="['28']"
-                                             data-width="none"
-                                             data-height="none"
-                                             data-whitespace="nowrap"
-                                             data-transform_idle="o:1;s:500"
-                                             data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                                             data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                                             data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                             data-start="1400" 
-                                             data-splitin="none" 
-                                             data-splitout="none" 
-                                             data-responsive_offset="on"
-                                             style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;">Every day we bring hope to millions of children in the world's<br>  hardest places as a sign of God's unconditional love.
-                                        </div>
+                                            <!-- LAYER NR. 3 -->
+                                            <div class="tp-caption tp-resizeme text-black" 
+                                                 id="rs-<?= $index ?>-layer-3"
 
-                                        <!-- LAYER NR. 4 -->
-                                        <div class="tp-caption" 
-                                             id="rs-1-layer-4"
+                                                 data-x="['<?= $HomeSlider['align'] ?>']"
+                                                 data-hoffset="['35']"
+                                                 data-y="['middle']"
+                                                 data-voffset="['35','45','55']"
+                                                 data-fontsize="['16','18','24']"
+                                                 data-lineheight="['28']"
+                                                 data-width="none"
+                                                 data-height="none"
+                                                 data-whitespace="nowrap"
+                                                 data-transform_idle="o:1;s:500"
+                                                 data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                                                 data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                                 data-start="1400" 
+                                                 data-splitin="none" 
+                                                 data-splitout="none" 
+                                                 data-responsive_offset="on"
+                                                 style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;">
+                                                     <?= $HomeSlider['layer3'] ?>
+                                            </div>
 
-                                             data-x="['center']"
-                                             data-hoffset="['0']"
-                                             data-y="['middle']"
-                                             data-voffset="['135','145','155']"
-                                             data-width="none"
-                                             data-height="none"
-                                             data-whitespace="nowrap"
-                                             data-transform_idle="o:1;"
-                                             data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-                                             data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                                             data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-                                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                             data-start="1400" 
-                                             data-splitin="none" 
-                                             data-splitout="none" 
-                                             data-responsive_offset="on"
-                                             style="z-index: 5; white-space: nowrap; letter-spacing:1px;"><a class="btn btn-colored btn-lg btn-theme-colored pl-20 pr-20" href="#">View Details</a> 
-                                        </div>
-                                    </li>
+                                            <!-- LAYER NR. 4 -->
+                                            <div class="tp-caption" 
+                                                 id="rs-<?= $index ?>-layer-4"
 
-                                    <!-- SLIDE 2 -->
-                                    <li data-index="rs-2" data-transition="random" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-thumb="images/bg/bg14.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-description="">
-                                        <!-- MAIN IMAGE -->
-                                        <img src="images/bg/bg14.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
-                                        <!-- LAYERS -->
+                                                 data-x="['<?= $HomeSlider['align'] ?>']"
+                                                 data-hoffset="['35']"
+                                                 data-y="['middle']"
+                                                 data-voffset="['110','120','140']"
+                                                 data-width="none"
+                                                 data-height="none"
+                                                 data-whitespace="nowrap"
+                                                 data-transform_idle="o:1;"
+                                                 data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                                                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                                                 data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
+                                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                                 data-start="1400" 
+                                                 data-splitin="none" 
+                                                 data-splitout="none" 
+                                                 data-responsive_offset="on"
+                                                 style="z-index: 5; white-space: nowrap; letter-spacing:1px;">
+                                                <a class="btn btn-colored btn-lg btn-theme-colored pl-20 pr-20" href="#"><?= $HomeSlider['layer4'] ?></a> 
+                                            </div>
+                                        </li>
+                                    <?php endforeach; ?>
 
-                                        <!-- LAYER NR. 1 -->
-                                        <div class="tp-caption tp-resizeme text-uppercase text-white bg-dark-transparent-5 pl-15 pr-15"
-                                             id="rs-2-layer-1"
-
-                                             data-x="['left']"
-                                             data-hoffset="['30']"
-                                             data-y="['middle']"
-                                             data-voffset="['-110']" 
-                                             data-fontsize="['30']"
-                                             data-lineheight="['50']"
-
-                                             data-width="none"
-                                             data-height="none"
-                                             data-whitespace="nowrap"
-                                             data-transform_idle="o:1;s:500"
-                                             data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                                             data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                                             data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                             data-start="1000" 
-                                             data-splitin="none" 
-                                             data-splitout="none" 
-                                             data-responsive_offset="on"
-                                             style="z-index: 7; white-space: nowrap; font-weight:600;">We Provide Total
-                                        </div>
-
-                                        <!-- LAYER NR. 2 -->
-                                        <div class="tp-caption tp-resizeme text-uppercase text-white bg-theme-colored-transparent pl-15 pr-15"
-                                             id="rs-2-layer-2"
-
-                                             data-x="['left']"
-                                             data-hoffset="['30']"
-                                             data-y="['middle']"
-                                             data-voffset="['-45']" 
-                                             data-fontsize="['48']"
-                                             data-lineheight="['70']"
-
-                                             data-width="none"
-                                             data-height="none"
-                                             data-whitespace="nowrap"
-                                             data-transform_idle="o:1;s:500"
-                                             data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                                             data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                                             data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                             data-start="1000" 
-                                             data-splitin="none" 
-                                             data-splitout="none" 
-                                             data-responsive_offset="on"
-                                             style="z-index: 7; white-space: nowrap; font-weight:600;">Health Care Solution 
-                                        </div>
-
-                                        <!-- LAYER NR. 3 -->
-                                        <div class="tp-caption tp-resizeme text-black" 
-                                             id="rs-2-layer-3"
-
-                                             data-x="['left']"
-                                             data-hoffset="['35']"
-                                             data-y="['middle']"
-                                             data-voffset="['35','45','55']"
-                                             data-fontsize="['16','18','24']"
-                                             data-lineheight="['28']"
-                                             data-width="none"
-                                             data-height="none"
-                                             data-whitespace="nowrap"
-                                             data-transform_idle="o:1;s:500"
-                                             data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                                             data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                                             data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                             data-start="1400" 
-                                             data-splitin="none" 
-                                             data-splitout="none" 
-                                             data-responsive_offset="on"
-                                             style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;">Every day we bring hope to millions of children in the world's<br>  hardest places as a sign of God's unconditional love.
-                                        </div>
-
-                                        <!-- LAYER NR. 4 -->
-                                        <div class="tp-caption" 
-                                             id="rs-2-layer-4"
-
-                                             data-x="['left']"
-                                             data-hoffset="['35']"
-                                             data-y="['middle']"
-                                             data-voffset="['110','120','140']"
-                                             data-width="none"
-                                             data-height="none"
-                                             data-whitespace="nowrap"
-                                             data-transform_idle="o:1;"
-                                             data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-                                             data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                                             data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-                                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                             data-start="1400" 
-                                             data-splitin="none" 
-                                             data-splitout="none" 
-                                             data-responsive_offset="on"
-                                             style="z-index: 5; white-space: nowrap; letter-spacing:1px;"><a class="btn btn-colored btn-lg btn-theme-colored pl-20 pr-20" href="#">View Details</a> 
-                                        </div>
-                                    </li>
-
-                                    <!-- SLIDE 3 -->
-                                    <li data-index="rs-3" data-transition="random" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-thumb="images/bg/bg8.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-description="">
-                                        <!-- MAIN IMAGE -->
-                                        <img src="images/bg/bg8.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
-                                        <!-- LAYERS -->
-
-                                        <!-- LAYER NR. 1 -->
-                                        <div class="tp-caption tp-resizeme text-uppercase text-white bg-dark-transparent-5 pl-15 pr-15"
-                                             id="rs-3-layer-1"
-
-                                             data-x="['right']"
-                                             data-hoffset="['30']"
-                                             data-y="['middle']"
-                                             data-voffset="['-110']" 
-                                             data-fontsize="['30']"
-                                             data-lineheight="['50']"
-
-                                             data-width="none"
-                                             data-height="none"
-                                             data-whitespace="nowrap"
-                                             data-transform_idle="o:1;s:500"
-                                             data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                                             data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                                             data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                             data-start="1000" 
-                                             data-splitin="none" 
-                                             data-splitout="none" 
-                                             data-responsive_offset="on"
-                                             style="z-index: 7; white-space: nowrap; font-weight:600;">We Provide Total
-                                        </div>
-
-                                        <!-- LAYER NR. 2 -->
-                                        <div class="tp-caption tp-resizeme text-uppercase text-white bg-theme-colored-transparent pl-15 pr-15"
-                                             id="rs-3-layer-2"
-
-                                             data-x="['right']"
-                                             data-hoffset="['30']"
-                                             data-y="['middle']"
-                                             data-voffset="['-45']" 
-                                             data-fontsize="['48']"
-                                             data-lineheight="['70']"
-
-                                             data-width="none"
-                                             data-height="none"
-                                             data-whitespace="nowrap"
-                                             data-transform_idle="o:1;s:500"
-                                             data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                                             data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                                             data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                             data-start="1000" 
-                                             data-splitin="none" 
-                                             data-splitout="none" 
-                                             data-responsive_offset="on"
-                                             style="z-index: 7; white-space: nowrap; font-weight:600;">Health Care Solution 
-                                        </div>
-
-                                        <!-- LAYER NR. 3 -->
-                                        <div class="tp-caption tp-resizeme text-right text-black" 
-                                             id="rs-3-layer-3"
-
-                                             data-x="['right']"
-                                             data-hoffset="['35']"
-                                             data-y="['middle']"
-                                             data-voffset="['30','40','50']"
-                                             data-fontsize="['16','18','24']"
-                                             data-lineheight="['28']"
-                                             data-width="none"
-                                             data-height="none"
-                                             data-whitespace="nowrap"
-                                             data-transform_idle="o:1;s:500"
-                                             data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                                             data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                                             data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                             data-start="1400" 
-                                             data-splitin="none" 
-                                             data-splitout="none" 
-                                             data-responsive_offset="on"
-                                             style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;">Every day we bring hope to millions of children in the world's<br>  hardest places as a sign of God's unconditional love.
-                                        </div>
-
-                                        <!-- LAYER NR. 4 -->
-                                        <div class="tp-caption" 
-                                             id="rs-3-layer-4"
-
-                                             data-x="['right']"
-                                             data-hoffset="['35']"
-                                             data-y="['middle']"
-                                             data-voffset="['110','120','140']"
-                                             data-width="none"
-                                             data-height="none"
-                                             data-whitespace="nowrap"
-                                             data-transform_idle="o:1;"
-                                             data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-                                             data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                                             data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-                                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                             data-start="1400" 
-                                             data-splitin="none" 
-                                             data-splitout="none" 
-                                             data-responsive_offset="on"
-                                             style="z-index: 5; white-space: nowrap; letter-spacing:1px;"><a class="btn btn-colored btn-lg btn-theme-colored pl-20 pr-20" href="#">View Details</a> 
-                                        </div>
-                                    </li>
                                 </ul>
                             </div><!-- end .rev_slider -->
                         </div>
@@ -469,15 +265,11 @@ $this->layout = false;
                                             hide_delay: 200,
                                             hide_delay_mobile: 1200,
                                             tmp: '',
-                                            left: {
-                                                h_align: "left",
-                                                v_align: "center",
+                                            left: {h_align: "left", v_align: "center",
                                                 h_offset: 30,
                                                 v_offset: 0
                                             },
-                                            right: {
-                                                h_align: "right",
-                                                v_align: "center",
+                                            right: {h_align: "right", v_align: "center",
                                                 h_offset: 30,
                                                 v_offset: 0
                                             }
@@ -514,8 +306,7 @@ $this->layout = false;
                                     stopAfterLoops: 0,
                                     stopAtSlide: -1,
                                     shuffle: "off",
-                                    autoHeight: "off",
-                                    fullScreenAutoWidth: "off",
+                                    autoHeight: "off", fullScreenAutoWidth: "off",
                                     fullScreenAlignForce: "off",
                                     fullScreenOffsetContainer: "",
                                     fullScreenOffset: "0",
@@ -542,46 +333,20 @@ $this->layout = false;
                     <div class="container pt-0 pb-0">
                         <div class="section-content">
                             <div class="row equal-height-inner home-boxes mt-sm-0" data-margin-top="-100px">
-                                <div class="col-sm-12 col-md-3 pr-0 pr-sm-15 sm-height-auto mt-sm-0 wow fadeInLeft animation-delay1">
-                                    <div class="sm-height-auto bg-theme-colored">
-                                        <div class="p-30">
-                                            <img src="images/flaticon-png-medical/small/antibiotic.png" width="70" alt="">
-                                            <h4 class="text-uppercase text-white">Medical Services</h4>
-                                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                            <a href="page-become-a-volunteer.html" class="btn btn-border btn-circled btn-transparent btn-sm">View all services</a>
+                                <?php $index = 0; ?>
+                                <?php foreach ($HomeBoxes as $HomeBox): ?>
+                                    <?php $index ++; ?>
+                                    <div class="col-sm-12 col-md-3 pl-0 pl-sm-15 pr-0 pr-sm-15 sm-height-auto mt-sm-0 fadeInLeft animation-delay<?= $index ?>">
+                                        <div class="sm-height-auto bg-theme-colored<?= $index > 1 ? ("-darker" . $index) : "" ?>">
+                                            <div class="p-30">
+                                                <img src="images/flaticon-png-medical/small/antibiotic.png" width="70" alt="">
+                                                <h4 class="text-uppercase text-white"><?= $HomeBox['title'] ?></h4>
+                                                <p class="text-white"><?= $HomeBox['text'] ?></p>
+                                                <a href="<?= $HomeBox['link'] ?>" class="btn btn-border btn-circled btn-transparent btn-sm"><?= $HomeBox['avatar'] ?></a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-12 col-md-3 pl-0 pl-sm-15 pr-0 pr-sm-15 sm-height-auto mt-sm-0 wow fadeInLeft animation-delay2">
-                                    <div class="sm-height-auto bg-theme-colored-darker2">
-                                        <div class="p-30">
-                                            <img src="images/flaticon-png-medical/small/spinal-column.png" width="70" alt="">
-                                            <h4 class="text-uppercase text-white">Departments</h4>
-                                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                            <a href="#" class="btn btn-border btn-circled btn-transparent btn-sm">View all departments</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-3 pl-0 pr-0 pl-sm-15 pr-sm-15 sm-height-auto mt-sm-0 wow fadeInLeft animation-delay3">
-                                    <div class="sm-height-auto bg-theme-colored-darker3">
-                                        <div class="p-30">
-                                            <img src="images/flaticon-png-medical/small/stethoscope.png" width="70" alt="">
-                                            <h4 class="text-uppercase text-white">Appointment</h4>
-                                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                            <a href="page-donate.html" class="btn btn-border btn-circled btn-transparent btn-sm">Make an appontment</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-3 pl-0 pl-sm-15 sm-height-auto mt-sm-0 wow fadeInLeft animation-delay4">
-                                    <div class="sm-height-auto bg-theme-colored-darker4">
-                                        <div class="p-30">
-                                            <img src="images/flaticon-png-medical/small/wheelchair.png" width="70" alt="">
-                                            <h4 class="text-uppercase text-white">Emergency Case</h4>
-                                            <h2 class="text-white">+(012) 345 6789</h2>
-                                            <a href="page-contact1.html" class="btn btn-border btn-circled btn-transparent btn-sm">Contact Now</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
