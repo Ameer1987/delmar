@@ -613,6 +613,28 @@ $this->layout = 'pages';
                                 </div>
                             </div>
                         </div>
+                        <div class="item">
+                            <div class="testimonial sm-text-center pt-10">
+                                <div class="thumb pull-left mb-0 mr-0 pr-20 sm-pull-none">
+                                    <img width="75" class="img-circle" alt="" src="images/testimonials/1.jpg">
+                                </div>
+                                <div class="ml-100 ml-sm-0">
+                                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
+                                    <p class="author mt-20">- <span class="text-black-333">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial sm-text-center pt-10">
+                                <div class="thumb pull-left mb-0 mr-0 pr-20 sm-pull-none">
+                                    <img width="75" class="img-circle" alt="" src="images/testimonials/1.jpg">
+                                </div>
+                                <div class="ml-100 ml-sm-0">
+                                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
+                                    <p class="author mt-20">- <span class="text-black-333">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
+                                </div>
+                            </div>
+                        </div>
                     </div> 
                 </div>
             </div>
@@ -629,9 +651,11 @@ $this->layout = 'pages';
                     </div>
                 </div>
             </div>
-            <div class="section-content">
-                <div class="row">
-                    <?= $this->element('large_image_boxes') ?>                    
+            <div class="row multi-row-clearfix">
+                <div class="col-md-12">
+                    <div class="owl-carousel-4col" data-nav="true">
+                        <?= $this->element('large_image_boxes') ?>
+                    </div>
                 </div>
             </div>
         </div>
