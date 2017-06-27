@@ -34,9 +34,18 @@ $this->layout = 'pages';
     <!-- Section: small-image-boxes  -->
     <section id="about">
         <div class="container">
-            <div class="section-content">
+            <div class="section-title">
                 <div class="row">
-                    <?= $this->element('small_image_boxes') ?>
+                    <div class="col-md-6">
+                        <h2 class="mt-0 text-uppercase font-28">Latest <span class="text-theme-colored font-weight-400">offers</span> <span class="font-30 text-theme-colored">.</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row multi-row-clearfix">
+                <div class="col-md-12">
+                    <div class="owl-carousel-4col" data-nav="true">
+                        <?= $this->element('small_image_boxes') ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -613,6 +622,28 @@ $this->layout = 'pages';
                                 </div>
                             </div>
                         </div>
+                        <div class="item">
+                            <div class="testimonial sm-text-center pt-10">
+                                <div class="thumb pull-left mb-0 mr-0 pr-20 sm-pull-none">
+                                    <img width="75" class="img-circle" alt="" src="images/testimonials/1.jpg">
+                                </div>
+                                <div class="ml-100 ml-sm-0">
+                                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
+                                    <p class="author mt-20">- <span class="text-black-333">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial sm-text-center pt-10">
+                                <div class="thumb pull-left mb-0 mr-0 pr-20 sm-pull-none">
+                                    <img width="75" class="img-circle" alt="" src="images/testimonials/1.jpg">
+                                </div>
+                                <div class="ml-100 ml-sm-0">
+                                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
+                                    <p class="author mt-20">- <span class="text-black-333">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
+                                </div>
+                            </div>
+                        </div>
                     </div> 
                 </div>
             </div>
@@ -629,9 +660,11 @@ $this->layout = 'pages';
                     </div>
                 </div>
             </div>
-            <div class="section-content">
-                <div class="row">
-                    <?= $this->element('large_image_boxes') ?>                    
+            <div class="row multi-row-clearfix">
+                <div class="col-md-12">
+                    <div class="owl-carousel-3col" data-nav="true" data-duration="100000000000">
+                        <?= $this->element('large_image_boxes') ?>
+                    </div>
                 </div>
             </div>
         </div>

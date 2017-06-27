@@ -1,9 +1,9 @@
 <?php foreach ($LargeImageBoxes as $LargeImageBox): ?>
-    <div class="col-xs-12 col-sm-6 col-md-4 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+    <div class="item">
         <article class="post clearfix mb-sm-30 bg-lighter">
             <div class="entry-header">
                 <div class="post-thumb thumb"> 
-                    <img src="images/blog/1.jpg" alt="" class="img-responsive img-fullwidth"> 
+                    <img src="../images/logo-wide-white@2x.png" alt="" class="img-responsive img-fullwidth"> 
                 </div>
             </div>
             <div class="entry-content p-20 pr-10">
