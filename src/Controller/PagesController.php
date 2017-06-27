@@ -46,6 +46,9 @@ class PagesController extends AppController {
         $HomeBoxes = TableRegistry::get('HomeBoxes')->find('all');
         $this->set('HomeBoxes', $HomeBoxes->toArray());
 
+        $SmallImageBoxes = TableRegistry::get('SmallImageBoxes')->find('all');
+        $this->set('SmallImageBoxes', $SmallImageBoxes->toArray());
+
         $this->set('dir', "ltr");
         $this->set('lang', "en");
     }
