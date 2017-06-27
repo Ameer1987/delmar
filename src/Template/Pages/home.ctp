@@ -423,50 +423,11 @@ $this->layout = 'pages';
         </div>
     </section>
 
-    <!-- Divider: Funfact -->
+    <!-- Divider: Statistics -->
     <section class="divider parallax layer-overlay overlay-white-8" data-bg-img="images/bg/bg2.jpg">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
-                    <div class="funfact">
-                        <i class="pe-7s-smile text-black-light mt-20 font-48 pull-left flip"></i>
-                        <div class="ml-60">
-                            <h2 class="animate-number text-theme-colored mt-0 mb-10 pb-20 font-48 line-bottom" data-value="754" data-animation-duration="2000">0</h2>
-                            <div class="clearfix"></div>
-                            <h4>Happy Patients</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
-                    <div class="funfact">
-                        <i class="pe-7s-rocket text-black-light mt-20 font-48 pull-left flip"></i>
-                        <div class="ml-60">
-                            <h2 class="animate-number text-theme-colored mt-0 mb-10 pb-20 font-48 line-bottom" data-value="125" data-animation-duration="2500">0</h2>
-                            <div class="clearfix"></div>
-                            <h4>Success Mission</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-                    <div class="funfact">
-                        <i class="pe-7s-add-user text-black-light mt-20 font-48 pull-left flip"></i>
-                        <div class="ml-60">
-                            <h2 class="animate-number text-theme-colored mt-0 mb-10 pb-20 font-48 line-bottom" data-value="150" data-animation-duration="3000">0</h2>
-                            <div class="clearfix"></div>
-                            <h4>Qualified Doctors</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.6s">
-                    <div class="funfact">
-                        <i class="pe-7s-global text-black-light mt-20 font-48 pull-left flip"></i>
-                        <div class="ml-60">
-                            <h2 class="animate-number text-theme-colored mt-0 mb-10 pb-20 font-48 line-bottom" data-value="55" data-animation-duration="3500">0</h2>
-                            <div class="clearfix"></div>
-                            <h4>Globalization Work</h4>
-                        </div>
-                    </div>
-                </div>
+                <?= $this->element('statistics') ?>
             </div>
         </div>
     </section>
