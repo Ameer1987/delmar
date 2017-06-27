@@ -662,7 +662,7 @@ $this->layout = 'pages';
             </div>
             <div class="row multi-row-clearfix">
                 <div class="col-md-12">
-                    <div class="owl-carousel-3col" data-nav="true">
+                    <div class="owl-carousel-3col" data-nav="true" data-duration="100000000000">
                         <?= $this->element('large_image_boxes') ?>
                     </div>
                 </div>
