@@ -56,6 +56,11 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
+    Router::prefix('admin', function ($routes) {
+        // All routes here will be prefixed with `/admin`
+        // And have the prefix => admin route element added.
+        $routes->fallbacks(DashedRoute::class);
+    });
     /**
      * Connect catchall routes for all controllers.
      *
