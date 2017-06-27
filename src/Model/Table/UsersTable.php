@@ -62,24 +62,29 @@ class UsersTable extends Table {
      */
     public function validationDefault(Validator $validator) {
         $validator
-                ->integer('id')
-                ->allowEmpty('id', 'create');
+            ->integer('id')
+            ->allowEmpty('id', 'create');
 
         $validator
-                ->requirePresence('name', 'create')
-                ->notEmpty('name');
+            ->requirePresence('name', 'create')
+            ->notEmpty('name');
 
         $validator
-                ->requirePresence('username', 'create')
-                ->notEmpty('username');
+            ->requirePresence('username', 'create')
+            ->notEmpty('username');
 
         $validator
-                ->requirePresence('password', 'create')
-                ->notEmpty('password');
+            ->email('email')
+            ->requirePresence('email', 'create')
+            ->notEmpty('email');
 
         $validator
-                ->requirePresence('role', 'create')
-                ->notEmpty('role');
+            ->requirePresence('password', 'create')
+            ->notEmpty('password');
+
+        $validator
+            ->requirePresence('role', 'create')
+            ->notEmpty('role');
 
 //        $validator
 //                ->requirePresence('photo', 'create')
@@ -99,8 +104,10 @@ class UsersTable extends Table {
      * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
      * @return \Cake\ORM\RulesChecker
      */
-    public function buildRules(RulesChecker $rules) {
+    public function buildRules(RulesChecker $rules)
+    {
         $rules->add($rules->isUnique(['username']));
+        $rules->add($rules->isUnique(['email']));
 
         return $rules;
     }
