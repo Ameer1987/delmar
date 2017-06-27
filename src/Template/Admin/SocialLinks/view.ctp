@@ -11,6 +11,8 @@
         <li><?= $this->Form->postLink(__('Delete Social Link'), ['action' => 'delete', $socialLink->id], ['confirm' => __('Are you sure you want to delete # {0}?', $socialLink->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Social Links'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Social Link'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="socialLinks view large-9 medium-8 columns content">
@@ -35,6 +37,10 @@
         <tr>
             <th scope="row"><?= __('Linkedin') ?></th>
             <td><?= h($socialLink->linkedin) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Blog') ?></th>
+            <td><?= $socialLink->has('blog') ? $this->Html->link($socialLink->blog->title, ['controller' => 'Blogs', 'action' => 'view', $socialLink->blog->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>

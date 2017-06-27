@@ -24,6 +24,7 @@
                 <th scope="col"><?= $this->Paginator->sort('image') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('align') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('border') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('blog_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -39,6 +40,7 @@
                 <td><?= h($homeSlider->image) ?></td>
                 <td><?= h($homeSlider->align) ?></td>
                 <td><?= h($homeSlider->border) ?></td>
+                <td><?= $this->Number->format($homeSlider->blog_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $homeSlider->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $homeSlider->id]) ?>

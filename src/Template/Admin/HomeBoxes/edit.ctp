@@ -13,6 +13,8 @@
             )
         ?></li>
         <li><?= $this->Html->link(__('List Home Boxes'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="homeBoxes form large-9 medium-8 columns content">
@@ -26,6 +28,7 @@
             echo $this->Form->control('avatar');
             echo $this->Form->control('text');
             echo $this->Form->control('locale');
+            echo $this->Form->control('blog_id', ['options' => $blogs]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

@@ -20,6 +20,9 @@ class HomeBoxesController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['Blogs']
+        ];
         $homeBoxes = $this->paginate($this->HomeBoxes);
 
         $this->set(compact('homeBoxes'));
@@ -36,7 +39,7 @@ class HomeBoxesController extends AppController
     public function view($id = null)
     {
         $homeBox = $this->HomeBoxes->get($id, [
-            'contain' => []
+            'contain' => ['Blogs']
         ]);
 
         $this->set('homeBox', $homeBox);
@@ -60,7 +63,8 @@ class HomeBoxesController extends AppController
             }
             $this->Flash->error(__('The home box could not be saved. Please, try again.'));
         }
-        $this->set(compact('homeBox'));
+        $blogs = $this->HomeBoxes->Blogs->find('list', ['limit' => 200]);
+        $this->set(compact('homeBox', 'blogs'));
         $this->set('_serialize', ['homeBox']);
     }
 
@@ -85,7 +89,8 @@ class HomeBoxesController extends AppController
             }
             $this->Flash->error(__('The home box could not be saved. Please, try again.'));
         }
-        $this->set(compact('homeBox'));
+        $blogs = $this->HomeBoxes->Blogs->find('list', ['limit' => 200]);
+        $this->set(compact('homeBox', 'blogs'));
         $this->set('_serialize', ['homeBox']);
     }
 

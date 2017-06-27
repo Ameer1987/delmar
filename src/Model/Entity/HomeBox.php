@@ -13,6 +13,9 @@ use Cake\ORM\Entity;
  * @property string $avatar
  * @property string $text
  * @property string $locale
+ * @property int $blog_id
+ *
+ * @property \App\Model\Entity\Blog $blog
  */
 class HomeBox extends Entity
 {

@@ -13,6 +13,8 @@
             )
         ?></li>
         <li><?= $this->Html->link(__('List Social Links'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="socialLinks form large-9 medium-8 columns content">
@@ -25,6 +27,7 @@
             echo $this->Form->control('google_plus');
             echo $this->Form->control('instagram');
             echo $this->Form->control('linkedin');
+            echo $this->Form->control('blog_id', ['options' => $blogs]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

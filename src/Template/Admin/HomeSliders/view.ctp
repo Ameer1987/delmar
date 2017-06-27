@@ -52,5 +52,9 @@
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($homeSlider->id) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Blog Id') ?></th>
+            <td><?= $this->Number->format($homeSlider->blog_id) ?></td>
+        </tr>
     </table>
 </div>

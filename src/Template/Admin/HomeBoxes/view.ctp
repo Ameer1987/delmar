@@ -11,6 +11,8 @@
         <li><?= $this->Form->postLink(__('Delete Home Box'), ['action' => 'delete', $homeBox->id], ['confirm' => __('Are you sure you want to delete # {0}?', $homeBox->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Home Boxes'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Home Box'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="homeBoxes view large-9 medium-8 columns content">
@@ -35,6 +37,10 @@
         <tr>
             <th scope="row"><?= __('Locale') ?></th>
             <td><?= h($homeBox->locale) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Blog') ?></th>
+            <td><?= $homeBox->has('blog') ? $this->Html->link($homeBox->blog->title, ['controller' => 'Blogs', 'action' => 'view', $homeBox->blog->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
