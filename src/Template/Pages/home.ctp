@@ -578,72 +578,7 @@ $this->layout = 'pages';
             <div class="row">
                 <div class="col-md-12 mb-30">
                     <div class="owl-carousel-2col boxed" data-dots="true">
-                        <div class="item">
-                            <div class="testimonial sm-text-center pt-10">
-                                <div class="thumb pull-left mb-0 mr-0 pr-20 sm-pull-none">
-                                    <img width="75" class="img-circle" alt="" src="images/testimonials/1.jpg">
-                                </div>
-                                <div class="ml-100 ml-sm-0">
-                                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
-                                    <p class="author mt-20">- <span class="text-black-333">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial sm-text-center pt-10">
-                                <div class="thumb pull-left mb-0 mr-0 pr-20 sm-pull-none">
-                                    <img width="75" class="img-circle" alt="" src="images/testimonials/2.jpg">
-                                </div>
-                                <div class="ml-100 ml-sm-0">
-                                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
-                                    <p class="author mt-20">- <span class="text-black-333">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial sm-text-center pt-10">
-                                <div class="thumb pull-left mb-0 mr-0 pr-20 sm-pull-none">
-                                    <img width="75" class="img-circle" alt="" src="images/testimonials/3.jpg">
-                                </div>
-                                <div class="ml-100 ml-sm-0">
-                                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
-                                    <p class="author mt-20">- <span class="text-black-333">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial sm-text-center pt-10">
-                                <div class="thumb pull-left mb-0 mr-0 pr-20 sm-pull-none">
-                                    <img width="75" class="img-circle" alt="" src="images/testimonials/1.jpg">
-                                </div>
-                                <div class="ml-100 ml-sm-0">
-                                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
-                                    <p class="author mt-20">- <span class="text-black-333">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial sm-text-center pt-10">
-                                <div class="thumb pull-left mb-0 mr-0 pr-20 sm-pull-none">
-                                    <img width="75" class="img-circle" alt="" src="images/testimonials/1.jpg">
-                                </div>
-                                <div class="ml-100 ml-sm-0">
-                                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
-                                    <p class="author mt-20">- <span class="text-black-333">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial sm-text-center pt-10">
-                                <div class="thumb pull-left mb-0 mr-0 pr-20 sm-pull-none">
-                                    <img width="75" class="img-circle" alt="" src="images/testimonials/1.jpg">
-                                </div>
-                                <div class="ml-100 ml-sm-0">
-                                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</p>
-                                    <p class="author mt-20">- <span class="text-black-333">Catherine Grace,</span> <small><em>CEO apple.inc</em></small></p>
-                                </div>
-                            </div>
-                        </div>
+                        <?= $this->element('testimonials') ?>
                     </div> 
                 </div>
             </div>
