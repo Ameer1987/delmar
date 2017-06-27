@@ -34,9 +34,18 @@ $this->layout = 'pages';
     <!-- Section: small-image-boxes  -->
     <section id="about">
         <div class="container">
-            <div class="section-content">
+            <div class="section-title">
                 <div class="row">
-                    <?= $this->element('small_image_boxes') ?>
+                    <div class="col-md-6">
+                        <h2 class="mt-0 text-uppercase font-28">Latest <span class="text-theme-colored font-weight-400">offers</span> <span class="font-30 text-theme-colored">.</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row multi-row-clearfix">
+                <div class="col-md-12">
+                    <div class="owl-carousel-4col" data-nav="true">
+                        <?= $this->element('small_image_boxes') ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -653,7 +662,7 @@ $this->layout = 'pages';
             </div>
             <div class="row multi-row-clearfix">
                 <div class="col-md-12">
-                    <div class="owl-carousel-4col" data-nav="true">
+                    <div class="owl-carousel-3col" data-nav="true">
                         <?= $this->element('large_image_boxes') ?>
                     </div>
                 </div>
