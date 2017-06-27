@@ -8,6 +8,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Social Link'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="socialLinks index large-9 medium-8 columns content">
@@ -21,6 +23,7 @@
                 <th scope="col"><?= $this->Paginator->sort('google_plus') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('instagram') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('linkedin') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('blog_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -33,6 +36,7 @@
                 <td><?= h($socialLink->google_plus) ?></td>
                 <td><?= h($socialLink->instagram) ?></td>
                 <td><?= h($socialLink->linkedin) ?></td>
+                <td><?= $socialLink->has('blog') ? $this->Html->link($socialLink->blog->title, ['controller' => 'Blogs', 'action' => 'view', $socialLink->blog->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $socialLink->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $socialLink->id]) ?>

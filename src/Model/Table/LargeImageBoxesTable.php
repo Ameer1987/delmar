@@ -7,19 +7,19 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * SocialLinks Model
+ * LargeImageBoxes Model
  *
  * @property \App\Model\Table\BlogsTable|\Cake\ORM\Association\BelongsTo $Blogs
  *
- * @method \App\Model\Entity\SocialLink get($primaryKey, $options = [])
- * @method \App\Model\Entity\SocialLink newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\SocialLink[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\SocialLink|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\SocialLink patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\SocialLink[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\SocialLink findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\LargeImageBox get($primaryKey, $options = [])
+ * @method \App\Model\Entity\LargeImageBox newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\LargeImageBox[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\LargeImageBox|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\LargeImageBox patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\LargeImageBox[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\LargeImageBox findOrCreate($search, callable $callback = null, $options = [])
  */
-class SocialLinksTable extends Table
+class LargeImageBoxesTable extends Table
 {
 
     /**
@@ -32,7 +32,7 @@ class SocialLinksTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('social_links');
+        $this->setTable('large_image_boxes');
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
 
@@ -55,24 +55,24 @@ class SocialLinksTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('facebook', 'create')
-            ->notEmpty('facebook');
+            ->requirePresence('title', 'create')
+            ->notEmpty('title');
 
         $validator
-            ->requirePresence('twitter', 'create')
-            ->notEmpty('twitter');
+            ->requirePresence('text', 'create')
+            ->notEmpty('text');
 
         $validator
-            ->requirePresence('google_plus', 'create')
-            ->notEmpty('google_plus');
+            ->requirePresence('locale', 'create')
+            ->notEmpty('locale');
 
         $validator
-            ->requirePresence('instagram', 'create')
-            ->notEmpty('instagram');
+            ->requirePresence('image', 'create')
+            ->notEmpty('image');
 
         $validator
-            ->requirePresence('linkedin', 'create')
-            ->notEmpty('linkedin');
+            ->requirePresence('link', 'create')
+            ->notEmpty('link');
 
         return $validator;
     }

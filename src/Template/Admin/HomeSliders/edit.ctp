@@ -28,6 +28,7 @@
             echo $this->Form->control('image');
             echo $this->Form->control('align');
             echo $this->Form->control('border');
+            echo $this->Form->control('blog_id');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

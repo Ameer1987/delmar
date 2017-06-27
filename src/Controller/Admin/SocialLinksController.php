@@ -20,6 +20,9 @@ class SocialLinksController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['Blogs']
+        ];
         $socialLinks = $this->paginate($this->SocialLinks);
 
         $this->set(compact('socialLinks'));
@@ -36,7 +39,7 @@ class SocialLinksController extends AppController
     public function view($id = null)
     {
         $socialLink = $this->SocialLinks->get($id, [
-            'contain' => []
+            'contain' => ['Blogs']
         ]);
 
         $this->set('socialLink', $socialLink);
@@ -60,7 +63,8 @@ class SocialLinksController extends AppController
             }
             $this->Flash->error(__('The social link could not be saved. Please, try again.'));
         }
-        $this->set(compact('socialLink'));
+        $blogs = $this->SocialLinks->Blogs->find('list', ['limit' => 200]);
+        $this->set(compact('socialLink', 'blogs'));
         $this->set('_serialize', ['socialLink']);
     }
 
@@ -85,7 +89,8 @@ class SocialLinksController extends AppController
             }
             $this->Flash->error(__('The social link could not be saved. Please, try again.'));
         }
-        $this->set(compact('socialLink'));
+        $blogs = $this->SocialLinks->Blogs->find('list', ['limit' => 200]);
+        $this->set(compact('socialLink', 'blogs'));
         $this->set('_serialize', ['socialLink']);
     }
 

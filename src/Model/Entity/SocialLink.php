@@ -12,6 +12,9 @@ use Cake\ORM\Entity;
  * @property string $google_plus
  * @property string $instagram
  * @property string $linkedin
+ * @property int $blog_id
+ *
+ * @property \App\Model\Entity\Blog $blog
  */
 class SocialLink extends Entity
 {
