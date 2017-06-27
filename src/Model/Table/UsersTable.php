@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Table;
 
 use Cake\ORM\Query;
@@ -16,9 +17,10 @@ use Cake\Validation\Validator;
  * @method \App\Model\Entity\User patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
  * @method \App\Model\Entity\User[] patchEntities($entities, array $data, array $options = [])
  * @method \App\Model\Entity\User findOrCreate($search, callable $callback = null, $options = [])
+ *
+ * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
-class UsersTable extends Table
-{
+class UsersTable extends Table {
 
     /**
      * Initialize method
@@ -26,13 +28,30 @@ class UsersTable extends Table
      * @param array $config The configuration for the Table.
      * @return void
      */
-    public function initialize(array $config)
-    {
+    public function initialize(array $config) {
         parent::initialize($config);
 
+
         $this->setTable('users');
-        $this->setDisplayField('id');
+        $this->setDisplayField('username');
         $this->setPrimaryKey('id');
+
+        // for CakePHP 3.0.x-3.3.x, use the following lines instead of the previous:
+        // $this->table('users');
+        // $this->displayField('username');
+        // $this->primaryKey('id');
+
+        $this->addBehavior('Josegonzalez/Upload.Upload', [
+            'photo' => [
+                'fields' => [
+                    // if these fields or their defaults exist
+                    // the values will be set.
+                    'dir' => 'dir', // defaults to `dir`
+                    'size' => 'photo_size', // defaults to `size`
+                    'type' => 'photo_type', // defaults to `type`
+                ],
+            ],
+        ]);
     }
 
     /**
@@ -41,24 +60,34 @@ class UsersTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator)
-    {
+    public function validationDefault(Validator $validator) {
         $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
+                ->integer('id')
+                ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('username', 'create')
-            ->notEmpty('username');
+                ->requirePresence('name', 'create')
+                ->notEmpty('name');
 
         $validator
-            ->requirePresence('password', 'create')
-            ->notEmpty('password');
+                ->requirePresence('username', 'create')
+                ->notEmpty('username');
 
         $validator
-            ->email('email')
-            ->requirePresence('email', 'create')
-            ->notEmpty('email');
+                ->requirePresence('password', 'create')
+                ->notEmpty('password');
+
+        $validator
+                ->requirePresence('role', 'create')
+                ->notEmpty('role');
+
+//        $validator
+//                ->requirePresence('photo', 'create')
+//                ->notEmpty('photo');
+//
+//        $validator
+//                ->requirePresence('dir', 'create')
+//                ->notEmpty('dir');
 
         return $validator;
     }
@@ -70,11 +99,10 @@ class UsersTable extends Table
      * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
      * @return \Cake\ORM\RulesChecker
      */
-    public function buildRules(RulesChecker $rules)
-    {
+    public function buildRules(RulesChecker $rules) {
         $rules->add($rules->isUnique(['username']));
-        $rules->add($rules->isUnique(['email']));
 
         return $rules;
     }
+
 }
