@@ -424,7 +424,7 @@ $this->layout = 'pages';
     </section>
 
     <!-- Divider: Statistics -->
-    <section class="divider parallax layer-overlay overlay-white-8" data-bg-img="images/bg/bg2.jpg">
+    <section class="divider parallax layer-overlay overlay-white-8" data-bg-img="../images/Untitled-1.png">
         <div class="container">
             <div class="row">
                 <?= $this->element('statistics') ?>
