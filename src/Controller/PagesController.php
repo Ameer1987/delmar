@@ -52,6 +52,9 @@ class PagesController extends AppController {
         $LargeImageBoxes = TableRegistry::get('LargeImageBoxes')->find('all', ['contain' => ['Blogs']]);
         $this->set('LargeImageBoxes', $LargeImageBoxes->toArray());
 
+        $Testimonials = TableRegistry::get('Testimonials')->find('all');
+        $this->set('Testimonials', $Testimonials->toArray());
+
         $this->set('dir', "ltr");
         $this->set('lang', "en");
     }
