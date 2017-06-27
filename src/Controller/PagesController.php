@@ -49,6 +49,9 @@ class PagesController extends AppController {
         $SmallImageBoxes = TableRegistry::get('SmallImageBoxes')->find('all');
         $this->set('SmallImageBoxes', $SmallImageBoxes->toArray());
 
+        $LargeImageBoxes = TableRegistry::get('LargeImageBoxes')->find('all');
+        $this->set('LargeImageBoxes', $LargeImageBoxes->toArray());
+
         $this->set('dir', "ltr");
         $this->set('lang', "en");
     }
