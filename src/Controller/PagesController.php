@@ -55,6 +55,9 @@ class PagesController extends AppController {
         $ResponsiveImageBoxes = TableRegistry::get('ResponsiveImageBoxes')->find('all');
         $this->set('ResponsiveImageBoxes', $ResponsiveImageBoxes->toArray());
 
+        $Statistics = TableRegistry::get('Statistics')->find('all');
+        $this->set('Statistics', $Statistics->first());
+
         $Testimonials = TableRegistry::get('Testimonials')->find('all');
         $this->set('Testimonials', $Testimonials->toArray());
 
