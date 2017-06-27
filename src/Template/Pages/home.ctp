@@ -17,293 +17,26 @@ $this->layout = 'pages';
 
 <!-- Start main-content -->
 <div class="main-content">
-    <!-- Section: home -->
+    <!-- Section: home-sliders -->
     <section id="home" class="divider">
         <div class="container-fluid p-0">
-
-            <!-- Slider Revolution Start -->
-            <div class="rev_slider_wrapper">
-                <div class="rev_slider" data-version="5.0">
-                    <ul>
-                        <?php $index = 0; ?>
-                        <?php foreach ($HomeSliders as $HomeSlider): ?>
-                            <?php $index ++; ?>
-                            <?php $borderRadius = $HomeSlider['border'] == "circular" ? "border-radius:45px;" : "" ?>
-                            <li data-index="rs-<?= $index ?>" data-transition="random" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-thumb="images/bg/bg14.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-description="">
-                                <!-- MAIN IMAGE -->
-                                <img src="images/bg/bg14.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
-                                <!-- LAYERS -->
-
-                                <!-- LAYER NR. 1 -->
-                                <div class="tp-caption tp-resizeme text-uppercase text-white bg-dark-transparent-5 pl-15 pr-15"
-                                     id="rs-<?= $index ?>-layer-1"
-
-                                     data-x="['<?= $HomeSlider['align'] ?>']"
-                                     data-hoffset="['30']"
-                                     data-y="['middle']"
-                                     data-voffset="['-110']" 
-                                     data-fontsize="['30']"
-                                     data-lineheight="['50']"
-
-                                     data-width="none"
-                                     data-height="none"
-                                     data-whitespace="nowrap"
-                                     data-transform_idle="o:1;s:500"
-                                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                     data-start="1000" 
-                                     data-splitin="none" 
-                                     data-splitout="none" 
-                                     data-responsive_offset="on"
-                                     style="z-index: 7; white-space: nowrap; font-weight:600; <?= $borderRadius ?>">
-                                         <?= $HomeSlider['layer1'] ?>
-                                </div>
-
-                                <!-- LAYER NR. 2 -->
-                                <div class="tp-caption tp-resizeme text-uppercase text-white bg-theme-colored-transparent pl-15 pr-15"
-                                     id="rs-<?= $index ?>-layer-2"
-
-                                     data-x="['<?= $HomeSlider['align'] ?>']"
-                                     data-hoffset="['30']"
-                                     data-y="['middle']"
-                                     data-voffset="['-45']" 
-                                     data-fontsize="['48']"
-                                     data-lineheight="['70']"
-
-                                     data-width="none"
-                                     data-height="none"
-                                     data-whitespace="nowrap"
-                                     data-transform_idle="o:1;s:500"
-                                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                     data-start="1000" 
-                                     data-splitin="none" 
-                                     data-splitout="none" 
-                                     data-responsive_offset="on"
-                                     style="z-index: 7; white-space: nowrap; font-weight:600; <?= $borderRadius ?>">
-                                         <?= $HomeSlider['layer2'] ?>
-                                </div>
-
-                                <!-- LAYER NR. 3 -->
-                                <div class="tp-caption tp-resizeme text-black" 
-                                     id="rs-<?= $index ?>-layer-3"
-
-                                     data-x="['<?= $HomeSlider['align'] ?>']"
-                                     data-hoffset="['35']"
-                                     data-y="['middle']"
-                                     data-voffset="['35','45','55']"
-                                     data-fontsize="['16','18','24']"
-                                     data-lineheight="['28']"
-                                     data-width="none"
-                                     data-height="none"
-                                     data-whitespace="nowrap"
-                                     data-transform_idle="o:1;s:500"
-                                     data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                                     data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                     data-start="1400" 
-                                     data-splitin="none" 
-                                     data-splitout="none" 
-                                     data-responsive_offset="on"
-                                     style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;">
-                                         <?= $HomeSlider['layer3'] ?>
-                                </div>
-
-                                <!-- LAYER NR. 4 -->
-                                <div class="tp-caption" 
-                                     id="rs-<?= $index ?>-layer-4"
-
-                                     data-x="['<?= $HomeSlider['align'] ?>']"
-                                     data-hoffset="['35']"
-                                     data-y="['middle']"
-                                     data-voffset="['110','120','140']"
-                                     data-width="none"
-                                     data-height="none"
-                                     data-whitespace="nowrap"
-                                     data-transform_idle="o:1;"
-                                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-                                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-                                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                                     data-start="1400" 
-                                     data-splitin="none" 
-                                     data-splitout="none" 
-                                     data-responsive_offset="on"
-                                     style="z-index: 5; white-space: nowrap; letter-spacing:1px;">
-                                    <a class="btn btn-colored btn-lg btn-theme-colored pl-20 pr-20" href="#"><?= $HomeSlider['layer4'] ?></a> 
-                                </div>
-                            </li>
-                        <?php endforeach; ?>
-
-                    </ul>
-                </div><!-- end .rev_slider -->
-            </div>
-            <!-- end .rev_slider_wrapper -->
-            <script>
-                $(document).ready(function (e) {
-                    var revapi = $(".rev_slider").revolution({
-                        sliderType: "standard",
-                        sliderLayout: "auto",
-                        dottedOverlay: "none",
-                        delay: 5000,
-                        navigation: {
-                            keyboardNavigation: "off",
-                            keyboard_direction: "horizontal",
-                            mouseScrollNavigation: "off",
-                            onHoverStop: "off",
-                            touch: {
-                                touchenabled: "on",
-                                swipe_threshold: 75,
-                                swipe_min_touches: 1,
-                                swipe_direction: "horizontal",
-                                drag_block_vertical: false
-                            },
-                            arrows: {
-                                style: "zeus",
-                                enable: true,
-                                hide_onmobile: true,
-                                hide_under: 600,
-                                hide_onleave: true,
-                                hide_delay: 200,
-                                hide_delay_mobile: 1200,
-                                tmp: '',
-                                left: {h_align: "left", v_align: "center",
-                                    h_offset: 30,
-                                    v_offset: 0
-                                },
-                                right: {h_align: "right", v_align: "center",
-                                    h_offset: 30,
-                                    v_offset: 0
-                                }
-                            },
-                            bullets: {
-                                enable: true,
-                                hide_onmobile: true,
-                                hide_under: 600,
-                                style: "hebe",
-                                hide_onleave: false,
-                                direction: "horizontal",
-                                h_align: "center",
-                                v_align: "bottom",
-                                h_offset: 0,
-                                v_offset: 30,
-                                space: 5,
-                                tmp: '<span class="tp-bullet-image"></span><span class="tp-bullet-imageoverlay"></span><span class="tp-bullet-title"></span>'
-                            }
-                        },
-                        responsiveLevels: [1240, 1024, 778],
-                        visibilityLevels: [1240, 1024, 778],
-                        gridwidth: [1170, 1024, 778, 480],
-                        gridheight: [600, 668, 860, 620],
-                        lazyType: "none",
-                        parallax: {
-                            origo: "slidercenter",
-                            speed: 1000,
-                            levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 100, 55],
-                            type: "scroll"
-                        },
-                        shadow: 0,
-                        spinner: "off",
-                        stopLoop: "on",
-                        stopAfterLoops: 0,
-                        stopAtSlide: -1,
-                        shuffle: "off",
-                        autoHeight: "off", fullScreenAutoWidth: "off",
-                        fullScreenAlignForce: "off",
-                        fullScreenOffsetContainer: "",
-                        fullScreenOffset: "0",
-                        hideThumbsOnMobile: "off",
-                        hideSliderAtLimit: 0,
-                        hideCaptionAtLimit: 0,
-                        hideAllCaptionAtLilmit: 0,
-                        debugMode: false,
-                        fallbacks: {
-                            simplifyAll: "off",
-                            nextSlideOnWindowFocus: "off",
-                            disableFocusListener: false,
-                        }
-                    });
-                });
-            </script>
-            <!-- Slider Revolution Ends -->
-
+            <?= $this->element('home_sliders') ?>
         </div>
     </section>
 
     <!-- Section: home-boxes -->
     <section>
         <div class="container pt-0 pb-0">
-            <div class="section-content">
-                <div class="row equal-height-inner home-boxes mt-sm-0" data-margin-top="-100px">
-                    <?php $index = 0; ?>
-                    <?php foreach ($HomeBoxes as $HomeBox): ?>
-                        <?php $index ++; ?>
-                        <div class="col-sm-12 col-md-3 pl-0 pl-sm-15 pr-0 pr-sm-15 sm-height-auto mt-sm-0 fadeInLeft animation-delay<?= $index ?>">
-                            <div class="sm-height-auto bg-theme-colored<?= $index > 1 ? ("-darker" . $index) : "" ?>">
-                                <div class="p-30">
-                                    <img src="images/flaticon-png-medical/small/antibiotic.png" width="70" alt="">
-                                    <h4 class="text-uppercase text-white"><?= $HomeBox['title'] ?></h4>
-                                    <p class="text-white"><?= $HomeBox['text'] ?></p>
-                                    <a href="<?= $HomeBox['link'] ?>" class="btn btn-border btn-circled btn-transparent btn-sm"><?= $HomeBox['avatar'] ?></a>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            </div>
+            <?= $this->element('home_boxes') ?>
         </div>
     </section>
 
-    <!-- Section: About  -->
+    <!-- Section: small-image-boxes  -->
     <section id="about">
         <div class="container">
             <div class="section-content">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-3 pb-sm-20">
-                        <div class="image-box-thum">
-                            <img class="img-fullwidth" alt="" src="images/photos/2.jpg">
-                        </div>
-                        <div class="image-box-details pt-20 pb-sm-20">
-                            <h4 class="title mt-0 line-bottom">Medical Counseling</h4>
-                            <p class="desc mb-10">Lorem ipsum dolor sit amet cons ectetur adipisicing ipsa ullam dicta suscipit ipsum</p>
-                            <a href="#" class="btn-read-more">Read more</a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 pb-sm-20">
-                        <div class="image-box-thum">
-                            <img class="img-fullwidth" alt="" src="images/photos/1.jpg">
-                        </div>
-                        <div class="image-box-details pt-20 pb-sm-20">
-                            <h4 class="title mt-0 line-bottom">Healthcare for Kids</h4>
-                            <p class="desc mb-10">Lorem ipsum dolor sit amet cons ectetur adipisicing ipsa ullam dicta suscipit ipsum</p>
-                            <a href="#" class="btn-read-more">Read more</a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 pb-sm-20">
-                        <div class="image-box-thum">
-                            <img class="img-fullwidth" alt="" src="images/photos/3.jpg">
-                        </div>
-                        <div class="image-box-details pt-20 pb-sm-20">
-                            <h4 class="title mt-0 line-bottom">Qualified Doctors</h4>
-                            <p class="desc mb-10">Lorem ipsum dolor sit amet cons ectetur adipisicing ipsa ullam dicta suscipit ipsum</p>
-                            <a href="#" class="btn-read-more">Read more</a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="image-box-thum">
-                            <img class="img-fullwidth" alt="" src="images/photos/4.jpg">
-                        </div>
-                        <div class="image-box-details pt-20">
-                            <h4 class="title mt-0 line-bottom">Modern Equipments</h4>
-                            <p class="desc mb-10">Lorem ipsum dolor sit amet cons ectetur adipisicing ipsa ullam dicta suscipit ipsum</p>
-                            <a href="#" class="btn-read-more">Read more</a>
-                        </div>
-                    </div>
+                    <?= $this->element('small_image_boxes') ?>
                 </div>
             </div>
         </div>
@@ -886,111 +619,19 @@ $this->layout = 'pages';
         </div>
     </section>
 
-    <!-- Section: blog -->
+    <!-- Section: large-image-boxes  -->
     <section id="blog">
         <div class="container">
             <div class="section-title">
                 <div class="row">
                     <div class="col-md-6">
-                        <h5 class="font-weight-300 m-0">What we can do?</h5>
                         <h2 class="mt-0 text-uppercase font-28">Latest <span class="text-theme-colored font-weight-400">News</span> <span class="font-30 text-theme-colored">.</span></h2>
-                        <div class="icon">
-                            <i class="fa fa-hospital-o"></i>
-                        </div>
-
                     </div>
-                    <div class="col-md-6"> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus hic suscipit doloremque deleniti ipsa quia dolor</p></div>
                 </div>
             </div>
             <div class="section-content">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-4 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <article class="post clearfix mb-sm-30 bg-lighter">
-                            <div class="entry-header">
-                                <div class="post-thumb thumb"> 
-                                    <img src="images/blog/1.jpg" alt="" class="img-responsive img-fullwidth"> 
-                                </div>
-                            </div>
-                            <div class="entry-content p-20 pr-10">
-                                <div class="entry-meta media mt-0 no-bg no-border">
-                                    <div class="entry-date media-left text-center flip bg-theme-colored pt-5 pr-15 pb-5 pl-15">
-                                        <ul>
-                                            <li class="font-16 text-white font-weight-600 border-bottom">28</li>
-                                            <li class="font-12 text-white text-uppercase">Feb</li>
-                                        </ul>
-                                    </div>
-                                    <div class="media-body pl-15">
-                                        <div class="event-content pull-left flip">
-                                            <h4 class="entry-title text-white text-uppercase m-0 mt-5"><a href="#">Post title here</a></h4>
-                                            <span class="mb-10 text-gray-darkgray mr-10 font-13"><i class="fa fa-commenting-o mr-5 text-theme-colored"></i> 214 Comments</span>                       
-                                            <span class="mb-10 text-gray-darkgray mr-10 font-13"><i class="fa fa-heart-o mr-5 text-theme-colored"></i> 895 Likes</span>                       
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="mt-10">Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Molestias eius illum libero dolor nobis deleniti, sint assumenda. Pariatur iste veritatis excepturi, ipsa optio nobis.</p>
-                                <a href="#" class="btn-read-more">Read more</a>
-                                <div class="clearfix"></div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
-                        <article class="post clearfix mb-sm-30 bg-lighter">
-                            <div class="entry-header">
-                                <div class="post-thumb thumb"> 
-                                    <img src="images/blog/2.jpg" alt="" class="img-responsive img-fullwidth"> 
-                                </div>
-                            </div>
-                            <div class="entry-content p-20 pr-10">
-                                <div class="entry-meta media mt-0 no-bg no-border">
-                                    <div class="entry-date media-left text-center flip bg-theme-colored pt-5 pr-15 pb-5 pl-15">
-                                        <ul>
-                                            <li class="font-16 text-white font-weight-600 border-bottom">28</li>
-                                            <li class="font-12 text-white text-uppercase">Feb</li>
-                                        </ul>
-                                    </div>
-                                    <div class="media-body pl-15">
-                                        <div class="event-content pull-left flip">
-                                            <h4 class="entry-title text-white text-uppercase m-0 mt-5"><a href="#">Post title here</a></h4>
-                                            <span class="mb-10 text-gray-darkgray mr-10 font-13"><i class="fa fa-commenting-o mr-5 text-theme-colored"></i> 214 Comments</span>                       
-                                            <span class="mb-10 text-gray-darkgray mr-10 font-13"><i class="fa fa-heart-o mr-5 text-theme-colored"></i> 895 Likes</span>                       
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="mt-10">Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Molestias eius illum libero dolor nobis deleniti, sint assumenda. Pariatur iste veritatis excepturi, ipsa optio nobis.</p>
-                                <a href="#" class="btn-read-more">Read more</a>
-                                <div class="clearfix"></div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <article class="post clearfix bg-lighter">
-                            <div class="entry-header">
-                                <div class="post-thumb thumb"> 
-                                    <img src="images/blog/3.jpg" alt="" class="img-responsive img-fullwidth"> 
-                                </div>
-                            </div>
-                            <div class="entry-content p-20 pr-10">
-                                <div class="entry-meta media mt-0 no-bg no-border">
-                                    <div class="entry-date media-left text-center flip bg-theme-colored pt-5 pr-15 pb-5 pl-15">
-                                        <ul>
-                                            <li class="font-16 text-white font-weight-600 border-bottom">28</li>
-                                            <li class="font-12 text-white text-uppercase">Feb</li>
-                                        </ul>
-                                    </div>
-                                    <div class="media-body pl-15">
-                                        <div class="event-content pull-left flip">
-                                            <h4 class="entry-title text-white text-uppercase m-0 mt-5"><a href="#">Post title here</a></h4>
-                                            <span class="mb-10 text-gray-darkgray mr-10 font-13"><i class="fa fa-commenting-o mr-5 text-theme-colored"></i> 214 Comments</span>                       
-                                            <span class="mb-10 text-gray-darkgray mr-10 font-13"><i class="fa fa-heart-o mr-5 text-theme-colored"></i> 895 Likes</span>                       
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="mt-10">Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Molestias eius illum libero dolor nobis deleniti, sint assumenda. Pariatur iste veritatis excepturi, ipsa optio nobis.</p>
-                                <a href="#" class="btn-read-more">Read more</a>
-                                <div class="clearfix"></div>
-                            </div>
-                        </article>
-                    </div>
+                    <?= $this->element('large_image_boxes') ?>                    
                 </div>
             </div>
         </div>
