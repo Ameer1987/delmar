@@ -12,14 +12,15 @@
     </ul>
 </nav>
 <div class="largeImageBoxes form large-9 medium-8 columns content">
-    <?= $this->Form->create($largeImageBox) ?>
+    <?= $this->Form->create($largeImageBox, ['type' => 'file']); ?>
     <fieldset>
         <legend><?= __('Add Large Image Box') ?></legend>
         <?php
             echo $this->Form->control('title');
+            echo $this->Form->input('photo', ['type' => 'file']);
+            $this->Form->input('dir', ['type' => 'hidden']);
             echo $this->Form->control('text');
             echo $this->Form->control('locale');
-            echo $this->Form->control('image');
             echo $this->Form->control('link');
             echo $this->Form->control('blog_id', ['options' => $blogs]);
         ?>

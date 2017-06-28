@@ -25,7 +25,8 @@
                 <th scope="col"><?= $this->Paginator->sort('title_3') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title_4') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('image') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('dir') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -42,7 +43,8 @@
                 <td><?= h($statistic->title_3) ?></td>
                 <td><?= h($statistic->title_4) ?></td>
                 <td><?= h($statistic->locale) ?></td>
-                <td><?= h($statistic->image) ?></td>
+                <td><?= h($statistic->photo) ?></td>
+                <td><?= h($statistic->dir) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $statistic->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $statistic->id]) ?>

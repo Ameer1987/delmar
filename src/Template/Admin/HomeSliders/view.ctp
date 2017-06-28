@@ -11,6 +11,8 @@
         <li><?= $this->Form->postLink(__('Delete Home Slider'), ['action' => 'delete', $homeSlider->id], ['confirm' => __('Are you sure you want to delete # {0}?', $homeSlider->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Home Sliders'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Home Slider'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="homeSliders view large-9 medium-8 columns content">
@@ -37,8 +39,12 @@
             <td><?= h($homeSlider->locale) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Image') ?></th>
-            <td><?= h($homeSlider->image) ?></td>
+            <th scope="row"><?= __('Photo') ?></th>
+            <td><?= h($homeSlider->photo) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Dir') ?></th>
+            <td><?= h($homeSlider->dir) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Align') ?></th>
@@ -49,12 +55,12 @@
             <td><?= h($homeSlider->border) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($homeSlider->id) ?></td>
+            <th scope="row"><?= __('Blog') ?></th>
+            <td><?= $homeSlider->has('blog') ? $this->Html->link($homeSlider->blog->title, ['controller' => 'Blogs', 'action' => 'view', $homeSlider->blog->id]) : '' ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Blog Id') ?></th>
-            <td><?= $this->Number->format($homeSlider->blog_id) ?></td>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($homeSlider->id) ?></td>
         </tr>
     </table>
 </div>

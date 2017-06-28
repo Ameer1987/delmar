@@ -83,9 +83,13 @@ class StatisticsTable extends Table
             ->requirePresence('locale', 'create')
             ->notEmpty('locale');
 
-        $validator
-            ->requirePresence('image', 'create')
-            ->notEmpty('image');
+//        $validator
+//            ->requirePresence('photo', 'create')
+//            ->notEmpty('photo');
+//
+//        $validator
+//            ->requirePresence('dir', 'create')
+//            ->notEmpty('dir');
 
         return $validator;
     }

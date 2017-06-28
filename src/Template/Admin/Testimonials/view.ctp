@@ -25,8 +25,12 @@
             <td><?= h($testimonial->locale) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Image') ?></th>
-            <td><?= h($testimonial->image) ?></td>
+            <th scope="row"><?= __('Photo') ?></th>
+            <td><?= h($testimonial->photo) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Dir') ?></th>
+            <td><?= h($testimonial->dir) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>

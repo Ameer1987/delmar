@@ -19,9 +19,10 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('dir') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('subtitle') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('image') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('link') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('blog_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -32,9 +33,10 @@
             <tr>
                 <td><?= $this->Number->format($responsiveImageBox->id) ?></td>
                 <td><?= h($responsiveImageBox->title) ?></td>
+                <td><?= h($responsiveImageBox->photo) ?></td>
+                <td><?= h($responsiveImageBox->dir) ?></td>
                 <td><?= h($responsiveImageBox->subtitle) ?></td>
                 <td><?= h($responsiveImageBox->locale) ?></td>
-                <td><?= h($responsiveImageBox->image) ?></td>
                 <td><?= h($responsiveImageBox->link) ?></td>
                 <td><?= $responsiveImageBox->has('blog') ? $this->Html->link($responsiveImageBox->blog->title, ['controller' => 'Blogs', 'action' => 'view', $responsiveImageBox->blog->id]) : '' ?></td>
                 <td class="actions">

@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
 /**
  * HomeSliders Model
  *
- * @property |\Cake\ORM\Association\BelongsTo $Blogs
+ * @property \App\Model\Table\BlogsTable|\Cake\ORM\Association\BelongsTo $Blogs
  *
  * @method \App\Model\Entity\HomeSlider get($primaryKey, $options = [])
  * @method \App\Model\Entity\HomeSlider newEntity($data = null, array $options = [])
@@ -74,9 +74,13 @@ class HomeSlidersTable extends Table
             ->requirePresence('locale', 'create')
             ->notEmpty('locale');
 
-        $validator
-            ->requirePresence('image', 'create')
-            ->notEmpty('image');
+//        $validator
+//            ->requirePresence('photo', 'create')
+//            ->notEmpty('photo');
+//
+//        $validator
+//            ->requirePresence('dir', 'create')
+//            ->notEmpty('dir');
 
         $validator
             ->requirePresence('align', 'create')

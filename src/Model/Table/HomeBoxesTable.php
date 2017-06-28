@@ -58,9 +58,13 @@ class HomeBoxesTable extends Table
             ->requirePresence('title', 'create')
             ->notEmpty('title');
 
-        $validator
-            ->requirePresence('image', 'create')
-            ->notEmpty('image');
+//        $validator
+//            ->requirePresence('photo', 'create')
+//            ->notEmpty('photo');
+//
+//        $validator
+//            ->requirePresence('dir', 'create')
+//            ->notEmpty('dir');
 
         $validator
             ->requirePresence('link', 'create')

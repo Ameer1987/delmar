@@ -33,8 +33,12 @@
             <td><?= h($blog->title) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Image') ?></th>
-            <td><?= h($blog->image) ?></td>
+            <th scope="row"><?= __('Photo') ?></th>
+            <td><?= h($blog->photo) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Dir') ?></th>
+            <td><?= h($blog->dir) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Locale') ?></th>
@@ -56,7 +60,8 @@
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Title') ?></th>
-                <th scope="col"><?= __('Image') ?></th>
+                <th scope="col"><?= __('Photo') ?></th>
+                <th scope="col"><?= __('Dir') ?></th>
                 <th scope="col"><?= __('Link') ?></th>
                 <th scope="col"><?= __('Avatar') ?></th>
                 <th scope="col"><?= __('Text') ?></th>
@@ -68,7 +73,8 @@
             <tr>
                 <td><?= h($homeBoxes->id) ?></td>
                 <td><?= h($homeBoxes->title) ?></td>
-                <td><?= h($homeBoxes->image) ?></td>
+                <td><?= h($homeBoxes->photo) ?></td>
+                <td><?= h($homeBoxes->dir) ?></td>
                 <td><?= h($homeBoxes->link) ?></td>
                 <td><?= h($homeBoxes->avatar) ?></td>
                 <td><?= h($homeBoxes->text) ?></td>
@@ -95,7 +101,8 @@
                 <th scope="col"><?= __('Layer3') ?></th>
                 <th scope="col"><?= __('Layer4') ?></th>
                 <th scope="col"><?= __('Locale') ?></th>
-                <th scope="col"><?= __('Image') ?></th>
+                <th scope="col"><?= __('Photo') ?></th>
+                <th scope="col"><?= __('Dir') ?></th>
                 <th scope="col"><?= __('Align') ?></th>
                 <th scope="col"><?= __('Border') ?></th>
                 <th scope="col"><?= __('Blog Id') ?></th>
@@ -109,7 +116,8 @@
                 <td><?= h($homeSliders->layer3) ?></td>
                 <td><?= h($homeSliders->layer4) ?></td>
                 <td><?= h($homeSliders->locale) ?></td>
-                <td><?= h($homeSliders->image) ?></td>
+                <td><?= h($homeSliders->photo) ?></td>
+                <td><?= h($homeSliders->dir) ?></td>
                 <td><?= h($homeSliders->align) ?></td>
                 <td><?= h($homeSliders->border) ?></td>
                 <td><?= h($homeSliders->blog_id) ?></td>
@@ -130,9 +138,10 @@
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Title') ?></th>
+                <th scope="col"><?= __('Photo') ?></th>
+                <th scope="col"><?= __('Dir') ?></th>
                 <th scope="col"><?= __('Text') ?></th>
                 <th scope="col"><?= __('Locale') ?></th>
-                <th scope="col"><?= __('Image') ?></th>
                 <th scope="col"><?= __('Link') ?></th>
                 <th scope="col"><?= __('Blog Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -141,9 +150,10 @@
             <tr>
                 <td><?= h($largeImageBoxes->id) ?></td>
                 <td><?= h($largeImageBoxes->title) ?></td>
+                <td><?= h($largeImageBoxes->photo) ?></td>
+                <td><?= h($largeImageBoxes->dir) ?></td>
                 <td><?= h($largeImageBoxes->text) ?></td>
                 <td><?= h($largeImageBoxes->locale) ?></td>
-                <td><?= h($largeImageBoxes->image) ?></td>
                 <td><?= h($largeImageBoxes->link) ?></td>
                 <td><?= h($largeImageBoxes->blog_id) ?></td>
                 <td class="actions">
@@ -163,9 +173,10 @@
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Title') ?></th>
+                <th scope="col"><?= __('Photo') ?></th>
+                <th scope="col"><?= __('Dir') ?></th>
                 <th scope="col"><?= __('Subtitle') ?></th>
                 <th scope="col"><?= __('Locale') ?></th>
-                <th scope="col"><?= __('Image') ?></th>
                 <th scope="col"><?= __('Link') ?></th>
                 <th scope="col"><?= __('Blog Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -174,9 +185,10 @@
             <tr>
                 <td><?= h($responsiveImageBoxes->id) ?></td>
                 <td><?= h($responsiveImageBoxes->title) ?></td>
+                <td><?= h($responsiveImageBoxes->photo) ?></td>
+                <td><?= h($responsiveImageBoxes->dir) ?></td>
                 <td><?= h($responsiveImageBoxes->subtitle) ?></td>
                 <td><?= h($responsiveImageBoxes->locale) ?></td>
-                <td><?= h($responsiveImageBoxes->image) ?></td>
                 <td><?= h($responsiveImageBoxes->link) ?></td>
                 <td><?= h($responsiveImageBoxes->blog_id) ?></td>
                 <td class="actions">
@@ -196,9 +208,10 @@
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Title') ?></th>
+                <th scope="col"><?= __('Photo') ?></th>
+                <th scope="col"><?= __('Dir') ?></th>
                 <th scope="col"><?= __('Text') ?></th>
                 <th scope="col"><?= __('Locale') ?></th>
-                <th scope="col"><?= __('Image') ?></th>
                 <th scope="col"><?= __('Link') ?></th>
                 <th scope="col"><?= __('Blog Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -207,9 +220,10 @@
             <tr>
                 <td><?= h($smallImageBoxes->id) ?></td>
                 <td><?= h($smallImageBoxes->title) ?></td>
+                <td><?= h($smallImageBoxes->photo) ?></td>
+                <td><?= h($smallImageBoxes->dir) ?></td>
                 <td><?= h($smallImageBoxes->text) ?></td>
                 <td><?= h($smallImageBoxes->locale) ?></td>
-                <td><?= h($smallImageBoxes->image) ?></td>
                 <td><?= h($smallImageBoxes->link) ?></td>
                 <td><?= h($smallImageBoxes->blog_id) ?></td>
                 <td class="actions">

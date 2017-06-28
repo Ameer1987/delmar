@@ -20,6 +20,9 @@ class HomeSlidersController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['Blogs']
+        ];
         $homeSliders = $this->paginate($this->HomeSliders);
 
         $this->set(compact('homeSliders'));
@@ -36,7 +39,7 @@ class HomeSlidersController extends AppController
     public function view($id = null)
     {
         $homeSlider = $this->HomeSliders->get($id, [
-            'contain' => []
+            'contain' => ['Blogs']
         ]);
 
         $this->set('homeSlider', $homeSlider);
@@ -60,7 +63,8 @@ class HomeSlidersController extends AppController
             }
             $this->Flash->error(__('The home slider could not be saved. Please, try again.'));
         }
-        $this->set(compact('homeSlider'));
+        $blogs = $this->HomeSliders->Blogs->find('list', ['limit' => 200]);
+        $this->set(compact('homeSlider', 'blogs'));
         $this->set('_serialize', ['homeSlider']);
     }
 
@@ -85,7 +89,8 @@ class HomeSlidersController extends AppController
             }
             $this->Flash->error(__('The home slider could not be saved. Please, try again.'));
         }
-        $this->set(compact('homeSlider'));
+        $blogs = $this->HomeSliders->Blogs->find('list', ['limit' => 200]);
+        $this->set(compact('homeSlider', 'blogs'));
         $this->set('_serialize', ['homeSlider']);
     }
 

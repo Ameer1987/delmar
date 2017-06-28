@@ -16,7 +16,8 @@ use Cake\ORM\Entity;
  * @property string $title_3
  * @property string $title_4
  * @property string $locale
- * @property string $image
+ * @property string $photo
+ * @property string $dir
  */
 class Statistic extends Entity
 {

@@ -23,8 +23,12 @@
             <td><?= h($homeBox->title) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Image') ?></th>
-            <td><?= h($homeBox->image) ?></td>
+            <th scope="row"><?= __('Photo') ?></th>
+            <td><?= h($homeBox->photo) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Dir') ?></th>
+            <td><?= h($homeBox->dir) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Link') ?></th>

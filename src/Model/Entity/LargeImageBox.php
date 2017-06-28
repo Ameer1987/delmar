@@ -8,9 +8,10 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $title
+ * @property string $photo
+ * @property string $dir
  * @property string $text
  * @property string $locale
- * @property string $image
  * @property string $link
  * @property int $blog_id
  *

@@ -23,12 +23,16 @@
             <td><?= h($largeImageBox->title) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Locale') ?></th>
-            <td><?= h($largeImageBox->locale) ?></td>
+            <th scope="row"><?= __('Photo') ?></th>
+            <td><?= h($largeImageBox->photo) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Image') ?></th>
-            <td><?= h($largeImageBox->image) ?></td>
+            <th scope="row"><?= __('Dir') ?></th>
+            <td><?= h($largeImageBox->dir) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Locale') ?></th>
+            <td><?= h($largeImageBox->locale) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Link') ?></th>

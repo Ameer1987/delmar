@@ -8,6 +8,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Home Slider'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="homeSliders index large-9 medium-8 columns content">
@@ -21,7 +23,8 @@
                 <th scope="col"><?= $this->Paginator->sort('layer3') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('layer4') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('image') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('dir') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('align') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('border') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('blog_id') ?></th>
@@ -37,10 +40,11 @@
                 <td><?= h($homeSlider->layer3) ?></td>
                 <td><?= h($homeSlider->layer4) ?></td>
                 <td><?= h($homeSlider->locale) ?></td>
-                <td><?= h($homeSlider->image) ?></td>
+                <td><?= h($homeSlider->photo) ?></td>
+                <td><?= h($homeSlider->dir) ?></td>
                 <td><?= h($homeSlider->align) ?></td>
                 <td><?= h($homeSlider->border) ?></td>
-                <td><?= $this->Number->format($homeSlider->blog_id) ?></td>
+                <td><?= $homeSlider->has('blog') ? $this->Html->link($homeSlider->blog->title, ['controller' => 'Blogs', 'action' => 'view', $homeSlider->blog->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $homeSlider->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $homeSlider->id]) ?>

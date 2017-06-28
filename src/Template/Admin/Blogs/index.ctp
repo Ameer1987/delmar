@@ -29,7 +29,8 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('image') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('dir') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -39,7 +40,8 @@
             <tr>
                 <td><?= $this->Number->format($blog->id) ?></td>
                 <td><?= h($blog->title) ?></td>
-                <td><?= h($blog->image) ?></td>
+                <td><?= h($blog->photo) ?></td>
+                <td><?= h($blog->dir) ?></td>
                 <td><?= h($blog->locale) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $blog->id]) ?>

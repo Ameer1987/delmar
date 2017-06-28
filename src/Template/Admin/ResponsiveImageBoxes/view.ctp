@@ -23,16 +23,20 @@
             <td><?= h($responsiveImageBox->title) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Photo') ?></th>
+            <td><?= h($responsiveImageBox->photo) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Dir') ?></th>
+            <td><?= h($responsiveImageBox->dir) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Subtitle') ?></th>
             <td><?= h($responsiveImageBox->subtitle) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Locale') ?></th>
             <td><?= h($responsiveImageBox->locale) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Image') ?></th>
-            <td><?= h($responsiveImageBox->image) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Link') ?></th>

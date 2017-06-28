@@ -18,14 +18,15 @@
     </ul>
 </nav>
 <div class="smallImageBoxes form large-9 medium-8 columns content">
-    <?= $this->Form->create($smallImageBox) ?>
+    <?= $this->Form->create($smallImageBox, ['type' => 'file']); ?>
     <fieldset>
         <legend><?= __('Edit Small Image Box') ?></legend>
         <?php
             echo $this->Form->control('title');
+            echo $this->Form->input('photo', ['type' => 'file']);
+            $this->Form->input('dir', ['type' => 'hidden']);
             echo $this->Form->control('text');
             echo $this->Form->control('locale');
-            echo $this->Form->control('image');
             echo $this->Form->control('link');
             echo $this->Form->control('blog_id', ['options' => $blogs]);
         ?>

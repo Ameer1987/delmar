@@ -12,10 +12,13 @@ use Cake\ORM\Entity;
  * @property string $layer3
  * @property string $layer4
  * @property string $locale
- * @property string $image
+ * @property string $photo
+ * @property string $dir
  * @property string $align
  * @property string $border
  * @property int $blog_id
+ *
+ * @property \App\Model\Entity\Blog $blog
  */
 class HomeSlider extends Entity
 {

@@ -10,7 +10,8 @@ use Cake\ORM\Entity;
  * @property string $author_name
  * @property string $text
  * @property string $locale
- * @property string $image
+ * @property string $photo
+ * @property string $dir
  */
 class Testimonial extends Entity
 {

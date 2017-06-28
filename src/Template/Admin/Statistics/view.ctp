@@ -53,8 +53,12 @@
             <td><?= h($statistic->locale) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Image') ?></th>
-            <td><?= h($statistic->image) ?></td>
+            <th scope="row"><?= __('Photo') ?></th>
+            <td><?= h($statistic->photo) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Dir') ?></th>
+            <td><?= h($statistic->dir) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>

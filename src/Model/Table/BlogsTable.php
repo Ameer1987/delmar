@@ -77,13 +77,17 @@ class BlogsTable extends Table
             ->requirePresence('title', 'create')
             ->notEmpty('title');
 
+//        $validator
+//            ->requirePresence('photo', 'create')
+//            ->notEmpty('photo');
+//
+//        $validator
+//            ->requirePresence('dir', 'create')
+//            ->notEmpty('dir');
+
         $validator
             ->requirePresence('text', 'create')
             ->notEmpty('text');
-
-        $validator
-            ->requirePresence('image', 'create')
-            ->notEmpty('image');
 
         $validator
             ->requirePresence('locale', 'create')

@@ -58,6 +58,14 @@ class ResponsiveImageBoxesTable extends Table
             ->requirePresence('title', 'create')
             ->notEmpty('title');
 
+//        $validator
+//            ->requirePresence('photo', 'create')
+//            ->notEmpty('photo');
+//
+//        $validator
+//            ->requirePresence('dir', 'create')
+//            ->notEmpty('dir');
+
         $validator
             ->requirePresence('subtitle', 'create')
             ->notEmpty('subtitle');
@@ -65,10 +73,6 @@ class ResponsiveImageBoxesTable extends Table
         $validator
             ->requirePresence('locale', 'create')
             ->notEmpty('locale');
-
-        $validator
-            ->requirePresence('image', 'create')
-            ->notEmpty('image');
 
         $validator
             ->requirePresence('link', 'create')

@@ -19,7 +19,8 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('image') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('dir') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('link') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('avatar') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
@@ -32,7 +33,8 @@
             <tr>
                 <td><?= $this->Number->format($homeBox->id) ?></td>
                 <td><?= h($homeBox->title) ?></td>
-                <td><?= h($homeBox->image) ?></td>
+                <td><?= h($homeBox->photo) ?></td>
+                <td><?= h($homeBox->dir) ?></td>
                 <td><?= h($homeBox->link) ?></td>
                 <td><?= h($homeBox->avatar) ?></td>
                 <td><?= h($homeBox->locale) ?></td>

@@ -18,12 +18,13 @@
     </ul>
 </nav>
 <div class="homeBoxes form large-9 medium-8 columns content">
-    <?= $this->Form->create($homeBox) ?>
+    <?= $this->Form->create($homeBox, ['type' => 'file']); ?>
     <fieldset>
         <legend><?= __('Edit Home Box') ?></legend>
         <?php
             echo $this->Form->control('title');
-            echo $this->Form->control('image');
+            echo $this->Form->input('photo', ['type' => 'file']);
+            $this->Form->input('dir', ['type' => 'hidden']);
             echo $this->Form->control('link');
             echo $this->Form->control('avatar');
             echo $this->Form->control('text');

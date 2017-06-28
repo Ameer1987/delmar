@@ -8,8 +8,9 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $title
+ * @property string $photo
+ * @property string $dir
  * @property string $text
- * @property string $image
  * @property string $locale
  *
  * @property \App\Model\Entity\HomeBox[] $home_boxes

@@ -8,7 +8,8 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $title
- * @property string $image
+ * @property string $photo
+ * @property string $dir
  * @property string $link
  * @property string $avatar
  * @property string $text

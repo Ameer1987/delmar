@@ -16,7 +16,7 @@
     </ul>
 </nav>
 <div class="statistics form large-9 medium-8 columns content">
-    <?= $this->Form->create($statistic) ?>
+    <?= $this->Form->create($statistic, ['type' => 'file']); ?>
     <fieldset>
         <legend><?= __('Edit Statistic') ?></legend>
         <?php
@@ -29,7 +29,8 @@
             echo $this->Form->control('title_3');
             echo $this->Form->control('title_4');
             echo $this->Form->control('locale');
-            echo $this->Form->control('image');
+            echo $this->Form->input('photo', ['type' => 'file']);
+            $this->Form->input('dir', ['type' => 'hidden']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
