@@ -22,6 +22,7 @@
     <fieldset>
         <legend><?= __('Edit Home Slider') ?></legend>
         <?php
+            echo $this->Form->control('order');
             echo $this->Form->control('layer1');
             echo $this->Form->control('layer2');
             echo $this->Form->control('layer3');

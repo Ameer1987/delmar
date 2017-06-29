@@ -32,6 +32,7 @@
     <fieldset>
         <legend><?= __('Edit Blog') ?></legend>
         <?php
+            echo $this->Form->control('order');
             echo $this->Form->control('title');
             echo $this->Form->input('photo', ['type' => 'file']);
             $this->Form->input('dir', ['type' => 'hidden']);

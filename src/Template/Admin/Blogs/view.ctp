@@ -48,6 +48,10 @@
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($blog->id) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Order') ?></th>
+            <td><?= $this->Number->format($blog->order) ?></td>
+        </tr>
     </table>
     <div class="row">
         <h4><?= __('Text') ?></h4>
@@ -59,10 +63,10 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Order') ?></th>
                 <th scope="col"><?= __('Title') ?></th>
                 <th scope="col"><?= __('Photo') ?></th>
                 <th scope="col"><?= __('Dir') ?></th>
-                <th scope="col"><?= __('Link') ?></th>
                 <th scope="col"><?= __('Avatar') ?></th>
                 <th scope="col"><?= __('Text') ?></th>
                 <th scope="col"><?= __('Locale') ?></th>
@@ -72,10 +76,10 @@
             <?php foreach ($blog->home_boxes as $homeBoxes): ?>
             <tr>
                 <td><?= h($homeBoxes->id) ?></td>
+                <td><?= h($homeBoxes->order) ?></td>
                 <td><?= h($homeBoxes->title) ?></td>
                 <td><?= h($homeBoxes->photo) ?></td>
                 <td><?= h($homeBoxes->dir) ?></td>
-                <td><?= h($homeBoxes->link) ?></td>
                 <td><?= h($homeBoxes->avatar) ?></td>
                 <td><?= h($homeBoxes->text) ?></td>
                 <td><?= h($homeBoxes->locale) ?></td>
@@ -96,6 +100,7 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Order') ?></th>
                 <th scope="col"><?= __('Layer1') ?></th>
                 <th scope="col"><?= __('Layer2') ?></th>
                 <th scope="col"><?= __('Layer3') ?></th>
@@ -111,6 +116,7 @@
             <?php foreach ($blog->home_sliders as $homeSliders): ?>
             <tr>
                 <td><?= h($homeSliders->id) ?></td>
+                <td><?= h($homeSliders->order) ?></td>
                 <td><?= h($homeSliders->layer1) ?></td>
                 <td><?= h($homeSliders->layer2) ?></td>
                 <td><?= h($homeSliders->layer3) ?></td>
@@ -137,24 +143,24 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Order') ?></th>
                 <th scope="col"><?= __('Title') ?></th>
                 <th scope="col"><?= __('Photo') ?></th>
                 <th scope="col"><?= __('Dir') ?></th>
                 <th scope="col"><?= __('Text') ?></th>
                 <th scope="col"><?= __('Locale') ?></th>
-                <th scope="col"><?= __('Link') ?></th>
                 <th scope="col"><?= __('Blog Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($blog->large_image_boxes as $largeImageBoxes): ?>
             <tr>
                 <td><?= h($largeImageBoxes->id) ?></td>
+                <td><?= h($largeImageBoxes->order) ?></td>
                 <td><?= h($largeImageBoxes->title) ?></td>
                 <td><?= h($largeImageBoxes->photo) ?></td>
                 <td><?= h($largeImageBoxes->dir) ?></td>
                 <td><?= h($largeImageBoxes->text) ?></td>
                 <td><?= h($largeImageBoxes->locale) ?></td>
-                <td><?= h($largeImageBoxes->link) ?></td>
                 <td><?= h($largeImageBoxes->blog_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'LargeImageBoxes', 'action' => 'view', $largeImageBoxes->id]) ?>
@@ -172,24 +178,24 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Order') ?></th>
                 <th scope="col"><?= __('Title') ?></th>
                 <th scope="col"><?= __('Photo') ?></th>
                 <th scope="col"><?= __('Dir') ?></th>
                 <th scope="col"><?= __('Subtitle') ?></th>
                 <th scope="col"><?= __('Locale') ?></th>
-                <th scope="col"><?= __('Link') ?></th>
                 <th scope="col"><?= __('Blog Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($blog->responsive_image_boxes as $responsiveImageBoxes): ?>
             <tr>
                 <td><?= h($responsiveImageBoxes->id) ?></td>
+                <td><?= h($responsiveImageBoxes->order) ?></td>
                 <td><?= h($responsiveImageBoxes->title) ?></td>
                 <td><?= h($responsiveImageBoxes->photo) ?></td>
                 <td><?= h($responsiveImageBoxes->dir) ?></td>
                 <td><?= h($responsiveImageBoxes->subtitle) ?></td>
                 <td><?= h($responsiveImageBoxes->locale) ?></td>
-                <td><?= h($responsiveImageBoxes->link) ?></td>
                 <td><?= h($responsiveImageBoxes->blog_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'ResponsiveImageBoxes', 'action' => 'view', $responsiveImageBoxes->id]) ?>
@@ -207,24 +213,24 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Order') ?></th>
                 <th scope="col"><?= __('Title') ?></th>
                 <th scope="col"><?= __('Photo') ?></th>
                 <th scope="col"><?= __('Dir') ?></th>
                 <th scope="col"><?= __('Text') ?></th>
                 <th scope="col"><?= __('Locale') ?></th>
-                <th scope="col"><?= __('Link') ?></th>
                 <th scope="col"><?= __('Blog Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($blog->small_image_boxes as $smallImageBoxes): ?>
             <tr>
                 <td><?= h($smallImageBoxes->id) ?></td>
+                <td><?= h($smallImageBoxes->order) ?></td>
                 <td><?= h($smallImageBoxes->title) ?></td>
                 <td><?= h($smallImageBoxes->photo) ?></td>
                 <td><?= h($smallImageBoxes->dir) ?></td>
                 <td><?= h($smallImageBoxes->text) ?></td>
                 <td><?= h($smallImageBoxes->locale) ?></td>
-                <td><?= h($smallImageBoxes->link) ?></td>
                 <td><?= h($smallImageBoxes->blog_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'SmallImageBoxes', 'action' => 'view', $smallImageBoxes->id]) ?>

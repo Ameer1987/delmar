@@ -16,6 +16,7 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('order') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('author_name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
@@ -27,6 +28,7 @@
             <?php foreach ($testimonials as $testimonial): ?>
             <tr>
                 <td><?= $this->Number->format($testimonial->id) ?></td>
+                <td><?= $this->Number->format($testimonial->order) ?></td>
                 <td><?= h($testimonial->author_name) ?></td>
                 <td><?= h($testimonial->locale) ?></td>
                 <td><?= h($testimonial->photo) ?></td>

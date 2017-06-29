@@ -39,16 +39,16 @@
             <td><?= h($responsiveImageBox->locale) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Link') ?></th>
-            <td><?= h($responsiveImageBox->link) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Blog') ?></th>
             <td><?= $responsiveImageBox->has('blog') ? $this->Html->link($responsiveImageBox->blog->title, ['controller' => 'Blogs', 'action' => 'view', $responsiveImageBox->blog->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($responsiveImageBox->id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Order') ?></th>
+            <td><?= $this->Number->format($responsiveImageBox->order) ?></td>
         </tr>
     </table>
 </div>

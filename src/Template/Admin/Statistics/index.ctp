@@ -16,6 +16,7 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('order') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('number_1') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('number_2') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('number_3') ?></th>
@@ -34,6 +35,7 @@
             <?php foreach ($statistics as $statistic): ?>
             <tr>
                 <td><?= $this->Number->format($statistic->id) ?></td>
+                <td><?= $this->Number->format($statistic->order) ?></td>
                 <td><?= h($statistic->number_1) ?></td>
                 <td><?= h($statistic->number_2) ?></td>
                 <td><?= h($statistic->number_3) ?></td>

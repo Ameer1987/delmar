@@ -20,6 +20,7 @@
     <fieldset>
         <legend><?= __('Edit Statistic') ?></legend>
         <?php
+            echo $this->Form->control('order');
             echo $this->Form->control('number_1');
             echo $this->Form->control('number_2');
             echo $this->Form->control('number_3');

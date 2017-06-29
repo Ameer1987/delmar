@@ -1,19 +1,19 @@
 <?php
 /**
   * @var \App\View\AppView $this
-  * @var \App\Model\Entity\LargeImageBox[]|\Cake\Collection\CollectionInterface $largeImageBoxes
+  * @var \App\Model\Entity\Service[]|\Cake\Collection\CollectionInterface $services
   */
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Large Image Box'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('New Service'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="largeImageBoxes index large-9 medium-8 columns content">
-    <h3><?= __('Large Image Boxes') ?></h3>
+<div class="services index large-9 medium-8 columns content">
+    <h3><?= __('Services') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -28,19 +28,19 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($largeImageBoxes as $largeImageBox): ?>
+            <?php foreach ($services as $service): ?>
             <tr>
-                <td><?= $this->Number->format($largeImageBox->id) ?></td>
-                <td><?= $this->Number->format($largeImageBox->order) ?></td>
-                <td><?= h($largeImageBox->title) ?></td>
-                <td><?= h($largeImageBox->photo) ?></td>
-                <td><?= h($largeImageBox->dir) ?></td>
-                <td><?= h($largeImageBox->locale) ?></td>
-                <td><?= $largeImageBox->has('blog') ? $this->Html->link($largeImageBox->blog->title, ['controller' => 'Blogs', 'action' => 'view', $largeImageBox->blog->id]) : '' ?></td>
+                <td><?= $this->Number->format($service->id) ?></td>
+                <td><?= $this->Number->format($service->order) ?></td>
+                <td><?= h($service->title) ?></td>
+                <td><?= h($service->photo) ?></td>
+                <td><?= h($service->dir) ?></td>
+                <td><?= h($service->locale) ?></td>
+                <td><?= $service->has('blog') ? $this->Html->link($service->blog->title, ['controller' => 'Blogs', 'action' => 'view', $service->blog->id]) : '' ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $largeImageBox->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $largeImageBox->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $largeImageBox->id], ['confirm' => __('Are you sure you want to delete # {0}?', $largeImageBox->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $service->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $service->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $service->id], ['confirm' => __('Are you sure you want to delete # {0}?', $service->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

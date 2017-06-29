@@ -28,6 +28,7 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('order') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('dir') ?></th>
@@ -39,6 +40,7 @@
             <?php foreach ($blogs as $blog): ?>
             <tr>
                 <td><?= $this->Number->format($blog->id) ?></td>
+                <td><?= $this->Number->format($blog->order) ?></td>
                 <td><?= h($blog->title) ?></td>
                 <td><?= h($blog->photo) ?></td>
                 <td><?= h($blog->dir) ?></td>

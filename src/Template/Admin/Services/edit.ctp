@@ -1,4 +1,5 @@
 <?php
+
 /**
   * @var \App\View\AppView $this
   */
@@ -8,19 +9,20 @@
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
                 __('Delete'),
-                ['action' => 'delete', $largeImageBox->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $largeImageBox->id)]
+                ['action' => 'delete', $service->id],
+                ['confirm' => __('Are you sure you want to delete # {0}?', $service->id)]
             )
         ?></li>
-        <li><?= $this->Html->link(__('List Large Image Boxes'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Services'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="largeImageBoxes form large-9 medium-8 columns content">
-    <?= $this->Form->create($largeImageBox, ['type' => 'file']); ?>
+<div class="services form large-9 medium-8 columns content">
+        <?= $this->Form->create($service, ['type' => 'file']); ?>
+
     <fieldset>
-        <legend><?= __('Edit Large Image Box') ?></legend>
+        <legend><?= __('Edit Service') ?></legend>
         <?php
             echo $this->Form->control('order');
             echo $this->Form->control('title');
