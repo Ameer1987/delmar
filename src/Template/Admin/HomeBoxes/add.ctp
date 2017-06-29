@@ -21,7 +21,7 @@
             $this->Form->input('dir', ['type' => 'hidden']);
             echo $this->Form->control('link');
             echo $this->Form->control('avatar');
-            echo $this->Form->control('text');
+            echo $this->Ck->input('text');
             echo $this->Form->control('locale');
             echo $this->Form->control('blog_id', ['options' => $blogs]);
         ?>

@@ -21,7 +21,7 @@
         <legend><?= __('Edit Testimonial') ?></legend>
         <?php
             echo $this->Form->control('author_name');
-            echo $this->Form->control('text');
+            echo $this->Ck->input('text');
             echo $this->Form->control('locale');
             echo $this->Form->input('photo', ['type' => 'file']);
             $this->Form->input('dir', ['type' => 'hidden']);
