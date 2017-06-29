@@ -61,6 +61,9 @@ class PagesController extends AppController {
         $Testimonials = TableRegistry::get('Testimonials')->find('all');
         $this->set('Testimonials', $Testimonials->toArray());
 
+        $BlockTabs = TableRegistry::get('BlockTabs')->find('all');
+        $this->set('BlockTabs', $BlockTabs->toArray());
+
         $this->set('dir', "ltr");
         $this->set('lang', "en");
     }
