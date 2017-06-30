@@ -7,17 +7,17 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Testimonials Model
+ * SliderBranches Model
  *
- * @method \App\Model\Entity\Testimonial get($primaryKey, $options = [])
- * @method \App\Model\Entity\Testimonial newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\Testimonial[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\Testimonial|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\Testimonial patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\Testimonial[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\Testimonial findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\SliderBranch get($primaryKey, $options = [])
+ * @method \App\Model\Entity\SliderBranch newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\SliderBranch[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\SliderBranch|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\SliderBranch patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\SliderBranch[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\SliderBranch findOrCreate($search, callable $callback = null, $options = [])
  */
-class TestimonialsTable extends Table
+class SliderBranchesTable extends Table
 {
 
     /**
@@ -30,8 +30,8 @@ class TestimonialsTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('testimonials');
-        $this->setDisplayField('id');
+        $this->setTable('slider_branches');
+        $this->setDisplayField('title');
         $this->setPrimaryKey('id');
     }
 
@@ -53,8 +53,20 @@ class TestimonialsTable extends Table
             ->notEmpty('order');
 
         $validator
-            ->requirePresence('author_name', 'create')
-            ->notEmpty('author_name');
+            ->requirePresence('title', 'create')
+            ->notEmpty('title');
+
+        $validator
+            ->requirePresence('subtitle', 'create')
+            ->notEmpty('subtitle');
+
+        $validator
+            ->requirePresence('longitude', 'create')
+            ->notEmpty('longitude');
+
+        $validator
+            ->requirePresence('latitude', 'create')
+            ->notEmpty('latitude');
 
         $validator
             ->requirePresence('text', 'create')

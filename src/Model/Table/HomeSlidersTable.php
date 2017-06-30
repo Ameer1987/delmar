@@ -55,6 +55,11 @@ class HomeSlidersTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
+            ->integer('order')
+            ->requirePresence('order', 'create')
+            ->notEmpty('order');
+
+        $validator
             ->requirePresence('layer1', 'create')
             ->notEmpty('layer1');
 

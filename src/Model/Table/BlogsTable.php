@@ -9,10 +9,12 @@ use Cake\Validation\Validator;
 /**
  * Blogs Model
  *
+ * @property |\Cake\ORM\Association\HasMany $BlockTabs
  * @property \App\Model\Table\HomeBoxesTable|\Cake\ORM\Association\HasMany $HomeBoxes
  * @property \App\Model\Table\HomeSlidersTable|\Cake\ORM\Association\HasMany $HomeSliders
  * @property \App\Model\Table\LargeImageBoxesTable|\Cake\ORM\Association\HasMany $LargeImageBoxes
  * @property \App\Model\Table\ResponsiveImageBoxesTable|\Cake\ORM\Association\HasMany $ResponsiveImageBoxes
+ * @property |\Cake\ORM\Association\HasMany $Services
  * @property \App\Model\Table\SmallImageBoxesTable|\Cake\ORM\Association\HasMany $SmallImageBoxes
  * @property \App\Model\Table\SocialLinksTable|\Cake\ORM\Association\HasMany $SocialLinks
  *
@@ -41,6 +43,9 @@ class BlogsTable extends Table
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
 
+        $this->hasMany('BlockTabs', [
+            'foreignKey' => 'blog_id'
+        ]);
         $this->hasMany('HomeBoxes', [
             'foreignKey' => 'blog_id'
         ]);
@@ -51,6 +56,9 @@ class BlogsTable extends Table
             'foreignKey' => 'blog_id'
         ]);
         $this->hasMany('ResponsiveImageBoxes', [
+            'foreignKey' => 'blog_id'
+        ]);
+        $this->hasMany('Services', [
             'foreignKey' => 'blog_id'
         ]);
         $this->hasMany('SmallImageBoxes', [
@@ -72,6 +80,11 @@ class BlogsTable extends Table
         $validator
             ->integer('id')
             ->allowEmpty('id', 'create');
+
+        $validator
+            ->integer('order')
+            ->requirePresence('order', 'create')
+            ->notEmpty('order');
 
         $validator
             ->requirePresence('title', 'create')

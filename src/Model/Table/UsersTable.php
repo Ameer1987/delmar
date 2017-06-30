@@ -87,12 +87,12 @@ class UsersTable extends Table {
             ->notEmpty('role');
 
 //        $validator
-//                ->requirePresence('photo', 'create')
-//                ->notEmpty('photo');
+//            ->requirePresence('photo', 'create')
+//            ->notEmpty('photo');
 //
 //        $validator
-//                ->requirePresence('dir', 'create')
-//                ->notEmpty('dir');
+//            ->requirePresence('dir', 'create')
+//            ->notEmpty('dir');
 
         return $validator;
     }

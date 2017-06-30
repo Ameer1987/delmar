@@ -7,19 +7,19 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * HomeBoxes Model
+ * Services Model
  *
  * @property \App\Model\Table\BlogsTable|\Cake\ORM\Association\BelongsTo $Blogs
  *
- * @method \App\Model\Entity\HomeBox get($primaryKey, $options = [])
- * @method \App\Model\Entity\HomeBox newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\HomeBox[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\HomeBox|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\HomeBox patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\HomeBox[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\HomeBox findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\Service get($primaryKey, $options = [])
+ * @method \App\Model\Entity\Service newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\Service[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\Service|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\Service patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\Service[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\Service findOrCreate($search, callable $callback = null, $options = [])
  */
-class HomeBoxesTable extends Table
+class ServicesTable extends Table
 {
 
     /**
@@ -32,7 +32,7 @@ class HomeBoxesTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('home_boxes');
+        $this->setTable('services');
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
 
@@ -70,12 +70,6 @@ class HomeBoxesTable extends Table
 //        $validator
 //            ->requirePresence('dir', 'create')
 //            ->notEmpty('dir');
-
-        
-
-        $validator
-            ->requirePresence('avatar', 'create')
-            ->notEmpty('avatar');
 
         $validator
             ->requirePresence('text', 'create')

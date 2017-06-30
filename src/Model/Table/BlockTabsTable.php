@@ -7,19 +7,19 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * HomeBoxes Model
+ * BlockTabs Model
  *
  * @property \App\Model\Table\BlogsTable|\Cake\ORM\Association\BelongsTo $Blogs
  *
- * @method \App\Model\Entity\HomeBox get($primaryKey, $options = [])
- * @method \App\Model\Entity\HomeBox newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\HomeBox[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\HomeBox|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\HomeBox patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\HomeBox[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\HomeBox findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\BlockTab get($primaryKey, $options = [])
+ * @method \App\Model\Entity\BlockTab newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\BlockTab[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\BlockTab|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\BlockTab patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\BlockTab[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\BlockTab findOrCreate($search, callable $callback = null, $options = [])
  */
-class HomeBoxesTable extends Table
+class BlockTabsTable extends Table
 {
 
     /**
@@ -32,7 +32,7 @@ class HomeBoxesTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('home_boxes');
+        $this->setTable('block_tabs');
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
 
@@ -63,19 +63,9 @@ class HomeBoxesTable extends Table
             ->requirePresence('title', 'create')
             ->notEmpty('title');
 
-//        $validator
-//            ->requirePresence('photo', 'create')
-//            ->notEmpty('photo');
-//
-//        $validator
-//            ->requirePresence('dir', 'create')
-//            ->notEmpty('dir');
-
-        
-
         $validator
-            ->requirePresence('avatar', 'create')
-            ->notEmpty('avatar');
+            ->requirePresence('subtitle', 'create')
+            ->notEmpty('subtitle');
 
         $validator
             ->requirePresence('text', 'create')
@@ -84,6 +74,22 @@ class HomeBoxesTable extends Table
         $validator
             ->requirePresence('locale', 'create')
             ->notEmpty('locale');
+
+//        $validator
+//            ->requirePresence('photo', 'create')
+//            ->notEmpty('photo');
+//
+//        $validator
+//            ->requirePresence('dir', 'create')
+//            ->notEmpty('dir');
+
+        $validator
+            ->requirePresence('header_icon', 'create')
+            ->notEmpty('header_icon');
+
+        $validator
+            ->requirePresence('header_title', 'create')
+            ->notEmpty('header_title');
 
         return $validator;
     }
