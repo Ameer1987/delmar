@@ -159,66 +159,13 @@ $this->layout = 'pages';
             </div>
             <div class="section-content">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="icon-box left media p-0">
-                            <a href="#" class="media-left pull-left"><img src="images/flaticon-png-medical/small/blood-transfusion.png" alt="" width="64"></a>
-                            <div class="media-body">
-                                <h5 class="media-heading heading">Emergency Care</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum consectetur sit ullam perspiciatis, deserunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="icon-box left media p-0">
-                            <a href="#" class="media-left pull-left"><img src="images/flaticon-png-medical/small/cardiogram-2.png" alt="" width="64"></a>
-                            <div class="media-body">
-                                <h5 class="media-heading heading">Operation Theatre</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum consectetur sit ullam perspiciatis, deserunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="icon-box left media p-0">
-                            <a href="#" class="media-left pull-left"><img src="images/flaticon-png-medical/small/stethoscope.png" alt="" width="64"></a>
-                            <div class="media-body">
-                                <h5 class="media-heading heading">Outdoor Checkup</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum consectetur sit ullam perspiciatis, deserunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="icon-box left media p-0">
-                            <a href="#" class="media-left pull-left"><img src="images/flaticon-png-medical/small/antibiotic.png" alt="" width="64"></a>
-                            <div class="media-body">
-                                <h5 class="media-heading heading">Cancer Service</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum consectetur sit ullam perspiciatis, deserunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="icon-box left media p-0">
-                            <a href="#" class="media-left pull-left"><img src="images/flaticon-png-medical/small/syringe-2.png" alt="" width="64"></a>
-                            <div class="media-body">
-                                <h5 class="media-heading heading">Blood Test</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum consectetur sit ullam perspiciatis, deserunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="icon-box left media p-0">
-                            <a href="#" class="media-left pull-left"><img src="images/flaticon-png-medical/small/pills.png" alt="" width="64"></a>
-                            <div class="media-body">
-                                <h5 class="media-heading heading">Pharmacy</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum consectetur sit ullam perspiciatis, deserunt.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <?= $this->element('services') ?>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section: Specialities -->
+    <!-- Section: block tabs -->
     <section data-bg-img="images/pattern/p4.png" id="departments">
         <div class="container pb-70">
             <div class="section-title text-center">
