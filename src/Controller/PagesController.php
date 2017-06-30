@@ -37,8 +37,8 @@ class PagesController extends AppController {
      *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
      */
     public function home() {
-        $SocialLinks = TableRegistry::get('SocialLinks')->find('all');
-        $this->set('SocialLinks', $SocialLinks->first());
+        $Contacts = TableRegistry::get('Contacts')->find('all');
+        $this->set('Contacts', $Contacts->first());
 
         $HomeSliders = TableRegistry::get('HomeSliders')->find('all');
         $this->set('HomeSliders', $HomeSliders->toArray());
@@ -75,16 +75,16 @@ class PagesController extends AppController {
     }
 
     public function contactNow() {
-        $SocialLinks = TableRegistry::get('SocialLinks')->find('all');
-        $this->set('SocialLinks', $SocialLinks->first());
+        $Contacts = TableRegistry::get('Contacts')->find('all');
+        $this->set('Contacts', $Contacts->first());
 
         $this->set('dir', "ltr");
         $this->set('lang', "en");
     }
 
     public function nearestBranch() {
-        $SocialLinks = TableRegistry::get('SocialLinks')->find('all');
-        $this->set('SocialLinks', $SocialLinks->first());
+        $Contacts = TableRegistry::get('Contacts')->find('all');
+        $this->set('Contacts', $Contacts->first());
 
         $this->set('dir', "ltr");
         $this->set('lang', "en");
