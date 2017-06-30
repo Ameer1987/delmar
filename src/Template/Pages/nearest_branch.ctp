@@ -70,13 +70,6 @@ $this->layout = 'pages';
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-12">
-                            <div class="icon-box left media bg-deep p-30 mb-20"> <a class="media-left pull-left" href="#"> <i class="fa fa-skype text-theme-colored"></i></a>
-                                <div class="media-body"> <strong>Make a Video Call</strong>
-                                    <p>ThemeMascotSkype</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
