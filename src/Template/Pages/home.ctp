@@ -62,7 +62,7 @@ $this->layout = 'pages';
                             <div class="opening-hours text-left">
                                 <ul class="list-unstyled">
                                     <li class="clearfix"> 
-                                        <span> HQ Techno Pharm Egypt Ltd. (5 Emad El Din - Downtown  </span>
+                                        <span> HQ Techno Pharm Egypt Ltd. (5 Emad El Din - Downtown)  </span>
                                     </li>
                                     <li class="clearfix line-height-1"> 
                                         <span> (19955) hotline to call 24 hours </span>
