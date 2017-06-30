@@ -58,22 +58,22 @@ $this->layout = 'pages';
                 <div class="row">
                     <div class="col-md-4 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="border-10px p-30 bg-white">
-                            <h5><i class="fa fa-clock-o text-theme-colored"></i> Opening Hours</h5>
+                            <h5><i class="fa fa-clock-o text-theme-colored"></i> Contact Us </h5>
                             <div class="opening-hours text-left">
                                 <ul class="list-unstyled">
-                                    <li class="clearfix line-height-1"> <span> Monday - Friday </span>
-                                        <div class="value"> 9.00 - 20.00 </div>
+                                    <li class="clearfix"> 
+                                        <span> HQ Techno Pharm Egypt Ltd. (5 Emad El Din - Downtown  </span>
                                     </li>
-                                    <li class="clearfix line-height-1"> <span> Saturday </span>
-                                        <div class="value"> 10.00 - 16.00 </div>
+                                    <li class="clearfix line-height-1"> 
+                                        <span> (19955) hotline to call 24 hours </span>
                                     </li>
-                                    <li class="clearfix line-height-1"> <span> Sunday </span>
-                                        <div class="value"> 9.30 - 18.00 </div>
+                                    <li class="clearfix line-height-1"> 
+                                        <span> Email: INFO@delmar-attalla.com  </span>
                                     </li>
                                 </ul>
                             </div>
                             <h5 class="mt-30"><i class="fa fa-pencil-square-o text-theme-colored"></i> Need Help?</h5>
-                            <p class="mt-0">Just make an appointment to get help from our experts</p>
+                            <p class="mt-0">For any needed information, feedback or complaints.</p>
                             <a href="#" class="btn btn-dark btn-theme-colored btn-sm">Contact Now</a>
                         </div>
                     </div>
