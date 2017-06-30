@@ -6,21 +6,23 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Social Links'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Text Blocks'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="socialLinks form large-9 medium-8 columns content">
-    <?= $this->Form->create($socialLink) ?>
+<div class="textBlocks form large-9 medium-8 columns content">
+        <?= $this->Form->create($textBlock, ['type' => 'file']); ?>
+
     <fieldset>
-        <legend><?= __('Add Social Link') ?></legend>
+        <legend><?= __('Add Text Block') ?></legend>
         <?php
-            echo $this->Form->control('facebook');
-            echo $this->Form->control('twitter');
-            echo $this->Form->control('google_plus');
-            echo $this->Form->control('instagram');
-            echo $this->Form->control('linkedin');
+            echo $this->Form->control('order');
+            echo $this->Form->control('title');
+            echo $this->Form->input('photo', ['type' => 'file']);
+            $this->Form->input('dir', ['type' => 'hidden']);
+            echo $this->Ck->input('text');
+            echo $this->Form->control('locale');
             echo $this->Form->control('blog_id', ['options' => $blogs]);
         ?>
     </fieldset>

@@ -7,19 +7,19 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * SocialLinks Model
+ * TextBlocks Model
  *
  * @property \App\Model\Table\BlogsTable|\Cake\ORM\Association\BelongsTo $Blogs
  *
- * @method \App\Model\Entity\SocialLink get($primaryKey, $options = [])
- * @method \App\Model\Entity\SocialLink newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\SocialLink[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\SocialLink|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\SocialLink patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\SocialLink[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\SocialLink findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\TextBlock get($primaryKey, $options = [])
+ * @method \App\Model\Entity\TextBlock newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\TextBlock[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\TextBlock|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\TextBlock patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\TextBlock[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\TextBlock findOrCreate($search, callable $callback = null, $options = [])
  */
-class SocialLinksTable extends Table
+class TextBlocksTable extends Table
 {
 
     /**
@@ -32,7 +32,7 @@ class SocialLinksTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('social_links');
+        $this->setTable('text_blocks');
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
 
@@ -55,24 +55,29 @@ class SocialLinksTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('facebook', 'create')
-            ->notEmpty('facebook');
+            ->integer('order')
+            ->requirePresence('order', 'create')
+            ->notEmpty('order');
 
         $validator
-            ->requirePresence('twitter', 'create')
-            ->notEmpty('twitter');
+            ->requirePresence('title', 'create')
+            ->notEmpty('title');
+
+//        $validator
+//            ->requirePresence('photo', 'create')
+//            ->notEmpty('photo');
+//
+//        $validator
+//            ->requirePresence('dir', 'create')
+//            ->notEmpty('dir');
 
         $validator
-            ->requirePresence('google_plus', 'create')
-            ->notEmpty('google_plus');
+            ->requirePresence('text', 'create')
+            ->notEmpty('text');
 
         $validator
-            ->requirePresence('instagram', 'create')
-            ->notEmpty('instagram');
-
-        $validator
-            ->requirePresence('linkedin', 'create')
-            ->notEmpty('linkedin');
+            ->requirePresence('locale', 'create')
+            ->notEmpty('locale');
 
         return $validator;
     }

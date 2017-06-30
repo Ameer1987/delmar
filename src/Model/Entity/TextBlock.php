@@ -4,19 +4,20 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * SocialLink Entity
+ * TextBlock Entity
  *
  * @property int $id
- * @property string $facebook
- * @property string $twitter
- * @property string $google_plus
- * @property string $instagram
- * @property string $linkedin
+ * @property int $order
+ * @property string $title
+ * @property string $photo
+ * @property string $dir
+ * @property string $text
+ * @property string $locale
  * @property int $blog_id
  *
  * @property \App\Model\Entity\Blog $blog
  */
-class SocialLink extends Entity
+class TextBlock extends Entity
 {
 
     /**

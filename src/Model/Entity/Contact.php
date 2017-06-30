@@ -4,20 +4,30 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Service Entity
+ * Contact Entity
  *
  * @property int $id
- * @property int $order
- * @property string $title
- * @property string $photo
- * @property string $dir
- * @property string $text
+ * @property string $facebook
+ * @property string $twitter
+ * @property string $google_plus
+ * @property string $instagram
+ * @property string $linkedin
+ * @property string $address
+ * @property string $tel1
+ * @property string $tel2
+ * @property string $mob
+ * @property string $email
+ * @property string $longitude
+ * @property string $latitude
+ * @property string $hotline
  * @property string $locale
+ * @property string $text
+ * @property string $name
  * @property int $blog_id
  *
  * @property \App\Model\Entity\Blog $blog
  */
-class Service extends Entity
+class Contact extends Entity
 {
 
     /**
