@@ -20,7 +20,7 @@ $this->layout = 'pages';
     <!-- Divider: Contact -->
     <section class="divider">
         <div class="container pt-0 pb-0">
-            <div class="section-title mt-30 mb-0">
+            <div class="section-title mt-30 mb-10">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="esc-heading small-border">
