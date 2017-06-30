@@ -120,11 +120,11 @@ $this->layout = 'pages';
                     <h3 class="line-bottom mt-0">Get in touch with us</h3>
                     <p>For any inquiries, please feel free to contact us using any of the contacts below.</p>
                     <ul class="styled-icons icon-dark icon-sm icon-circled mb-20">
-                        <li><a target="_blank" href="<?= $SocialLinks['facebook'] ?>" data-bg-color="#3B5998"><i class="fa fa-facebook"></i></a></li>
-                        <li><a target="_blank" href="<?= $SocialLinks['twitter'] ?>" data-bg-color="#02B0E8"><i class="fa fa-twitter"></i></a></li>
-                        <li><a target="_blank" href="<?= $SocialLinks['google_plus'] ?>" data-bg-color="#D71619"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a target="_blank" href="<?= $SocialLinks['instagram'] ?>" data-bg-color="#D9CCB9"><i class="fa fa-instagram"></i></a></li>
-                        <li><a target="_blank" href="<?= $SocialLinks['linkedin'] ?>" data-bg-color="#3B5998"><i class="fa fa-linkedin text-white"></i></a></li>
+                        <li><a target="_blank" href="<?= $Contacts['facebook'] ?>" data-bg-color="#3B5998"><i class="fa fa-facebook"></i></a></li>
+                        <li><a target="_blank" href="<?= $Contacts['twitter'] ?>" data-bg-color="#02B0E8"><i class="fa fa-twitter"></i></a></li>
+                        <li><a target="_blank" href="<?= $Contacts['google_plus'] ?>" data-bg-color="#D71619"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a target="_blank" href="<?= $Contacts['instagram'] ?>" data-bg-color="#D9CCB9"><i class="fa fa-instagram"></i></a></li>
+                        <li><a target="_blank" href="<?= $Contacts['linkedin'] ?>" data-bg-color="#3B5998"><i class="fa fa-linkedin text-white"></i></a></li>
                     </ul>
 
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-20" href="#"> <i class="pe-7s-map-2 text-theme-colored"></i></a>
