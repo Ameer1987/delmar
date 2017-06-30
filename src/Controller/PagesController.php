@@ -64,6 +64,9 @@ class PagesController extends AppController {
         $BlockTabs = TableRegistry::get('BlockTabs')->find('all');
         $this->set('BlockTabs', $BlockTabs->toArray());
 
+        $Services = TableRegistry::get('Services')->find('all');
+        $this->set('Services', $Services->toArray());
+
         $this->set('dir', "ltr");
         $this->set('lang', "en");
     }
