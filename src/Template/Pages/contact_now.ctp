@@ -43,7 +43,7 @@ $this->layout = 'pages';
         <div class="container">
             <div class="row pt-30">
                 <div class="col-md-6">
-                    <h3 class="line-bottom mt-0 mb-30">Interested in discussing?</h3>
+                    <h3 class="line-bottom mt-0 mb-30">Send Us a Message:</h3>
 
                     <!-- Contact Form -->
                     <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php" method="post">
@@ -118,39 +118,31 @@ $this->layout = 'pages';
                 </div>
                 <div class="col-md-6">
                     <h3 class="line-bottom mt-0">Get in touch with us</h3>
-                    <p>Aliquam officia dolor rerum enim doloremque iusto eos atque tempora dignissimos similique, quae, maxime sit accusantium delectus.</p>
+                    <p>For any inquiries, please feel free to contact us using any of the following contacts.</p>
                     <ul class="styled-icons icon-dark icon-sm icon-circled mb-20">
-                        <li><a href="#" data-bg-color="#3B5998"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" data-bg-color="#02B0E8"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" data-bg-color="#4C75A3"><i class="fa fa-vk"></i></a></li>
-                        <li><a href="#" data-bg-color="#D9CCB9"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#" data-bg-color="#D71619"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#" data-bg-color="#A4CA39"><i class="fa fa-android"></i></a></li>
-                        <li><a href="#" data-bg-color="#4C75A3"><i class="fa fa-vk"></i></a></li>
+                        <li><a target="_blank" href="<?= $SocialLinks['facebook'] ?>" data-bg-color="#3B5998"><i class="fa fa-facebook"></i></a></li>
+                        <li><a target="_blank" href="<?= $SocialLinks['twitter'] ?>" data-bg-color="#02B0E8"><i class="fa fa-twitter"></i></a></li>
+                        <li><a target="_blank" href="<?= $SocialLinks['google_plus'] ?>" data-bg-color="#D71619"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a target="_blank" href="<?= $SocialLinks['instagram'] ?>" data-bg-color="#D9CCB9"><i class="fa fa-instagram"></i></a></li>
+                        <li><a target="_blank" href="<?= $SocialLinks['linkedin'] ?>" data-bg-color="#3B5998"><i class="fa fa-linkedin text-white"></i></a></li>
                     </ul>
 
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-20" href="#"> <i class="pe-7s-map-2 text-theme-colored"></i></a>
                         <div class="media-body">
-                            <h5 class="mt-0">Our Office Location</h5>
-                            <p>#405, Lan Streen, Los Vegas, USA</p>
+                            <h5 class="mt-0">Headquarter Location</h5>
+                            <p>HQ Techno Pharm Egypt Ltd. (5 Emad El Din - Downtown)</p>
                         </div>
                     </div>
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-15" href="#"> <i class="pe-7s-call text-theme-colored"></i></a>
                         <div class="media-body">
-                            <h5 class="mt-0">Contact Number</h5>
-                            <p><a href="tel:+325-12345-65478">+325-12345-65478</a></p>
+                            <h5 class="mt-0">Call center</h5>
+                            <p><a href="tel:19955">(19955) hotline to call 24 hours</a></p>
                         </div>
                     </div>
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-15" href="#"> <i class="pe-7s-mail text-theme-colored"></i></a>
                         <div class="media-body">
                             <h5 class="mt-0">Email Address</h5>
-                            <p><a href="mailto:supporte@yourdomin.com">supporte@yourdomin.com</a></p>
-                        </div>
-                    </div>
-                    <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-20" href="#"> <i class="fa fa-skype text-theme-colored"></i></a>
-                        <div class="media-body">
-                            <h5 class="mt-0">Make a Video Call</h5>
-                            <p>ThemeMascotSkype</p>
+                            <p><a href="mailto:INFO@delmar-attalla.com">Email: INFO@delmar-attalla.com</a></p>
                         </div>
                     </div>
                 </div>
