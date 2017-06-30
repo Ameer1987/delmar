@@ -7,6 +7,7 @@ use Cake\ORM\Entity;
  * Testimonial Entity
  *
  * @property int $id
+ * @property int $order
  * @property string $author_name
  * @property string $text
  * @property string $locale

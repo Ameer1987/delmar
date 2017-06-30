@@ -4,20 +4,20 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * SmallImageBox Entity
+ * SliderBranch Entity
  *
  * @property int $id
  * @property int $order
  * @property string $title
- * @property string $photo
- * @property string $dir
+ * @property string $subtitle
+ * @property string $longitude
+ * @property string $latitude
  * @property string $text
  * @property string $locale
- * @property int $blog_id
- *
- * @property \App\Model\Entity\Blog $blog
+ * @property string $photo
+ * @property string $dir
  */
-class SmallImageBox extends Entity
+class SliderBranch extends Entity
 {
 
     /**

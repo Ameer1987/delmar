@@ -4,7 +4,7 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * SmallImageBox Entity
+ * Service Entity
  *
  * @property int $id
  * @property int $order
@@ -17,7 +17,7 @@ use Cake\ORM\Entity;
  *
  * @property \App\Model\Entity\Blog $blog
  */
-class SmallImageBox extends Entity
+class Service extends Entity
 {
 
     /**

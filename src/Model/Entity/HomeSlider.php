@@ -7,6 +7,7 @@ use Cake\ORM\Entity;
  * HomeSlider Entity
  *
  * @property int $id
+ * @property int $order
  * @property string $layer1
  * @property string $layer2
  * @property string $layer3
