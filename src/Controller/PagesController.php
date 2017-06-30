@@ -82,4 +82,12 @@ class PagesController extends AppController {
         $this->set('lang', "en");
     }
 
+    public function nearestBranch() {
+        $SocialLinks = TableRegistry::get('SocialLinks')->find('all');
+        $this->set('SocialLinks', $SocialLinks->first());
+
+        $this->set('dir', "ltr");
+        $this->set('lang', "en");
+    }
+
 }
