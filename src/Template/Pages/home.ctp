@@ -79,63 +79,7 @@ $this->layout = 'pages';
                     </div>
                     <div class="col-md-8 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="owl-carousel-1col owl-dots-bottom-right" data-dots="true">
-                            <div class="item">
-                                <div class="row-fluid">
-                                    <div class="col-md-5">
-                                        <img src="images/team/h1.jpg" alt="">
-                                    </div>
-                                    <div class="col-md-7">
-                                        <h5 class="mb-0 text-black-999">Gynaecologist</h5>
-                                        <h2 class="line-bottom mt-0">Dr. Brian Adam</h2>
-                                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam maxime nesciunt ex modi minus illum nemo provident ducimus, velit magnam consectetur adipisicing nemo provident ducimus, velit magnam.</p>
-                                        <a href="#" class="btn-read-more mt-15">Contact Now</a>
-                                        <ul class="styled-icons icon-theme-colored icon-circled icon-dark icon-sm mt-20">
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row-fluid">
-                                    <div class="col-md-5">
-                                        <img src="images/team/h2.jpg" alt="">
-                                    </div>
-                                    <div class="col-md-7">
-                                        <h5 class="mb-0 text-black-999">Gynaecologist</h5>
-                                        <h2 class="line-bottom mt-0">Dr. Brian Adam</h2>
-                                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam maxime nesciunt ex modi minus illum nemo provident ducimus, velit magnam consectetur adipisicing nemo provident ducimus, velit magnam.</p>
-                                        <a href="#" class="btn-read-more mt-15">Contact Now</a>
-                                        <ul class="styled-icons icon-theme-colored icon-circled icon-dark icon-sm mt-20">
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row-fluid">
-                                    <div class="col-md-5">
-                                        <img src="images/team/h3.jpg" alt="">
-                                    </div>
-                                    <div class="col-md-7">
-                                        <h5 class="mb-0 text-black-999">Gynaecologist</h5>
-                                        <h2 class="line-bottom mt-0">Dr. Brian Adam</h2>
-                                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam maxime nesciunt ex modi minus illum nemo provident ducimus, velit magnam consectetur adipisicing nemo provident ducimus, velit magnam.</p>
-                                        <a href="#" class="btn-read-more mt-15">Contact Now</a>
-                                        <ul class="styled-icons icon-theme-colored icon-circled icon-dark icon-sm mt-20">
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            <?= $this->element('slider_branches') ?>
                         </div>
                     </div>
                 </div>
