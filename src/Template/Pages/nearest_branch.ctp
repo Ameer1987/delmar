@@ -28,6 +28,8 @@ $this->layout = 'pages';
                 </div>
             </div>
         </div>
+    </section>
+    <section class="divider">
         <div class="container pt-sm-10 pb-sm-30">
             <div class="row pt-30">
                 <div class="col-md-4">
