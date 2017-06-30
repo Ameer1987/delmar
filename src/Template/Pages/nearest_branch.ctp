@@ -19,7 +19,7 @@ $this->layout = 'pages';
 <div class="main-content">
     <!-- Divider: Contact -->
     <section class="divider">
-        <div class="section-title mb-60">
+        <div class="section-title mt-30 mb-0">
             <div class="row">
                 <div class="col-md-12">
                     <div class="esc-heading small-border text-center">
@@ -30,8 +30,8 @@ $this->layout = 'pages';
         </div>
     </section>
     <section class="divider">
-        <div class="container pt-sm-10 pb-sm-30">
-            <div class="row pt-30">
+        <div class="container pt-0 pb-sm-30">
+            <div class="row pt-10">
                 <div class="col-md-4">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
