@@ -48,6 +48,11 @@ class TestimonialsTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
+            ->integer('order')
+            ->requirePresence('order', 'create')
+            ->notEmpty('order');
+
+        $validator
             ->requirePresence('author_name', 'create')
             ->notEmpty('author_name');
 

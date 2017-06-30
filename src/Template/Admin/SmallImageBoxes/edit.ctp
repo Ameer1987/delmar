@@ -22,12 +22,12 @@
     <fieldset>
         <legend><?= __('Edit Small Image Box') ?></legend>
         <?php
+            echo $this->Form->control('order');
             echo $this->Form->control('title');
             echo $this->Form->input('photo', ['type' => 'file']);
             $this->Form->input('dir', ['type' => 'hidden']);
-            echo $this->Form->control('text');
+            echo $this->Ck->input('text');
             echo $this->Form->control('locale');
-            echo $this->Form->control('link');
             echo $this->Form->control('blog_id', ['options' => $blogs]);
         ?>
     </fieldset>

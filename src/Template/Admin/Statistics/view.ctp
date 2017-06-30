@@ -64,5 +64,9 @@
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($statistic->id) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Order') ?></th>
+            <td><?= $this->Number->format($statistic->order) ?></td>
+        </tr>
     </table>
 </div>

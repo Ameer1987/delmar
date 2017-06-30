@@ -18,6 +18,7 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('order') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('layer1') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('layer2') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('layer3') ?></th>
@@ -35,6 +36,7 @@
             <?php foreach ($homeSliders as $homeSlider): ?>
             <tr>
                 <td><?= $this->Number->format($homeSlider->id) ?></td>
+                <td><?= $this->Number->format($homeSlider->order) ?></td>
                 <td><?= h($homeSlider->layer1) ?></td>
                 <td><?= h($homeSlider->layer2) ?></td>
                 <td><?= h($homeSlider->layer3) ?></td>

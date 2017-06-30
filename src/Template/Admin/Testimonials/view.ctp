@@ -36,6 +36,10 @@
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($testimonial->id) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Order') ?></th>
+            <td><?= $this->Number->format($testimonial->order) ?></td>
+        </tr>
     </table>
     <div class="row">
         <h4><?= __('Text') ?></h4>

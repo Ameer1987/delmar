@@ -7,6 +7,7 @@ use Cake\ORM\Entity;
  * Blog Entity
  *
  * @property int $id
+ * @property int $order
  * @property string $title
  * @property string $photo
  * @property string $dir

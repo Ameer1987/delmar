@@ -35,16 +35,16 @@
             <td><?= h($smallImageBox->locale) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Link') ?></th>
-            <td><?= h($smallImageBox->link) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Blog') ?></th>
             <td><?= $smallImageBox->has('blog') ? $this->Html->link($smallImageBox->blog->title, ['controller' => 'Blogs', 'action' => 'view', $smallImageBox->blog->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($smallImageBox->id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Order') ?></th>
+            <td><?= $this->Number->format($smallImageBox->order) ?></td>
         </tr>
     </table>
     <div class="row">

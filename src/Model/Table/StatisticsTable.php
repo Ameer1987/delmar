@@ -48,6 +48,11 @@ class StatisticsTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
+            ->integer('order')
+            ->requirePresence('order', 'create')
+            ->notEmpty('order');
+
+        $validator
             ->requirePresence('number_1', 'create')
             ->notEmpty('number_1');
 

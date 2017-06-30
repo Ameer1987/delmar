@@ -7,6 +7,7 @@ use Cake\ORM\Entity;
  * Statistic Entity
  *
  * @property int $id
+ * @property int $order
  * @property string $number_1
  * @property string $number_2
  * @property string $number_3

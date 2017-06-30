@@ -7,12 +7,12 @@ use Cake\ORM\Entity;
  * SmallImageBox Entity
  *
  * @property int $id
+ * @property int $order
  * @property string $title
  * @property string $photo
  * @property string $dir
  * @property string $text
  * @property string $locale
- * @property string $link
  * @property int $blog_id
  *
  * @property \App\Model\Entity\Blog $blog

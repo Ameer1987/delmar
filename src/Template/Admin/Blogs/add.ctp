@@ -26,10 +26,11 @@
     <fieldset>
         <legend><?= __('Add Blog') ?></legend>
         <?php
+            echo $this->Form->control('order');
             echo $this->Form->control('title');
             echo $this->Form->input('photo', ['type' => 'file']);
             $this->Form->input('dir', ['type' => 'hidden']);
-            echo $this->Form->control('text');
+            echo $this->Ck->input('text');
             echo $this->Form->control('locale');
         ?>
     </fieldset>

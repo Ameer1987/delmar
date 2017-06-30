@@ -55,6 +55,11 @@ class LargeImageBoxesTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
+            ->integer('order')
+            ->requirePresence('order', 'create')
+            ->notEmpty('order');
+
+        $validator
             ->requirePresence('title', 'create')
             ->notEmpty('title');
 
@@ -73,10 +78,6 @@ class LargeImageBoxesTable extends Table
         $validator
             ->requirePresence('locale', 'create')
             ->notEmpty('locale');
-
-        $validator
-            ->requirePresence('link', 'create')
-            ->notEmpty('link');
 
         return $validator;
     }

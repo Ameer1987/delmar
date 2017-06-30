@@ -31,10 +31,6 @@
             <td><?= h($homeBox->dir) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Link') ?></th>
-            <td><?= h($homeBox->link) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Avatar') ?></th>
             <td><?= h($homeBox->avatar) ?></td>
         </tr>
@@ -49,6 +45,10 @@
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($homeBox->id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Order') ?></th>
+            <td><?= $this->Number->format($homeBox->order) ?></td>
         </tr>
     </table>
     <div class="row">

@@ -7,10 +7,10 @@ use Cake\ORM\Entity;
  * HomeBox Entity
  *
  * @property int $id
+ * @property int $order
  * @property string $title
  * @property string $photo
  * @property string $dir
- * @property string $link
  * @property string $avatar
  * @property string $text
  * @property string $locale

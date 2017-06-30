@@ -55,6 +55,11 @@ class HomeBoxesTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
+            ->integer('order')
+            ->requirePresence('order', 'create')
+            ->notEmpty('order');
+
+        $validator
             ->requirePresence('title', 'create')
             ->notEmpty('title');
 
@@ -66,9 +71,7 @@ class HomeBoxesTable extends Table
 //            ->requirePresence('dir', 'create')
 //            ->notEmpty('dir');
 
-        $validator
-            ->requirePresence('link', 'create')
-            ->notEmpty('link');
+        
 
         $validator
             ->requirePresence('avatar', 'create')

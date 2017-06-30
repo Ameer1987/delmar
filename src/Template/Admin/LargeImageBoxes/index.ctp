@@ -18,11 +18,11 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('order') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('dir') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('link') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('blog_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -31,11 +31,11 @@
             <?php foreach ($largeImageBoxes as $largeImageBox): ?>
             <tr>
                 <td><?= $this->Number->format($largeImageBox->id) ?></td>
+                <td><?= $this->Number->format($largeImageBox->order) ?></td>
                 <td><?= h($largeImageBox->title) ?></td>
                 <td><?= h($largeImageBox->photo) ?></td>
                 <td><?= h($largeImageBox->dir) ?></td>
                 <td><?= h($largeImageBox->locale) ?></td>
-                <td><?= h($largeImageBox->link) ?></td>
                 <td><?= $largeImageBox->has('blog') ? $this->Html->link($largeImageBox->blog->title, ['controller' => 'Blogs', 'action' => 'view', $largeImageBox->blog->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $largeImageBox->id]) ?>

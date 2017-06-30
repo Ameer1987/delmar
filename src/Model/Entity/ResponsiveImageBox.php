@@ -7,12 +7,12 @@ use Cake\ORM\Entity;
  * ResponsiveImageBox Entity
  *
  * @property int $id
+ * @property int $order
  * @property string $title
  * @property string $photo
  * @property string $dir
  * @property string $subtitle
  * @property string $locale
- * @property string $link
  * @property int $blog_id
  *
  * @property \App\Model\Entity\Blog $blog
