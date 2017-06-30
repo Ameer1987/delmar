@@ -67,6 +67,9 @@ class PagesController extends AppController {
         $Services = TableRegistry::get('Services')->find('all');
         $this->set('Services', $Services->toArray());
 
+        $SliderBranches = TableRegistry::get('SliderBranches')->find('all');
+        $this->set('SliderBranches', $SliderBranches->toArray());
+
         $this->set('dir', "ltr");
         $this->set('lang', "en");
     }
