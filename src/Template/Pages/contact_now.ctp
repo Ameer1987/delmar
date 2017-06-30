@@ -118,7 +118,7 @@ $this->layout = 'pages';
                 </div>
                 <div class="col-md-6">
                     <h3 class="line-bottom mt-0">Get in touch with us</h3>
-                    <p>For any inquiries, please feel free to contact us using any of the following contacts.</p>
+                    <p>For any inquiries, please feel free to contact us using any of the contacts below.</p>
                     <ul class="styled-icons icon-dark icon-sm icon-circled mb-20">
                         <li><a target="_blank" href="<?= $SocialLinks['facebook'] ?>" data-bg-color="#3B5998"><i class="fa fa-facebook"></i></a></li>
                         <li><a target="_blank" href="<?= $SocialLinks['twitter'] ?>" data-bg-color="#02B0E8"><i class="fa fa-twitter"></i></a></li>
