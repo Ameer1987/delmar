@@ -8,11 +8,11 @@
                 <div class="col-md-4">
                     <div class="widget no-border m-0">
                         <ul class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm pull-right flip sm-pull-none sm-text-center mt-sm-15">
-                            <li><a target="_blank" href="<?= $SocialLinks['facebook'] ?>"><i class="fa fa-facebook text-white"></i></a></li>
-                            <li><a target="_blank" href="<?= $SocialLinks['twitter'] ?>"><i class="fa fa-twitter text-white"></i></a></li>
-                            <li><a target="_blank" href="<?= $SocialLinks['google_plus'] ?>"><i class="fa fa-google-plus text-white"></i></a></li>
-                            <li><a target="_blank" href="<?= $SocialLinks['instagram'] ?>"><i class="fa fa-instagram text-white"></i></a></li>
-                            <li><a target="_blank" href="<?= $SocialLinks['linkedin'] ?>"><i class="fa fa-linkedin text-white"></i></a></li>
+                            <li><a target="_blank" href="<?= $Contacts['facebook'] ?>"><i class="fa fa-facebook text-white"></i></a></li>
+                            <li><a target="_blank" href="<?= $Contacts['twitter'] ?>"><i class="fa fa-twitter text-white"></i></a></li>
+                            <li><a target="_blank" href="<?= $Contacts['google_plus'] ?>"><i class="fa fa-google-plus text-white"></i></a></li>
+                            <li><a target="_blank" href="<?= $Contacts['instagram'] ?>"><i class="fa fa-instagram text-white"></i></a></li>
+                            <li><a target="_blank" href="<?= $Contacts['linkedin'] ?>"><i class="fa fa-linkedin text-white"></i></a></li>
                         </ul>
                     </div>
                 </div>
