@@ -19,11 +19,13 @@ $this->layout = 'pages';
 <div class="main-content">
     <!-- Divider: Contact -->
     <section class="divider">
-        <div class="section-title mt-30 mb-0">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="esc-heading small-border text-center">
-                        <h3>Have any Questions?</h3>
+        <div class="container pt-0 pb-0">
+            <div class="section-title mt-30 mb-0">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="esc-heading small-border">
+                            <h3>Please choose your location on the map to get the nearest branch:</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -32,6 +34,19 @@ $this->layout = 'pages';
     <section class="divider">
         <div class="container pt-0 pb-sm-30">
             <div class="row pt-10">
+                <div class="col-md-8">
+                    <!-- Google Map HTML Codes -->
+                    <div 
+                        id="map-canvas-multipointer"
+                        data-mapstyle="default"
+                        data-height="400"
+                        data-zoom="12"
+                        data-marker="images/map-marker.png">
+                    </div>
+                    <!-- Google Map Javascript Codes -->
+                    <script src="http://maps.google.com/maps/api/js?key=AIzaSyA7H5g416Y6e69e_1fj7uYamnxsGFk3-L8"></script>
+                    <script src="../js/google-map-init-multilocation.js"></script>
+                </div>
                 <div class="col-md-4">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -63,19 +78,6 @@ $this->layout = 'pages';
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-8">
-                    <!-- Google Map HTML Codes -->
-                    <div 
-                        id="map-canvas-multipointer"
-                        data-mapstyle="default"
-                        data-height="500"
-                        data-zoom="12"
-                        data-marker="images/map-marker.png">
-                    </div>
-                    <!-- Google Map Javascript Codes -->
-                    <script src="http://maps.google.com/maps/api/js?key=AIzaSyA7H5g416Y6e69e_1fj7uYamnxsGFk3-L8"></script>
-                    <script src="../js/google-map-init-multilocation.js"></script>
                 </div>
             </div>
         </div>
