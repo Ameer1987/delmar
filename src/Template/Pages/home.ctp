@@ -58,86 +58,124 @@ $this->layout = 'pages';
                 <div class="row">
                     <div class="col-md-4 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="border-10px p-30 bg-white">
-                            <h5><i class="fa fa-clock-o text-theme-colored"></i> Opening Hours</h5>
+                            <h5><i class="fa fa-clock-o text-theme-colored"></i> Contact Us </h5>
                             <div class="opening-hours text-left">
                                 <ul class="list-unstyled">
-                                    <li class="clearfix line-height-1"> <span> Monday - Friday </span>
-                                        <div class="value"> 9.00 - 20.00 </div>
+                                    <li class="clearfix"> 
+                                        <span> HQ Techno Pharm Egypt Ltd. (5 Emad El Din - Downtown)  </span>
                                     </li>
-                                    <li class="clearfix line-height-1"> <span> Saturday </span>
-                                        <div class="value"> 10.00 - 16.00 </div>
+                                    <li class="clearfix line-height-1"> 
+                                        <span> (19955) hotline to call 24 hours </span>
                                     </li>
-                                    <li class="clearfix line-height-1"> <span> Sunday </span>
-                                        <div class="value"> 9.30 - 18.00 </div>
+                                    <li class="clearfix line-height-1" style="border: none;"> 
+                                        <span> Email: INFO@delmar-attalla.com  </span>
                                     </li>
                                 </ul>
                             </div>
+                            <a target="_blank" href="<?= $this->Url->build(["controller" => "Pages", "action" => "contactNow"]); ?>" class="btn btn-dark btn-theme-colored btn-sm mt-10" style="font-size: 16px;">Get your nearest branch</a>
                             <h5 class="mt-30"><i class="fa fa-pencil-square-o text-theme-colored"></i> Need Help?</h5>
-                            <p class="mt-0">Just make an appointment to get help from our experts</p>
-                            <a href="#" class="btn btn-dark btn-theme-colored btn-sm">Contact Now</a>
+                            <p class="mt-0">For any needed information, feedback or complaints.</p>
+                            <a target="_blank" href="<?= $this->Url->build(["controller" => "Pages", "action" => "contactNow"]); ?>" class="btn btn-dark btn-theme-colored btn-sm">Contact Now</a>
                         </div>
                     </div>
                     <div class="col-md-8 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="owl-carousel-1col owl-dots-bottom-right" data-dots="true">
-                            <div class="item">
-                                <div class="row-fluid">
-                                    <div class="col-md-5">
-                                        <img src="images/team/h1.jpg" alt="">
-                                    </div>
-                                    <div class="col-md-7">
-                                        <h5 class="mb-0 text-black-999">Gynaecologist</h5>
-                                        <h2 class="line-bottom mt-0">Dr. Brian Adam</h2>
-                                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam maxime nesciunt ex modi minus illum nemo provident ducimus, velit magnam consectetur adipisicing nemo provident ducimus, velit magnam.</p>
-                                        <a href="#" class="btn-read-more mt-15">Contact Now</a>
-                                        <ul class="styled-icons icon-theme-colored icon-circled icon-dark icon-sm mt-20">
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                        </ul>
-                                    </div>
+                            <?= $this->element('slider_branches') ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider: Contact -->
+    <section class="divider">
+        <div class="container">
+            <div class="row pt-30">
+                <div class="col-md-4">
+                    <img class="img-fullwidth" src="http://placehold.it/270x185" alt="">
+                </div>
+                <div class="col-md-4">
+                    <h3 class="line-bottom mt-0 mb-30">Consultation</h3>
+                    <!--<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Incidunt quasi tenetur perspiciatis deserunt.</p>-->
+                    <p>Please send us any questions related to your health and beauty care and our experts will be happy to help you.</p>
+                    <ul class="list angle-double-right">
+                        <li><strong>Phone:</strong> +325 12345 65478</li>
+                        <li><strong>Email:</strong> supporte@yourdomin.com</li>
+                        <li><strong>Skype:</strong> ThemeMascotSkype</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="mt-0 mb-10 mt-sm-30">Ask our doctors:</h3>
+                    <!-- Contact Form -->
+                    <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php" method="post">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Name <small>*</small></label>
+                                    <input name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="row-fluid">
-                                    <div class="col-md-5">
-                                        <img src="images/team/h2.jpg" alt="">
-                                    </div>
-                                    <div class="col-md-7">
-                                        <h5 class="mb-0 text-black-999">Gynaecologist</h5>
-                                        <h2 class="line-bottom mt-0">Dr. Brian Adam</h2>
-                                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam maxime nesciunt ex modi minus illum nemo provident ducimus, velit magnam consectetur adipisicing nemo provident ducimus, velit magnam.</p>
-                                        <a href="#" class="btn-read-more mt-15">Contact Now</a>
-                                        <ul class="styled-icons icon-theme-colored icon-circled icon-dark icon-sm mt-20">
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row-fluid">
-                                    <div class="col-md-5">
-                                        <img src="images/team/h3.jpg" alt="">
-                                    </div>
-                                    <div class="col-md-7">
-                                        <h5 class="mb-0 text-black-999">Gynaecologist</h5>
-                                        <h2 class="line-bottom mt-0">Dr. Brian Adam</h2>
-                                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam maxime nesciunt ex modi minus illum nemo provident ducimus, velit magnam consectetur adipisicing nemo provident ducimus, velit magnam.</p>
-                                        <a href="#" class="btn-read-more mt-15">Contact Now</a>
-                                        <ul class="styled-icons icon-theme-colored icon-circled icon-dark icon-sm mt-20">
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                        </ul>
-                                    </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Email <small>*</small></label>
+                                    <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Subject <small>*</small></label>
+                                    <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="form_message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input name="form_botcheck" class="form-control" type="hidden" value="" />
+                            <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait...">Send your message</button>
+                            <button type="reset" class="btn btn-default btn-flat btn-theme-colored">Reset</button>
+                        </div>
+                    </form>
+
+                    <!-- Contact Form Validation-->
+                    <script type="text/javascript">
+                        $("#contact_form").validate({
+                            submitHandler: function (form) {
+                                var form_btn = $(form).find('button[type="submit"]');
+                                var form_result_div = '#form-result';
+                                $(form_result_div).remove();
+                                form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+                                var form_btn_old_msg = form_btn.html();
+                                form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+                                $(form).ajaxSubmit({
+                                    dataType: 'json',
+                                    success: function (data) {
+                                        if (data.status == 'true') {
+                                            $(form).find('.form-control').val('');
+                                        }
+                                        form_btn.prop('disabled', false).html(form_btn_old_msg);
+                                        $(form_result_div).html(data.message).fadeIn('slow');
+                                        setTimeout(function () {
+                                            $(form_result_div).fadeOut('slow')
+                                        }, 6000);
+                                    }
+                                });
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </div>
@@ -159,66 +197,13 @@ $this->layout = 'pages';
             </div>
             <div class="section-content">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="icon-box left media p-0">
-                            <a href="#" class="media-left pull-left"><img src="images/flaticon-png-medical/small/blood-transfusion.png" alt="" width="64"></a>
-                            <div class="media-body">
-                                <h5 class="media-heading heading">Emergency Care</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum consectetur sit ullam perspiciatis, deserunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="icon-box left media p-0">
-                            <a href="#" class="media-left pull-left"><img src="images/flaticon-png-medical/small/cardiogram-2.png" alt="" width="64"></a>
-                            <div class="media-body">
-                                <h5 class="media-heading heading">Operation Theatre</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum consectetur sit ullam perspiciatis, deserunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="icon-box left media p-0">
-                            <a href="#" class="media-left pull-left"><img src="images/flaticon-png-medical/small/stethoscope.png" alt="" width="64"></a>
-                            <div class="media-body">
-                                <h5 class="media-heading heading">Outdoor Checkup</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum consectetur sit ullam perspiciatis, deserunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="icon-box left media p-0">
-                            <a href="#" class="media-left pull-left"><img src="images/flaticon-png-medical/small/antibiotic.png" alt="" width="64"></a>
-                            <div class="media-body">
-                                <h5 class="media-heading heading">Cancer Service</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum consectetur sit ullam perspiciatis, deserunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="icon-box left media p-0">
-                            <a href="#" class="media-left pull-left"><img src="images/flaticon-png-medical/small/syringe-2.png" alt="" width="64"></a>
-                            <div class="media-body">
-                                <h5 class="media-heading heading">Blood Test</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum consectetur sit ullam perspiciatis, deserunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="icon-box left media p-0">
-                            <a href="#" class="media-left pull-left"><img src="images/flaticon-png-medical/small/pills.png" alt="" width="64"></a>
-                            <div class="media-body">
-                                <h5 class="media-heading heading">Pharmacy</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum consectetur sit ullam perspiciatis, deserunt.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <?= $this->element('services') ?>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section: Specialities -->
+    <!-- Section: block tabs -->
     <section data-bg-img="images/pattern/p4.png" id="departments">
         <div class="container pb-70">
             <div class="section-title text-center">
@@ -236,162 +221,7 @@ $this->layout = 'pages';
                 <div class="row">
                     <div class="col-md-12">
                         <div class="services-tab border-10px bg-white">
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#tab11" data-toggle="tab"><i class="flaticon-medical-xray2"></i><span>Orthopaedics</span></a></li>
-                                <li><a href="#tab12" data-toggle="tab"><i class="flaticon-medical-heart36"></i><span>Cardiology</span></a></li>
-                                <li><a href="#tab13" data-toggle="tab"><i class="flaticon-medical-brain9"></i><span>Neurology</span></a></li>
-                                <li><a href="#tab14" data-toggle="tab"><i class="flaticon-medical-teeth1"></i><span>Dental</span></a></li>
-                                <li><a href="#tab15" data-toggle="tab"><i class="flaticon-medical-hospital35"></i><span>Haematology</span></a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane fade in active" id="tab11">
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="thumb">
-                                                <img class="img-fullwidth" src="images/services/1.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="service-content">
-                                                <h3 class="sub-title mb-0 mt-15">Services</h3>
-                                                <h1 class="title mt-0">Orthopaedics</h1>
-                                                <p>One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo ratione.</p>
-                                                <ul class="mt-10">
-                                                    <li class="mb-10">
-                                                        <h6 class="mt-0 mb-0"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;Qualified Doctors</h6>
-                                                        <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo.</small></p>
-                                                    </li>
-                                                    <li class="mb-10">
-                                                        <h6 class="mt-0 mb-0"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;24×7 Emergency Services</h6>
-                                                        <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo.</small></p>
-                                                    </li>
-                                                </ul>
-                                                <a class="btn btn-dark btn-theme-colored" href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="tab12">
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="thumb">
-                                                <img class="img-fullwidth" src="images/services/2.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="service-content">
-                                                <h3 class="sub-title mb-0 mt-15">Services</h3>
-                                                <h1 class="title mt-0">Cardiology</h1>
-                                                <p>One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo ratione.</p>
-                                                <ul class="mt-10">
-                                                    <li class="mb-10">
-                                                        <h6 class="mt-0 mb-0"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;Qualified Doctors</h6>
-                                                        <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo.</small></p>
-                                                    </li>
-                                                    <li class="mb-10">
-                                                        <h6 class="mt-0 mb-0"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;24×7 Emergency Services</h6>
-                                                        <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo.</small></p>
-                                                    </li>
-                                                </ul>
-                                                <a class="btn btn-dark btn-theme-colored" href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="tab13">
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="thumb">
-                                                <img class="img-fullwidth" src="images/services/3.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="service-content">
-                                                <h3 class="sub-title mb-0 mt-15">Services</h3>
-                                                <h1 class="title mt-0">Neurology</h1>
-                                                <p>One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo ratione.</p>
-                                                <ul class="mt-10">
-                                                    <li class="mb-10">
-                                                        <h6 class="mt-0 mb-0"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;Qualified Doctors</h6>
-                                                        <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo.</small></p>
-                                                    </li>
-                                                    <li class="mb-10">
-                                                        <h6 class="mt-0 mb-0"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;24×7 Emergency Services</h6>
-                                                        <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo.</small></p>
-                                                    </li>
-                                                </ul>
-                                                <a class="btn btn-dark btn-theme-colored" href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="tab14">
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="thumb">
-                                                <img class="img-fullwidth" src="images/services/4.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="service-content">
-                                                <h3 class="sub-title mb-0 mt-15">Services</h3>
-                                                <h1 class="title mt-0">Dental</h1>
-                                                <p>One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo ratione tempora consectetur quos minus ut quo nulla ipsa aliquid neque.</p>
-                                                <div class="row mb-20">
-                                                    <div class="col-md-6">
-                                                        <ul class="mt-10">
-                                                            <li class="mb-10"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;Qualified Doctors</li>
-                                                            <li class="mb-10"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;24×7 Emergency Services</li>
-                                                            <li class="mb-10"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;General Medical</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <ul class="mt-10">
-                                                            <li class="mb-10"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;Feel like Home Services</li>
-                                                            <li class="mb-10"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;Outdoor Checkup</li>
-                                                            <li class="mb-10"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;Easy and Affordable Billing</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <a class="btn btn-dark btn-theme-colored" href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="tab15">
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="thumb">
-                                                <img class="img-fullwidth" src="images/services/5.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="service-content">
-                                                <h3 class="sub-title mb-0 mt-15">Services</h3>
-                                                <h1 class="title mt-0">Haematology</h1>
-                                                <p>One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo ratione tempora consectetur quos minus ut quo nulla ipsa aliquid neque.</p>
-                                                <div class="row mb-20">
-                                                    <div class="col-md-6">
-                                                        <ul class="mt-10">
-                                                            <li class="mb-10"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;Qualified Doctors</li>
-                                                            <li class="mb-10"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;24×7 Emergency Services</li>
-                                                            <li class="mb-10"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;General Medical</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <ul class="mt-10">
-                                                            <li class="mb-10"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;Feel like Home Services</li>
-                                                            <li class="mb-10"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;Outdoor Checkup</li>
-                                                            <li class="mb-10"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;Easy and Affordable Billing</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <a class="btn btn-dark btn-theme-colored" href="#">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?= $this->element('block_tabs') ?>
                         </div>
                     </div>
                 </div>

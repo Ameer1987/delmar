@@ -45,7 +45,7 @@ class AppController extends Controller {
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-        if ($this->request->params['prefix'] === 'admin') {
+        if (isset($this->request->params['prefix']) && $this->request->params['prefix'] === 'admin') {
             $this->loadComponent('Auth', [
                 'authenticate' => [
                     'Form' => [

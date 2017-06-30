@@ -61,6 +61,23 @@ class PagesController extends AppController {
         $Testimonials = TableRegistry::get('Testimonials')->find('all');
         $this->set('Testimonials', $Testimonials->toArray());
 
+        $BlockTabs = TableRegistry::get('BlockTabs')->find('all');
+        $this->set('BlockTabs', $BlockTabs->toArray());
+
+        $Services = TableRegistry::get('Services')->find('all');
+        $this->set('Services', $Services->toArray());
+
+        $SliderBranches = TableRegistry::get('SliderBranches')->find('all');
+        $this->set('SliderBranches', $SliderBranches->toArray());
+
+        $this->set('dir', "ltr");
+        $this->set('lang', "en");
+    }
+
+    public function contactNow() {
+        $SocialLinks = TableRegistry::get('SocialLinks')->find('all');
+        $this->set('SocialLinks', $SocialLinks->first());
+
         $this->set('dir', "ltr");
         $this->set('lang', "en");
     }

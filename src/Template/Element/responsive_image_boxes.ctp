@@ -7,7 +7,7 @@
             <div class="details p-15 pt-10 pb-10">
                 <h4 class="title"><?= $ResponsiveImageBox['title'] ?></h4>
                 <h6 class="sub-title"><?= $ResponsiveImageBox['subtitle'] ?></h6>
-                <a class="btn btn-theme-colored btn-sm" href="<?= $ResponsiveImageBox['link'] ?>">view details</a>
+                <a class="btn btn-theme-colored btn-sm" href="#">view details</a>
             </div>
         </div>
     </div>

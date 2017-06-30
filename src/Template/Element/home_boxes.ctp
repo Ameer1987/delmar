@@ -9,7 +9,7 @@
                         <img src="images/flaticon-png-medical/small/antibiotic.png" width="70" alt="">
                         <h4 class="text-uppercase text-white"><?= $HomeBox['title'] ?></h4>
                         <p class="text-white"><?= $HomeBox['text'] ?></p>
-                        <a href="<?= $HomeBox['link'] ?>" class="btn btn-border btn-circled btn-transparent btn-sm"><?= $HomeBox['avatar'] ?></a>
+                        <a href="#" class="btn btn-border btn-circled btn-transparent btn-sm"><?= $HomeBox['avatar'] ?></a>
                     </div>
                 </div>
             </div>
