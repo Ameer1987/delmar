@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <p class="mt-10"><?= $LargeImageBox['text'] ?></p>
-                <a href="<?= $LargeImageBox['link'] ?>" class="btn-read-more">Read more</a>
+                <a href="#" class="btn-read-more">Read more</a>
                 <div class="clearfix"></div>
             </div>
         </article>
