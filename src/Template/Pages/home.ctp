@@ -181,7 +181,7 @@ $this->layout = 'pages';
         </div>
     </section>
 
-    <!-- Section: Services -->
+    <!-- Section: Text Blocks -->
     <section id="services">
         <div class="container pb-40">
             <div class="section-title text-center">
