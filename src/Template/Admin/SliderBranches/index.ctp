@@ -15,7 +15,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('order') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('subtitle') ?></th>
@@ -23,14 +23,14 @@
                 <th scope="col"><?= $this->Paginator->sort('latitude') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('dir') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('dir') ?></th>-->
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($sliderBranches as $sliderBranch): ?>
             <tr>
-                <td><?= $this->Number->format($sliderBranch->id) ?></td>
+                <!--<td><?= $this->Number->format($sliderBranch->id) ?></td>-->
                 <td><?= $this->Number->format($sliderBranch->order) ?></td>
                 <td><?= h($sliderBranch->title) ?></td>
                 <td><?= h($sliderBranch->subtitle) ?></td>
@@ -38,7 +38,7 @@
                 <td><?= h($sliderBranch->latitude) ?></td>
                 <td><?= h($sliderBranch->locale) ?></td>
                 <td><?= h($sliderBranch->photo) ?></td>
-                <td><?= h($sliderBranch->dir) ?></td>
+                <!--<td><?= h($sliderBranch->dir) ?></td>-->
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $sliderBranch->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $sliderBranch->id]) ?>

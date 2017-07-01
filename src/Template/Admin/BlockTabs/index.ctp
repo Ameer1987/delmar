@@ -17,13 +17,13 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('order') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('subtitle') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('dir') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('dir') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('header_icon') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('header_title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('blog_id') ?></th>
@@ -33,13 +33,13 @@
         <tbody>
             <?php foreach ($blockTabs as $blockTab): ?>
             <tr>
-                <td><?= $this->Number->format($blockTab->id) ?></td>
+                <!--<td><?= $this->Number->format($blockTab->id) ?></td>-->
                 <td><?= $this->Number->format($blockTab->order) ?></td>
                 <td><?= h($blockTab->title) ?></td>
                 <td><?= h($blockTab->subtitle) ?></td>
                 <td><?= h($blockTab->locale) ?></td>
                 <td><?= h($blockTab->photo) ?></td>
-                <td><?= h($blockTab->dir) ?></td>
+                <!--<td><?= h($blockTab->dir) ?></td>-->
                 <td><?= h($blockTab->header_icon) ?></td>
                 <td><?= h($blockTab->header_title) ?></td>
                 <td><?= $blockTab->has('blog') ? $this->Html->link($blockTab->blog->title, ['controller' => 'Blogs', 'action' => 'view', $blockTab->blog->id]) : '' ?></td>

@@ -17,7 +17,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('order') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('layer1') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('layer2') ?></th>
@@ -25,9 +25,9 @@
                 <th scope="col"><?= $this->Paginator->sort('layer4') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('dir') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('align') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('border') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('dir') ?></th>-->
+                <!--<th scope="col"><?= $this->Paginator->sort('align') ?></th>-->
+                <!--<th scope="col"><?= $this->Paginator->sort('border') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('blog_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -35,7 +35,7 @@
         <tbody>
             <?php foreach ($homeSliders as $homeSlider): ?>
             <tr>
-                <td><?= $this->Number->format($homeSlider->id) ?></td>
+                <!--<td><?= $this->Number->format($homeSlider->id) ?></td>-->
                 <td><?= $this->Number->format($homeSlider->order) ?></td>
                 <td><?= h($homeSlider->layer1) ?></td>
                 <td><?= h($homeSlider->layer2) ?></td>
@@ -43,9 +43,9 @@
                 <td><?= h($homeSlider->layer4) ?></td>
                 <td><?= h($homeSlider->locale) ?></td>
                 <td><?= h($homeSlider->photo) ?></td>
-                <td><?= h($homeSlider->dir) ?></td>
-                <td><?= h($homeSlider->align) ?></td>
-                <td><?= h($homeSlider->border) ?></td>
+                <!--<td><?= h($homeSlider->dir) ?></td>-->
+                <!--<td><?= h($homeSlider->align) ?></td>-->
+                <!--<td><?= h($homeSlider->border) ?></td>-->
                 <td><?= $homeSlider->has('blog') ? $this->Html->link($homeSlider->blog->title, ['controller' => 'Blogs', 'action' => 'view', $homeSlider->blog->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $homeSlider->id]) ?>

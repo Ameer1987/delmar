@@ -17,11 +17,11 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('order') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('dir') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('dir') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('avatar') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('blog_id') ?></th>
@@ -31,11 +31,11 @@
         <tbody>
             <?php foreach ($homeBoxes as $homeBox): ?>
             <tr>
-                <td><?= $this->Number->format($homeBox->id) ?></td>
+                <!--<td><?= $this->Number->format($homeBox->id) ?></td>-->
                 <td><?= $this->Number->format($homeBox->order) ?></td>
                 <td><?= h($homeBox->title) ?></td>
                 <td><?= h($homeBox->photo) ?></td>
-                <td><?= h($homeBox->dir) ?></td>
+                <!--<td><?= h($homeBox->dir) ?></td>-->
                 <td><?= h($homeBox->avatar) ?></td>
                 <td><?= h($homeBox->locale) ?></td>
                 <td><?= $homeBox->has('blog') ? $this->Html->link($homeBox->blog->title, ['controller' => 'Blogs', 'action' => 'view', $homeBox->blog->id]) : '' ?></td>

@@ -17,11 +17,11 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('order') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('dir') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('dir') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('subtitle') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('blog_id') ?></th>
@@ -31,11 +31,11 @@
         <tbody>
             <?php foreach ($responsiveImageBoxes as $responsiveImageBox): ?>
             <tr>
-                <td><?= $this->Number->format($responsiveImageBox->id) ?></td>
+                <!--<td><?= $this->Number->format($responsiveImageBox->id) ?></td>-->
                 <td><?= $this->Number->format($responsiveImageBox->order) ?></td>
                 <td><?= h($responsiveImageBox->title) ?></td>
                 <td><?= h($responsiveImageBox->photo) ?></td>
-                <td><?= h($responsiveImageBox->dir) ?></td>
+                <!--<td><?= h($responsiveImageBox->dir) ?></td>-->
                 <td><?= h($responsiveImageBox->subtitle) ?></td>
                 <td><?= h($responsiveImageBox->locale) ?></td>
                 <td><?= $responsiveImageBox->has('blog') ? $this->Html->link($responsiveImageBox->blog->title, ['controller' => 'Blogs', 'action' => 'view', $responsiveImageBox->blog->id]) : '' ?></td>

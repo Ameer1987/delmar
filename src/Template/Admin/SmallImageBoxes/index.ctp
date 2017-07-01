@@ -17,11 +17,11 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('order') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('dir') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('dir') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('blog_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -30,11 +30,11 @@
         <tbody>
             <?php foreach ($smallImageBoxes as $smallImageBox): ?>
             <tr>
-                <td><?= $this->Number->format($smallImageBox->id) ?></td>
+                <!--<td><?= $this->Number->format($smallImageBox->id) ?></td>-->
                 <td><?= $this->Number->format($smallImageBox->order) ?></td>
                 <td><?= h($smallImageBox->title) ?></td>
                 <td><?= h($smallImageBox->photo) ?></td>
-                <td><?= h($smallImageBox->dir) ?></td>
+                <!--<td><?= h($smallImageBox->dir) ?></td>-->
                 <td><?= h($smallImageBox->locale) ?></td>
                 <td><?= $smallImageBox->has('blog') ? $this->Html->link($smallImageBox->blog->title, ['controller' => 'Blogs', 'action' => 'view', $smallImageBox->blog->id]) : '' ?></td>
                 <td class="actions">

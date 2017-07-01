@@ -17,11 +17,11 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('order') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('dir') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('dir') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('blog_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -30,11 +30,11 @@
         <tbody>
             <?php foreach ($textBlocks as $textBlock): ?>
             <tr>
-                <td><?= $this->Number->format($textBlock->id) ?></td>
+                <!--<td><?= $this->Number->format($textBlock->id) ?></td>-->
                 <td><?= $this->Number->format($textBlock->order) ?></td>
                 <td><?= h($textBlock->title) ?></td>
                 <td><?= h($textBlock->photo) ?></td>
-                <td><?= h($textBlock->dir) ?></td>
+                <!--<td><?= h($textBlock->dir) ?></td>-->
                 <td><?= h($textBlock->locale) ?></td>
                 <td><?= $textBlock->has('blog') ? $this->Html->link($textBlock->blog->title, ['controller' => 'Blogs', 'action' => 'view', $textBlock->blog->id]) : '' ?></td>
                 <td class="actions">
