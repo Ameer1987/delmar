@@ -130,19 +130,19 @@ $this->layout = 'pages';
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-20" href="#"> <i class="pe-7s-map-2 text-theme-colored"></i></a>
                         <div class="media-body">
                             <h5 class="mt-0">Headquarter Location</h5>
-                            <p>HQ Techno Pharm Egypt Ltd. (5 Emad El Din - Downtown)</p>
+                            <p><?= $Contacts['address'] ?></p>
                         </div>
                     </div>
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-15" href="#"> <i class="pe-7s-call text-theme-colored"></i></a>
                         <div class="media-body">
                             <h5 class="mt-0">Call center</h5>
-                            <p><a href="tel:19955">(19955) hotline to call 24 hours</a></p>
+                            <p><?= $Contacts['hotline'] ?></p>
                         </div>
                     </div>
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-15" href="#"> <i class="pe-7s-mail text-theme-colored"></i></a>
                         <div class="media-body">
                             <h5 class="mt-0">Email Address</h5>
-                            <p><a href="mailto:INFO@delmar-attalla.com">Email: INFO@delmar-attalla.com</a></p>
+                            <p><a href="mailto:<?= $Contacts['email'] ?>">Email: <?= $Contacts['email'] ?></a></p>
                         </div>
                     </div>
                 </div>

@@ -4,11 +4,11 @@
             <div class="col-sm-6 col-md-4">
                 <div class="widget dark">
                     <img class="mt-10 mb-20" alt="" src="images/logo-wide-white.png">
-                    <p>HQ Techno Pharm Egypt Ltd. (5 Emad El Din - Downtown)</p>
+                    <p><?= $Contacts['address'] ?></p>
                     <ul class="list-inline mt-5">
-                        <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored mr-5"></i>(19955) hotline 24 hours </li>
-                        <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored mr-5"></i>INFO@delmar-attalla.com </li>
-                        <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-colored mr-5"></i> <a class="text-gray" href="http://www.delmar-attalla.com">www.delmar-attalla.com </a> </li>
+                        <li class="m-0 pl-10 pr-10"><i class="fa fa-phone text-theme-colored mr-5"></i><?= $Contacts['hotline'] ?></li>
+                        <li class="m-0 pl-10 pr-10"><a href="mailto:<?= $Contacts['email'] ?>"><i class="fa fa-envelope-o text-theme-colored mr-5"></i><?= $Contacts['email'] ?></a></li>
+                        <li class="m-0 pl-10 pr-10"><i class="fa fa-globe text-theme-colored mr-5"></i> <a class="text-gray" href="http://www.delmar-attalla.com">www.delmar-attalla.com </a> </li>
                     </ul>
                 </div>
             </div>
