@@ -100,9 +100,9 @@ $this->layout = 'pages';
                     <!--<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Incidunt quasi tenetur perspiciatis deserunt.</p>-->
                     <p>Please send us any questions related to your health and beauty care and our experts will be happy to help you.</p>
                     <ul class="list angle-double-right">
-                        <li><strong>Phone:</strong> +325 12345 65478</li>
-                        <li><strong>Email:</strong> supporte@yourdomin.com</li>
-                        <li><strong>Skype:</strong> ThemeMascotSkype</li>
+                        <li><strong>Address:</strong> <?= $Contacts['address'] ?></li>
+                        <li><strong>Phone:</strong> <?= $Contacts['hotline'] ?></li>
+                        <li><strong>Email:</strong><a href="mailto:<?= $Contacts['email'] ?>"> <?= $Contacts['email'] ?></a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
