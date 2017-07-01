@@ -18,6 +18,8 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+//use Cirici\AdminLTE\Controller\AppController as BaseController;
+use Cake\Core\Configure;
 
 /**
  * Application Controller
@@ -80,6 +82,11 @@ class AppController extends Controller {
                 in_array($this->response->type(), ['application/json', 'application/xml'])
         ) {
             $this->set('_serialize', true);
+        }
+        if (isset($this->request->params['prefix']) && $this->request->params['prefix'] === 'admin') {
+            $this->viewBuilder()->theme('AdminLTE');
+            $this->viewBuilder()->layout('adminlte');
+            $this->set('theme', Configure::read('Theme'));
         }
     }
 
