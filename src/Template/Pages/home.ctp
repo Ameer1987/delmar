@@ -106,7 +106,7 @@ $this->layout = 'pages';
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h3 class="mt-0 mb-10 mt-sm-30">Ask our doctors:</h3>
+                    <h3 class="line-bottom mt-0 mb-10 mt-sm-30">Ask our doctors:</h3>
                     <!-- Contact Form -->
                     <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php" method="post">
                         <div class="row">
