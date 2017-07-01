@@ -78,6 +78,9 @@ class PagesController extends AppController {
         $Contacts = TableRegistry::get('Contacts')->find('all');
         $this->set('Contacts', $Contacts->first());
 
+        $SliderBranches = TableRegistry::get('SliderBranches')->find('all');
+        $this->set('SliderBranches', $SliderBranches->toArray());
+
         $this->set('dir', "ltr");
         $this->set('lang', "en");
     }
