@@ -1,11 +1,6 @@
-<?php
-/**
-  * @var \App\View\AppView $this
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+<section class="content-header">
+    <legend><?= __('Edit Contact') ?></legend>
+    <ol class="breadcrumb">
         <li><?= $this->Form->postLink(
                 __('Delete'),
                 ['action' => 'delete', $contact->id],
@@ -15,12 +10,11 @@
         <li><?= $this->Html->link(__('List Contacts'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
+    </ol>
+</section>
 <div class="contacts form large-9 medium-8 columns content">
     <?= $this->Form->create($contact) ?>
     <fieldset>
-        <legend><?= __('Edit Contact') ?></legend>
         <?php
             echo $this->Form->control('facebook');
             echo $this->Form->control('twitter');
@@ -36,7 +30,7 @@
             echo $this->Form->control('latitude');
             echo $this->Form->control('hotline');
             echo $this->Form->control('locale');
-            echo $this->Form->control('text');
+            echo $this->Ck->input('text');
             echo $this->Form->control('name');
             echo $this->Form->control('blog_id', ['options' => $blogs]);
         ?>
