@@ -62,13 +62,13 @@ $this->layout = 'pages';
                             <div class="opening-hours text-left">
                                 <ul class="list-unstyled">
                                     <li class="clearfix"> 
-                                        <span> HQ Techno Pharm Egypt Ltd. (5 Emad El Din - Downtown)  </span>
+                                        <span> <?= $Contacts['address'] ?> </span>
                                     </li>
                                     <li class="clearfix line-height-1"> 
-                                        <span> (19955) hotline to call 24 hours </span>
+                                        <span> <?= $Contacts['hotline'] ?> </span>
                                     </li>
                                     <li class="clearfix line-height-1" style="border: none;"> 
-                                        <span> Email: INFO@delmar-attalla.com  </span>
+                                        <span><a href="mailto:<?= $Contacts['email'] ?>"> Email: <?= $Contacts['email'] ?> </a></span>
                                     </li>
                                 </ul>
                             </div>
