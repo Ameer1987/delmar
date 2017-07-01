@@ -82,12 +82,4 @@ class PagesController extends AppController {
         $this->set('lang', "en");
     }
 
-    public function nearestBranch() {
-        $Contacts = TableRegistry::get('Contacts')->find('all');
-        $this->set('Contacts', $Contacts->first());
-
-        $this->set('dir', "ltr");
-        $this->set('lang', "en");
-    }
-
 }
