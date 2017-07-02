@@ -1,4 +1,5 @@
 <?php
+
 $file = $theme['folder'] . DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'nav-top.ctp';
 
 if (file_exists($file)) {
@@ -17,6 +18,10 @@ if (file_exists($file)) {
     </a>
 
     <div class="navbar-custom-menu">
+    <?php
+        $loggeduser = $this->request->session()->read('Auth.User');
+            if($loggeduser) {
+                ?>
         <ul class="nav navbar-nav">
             <!-- Messages: style can be found in dropdown.less-->
             <li class="dropdown messages-menu">
@@ -147,6 +152,9 @@ if (file_exists($file)) {
                 <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
             </li>
         </ul>
+    <?php 
+                } 
+    ?>
     </div>
 </nav>
 <?php } ?>
