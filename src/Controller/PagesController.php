@@ -17,6 +17,7 @@
 namespace App\Controller;
 
 use Cake\ORM\TableRegistry;
+use Cake\Http\ServerRequest;
 
 /**
  * Static content controller
@@ -27,17 +28,19 @@ use Cake\ORM\TableRegistry;
  */
 class PagesController extends AppController {
 
-    private $session;
+    private $lang;
 
-    public function __construct() {
-        if ($this->request->session()->read('lang')) {
-            $this->request->session()->write('lang', 'English');
+    public function setLang($request) {
+        if (null === $request->session()->read('lang')) {
+            $request->session()->write('lang', 'English');
         }
 
-        $this->session = $this->request->session()->read('lang');
+        $this->lang = $request->session()->read('lang');
     }
 
     public function home() {
+        $this->setLang($this->request);
+
         $Contacts = TableRegistry::get('Contacts')->find('all');
         $this->set('Contacts', $Contacts->first());
 
@@ -71,8 +74,8 @@ class PagesController extends AppController {
         $SliderBranches = TableRegistry::get('SliderBranches')->find('all');
         $this->set('SliderBranches', $SliderBranches->toArray());
 
-        $lang = $this->session == "English" ? "en" : "ar";
-        $dir = $this->session == "English" ? "ltr" : "rtl";
+        $lang = $this->lang == "English" ? "en" : "ar";
+        $dir = $this->lang == "English" ? "ltr" : "rtl";
         $this->set('dir', $dir);
         $this->set('lang', $lang);
     }
@@ -84,8 +87,8 @@ class PagesController extends AppController {
         $SliderBranches = TableRegistry::get('SliderBranches')->find('all');
         $this->set('SliderBranches', $SliderBranches->toArray());
 
-        $lang = $this->session == "English" ? "en" : "ar";
-        $dir = $this->session == "English" ? "ltr" : "rtl";
+        $lang = $this->lang == "English" ? "en" : "ar";
+        $dir = $this->lang == "English" ? "ltr" : "rtl";
         $this->set('dir', $dir);
         $this->set('lang', $lang);
     }
