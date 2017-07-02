@@ -17,6 +17,7 @@
 namespace App\Controller;
 
 use Cake\ORM\TableRegistry;
+use Cake\Http\ServerRequest;
 
 /**
  * Static content controller
@@ -27,16 +28,19 @@ use Cake\ORM\TableRegistry;
  */
 class PagesController extends AppController {
 
-    /**
-     * Displays a view
-     *
-     * @param string ...$path Path segments.
-     * @return void|\Cake\Network\Response
-     * @throws \Cake\Network\Exception\ForbiddenException When a directory traversal attempt.
-     * @throws \Cake\Network\Exception\NotFoundException When the view file could not
-     *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
-     */
+    private $lang;
+
+    public function setLang($request) {
+        if (null === $request->session()->read('lang')) {
+            $request->session()->write('lang', 'English');
+        }
+
+        $this->lang = $request->session()->read('lang');
+    }
+
     public function home() {
+        $this->setLang($this->request);
+
         $Contacts = TableRegistry::get('Contacts')->find('all');
         $this->set('Contacts', $Contacts->first());
 
@@ -70,8 +74,10 @@ class PagesController extends AppController {
         $SliderBranches = TableRegistry::get('SliderBranches')->find('all');
         $this->set('SliderBranches', $SliderBranches->toArray());
 
-        $this->set('dir', "ltr");
-        $this->set('lang', "en");
+        $lang = $this->lang == "English" ? "en" : "ar";
+        $dir = $this->lang == "English" ? "ltr" : "rtl";
+        $this->set('dir', $dir);
+        $this->set('lang', $lang);
     }
 
     public function contactNow() {
@@ -81,8 +87,10 @@ class PagesController extends AppController {
         $SliderBranches = TableRegistry::get('SliderBranches')->find('all');
         $this->set('SliderBranches', $SliderBranches->toArray());
 
-        $this->set('dir', "ltr");
-        $this->set('lang', "en");
+        $lang = $this->lang == "English" ? "en" : "ar";
+        $dir = $this->lang == "English" ? "ltr" : "rtl";
+        $this->set('dir', $dir);
+        $this->set('lang', $lang);
     }
 
 }

@@ -4,119 +4,120 @@
         <ul>
             <?php $index = 0; ?>
             <?php foreach ($HomeSliders as $HomeSlider): ?>
-                <?php $index ++; ?>
-                <?php $borderRadius = $HomeSlider['border'] == "circular" ? "border-radius:45px;" : "" ?>
-                <li data-index="rs-<?= $index ?>" data-transition="random" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-thumb="images/bg/bg14.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-description="">
-                    <!-- MAIN IMAGE -->
-                    <img src="images/bg/bg14.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
-                    <!-- LAYERS -->
+                <?php if ($HomeSlider['locale'] == $this->request->session()->read('lang')): ?>
+                    <?php $index ++; ?>
+                    <?php $borderRadius = $HomeSlider['border'] == "circular" ? "border-radius:45px;" : "" ?>
+                    <li data-index="rs-<?= $index ?>" data-transition="random" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-thumb="images/bg/bg14.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-description="">
+                        <!-- MAIN IMAGE -->
+                        <img src="images/bg/bg14.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                        <!-- LAYERS -->
 
-                    <!-- LAYER NR. 1 -->
-                    <div class="tp-caption tp-resizeme text-uppercase text-white bg-dark-transparent-5 pl-15 pr-15"
-                         id="rs-<?= $index ?>-layer-1"
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption tp-resizeme text-uppercase text-white bg-dark-transparent-5 pl-15 pr-15"
+                             id="rs-<?= $index ?>-layer-1"
 
-                         data-x="['<?= $HomeSlider['align'] ?>']"
-                         data-hoffset="['30']"
-                         data-y="['middle']"
-                         data-voffset="['-110']" 
-                         data-fontsize="['30']"
-                         data-lineheight="['50']"
+                             data-x="['<?= $HomeSlider['align'] ?>']"
+                             data-hoffset="['30']"
+                             data-y="['middle']"
+                             data-voffset="['-110']" 
+                             data-fontsize="['30']"
+                             data-lineheight="['50']"
 
-                         data-width="none"
-                         data-height="none"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;s:500"
-                         data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                         data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                         data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                         data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                         data-start="1000" 
-                         data-splitin="none" 
-                         data-splitout="none" 
-                         data-responsive_offset="on"
-                         style="z-index: 7; white-space: nowrap; font-weight:600; <?= $borderRadius ?>">
-                             <?= $HomeSlider['layer1'] ?>
-                    </div>
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;s:500"
+                             data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                             data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                             data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                             data-start="1000" 
+                             data-splitin="none" 
+                             data-splitout="none" 
+                             data-responsive_offset="on"
+                             style="z-index: 7; white-space: nowrap; font-weight:600; <?= $borderRadius ?>">
+                                 <?= $HomeSlider['layer1'] ?>
+                        </div>
 
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption tp-resizeme text-uppercase text-white bg-theme-colored-transparent pl-15 pr-15"
-                         id="rs-<?= $index ?>-layer-2"
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption tp-resizeme text-uppercase text-white bg-theme-colored-transparent pl-15 pr-15"
+                             id="rs-<?= $index ?>-layer-2"
 
-                         data-x="['<?= $HomeSlider['align'] ?>']"
-                         data-hoffset="['30']"
-                         data-y="['middle']"
-                         data-voffset="['-45']" 
-                         data-fontsize="['48']"
-                         data-lineheight="['70']"
+                             data-x="['<?= $HomeSlider['align'] ?>']"
+                             data-hoffset="['30']"
+                             data-y="['middle']"
+                             data-voffset="['-45']" 
+                             data-fontsize="['48']"
+                             data-lineheight="['70']"
 
-                         data-width="none"
-                         data-height="none"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;s:500"
-                         data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                         data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                         data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                         data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                         data-start="1000" 
-                         data-splitin="none" 
-                         data-splitout="none" 
-                         data-responsive_offset="on"
-                         style="z-index: 7; white-space: nowrap; font-weight:600; <?= $borderRadius ?>">
-                             <?= $HomeSlider['layer2'] ?>
-                    </div>
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;s:500"
+                             data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                             data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                             data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                             data-start="1000" 
+                             data-splitin="none" 
+                             data-splitout="none" 
+                             data-responsive_offset="on"
+                             style="z-index: 7; white-space: nowrap; font-weight:600; <?= $borderRadius ?>">
+                                 <?= $HomeSlider['layer2'] ?>
+                        </div>
 
-                    <!-- LAYER NR. 3 -->
-                    <div class="tp-caption tp-resizeme text-black" 
-                         id="rs-<?= $index ?>-layer-3"
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption tp-resizeme text-black" 
+                             id="rs-<?= $index ?>-layer-3"
 
-                         data-x="['<?= $HomeSlider['align'] ?>']"
-                         data-hoffset="['35']"
-                         data-y="['middle']"
-                         data-voffset="['35','45','55']"
-                         data-fontsize="['16','18','24']"
-                         data-lineheight="['28']"
-                         data-width="none"
-                         data-height="none"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;s:500"
-                         data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
-                         data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
-                         data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-                         data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                         data-start="1400" 
-                         data-splitin="none" 
-                         data-splitout="none" 
-                         data-responsive_offset="on"
-                         style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;">
-                             <?= $HomeSlider['layer3'] ?>
-                    </div>
+                             data-x="['<?= $HomeSlider['align'] ?>']"
+                             data-hoffset="['35']"
+                             data-y="['middle']"
+                             data-voffset="['35','45','55']"
+                             data-fontsize="['16','18','24']"
+                             data-lineheight="['28']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;s:500"
+                             data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                             data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                             data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                             data-start="1400" 
+                             data-splitin="none" 
+                             data-splitout="none" 
+                             data-responsive_offset="on"
+                             style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;">
+                                 <?= $HomeSlider['layer3'] ?>
+                        </div>
 
-                    <!-- LAYER NR. 4 -->
-                    <div class="tp-caption" 
-                         id="rs-<?= $index ?>-layer-4"
+                        <!-- LAYER NR. 4 -->
+                        <div class="tp-caption" 
+                             id="rs-<?= $index ?>-layer-4"
 
-                         data-x="['<?= $HomeSlider['align'] ?>']"
-                         data-hoffset="['35']"
-                         data-y="['middle']"
-                         data-voffset="['110','120','140']"
-                         data-width="none"
-                         data-height="none"
-                         data-whitespace="nowrap"
-                         data-transform_idle="o:1;"
-                         data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-                         data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                         data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-                         data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-                         data-start="1400" 
-                         data-splitin="none" 
-                         data-splitout="none" 
-                         data-responsive_offset="on"
-                         style="z-index: 5; white-space: nowrap; letter-spacing:1px;">
-                        <a class="btn btn-colored btn-lg btn-theme-colored pl-20 pr-20" href="#"><?= $HomeSlider['layer4'] ?></a> 
-                    </div>
-                </li>
+                             data-x="['<?= $HomeSlider['align'] ?>']"
+                             data-hoffset="['35']"
+                             data-y="['middle']"
+                             data-voffset="['110','120','140']"
+                             data-width="none"
+                             data-height="none"
+                             data-whitespace="nowrap"
+                             data-transform_idle="o:1;"
+                             data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                             data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                             data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
+                             data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                             data-start="1400" 
+                             data-splitin="none" 
+                             data-splitout="none" 
+                             data-responsive_offset="on"
+                             style="z-index: 5; white-space: nowrap; letter-spacing:1px;">
+                            <a class="btn btn-colored btn-lg btn-theme-colored pl-20 pr-20" href="#"><?= $HomeSlider['layer4'] ?></a> 
+                        </div>
+                    </li>
+                <?php endif; ?>
             <?php endforeach; ?>
-
         </ul>
     </div><!-- end .rev_slider -->
 </div>

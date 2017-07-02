@@ -24,7 +24,7 @@ $this->layout = 'pages';
                 <?php foreach ($SliderBranches as $SliderBranch): ?>
                     <?php $branchLocation = json_encode(array($SliderBranch['google_map_title'], $SliderBranch['latitude'], $SliderBranch['longitude'])); ?>
                     <?php $branchInfo = json_encode(array($SliderBranch['google_map_desc'])); ?>
-                    <?php $branchMarker = json_encode(array('../images/map-marker3.png')); ?>
+                    <?php $branchMarker = json_encode(array('../images/map-marker.png')); ?>
                     <input type="hidden" class="branch_location" value='<?= $branchLocation ?>' />
                     <input type="hidden" class="branch_info" value='<?= $branchInfo ?>' />
                     <input type="hidden" class="branch_marker" value='<?= $branchMarker ?>' />
