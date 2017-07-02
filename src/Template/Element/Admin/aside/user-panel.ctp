@@ -1,4 +1,5 @@
 <?php
+
 $file = $theme['folder'] . DS . 'src' . DS . 'Template' . DS . 'Element' . DS . 'aside' . DS . 'user-panel.ctp';
 
 if (file_exists($file)) {
@@ -12,7 +13,13 @@ if (file_exists($file)) {
         <?php echo $this->Html->image('user2-160x160.jpg', array('class' => 'img-circle', 'alt' => 'User Image')); ?>
     </div>
     <div class="pull-left info">
-        <p>Magdy Yackoub</p>
+        <p>
+            <?php
+        $loggeduser = $this->request->session()->read('Auth.User');
+            if($loggeduser) 
+                 echo $loggeduser['username'];
+                ?>
+        </p>
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
     </div>
 </div>
