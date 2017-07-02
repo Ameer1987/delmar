@@ -18,18 +18,22 @@ $this->layout = 'pages';
 <!-- Start main-content -->
 <div class="main-content">
     <!-- Section: home-sliders -->
-    <section id="home" class="divider">
-        <div class="container-fluid p-0">
-            <?= $this->element('home_sliders') ?>
-        </div>
-    </section>
+    <?php if (count($HomeSliders) > 0): ?>
+        <section id="home" class="divider">
+            <div class="container-fluid p-0">
+                <?= $this->element('home_sliders') ?>
+            </div>
+        </section>
+    <?php endif ?>
 
     <!-- Section: home-boxes -->
-    <section>
-        <div class="container pt-0 pb-0">
-            <?= $this->element('home_boxes') ?>
-        </div>
-    </section>
+    <?php if (count($HomeBoxes) > 0): ?>
+        <section>
+            <div class="container pt-0 pb-0">
+                <?= $this->element('home_boxes') ?>
+            </div>
+        </section>
+    <?php endif ?>
 
     <!-- Section: small-image-boxes  -->
     <?php if (count($SmallImageBoxes) > 0): ?>
