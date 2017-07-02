@@ -32,24 +32,26 @@ $this->layout = 'pages';
     </section>
 
     <!-- Section: small-image-boxes  -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2 class="mt-0 text-uppercase font-28">Latest <span class="text-theme-colored font-weight-400">offers</span> <span class="font-30 text-theme-colored">.</span></h2>
+    <?php if (count($SmallImageBoxes) > 0): ?>
+        <section id="about">
+            <div class="container">
+                <div class="section-title">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="mt-0 text-uppercase font-28">Latest <span class="text-theme-colored font-weight-400">offers</span> <span class="font-30 text-theme-colored">.</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row multi-row-clearfix">
+                    <div class="col-md-12">
+                        <div class="owl-carousel-4col" data-nav="true">
+                            <?= $this->element('small_image_boxes') ?>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row multi-row-clearfix">
-                <div class="col-md-12">
-                    <div class="owl-carousel-4col" data-nav="true">
-                        <?= $this->element('small_image_boxes') ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    <?php endif ?>
 
     <!-- Section: -->
     <section data-bg-img="images/pattern/p5.png">
@@ -92,215 +94,143 @@ $this->layout = 'pages';
     <section class="divider">
         <div class="container">
             <div class="row pt-30">
-                <div class="col-md-4">
-                    <img class="img-fullwidth" src="http://placehold.it/270x185" alt="">
-                </div>
-                <div class="col-md-4">
-                    <h3 class="line-bottom mt-0 mb-30">Consultation</h3>
-                    <!--<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Incidunt quasi tenetur perspiciatis deserunt.</p>-->
-                    <p>Please send us any questions related to your health and beauty care and our experts will be happy to help you.</p>
-                    <ul class="list angle-double-right">
-                        <li><strong>Address:</strong> <?= $Contacts['address'] ?></li>
-                        <li><strong>Phone:</strong> <?= $Contacts['hotline'] ?></li>
-                        <li><strong>Email:</strong><a href="mailto:<?= $Contacts['email'] ?>"> <?= $Contacts['email'] ?></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3 class="line-bottom mt-0 mb-10 mt-sm-30">Ask our doctors:</h3>
-                    <!-- Contact Form -->
-                    <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php" method="post">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label>Name <small>*</small></label>
-                                    <input name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label>Email <small>*</small></label>
-                                    <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label>Subject <small>*</small></label>
-                                    <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label>Phone</label>
-                                    <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Message</label>
-                            <textarea name="form_message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                            <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait...">Send your message</button>
-                            <button type="reset" class="btn btn-default btn-flat btn-theme-colored">Reset</button>
-                        </div>
-                    </form>
-
-                    <!-- Contact Form Validation-->
-                    <script type="text/javascript">
-                        $("#contact_form").validate({
-                            submitHandler: function (form) {
-                                var form_btn = $(form).find('button[type="submit"]');
-                                var form_result_div = '#form-result';
-                                $(form_result_div).remove();
-                                form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-                                var form_btn_old_msg = form_btn.html();
-                                form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-                                $(form).ajaxSubmit({
-                                    dataType: 'json',
-                                    success: function (data) {
-                                        if (data.status == 'true') {
-                                            $(form).find('.form-control').val('');
-                                        }
-                                        form_btn.prop('disabled', false).html(form_btn_old_msg);
-                                        $(form_result_div).html(data.message).fadeIn('slow');
-                                        setTimeout(function () {
-                                            $(form_result_div).fadeOut('slow')
-                                        }, 6000);
-                                    }
-                                });
-                            }
-                        });
-                    </script>
-                </div>
+                <?= $this->element('consultation') ?>
             </div>
         </div>
     </section>
 
     <!-- Section: Text Blocks -->
-    <section id="services">
-        <div class="container pb-40">
-            <div class="section-title text-center">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h2 class="text-uppercase mt-0 line-height-1">Services</h2>
-                        <div class="title-icon">
-                            <img class="mb-10" src="images/title-icon.png" alt="">
+    <?php if (count($TextBlocks) > 0): ?>
+        <section id="services">
+            <div class="container pb-40">
+                <div class="section-title text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h2 class="text-uppercase mt-0 line-height-1">Services</h2>
+                            <div class="title-icon">
+                                <img class="mb-10" src="images/title-icon.png" alt="">
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="row">
+                        <?= $this->element('text_blocks') ?>
                     </div>
                 </div>
             </div>
-            <div class="section-content">
-                <div class="row">
-                    <?= $this->element('services') ?>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    <?php endif; ?>
 
     <!-- Section: block tabs -->
-    <section data-bg-img="images/pattern/p4.png" id="departments">
-        <div class="container pb-70">
-            <div class="section-title text-center">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h2 class="text-uppercase mt-0 line-height-1">Our Specialities</h2>
-                        <div class="title-icon">
-                            <img class="mb-10" src="images/title-icon.png" alt="">
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section-centent">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="services-tab border-10px bg-white">
-                            <?= $this->element('block_tabs') ?>
+    <?php if (count($BlockTabs) > 0): ?>
+        <section data-bg-img="images/pattern/p4.png" id="departments">
+            <div class="container pb-70">
+                <div class="section-title text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h2 class="text-uppercase mt-0 line-height-1">Our Specialities</h2>
+                            <div class="title-icon">
+                                <img class="mb-10" src="images/title-icon.png" alt="">
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
                         </div>
                     </div>
                 </div>
+                <div class="section-centent">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="services-tab border-10px bg-white">
+                                <?= $this->element('block_tabs') ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    <?php endif; ?>
 
     <!-- Section: Doctors -->
-    <section id="doctors">
-        <div class="container pb-50">
-            <div class="section-title text-center">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h2 class="text-uppercase mt-0 line-height-1">Our Doctors</h2>
-                        <div class="title-icon">
-                            <img class="mb-10" src="images/title-icon.png" alt="">
+    <?php if (count($ResponsiveImageBoxes) > 0): ?>
+        <section id="doctors">
+            <div class="container pb-50">
+                <div class="section-title text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h2 class="text-uppercase mt-0 line-height-1">Our Doctors</h2>
+                            <div class="title-icon">
+                                <img class="mb-10" src="images/title-icon.png" alt="">
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
+                    </div>
+                </div>
+                <div class="row multi-row-clearfix">
+                    <div class="col-md-12">
+                        <div class="owl-carousel-4col" data-nav="true">
+                            <?= $this->element('responsive_image_boxes') ?>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row multi-row-clearfix">
-                <div class="col-md-12">
-                    <div class="owl-carousel-4col" data-nav="true">
-                        <?= $this->element('responsive_image_boxes') ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    <?php endif; ?>
 
     <!-- Divider: Statistics -->
-    <section class="divider parallax layer-overlay overlay-white-8" data-bg-img="../images/Untitled-1.png">
-        <div class="container">
-            <div class="row">
-                <?= $this->element('statistics') ?>
+    <?php if ($Statistics['title_1'] || $Statistics['title_2'] || $Statistics['title_3'] || $Statistics['title_4'] || $Statistics['number_1'] || $Statistics['number_2'] || $Statistics['number_3'] || $Statistics['number_4']): ?>
+        <section class="divider parallax layer-overlay overlay-white-8" data-bg-img="../images/Untitled-1.png">
+            <div class="container">
+                <div class="row">
+                    <?= $this->element('statistics') ?>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    <?php endif; ?>
 
     <!-- Divider: testimonials -->
-    <section class="bg-light">
-        <div class="container pb-40">
-            <div class="section-title text-center">
+    <?php if (count($Testimonials) > 0): ?>
+        <section class="bg-light">
+            <div class="container pb-40">
+                <div class="section-title text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h2 class="mt-0 text-uppercase font-28">Testimonials <span class="font-30 text-theme-colored"></span></h2>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h2 class="mt-0 text-uppercase font-28">Testimonials <span class="font-30 text-theme-colored"></span></h2>
+                    <div class="col-md-12 mb-30">
+                        <div class="owl-carousel-2col boxed" data-dots="true">
+                            <?= $this->element('testimonials') ?>
+                        </div> 
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12 mb-30">
-                    <div class="owl-carousel-2col boxed" data-dots="true">
-                        <?= $this->element('testimonials') ?>
-                    </div> 
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    <?php endif; ?>
 
     <!-- Section: large-image-boxes  -->
-    <section id="blog">
-        <div class="container">
-            <div class="section-title">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2 class="mt-0 text-uppercase font-28">Latest <span class="text-theme-colored font-weight-400">News</span> <span class="font-30 text-theme-colored">.</span></h2>
+    <?php if (count($LargeImageBoxes) > 0): ?>
+        <section id="blog">
+            <div class="container">
+                <div class="section-title">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="mt-0 text-uppercase font-28">Latest <span class="text-theme-colored font-weight-400">News</span> <span class="font-30 text-theme-colored">.</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row multi-row-clearfix">
+                    <div class="col-md-12">
+                        <div class="owl-carousel-3col" data-nav="true" data-duration="100000000000">
+                            <?= $this->element('large_image_boxes') ?>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row multi-row-clearfix">
-                <div class="col-md-12">
-                    <div class="owl-carousel-3col" data-nav="true" data-duration="100000000000">
-                        <?= $this->element('large_image_boxes') ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    <?php endif; ?>
 </div>
 <!-- end main-content -->
 
