@@ -33,6 +33,17 @@ class StatisticsTable extends Table
         $this->setTable('statistics');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+        $this->addBehavior('Josegonzalez/Upload.Upload', [
+            'photo' => [
+                'fields' => [
+                    // if these fields or their defaults exist
+                    // the values will be set.
+                    'dir' => 'dir', // defaults to `dir`
+                    'size' => 'photo_size', // defaults to `size`
+                    'type' => 'photo_type', // defaults to `type`
+                ],
+            ],
+        ]);
     }
 
     /**
