@@ -17,7 +17,7 @@
 namespace App\Controller;
 
 use Cake\ORM\TableRegistry;
-use Cake\Http\ServerRequest;
+use Cake\Routing\Router;
 
 /**
  * Static content controller
@@ -29,6 +29,17 @@ use Cake\Http\ServerRequest;
 class PagesController extends AppController {
 
     private $lang;
+
+    public function switchLang($locale) {
+        $this->request->session()->write('lang', $locale);
+
+        $refer_url = $this->referer('/', true);
+        $parse_url_params = Router::parse($refer_url);
+
+        return $this->redirect(
+                        ['controller' => $parse_url_params['controller'], 'action' => $parse_url_params['action']]
+        );
+    }
 
     public function setLang($request) {
         if (null === $request->session()->read('lang')) {
