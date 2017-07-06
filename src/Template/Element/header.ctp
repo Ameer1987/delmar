@@ -1,19 +1,29 @@
 
+<style>
+    @import url(//fonts.googleapis.com/css?family=Raleway);
+    .current-lang {
+        font-family: 'Raleway';
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+    }
+</style>
+
 <header id="header" class="header">
     <div class="header-top bg-theme-colored sm-text-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <div id="locale-switcher" class="btn-group">
-                        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                            <img src="images/flags/<?= strtolower($this->request->session()->read('lang')) ?>.png" title="<?= $this->request->session()->read('lang') ?>" alt="<?= $this->request->session()->read('lang') ?>" />
+                        <a class="btn dropdown-toggle current-lang" data-toggle="dropdown" href="#">
+                            <?= strtoupper(substr($this->request->session()->read('lang'), 0, 3)) ?>
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <?php foreach (['English', 'Arabic'] as $locale): ?>
                                 <li <?= $locale == $this->request->session()->read('lang') ? 'class="active"' : '' ?>>
                                     <a href="<?= $this->Url->build(["controller" => 'Pages', "action" => 'switchLang', $locale]) ?>">
-                                        <img src="images/flags/<?= strtolower($locale) ?>.png" title="<?= $locale ?>" alt="<?= $locale ?>" /> <?= $locale ?>
+                                        <?= strtoupper(substr($locale, 0, 3)) ?>
                                     </a>
                                 </li>
                             <?php endforeach; ?>
