@@ -1,4 +1,4 @@
-<div class="col-md-4">
+<div class="col-md-4" style="height: 400px; overflow: hidden;">
     <img class="img-fullwidth" src="images/h3.jpg" alt="">
 </div>
 <div class="col-md-4">
