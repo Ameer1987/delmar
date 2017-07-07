@@ -183,7 +183,7 @@ $this->layout = 'pages';
 
     <!-- Divider: Statistics -->
     <?php if ($Statistics['title_1'] || $Statistics['title_2'] || $Statistics['title_3'] || $Statistics['title_4'] || $Statistics['number_1'] || $Statistics['number_2'] || $Statistics['number_3'] || $Statistics['number_4']): ?>
-        <section class="divider parallax layer-overlay overlay-white-8" data-bg-img="../images/Untitled-1.png">
+        <section class="divider parallax layer-overlay overlay-white-8" data-bg-img="<?= str_replace("webroot/", "", $Statistics['dir']) . $Statistics['photo'] ?>">
             <div class="container">
                 <div class="row">
                     <?= $this->element('statistics') ?>
