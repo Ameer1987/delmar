@@ -1,5 +1,5 @@
 <div class="col-md-4">
-    <img class="img-fullwidth" src="http://placehold.it/270x185" alt="">
+    <img class="img-fullwidth" src="images/h3.jpg" alt="">
 </div>
 <div class="col-md-4">
     <h3 class="line-bottom mt-0 mb-30">Consultation</h3>
