@@ -1,11 +1,6 @@
-<?php
-/**
-  * @var \App\View\AppView $this
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+<section class="content-header">
+    <legend><?= __('Edit Home Box') ?></legend>
+    <ol class="breadcrumb">
         <li><?= $this->Form->postLink(
                 __('Delete'),
                 ['action' => 'delete', $homeBox->id],
@@ -15,12 +10,13 @@
         <li><?= $this->Html->link(__('List Home Boxes'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
+    </ol>
+</section>
+
+
 <div class="homeBoxes form large-9 medium-8 columns content">
     <?= $this->Form->create($homeBox, ['type' => 'file']); ?>
     <fieldset>
-        <legend><?= __('Edit Home Box') ?></legend>
         <?php
             echo $this->Form->control('order');
             echo $this->Form->control('title');
