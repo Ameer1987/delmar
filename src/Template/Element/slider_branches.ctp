@@ -3,7 +3,7 @@
         <div class="item">
             <div class="row-fluid">
                 <div class="col-md-5">
-                    <img src="images/team/h1.jpg" alt="">
+                    <img src="<?= str_replace("webroot/", "", $SliderBranch['dir']) . $SliderBranch['photo'] ?>" alt="">
                 </div>
                 <div class="col-md-7">
                     <h5 class="mb-0 text-black-999"><?= $SliderBranch['subtitle'] ?></h5>

@@ -4,7 +4,7 @@
             <article class="post clearfix mb-sm-30 bg-lighter">
                 <div class="entry-header">
                     <div class="post-thumb thumb"> 
-                        <img src="../images/logo-wide-white@2x.png" alt="" class="img-responsive img-fullwidth"> 
+                        <img src="<?= str_replace("webroot/", "", $LargeImageBox['dir']) . $LargeImageBox['photo'] ?>" alt="" class="img-responsive img-fullwidth"> 
                     </div>
                 </div>
                 <div class="entry-content p-20 pr-10">

@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-md-5">
                         <div class="thumb">
-                            <img class="img-fullwidth" src="images/services/1.jpg" alt="">
+                            <img class="img-fullwidth" src="<?= str_replace("webroot/", "", $BlockTab['dir']) . $BlockTab['photo'] ?>" alt="">
                         </div>
                     </div>
                     <div class="col-md-6">

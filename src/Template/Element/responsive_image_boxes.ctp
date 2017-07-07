@@ -3,7 +3,7 @@
         <div class="item">
             <div class="hover-effect mb-30">
                 <div class="thumb">
-                    <img class="img-fullwidth" alt="" src="../images/logo-wide-white@2x.png">
+                    <img class="img-fullwidth" alt="" src="<?= str_replace("webroot/", "", $ResponsiveImageBox['dir']) . $ResponsiveImageBox['photo'] ?>">
                 </div>
                 <div class="details p-15 pt-10 pb-10">
                     <h4 class="title"><?= $ResponsiveImageBox['title'] ?></h4>

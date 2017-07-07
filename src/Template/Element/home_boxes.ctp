@@ -7,7 +7,7 @@
                 <div class="col-sm-12 col-md-3 pl-0 pl-sm-15 pr-0 pr-sm-15 sm-height-auto mt-sm-0 fadeInLeft animation-delay<?= $index ?>">
                     <div class="sm-height-auto bg-theme-colored<?= $index > 1 ? ("-darker" . $index) : "" ?>">
                         <div class="p-30">
-                            <img src="images/flaticon-png-medical/small/antibiotic.png" width="70" alt="">
+                            <img src="<?= str_replace("webroot/", "", $HomeBox['dir']) . $HomeBox['photo'] ?>" width="70" alt="">
                             <h4 class="text-uppercase text-white"><?= $HomeBox['title'] ?></h4>
                             <p class="text-white"><?= $HomeBox['text'] ?></p>
                             <a href="#" class="btn btn-border btn-circled btn-transparent btn-sm"><?= $HomeBox['avatar'] ?></a>
