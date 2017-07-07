@@ -1,12 +1,6 @@
-<?php
-
-/**
-  * @var \App\View\AppView $this
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+<section class="content-header">
+        <legend><?= __('Edit Block Tab') ?></legend>
+    <ol class="breadcrumb">
         <li><?= $this->Form->postLink(
                 __('Delete'),
                 ['action' => 'delete', $blockTab->id],
@@ -16,13 +10,14 @@
         <li><?= $this->Html->link(__('List Block Tabs'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="blockTabs form large-9 medium-8 columns content">
+    </ol>
+</section>
+
+
+<div class="contacts form large-9 medium-8 columns content">
         <?= $this->Form->create($blockTab, ['type' => 'file']); ?>
 
     <fieldset>
-        <legend><?= __('Edit Block Tab') ?></legend>
         <?php
             echo $this->Form->control('order');
             echo $this->Form->control('title');
