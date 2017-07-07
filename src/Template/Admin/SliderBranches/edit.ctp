@@ -1,11 +1,6 @@
-<?php
-/**
-  * @var \App\View\AppView $this
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+<section class="content-header">
+    <legend><?= __('Edit Slider Branch') ?></legend>
+    <ol class="breadcrumb">
         <li><?= $this->Form->postLink(
                 __('Delete'),
                 ['action' => 'delete', $sliderBranch->id],
@@ -13,13 +8,13 @@
             )
         ?></li>
         <li><?= $this->Html->link(__('List Slider Branches'), ['action' => 'index']) ?></li>
-    </ul>
-</nav>
+    </ol>
+</section>
+
 <div class="sliderBranches form large-9 medium-8 columns content">
         <?= $this->Form->create($sliderBranch, ['type' => 'file']); ?>
 
     <fieldset>
-        <legend><?= __('Edit Slider Branch') ?></legend>
         <?php
             echo $this->Form->control('order');
             echo $this->Form->control('title');
