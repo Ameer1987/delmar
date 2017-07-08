@@ -22,7 +22,11 @@
                         </div>
                     </div>
                     <p class="mt-10"><?= $LargeImageBox['text'] ?></p>
-                    <a href="#" class="btn-read-more">Read more</a>
+
+                    <?php if ($LargeImageBox['blog_id']): ?>
+                        <a href="#" class="btn-read-more">Read more</a>
+                    <?php endif; ?>
+
                     <div class="clearfix"></div>
                 </div>
             </article>
