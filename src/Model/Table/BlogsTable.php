@@ -89,34 +89,34 @@ class BlogsTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
-        $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
-
-        $validator
-            ->integer('order')
-            ->requirePresence('order', 'create')
-            ->notEmpty('order');
-
-        $validator
-            ->requirePresence('title', 'create')
-            ->notEmpty('title');
-
 //        $validator
-//            ->requirePresence('photo', 'create')
-//            ->notEmpty('photo');
+//            ->integer('id')
+//            ->allowEmpty('id', 'create');
 //
 //        $validator
-//            ->requirePresence('dir', 'create')
-//            ->notEmpty('dir');
-
-        $validator
-            ->requirePresence('text', 'create')
-            ->notEmpty('text');
-
-        $validator
-            ->requirePresence('locale', 'create')
-            ->notEmpty('locale');
+//            ->integer('order')
+//            ->requirePresence('order', 'create')
+//            ->notEmpty('order');
+//
+//        $validator
+//            ->requirePresence('title', 'create')
+//            ->notEmpty('title');
+//
+////        $validator
+////            ->requirePresence('photo', 'create')
+////            ->notEmpty('photo');
+////
+////        $validator
+////            ->requirePresence('dir', 'create')
+////            ->notEmpty('dir');
+//
+//        $validator
+//            ->requirePresence('text', 'create')
+//            ->notEmpty('text');
+//
+//        $validator
+//            ->requirePresence('locale', 'create')
+//            ->notEmpty('locale');
 
         return $validator;
     }

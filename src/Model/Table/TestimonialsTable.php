@@ -54,34 +54,34 @@ class TestimonialsTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
-        $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
-
-        $validator
-            ->integer('order')
-            ->requirePresence('order', 'create')
-            ->notEmpty('order');
-
-        $validator
-            ->requirePresence('author_name', 'create')
-            ->notEmpty('author_name');
-
-        $validator
-            ->requirePresence('text', 'create')
-            ->notEmpty('text');
-
-        $validator
-            ->requirePresence('locale', 'create')
-            ->notEmpty('locale');
-
 //        $validator
-//            ->requirePresence('photo', 'create')
-//            ->notEmpty('photo');
+//            ->integer('id')
+//            ->allowEmpty('id', 'create');
 //
 //        $validator
-//            ->requirePresence('dir', 'create')
-//            ->notEmpty('dir');
+//            ->integer('order')
+//            ->requirePresence('order', 'create')
+//            ->notEmpty('order');
+//
+//        $validator
+//            ->requirePresence('author_name', 'create')
+//            ->notEmpty('author_name');
+//
+//        $validator
+//            ->requirePresence('text', 'create')
+//            ->notEmpty('text');
+//
+//        $validator
+//            ->requirePresence('locale', 'create')
+//            ->notEmpty('locale');
+//
+////        $validator
+////            ->requirePresence('photo', 'create')
+////            ->notEmpty('photo');
+////
+////        $validator
+////            ->requirePresence('dir', 'create')
+////            ->notEmpty('dir');
 
         return $validator;
     }

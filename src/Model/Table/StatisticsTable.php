@@ -54,58 +54,58 @@ class StatisticsTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
-        $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
-
-        $validator
-            ->integer('order')
-            ->requirePresence('order', 'create')
-            ->notEmpty('order');
-
-        $validator
-            ->requirePresence('number_1', 'create')
-            ->notEmpty('number_1');
-
-        $validator
-            ->requirePresence('number_2', 'create')
-            ->notEmpty('number_2');
-
-        $validator
-            ->requirePresence('number_3', 'create')
-            ->notEmpty('number_3');
-
-        $validator
-            ->requirePresence('number_4', 'create')
-            ->notEmpty('number_4');
-
-        $validator
-            ->requirePresence('title_1', 'create')
-            ->notEmpty('title_1');
-
-        $validator
-            ->requirePresence('title_2', 'create')
-            ->notEmpty('title_2');
-
-        $validator
-            ->requirePresence('title_3', 'create')
-            ->notEmpty('title_3');
-
-        $validator
-            ->requirePresence('title_4', 'create')
-            ->notEmpty('title_4');
-
-        $validator
-            ->requirePresence('locale', 'create')
-            ->notEmpty('locale');
-
 //        $validator
-//            ->requirePresence('photo', 'create')
-//            ->notEmpty('photo');
+//            ->integer('id')
+//            ->allowEmpty('id', 'create');
 //
 //        $validator
-//            ->requirePresence('dir', 'create')
-//            ->notEmpty('dir');
+//            ->integer('order')
+//            ->requirePresence('order', 'create')
+//            ->notEmpty('order');
+//
+//        $validator
+//            ->requirePresence('number_1', 'create')
+//            ->notEmpty('number_1');
+//
+//        $validator
+//            ->requirePresence('number_2', 'create')
+//            ->notEmpty('number_2');
+//
+//        $validator
+//            ->requirePresence('number_3', 'create')
+//            ->notEmpty('number_3');
+//
+//        $validator
+//            ->requirePresence('number_4', 'create')
+//            ->notEmpty('number_4');
+//
+//        $validator
+//            ->requirePresence('title_1', 'create')
+//            ->notEmpty('title_1');
+//
+//        $validator
+//            ->requirePresence('title_2', 'create')
+//            ->notEmpty('title_2');
+//
+//        $validator
+//            ->requirePresence('title_3', 'create')
+//            ->notEmpty('title_3');
+//
+//        $validator
+//            ->requirePresence('title_4', 'create')
+//            ->notEmpty('title_4');
+//
+//        $validator
+//            ->requirePresence('locale', 'create')
+//            ->notEmpty('locale');
+//
+////        $validator
+////            ->requirePresence('photo', 'create')
+////            ->notEmpty('photo');
+////
+////        $validator
+////            ->requirePresence('dir', 'create')
+////            ->notEmpty('dir');
 
         return $validator;
     }

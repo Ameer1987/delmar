@@ -62,18 +62,18 @@ class SmallImageBoxesTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
-        $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
-
-        $validator
-            ->integer('order')
-            ->requirePresence('order', 'create')
-            ->notEmpty('order');
-
-        $validator
-            ->requirePresence('title', 'create')
-            ->notEmpty('title');
+//        $validator
+//            ->integer('id')
+//            ->allowEmpty('id', 'create');
+//
+//        $validator
+//            ->integer('order')
+//            ->requirePresence('order', 'create')
+//            ->notEmpty('order');
+//
+//        $validator
+//            ->requirePresence('title', 'create')
+//            ->notEmpty('title');
 
 //        $validator
 //            ->requirePresence('photo', 'create')
@@ -83,13 +83,13 @@ class SmallImageBoxesTable extends Table
 //            ->requirePresence('dir', 'create')
 //            ->notEmpty('dir');
 
-        $validator
-            ->requirePresence('text', 'create')
-            ->notEmpty('text');
-
-        $validator
-            ->requirePresence('locale', 'create')
-            ->notEmpty('locale');
+//        $validator
+//            ->requirePresence('text', 'create')
+//            ->notEmpty('text');
+//
+//        $validator
+//            ->requirePresence('locale', 'create')
+//            ->notEmpty('locale');
 
         return $validator;
     }

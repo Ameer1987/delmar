@@ -61,38 +61,38 @@ class UsersTable extends Table {
      * @return \Cake\Validation\Validator
      */
     public function validationDefault(Validator $validator) {
-        $validator
-                ->integer('id')
-                ->allowEmpty('id', 'create');
-
-        $validator
-                ->requirePresence('name', 'create')
-                ->notEmpty('name');
-
-        $validator
-                ->requirePresence('username', 'create')
-                ->notEmpty('username');
-
-        $validator
-                ->email('email')
-                ->requirePresence('email', 'create')
-                ->notEmpty('email');
-
-        $validator
-                ->requirePresence('password', 'create')
-                ->notEmpty('password');
-
-        $validator
-                ->requirePresence('role', 'create')
-                ->notEmpty('role');
-
 //        $validator
-//            ->requirePresence('photo', 'create')
-//            ->notEmpty('photo');
+//                ->integer('id')
+//                ->allowEmpty('id', 'create');
 //
 //        $validator
-//            ->requirePresence('dir', 'create')
-//            ->notEmpty('dir');
+//                ->requirePresence('name', 'create')
+//                ->notEmpty('name');
+//
+//        $validator
+//                ->requirePresence('username', 'create')
+//                ->notEmpty('username');
+//
+//        $validator
+//                ->email('email')
+//                ->requirePresence('email', 'create')
+//                ->notEmpty('email');
+//
+//        $validator
+//                ->requirePresence('password', 'create')
+//                ->notEmpty('password');
+//
+//        $validator
+//                ->requirePresence('role', 'create')
+//                ->notEmpty('role');
+//
+////        $validator
+////            ->requirePresence('photo', 'create')
+////            ->notEmpty('photo');
+////
+////        $validator
+////            ->requirePresence('dir', 'create')
+////            ->notEmpty('dir');
 
         return $validator;
     }

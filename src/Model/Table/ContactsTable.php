@@ -62,74 +62,74 @@ class ContactsTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
-        $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
-
-        $validator
-            ->requirePresence('facebook', 'create')
-            ->notEmpty('facebook');
-
-        $validator
-            ->requirePresence('twitter', 'create')
-            ->notEmpty('twitter');
-
-        $validator
-            ->requirePresence('google_plus', 'create')
-            ->notEmpty('google_plus');
-
-        $validator
-            ->requirePresence('instagram', 'create')
-            ->notEmpty('instagram');
-
-        $validator
-            ->requirePresence('linkedin', 'create')
-            ->notEmpty('linkedin');
-
-        $validator
-            ->requirePresence('address', 'create')
-            ->notEmpty('address');
-
-        $validator
-            ->requirePresence('tel1', 'create')
-            ->notEmpty('tel1');
-
-        $validator
-            ->requirePresence('tel2', 'create')
-            ->notEmpty('tel2');
-
-        $validator
-            ->requirePresence('mob', 'create')
-            ->notEmpty('mob');
-
-        $validator
-            ->email('email')
-            ->requirePresence('email', 'create')
-            ->notEmpty('email');
-
-        $validator
-            ->requirePresence('longitude', 'create')
-            ->notEmpty('longitude');
-
-        $validator
-            ->requirePresence('latitude', 'create')
-            ->notEmpty('latitude');
-
-        $validator
-            ->requirePresence('hotline', 'create')
-            ->notEmpty('hotline');
-
-        $validator
-            ->requirePresence('locale', 'create')
-            ->notEmpty('locale');
-
-        $validator
-            ->requirePresence('text', 'create')
-            ->notEmpty('text');
-
-        $validator
-            ->requirePresence('name', 'create')
-            ->notEmpty('name');
+//        $validator
+//            ->integer('id')
+//            ->allowEmpty('id', 'create');
+//
+//        $validator
+//            ->requirePresence('facebook', 'create')
+//            ->notEmpty('facebook');
+//
+//        $validator
+//            ->requirePresence('twitter', 'create')
+//            ->notEmpty('twitter');
+//
+//        $validator
+//            ->requirePresence('google_plus', 'create')
+//            ->notEmpty('google_plus');
+//
+//        $validator
+//            ->requirePresence('instagram', 'create')
+//            ->notEmpty('instagram');
+//
+//        $validator
+//            ->requirePresence('linkedin', 'create')
+//            ->notEmpty('linkedin');
+//
+//        $validator
+//            ->requirePresence('address', 'create')
+//            ->notEmpty('address');
+//
+//        $validator
+//            ->requirePresence('tel1', 'create')
+//            ->notEmpty('tel1');
+//
+//        $validator
+//            ->requirePresence('tel2', 'create')
+//            ->notEmpty('tel2');
+//
+//        $validator
+//            ->requirePresence('mob', 'create')
+//            ->notEmpty('mob');
+//
+//        $validator
+//            ->email('email')
+//            ->requirePresence('email', 'create')
+//            ->notEmpty('email');
+//
+//        $validator
+//            ->requirePresence('longitude', 'create')
+//            ->notEmpty('longitude');
+//
+//        $validator
+//            ->requirePresence('latitude', 'create')
+//            ->notEmpty('latitude');
+//
+//        $validator
+//            ->requirePresence('hotline', 'create')
+//            ->notEmpty('hotline');
+//
+//        $validator
+//            ->requirePresence('locale', 'create')
+//            ->notEmpty('locale');
+//
+//        $validator
+//            ->requirePresence('text', 'create')
+//            ->notEmpty('text');
+//
+//        $validator
+//            ->requirePresence('name', 'create')
+//            ->notEmpty('name');
 
         return $validator;
     }

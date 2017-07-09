@@ -61,50 +61,50 @@ class HomeSlidersTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
-        $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
-
-        $validator
-            ->integer('order')
-            ->requirePresence('order', 'create')
-            ->notEmpty('order');
-
-        $validator
-            ->requirePresence('layer1', 'create')
-            ->notEmpty('layer1');
-
-        $validator
-            ->requirePresence('layer2', 'create')
-            ->notEmpty('layer2');
-
-        $validator
-            ->requirePresence('layer3', 'create')
-            ->notEmpty('layer3');
-
-        $validator
-            ->requirePresence('layer4', 'create')
-            ->notEmpty('layer4');
-
-        $validator
-            ->requirePresence('locale', 'create')
-            ->notEmpty('locale');
-
 //        $validator
-//            ->requirePresence('photo', 'create')
-//            ->notEmpty('photo');
+//            ->integer('id')
+//            ->allowEmpty('id', 'create');
 //
 //        $validator
-//            ->requirePresence('dir', 'create')
-//            ->notEmpty('dir');
-
-        $validator
-            ->requirePresence('align', 'create')
-            ->notEmpty('align');
-
-        $validator
-            ->requirePresence('border', 'create')
-            ->notEmpty('border');
+//            ->integer('order')
+//            ->requirePresence('order', 'create')
+//            ->notEmpty('order');
+//
+//        $validator
+//            ->requirePresence('layer1', 'create')
+//            ->notEmpty('layer1');
+//
+//        $validator
+//            ->requirePresence('layer2', 'create')
+//            ->notEmpty('layer2');
+//
+//        $validator
+//            ->requirePresence('layer3', 'create')
+//            ->notEmpty('layer3');
+//
+//        $validator
+//            ->requirePresence('layer4', 'create')
+//            ->notEmpty('layer4');
+//
+//        $validator
+//            ->requirePresence('locale', 'create')
+//            ->notEmpty('locale');
+//
+////        $validator
+////            ->requirePresence('photo', 'create')
+////            ->notEmpty('photo');
+////
+////        $validator
+////            ->requirePresence('dir', 'create')
+////            ->notEmpty('dir');
+//
+//        $validator
+//            ->requirePresence('align', 'create')
+//            ->notEmpty('align');
+//
+//        $validator
+//            ->requirePresence('border', 'create')
+//            ->notEmpty('border');
 
         return $validator;
     }

@@ -62,30 +62,30 @@ class BlockTabsTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
-        $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
-
-        $validator
-            ->integer('order')
-            ->requirePresence('order', 'create')
-            ->notEmpty('order');
-
-        $validator
-            ->requirePresence('title', 'create')
-            ->notEmpty('title');
-
-        $validator
-            ->requirePresence('subtitle', 'create')
-            ->notEmpty('subtitle');
-
-        $validator
-            ->requirePresence('text', 'create')
-            ->notEmpty('text');
-
-        $validator
-            ->requirePresence('locale', 'create')
-            ->notEmpty('locale');
+//        $validator
+//            ->integer('id')
+//            ->allowEmpty('id', 'create');
+//
+//        $validator
+//            ->integer('order')
+//            ->requirePresence('order', 'create')
+//            ->notEmpty('order');
+//
+//        $validator
+//            ->requirePresence('title', 'create')
+//            ->notEmpty('title');
+//
+//        $validator
+//            ->requirePresence('subtitle', 'create')
+//            ->notEmpty('subtitle');
+//
+//        $validator
+//            ->requirePresence('text', 'create')
+//            ->notEmpty('text');
+//
+//        $validator
+//            ->requirePresence('locale', 'create')
+//            ->notEmpty('locale');
 
 //        $validator
 //            ->requirePresence('photo', 'create')
@@ -95,14 +95,14 @@ class BlockTabsTable extends Table
 //            ->requirePresence('dir', 'create')
 //            ->notEmpty('dir');
 
-        $validator
-            ->requirePresence('header_icon', 'create')
-            ->notEmpty('header_icon');
-
-        $validator
-            ->requirePresence('header_title', 'create')
-            ->notEmpty('header_title');
-
+//        $validator
+//            ->requirePresence('header_icon', 'create')
+//            ->notEmpty('header_icon');
+//
+//        $validator
+//            ->requirePresence('header_title', 'create')
+//            ->notEmpty('header_title');
+//
         return $validator;
     }
 
