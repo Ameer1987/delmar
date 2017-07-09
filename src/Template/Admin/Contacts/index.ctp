@@ -44,7 +44,9 @@
                         <tbody>
             <?php foreach ($contacts as $contact): ?>
                             <tr>
-                                <td><?= h($contact->facebook) ?></td>
+                                <td>
+                                    <?= $this->Html->link($contact->facebook, ['action' => 'view', $contact->id]) ?>
+                                </td>
                                 <td><?= h($contact->twitter) ?></td>
                                 <td><?= h($contact->google_plus) ?></td>
                                 <td><?= h($contact->instagram) ?></td>
