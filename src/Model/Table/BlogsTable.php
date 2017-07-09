@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Table;
 
 use Cake\ORM\Query;
@@ -26,8 +27,7 @@ use Cake\Validation\Validator;
  * @method \App\Model\Entity\Blog[] patchEntities($entities, array $data, array $options = [])
  * @method \App\Model\Entity\Blog findOrCreate($search, callable $callback = null, $options = [])
  */
-class BlogsTable extends Table
-{
+class BlogsTable extends Table {
 
     /**
      * Initialize method
@@ -35,11 +35,11 @@ class BlogsTable extends Table
      * @param array $config The configuration for the Table.
      * @return void
      */
-    public function initialize(array $config)
-    {
+    public function initialize(array $config) {
         parent::initialize($config);
 
         $this->setTable('blogs');
+        
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
 
@@ -67,7 +67,7 @@ class BlogsTable extends Table
         $this->hasMany('SocialLinks', [
             'foreignKey' => 'blog_id'
         ]);
-        
+
         $this->addBehavior('Josegonzalez/Upload.Upload', [
             'photo' => [
                 'fields' => [
@@ -79,6 +79,14 @@ class BlogsTable extends Table
                 ],
             ],
         ]);
+        $this->addBehavior('Timestamp', [
+            'events' => [
+                'Model.beforeSave' => [
+                    'created_at' => 'new',
+                ],
+                
+            ]
+        ]);
     }
 
     /**
@@ -87,8 +95,7 @@ class BlogsTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator)
-    {
+    public function validationDefault(Validator $validator) {
 //        $validator
 //            ->integer('id')
 //            ->allowEmpty('id', 'create');
@@ -120,4 +127,5 @@ class BlogsTable extends Table
 
         return $validator;
     }
+
 }
