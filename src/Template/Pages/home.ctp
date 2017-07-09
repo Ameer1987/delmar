@@ -250,15 +250,8 @@ $this->layout = 'pages';
 
     <!-- Section: large-image-boxes  -->
     <?php if (count($LargeImageBoxes) > 0): ?>
-        <section>
-            <div class="container">
-                <div class="section-title">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h2 class="mt-0 text-uppercase font-28">Latest <span class="text-theme-colored font-weight-400">News</span> <span class="font-30 text-theme-colored">.</span></h2>
-                        </div>
-                    </div>
-                </div>
+        <section data-bg-img="images/pattern/p4.png">
+            <div class="container pt-0">
                 <div class="row multi-row-clearfix">
                     <div class="col-md-12">
                         <div class="owl-carousel-3col" data-nav="true" data-duration="100000000000">
