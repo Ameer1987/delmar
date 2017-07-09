@@ -15,6 +15,8 @@
             echo $this->Form->control('subtitle');
             echo $this->Form->control('longitude');
             echo $this->Form->control('latitude');
+            echo $this->Form->control('google_map_title');
+            echo $this->Ck->input('google_map_desc');
             echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
             echo $this->Form->input('photo', ['type' => 'file']);
             $this->Form->input('dir', ['type' => 'hidden']);
