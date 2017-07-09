@@ -92,6 +92,8 @@ class PagesController extends AppController {
     }
 
     public function contactNow() {
+        $this->setLang($this->request);
+
         $Contacts = TableRegistry::get('Contacts')->find('all');
         $this->set('Contacts', $Contacts->first());
 
