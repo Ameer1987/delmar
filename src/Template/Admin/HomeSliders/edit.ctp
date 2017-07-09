@@ -24,7 +24,8 @@
             echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
             echo $this->Form->input('photo', ['type' => 'file']);
             $this->Form->input('dir', ['type' => 'hidden']);
-            echo $this->Form->control('align');
+            echo $this->Form->select('align', ['right'=> 'right','left' =>'left', 'center' => 'center']);
+            echo $this->Form->select('border', ['circular'=> 'circular','rectangular' =>'rectangular']);
             echo $this->Form->control('border');
             echo $this->Form->control('blog_id', ['options' => $blogs]);
         ?>
