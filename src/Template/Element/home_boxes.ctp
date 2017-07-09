@@ -9,7 +9,7 @@
                         <div class="p-30">
                             <img src="<?= str_replace("webroot/", "", $HomeBox['dir']) . $HomeBox['photo'] ?>" width="70" alt="">
                             <h4 class="text-uppercase text-white"><?= $HomeBox['title'] ?></h4>
-                            <span class="text-white"><?= $HomeBox['text'] ?></span>>
+                            <span class="text-white"><?= $HomeBox['text'] ?></span>
 
                             <?php if ($HomeBox['avatar']): ?>
                                 <a href="#" class="btn btn-border btn-circled btn-transparent btn-sm"><?= $HomeBox['avatar'] ?></a>
