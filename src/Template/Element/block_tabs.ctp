@@ -26,7 +26,10 @@
                             <p>
                                 <?= $BlockTab['text'] ?>
                             </p>
-                            <a class="btn btn-dark btn-theme-colored" href="#">View Details</a>
+
+                            <?php if ($BlockTab['blog_id']): ?>
+                                <a class="btn btn-dark btn-theme-colored" href="#">View Details</a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
