@@ -2,7 +2,6 @@
     <h1><?= __('Contacts') ?></h1>
     <ol class="breadcrumb">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Contact'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ol>
@@ -37,7 +36,6 @@
                                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $contact->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $contact->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $contact->id], ['confirm' => __('Are you sure you want to delete # {0}?', $contact->id)]) ?>
                                 </td>
                             </tr>
             <?php endforeach; ?>
