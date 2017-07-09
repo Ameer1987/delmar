@@ -119,7 +119,7 @@ $this->layout = 'pages';
                     </div>
                 </div>
                 <div class="section-content">
-                    <div class="row">
+                    <div class="row" style="display: inline;">
                         <?= $this->element('text_blocks') ?>
                     </div>
                 </div>
@@ -162,11 +162,11 @@ $this->layout = 'pages';
                 <div class="section-title text-center">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-uppercase mt-0 line-height-1">Our Doctors</h2>
+                            <h2 class="text-uppercase mt-0 line-height-1">Recommended Doctors</h2>
                             <div class="title-icon">
                                 <img class="mb-10" src="images/title-icon.png" alt="">
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
+                            <p>A list of VIP doctors we recommend for our customers</p>
                         </div>
                     </div>
                 </div>
