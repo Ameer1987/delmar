@@ -1,18 +1,14 @@
-<?php
-/**
-  * @var \App\View\AppView $this
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<section class="content-header">
+    <legend><?= __('Add Testimonial') ?></legend>
+    <ol class="breadcrumb">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Testimonials'), ['action' => 'index']) ?></li>
-    </ul>
-</nav>
+    </ol>
+</section>
+
 <div class="testimonials form large-9 medium-8 columns content">
     <?= $this->Form->create($testimonial, ['type' => 'file']); ?>
     <fieldset>
-        <legend><?= __('Add Testimonial') ?></legend>
         <?php
             echo $this->Form->control('order');
             echo $this->Form->control('author_name');

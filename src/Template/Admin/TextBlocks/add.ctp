@@ -1,21 +1,18 @@
-<?php
-/**
-  * @var \App\View\AppView $this
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<section class="content-header">
+    <legend><?= __('Add Text Block') ?></legend>
+    <ol class="breadcrumb">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Text Blocks'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
+    </ol>
+</section>
+
+
 <div class="textBlocks form large-9 medium-8 columns content">
         <?= $this->Form->create($textBlock, ['type' => 'file']); ?>
 
     <fieldset>
-        <legend><?= __('Add Text Block') ?></legend>
         <?php
             echo $this->Form->control('order');
             echo $this->Form->control('title');
