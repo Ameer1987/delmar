@@ -129,7 +129,7 @@ $this->layout = 'pages';
         </section>
     <?php endif ?>
 
-    <!-- Divider: Contact -->
+    <!-- Divider: Consultation -->
     <section class="divider" id="consultation">
         <div class="container">
             <div class="row pt-30">
@@ -138,33 +138,28 @@ $this->layout = 'pages';
         </div>
     </section>
 
-    <!-- Section: block tabs -->
-    <?php if (count($BlockTabs) > 0): ?>
-        <section data-bg-img="images/pattern/p4.png" id="activities">
-            <div class="container pb-70">
-                <div class="section-title text-center">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-uppercase mt-0 line-height-1">Other activities</h2>
-                            <div class="title-icon">
-                                <img class="mb-10" src="images/title-icon.png" alt="">
-                            </div>
-                            <!--<p>&nbsp;</p>-->
-                        </div>
-                    </div>
-                </div>
-                <div class="section-centent">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="services-tab border-10px bg-white">
-                                <?= $this->element('block_tabs') ?>
-                            </div>
+    <!-- Section: magazines  -->
+    <section id="magazines">
+        <div class="container">
+            <div class="section-title text-center">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="text-uppercase mt-0 line-height-1">Magazines</h2>
+                        <div class="title-icon">
+                            <img class="mb-10" src="images/title-icon.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    <?php endif; ?>
+            <div class="row multi-row-clearfix">
+                <div class="col-md-12">
+                    <div class="owl-carousel-3col" data-nav="true" data-duration="100000000000">
+                        <?= $this->element('magazines') ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Section: Doctors -->
     <?php if (count($ResponsiveImageBoxes) > 0): ?>
@@ -225,9 +220,37 @@ $this->layout = 'pages';
         </section>
     <?php endif; ?>
 
+    <!-- Section: block tabs -->
+    <?php if (count($BlockTabs) > 0): ?>
+        <section data-bg-img="images/pattern/p4.png" id="news">
+            <div class="container pb-70">
+                <div class="section-title text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h2 class="text-uppercase mt-0 line-height-1">Latest News</h2>
+                            <div class="title-icon">
+                                <img class="mb-10" src="images/title-icon.png" alt="">
+                            </div>
+                            <!--<p>&nbsp;</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="section-centent">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="services-tab border-10px bg-white">
+                                <?= $this->element('block_tabs') ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
+
     <!-- Section: large-image-boxes  -->
     <?php if (count($LargeImageBoxes) > 0): ?>
-        <section id="news">
+        <section>
             <div class="container">
                 <div class="section-title">
                     <div class="row">
@@ -246,6 +269,25 @@ $this->layout = 'pages';
             </div>
         </section>
     <?php endif; ?>
+
+    <!-- Section: career  -->
+    <section id="career">
+        <div class="container">
+            <div class="section-title text-center">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="text-uppercase mt-0 line-height-1">Career</h2>
+                        <div class="title-icon">
+                            <img class="mb-10" src="images/title-icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <?= $this->element('career') ?>
+            </div>
+        </div>
+    </section>
 </div>
 <!-- end main-content -->
 
