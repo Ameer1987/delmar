@@ -60,7 +60,7 @@
                         <li><a href="#consultation">Consultation</a></li>
                         <li><a href="#activities">Activities</a></li>
                         <li><a href="#doctors">Doctors</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
+                        <!--<li><a href="#testimonials">Testimonials</a></li>-->
                         <li><a href="#news">News</a></li>
                     </ul>
                 </nav>
