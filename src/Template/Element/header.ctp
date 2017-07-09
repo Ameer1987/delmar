@@ -58,10 +58,10 @@
                         <li><a href="#branches">Branches</a></li>
                         <li><a href="#offers">Offers</a></li>
                         <li><a href="#consultation">Consultation</a></li>
-                        <li><a href="#activities">Activities</a></li>
+                        <li><a href="#magazines">Magazines</a></li>
                         <li><a href="#doctors">Doctors</a></li>
-                        <!--<li><a href="#testimonials">Testimonials</a></li>-->
                         <li><a href="#news">News</a></li>
+                        <li><a href="#career">Career</a></li>
                     </ul>
                 </nav>
             </div>

@@ -81,6 +81,37 @@ function initialize() {
         google.maps.event.removeListener(boundsListener);
     });
 
+    // Code for the autocomplete input
+    var input = document.getElementById('pac-input');
+
+    var autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.bindTo('bounds', map);
+
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+    var marker = new google.maps.Marker({
+        map: map
+    });
+
+    autocomplete.addListener('place_changed', function () {
+        var place = autocomplete.getPlace();
+        if (!place.geometry) {
+            return;
+        }
+
+        // Automatically center the map fitting all markers on the screen
+        var position = new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng());
+        bounds.extend(position);
+        map.fitBounds(bounds);
+
+        // Set the position of the marker using the place ID and location.
+        marker.setPlace({
+            placeId: place.place_id,
+            location: place.geometry.location
+        });
+        marker.setVisible(true);
+    });
+
 }
 
 var THEMEMASCOT_googlemap_init_obj = {};
