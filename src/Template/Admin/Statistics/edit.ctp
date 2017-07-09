@@ -1,12 +1,7 @@
 <section class="content-header">
     <legend><?= __('Edit Statistic') ?></legend>
     <ol class="breadcrumb">
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $statistic->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $statistic->id)]
-            )
-        ?></li>
+        
         <li><?= $this->Html->link(__('List Statistics'), ['action' => 'index']) ?></li>
     </ol>
 </section>

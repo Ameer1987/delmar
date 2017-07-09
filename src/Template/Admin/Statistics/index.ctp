@@ -1,9 +1,6 @@
 <section class="content-header">
     <h1><?= __('Statistics') ?></h1>
-    <ol class="breadcrumb">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Statistic'), ['action' => 'add']) ?></li>
-    </ol>
+    
 </section>
 
 <!-- Main content -->
@@ -54,7 +51,6 @@
                                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $statistic->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $statistic->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $statistic->id], ['confirm' => __('Are you sure you want to delete # {0}?', $statistic->id)]) ?>
                                 </td>
                             </tr>
             <?php endforeach; ?>
