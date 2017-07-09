@@ -60,11 +60,22 @@ $this->layout = 'pages';
     <?php endif; ?>
 
     <!-- Section: -->
-    <section data-bg-img="images/pattern/p5.png">
-        <div class="container pb-70">
+    <section data-bg-img="images/pattern/p5.png" id="contacts">
+        <div class="container pb-70" id="branches">
+            <div class="section-title text-center">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="text-uppercase mt-0 line-height-1">Our branches</h2>
+                        <div class="title-icon">
+                            <img class="mb-10" src="images/title-icon.png" alt="">
+                        </div>
+                        <!--<p>&nbsp;</p>-->
+                    </div>
+                </div>
+            </div>
             <div class="section-content">
                 <div class="row">
-                    <div class="col-md-4 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s" id="contacts">
+                    <div class="col-md-4 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="border-10px p-30 bg-white">
                             <h5><i class="fa fa-clock-o text-theme-colored"></i> Contact Us </h5>
                             <div class="opening-hours text-left">
@@ -86,7 +97,7 @@ $this->layout = 'pages';
                             <a target="_blank" href="<?= $this->Url->build(["controller" => "Pages", "action" => "contactNow"]); ?>" class="btn btn-dark btn-theme-colored btn-sm">Contact Now</a>
                         </div>
                     </div>
-                    <div class="col-md-8 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s" id="branches">
+                    <div class="col-md-8 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="owl-carousel-1col owl-dots-bottom-right" data-dots="true">
                             <?= $this->element('slider_branches') ?>
                         </div>
