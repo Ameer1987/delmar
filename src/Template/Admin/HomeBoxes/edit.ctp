@@ -1,12 +1,7 @@
 <section class="content-header">
     <legend><?= __('Edit Home Box') ?></legend>
     <ol class="breadcrumb">
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $homeBox->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $homeBox->id)]
-            )
-        ?></li>
+        
         <li><?= $this->Html->link(__('List Home Boxes'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>

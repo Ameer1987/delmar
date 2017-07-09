@@ -2,7 +2,6 @@
     <h1><?= __('Home Boxes') ?></h1>
     <ol class="breadcrumb">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Home Box'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ol>
@@ -46,7 +45,6 @@
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $homeBox->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $homeBox->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $homeBox->id], ['confirm' => __('Are you sure you want to delete # {0}?', $homeBox->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
