@@ -35,31 +35,44 @@ $this->layout = 'pages';
         </section>
     <?php endif ?>
 
-    <!-- Section: small-image-boxes  -->
-    <?php if (count($SmallImageBoxes) > 0): ?>
+    <!-- Section: Text Blocks -->
+    <?php if (count($TextBlocks) > 0): ?>
         <section id="about">
-            <div class="container">
-                <div class="section-title">
+            <div class="container pb-40">
+                <div class="section-title text-center">
                     <div class="row">
-                        <div class="col-md-6">
-                            <h2 class="mt-0 text-uppercase font-28">Featured <span class="text-theme-colored font-weight-400">offers</span> <span class="font-30 text-theme-colored">.</span></h2>
+                        <div class="col-md-8 col-md-offset-2">
+                            <h2 class="text-uppercase mt-0 line-height-1">About us</h2>
+                            <div class="title-icon">
+                                <img class="mb-10" src="images/title-icon.png" alt="">
+                            </div>
+                            <p>We offer our customers the best of everything from prescribed <br/> medicine,cosmetics and personal care products.</p>
                         </div>
                     </div>
                 </div>
-                <div class="row multi-row-clearfix">
-                    <div class="col-md-12">
-                        <div class="owl-carousel-4col" data-nav="true">
-                            <?= $this->element('small_image_boxes') ?>
-                        </div>
+                <div class="section-content">
+                    <div class="row" style="display: inline;">
+                        <?= $this->element('text_blocks') ?>
                     </div>
                 </div>
             </div>
         </section>
-    <?php endif ?>
+    <?php endif; ?>
 
     <!-- Section: -->
-    <section data-bg-img="images/pattern/p5.png">
-        <div class="container pb-70">
+    <section data-bg-img="images/pattern/p5.png" id="contacts">
+        <div class="container pb-70" id="branches">
+            <div class="section-title text-center">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="text-uppercase mt-0 line-height-1">Our branches</h2>
+                        <div class="title-icon">
+                            <img class="mb-10" src="images/title-icon.png" alt="">
+                        </div>
+                        <!--<p>&nbsp;</p>-->
+                    </div>
+                </div>
+            </div>
             <div class="section-content">
                 <div class="row">
                     <div class="col-md-4 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
@@ -94,8 +107,30 @@ $this->layout = 'pages';
         </div>
     </section>
 
+    <!-- Section: small-image-boxes  -->
+    <?php if (count($SmallImageBoxes) > 0): ?>
+        <section id="offers">
+            <div class="container">
+                <div class="section-title">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="mt-0 text-uppercase font-28">Featured <span class="text-theme-colored font-weight-400">offers</span> <span class="font-30 text-theme-colored">.</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row multi-row-clearfix">
+                    <div class="col-md-12">
+                        <div class="owl-carousel-4col" data-nav="true">
+                            <?= $this->element('small_image_boxes') ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php endif ?>
+
     <!-- Divider: Contact -->
-    <section class="divider">
+    <section class="divider" id="consultation">
         <div class="container">
             <div class="row pt-30">
                 <?= $this->element('consultation') ?>
@@ -103,42 +138,18 @@ $this->layout = 'pages';
         </div>
     </section>
 
-    <!-- Section: Text Blocks -->
-    <?php if (count($TextBlocks) > 0): ?>
-        <section id="services">
-            <div class="container pb-40">
-                <div class="section-title text-center">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-uppercase mt-0 line-height-1">About us</h2>
-                            <div class="title-icon">
-                                <img class="mb-10" src="images/title-icon.png" alt="">
-                            </div>
-                            <p>We offer our customers the best of everything from prescribed <br/> medicine,cosmetics and personal care products.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-content">
-                    <div class="row" style="display: inline;">
-                        <?= $this->element('text_blocks') ?>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <?php endif; ?>
-
     <!-- Section: block tabs -->
     <?php if (count($BlockTabs) > 0): ?>
-        <section data-bg-img="images/pattern/p4.png" id="departments">
+        <section data-bg-img="images/pattern/p4.png" id="activities">
             <div class="container pb-70">
                 <div class="section-title text-center">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-uppercase mt-0 line-height-1">Our Specialities</h2>
+                            <h2 class="text-uppercase mt-0 line-height-1">Other activities</h2>
                             <div class="title-icon">
                                 <img class="mb-10" src="images/title-icon.png" alt="">
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
+                            <!--<p>&nbsp;</p>-->
                         </div>
                     </div>
                 </div>
@@ -194,7 +205,7 @@ $this->layout = 'pages';
 
     <!-- Divider: testimonials -->
     <?php if (count($Testimonials) > 0): ?>
-        <section class="bg-light">
+        <section class="bg-light" id="testimonials">
             <div class="container pb-40">
                 <div class="section-title text-center">
                     <div class="row">
@@ -216,7 +227,7 @@ $this->layout = 'pages';
 
     <!-- Section: large-image-boxes  -->
     <?php if (count($LargeImageBoxes) > 0): ?>
-        <section id="blog">
+        <section id="news">
             <div class="container">
                 <div class="section-title">
                     <div class="row">
