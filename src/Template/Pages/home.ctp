@@ -42,7 +42,7 @@ $this->layout = 'pages';
                 <div class="section-title">
                     <div class="row">
                         <div class="col-md-6">
-                            <h2 class="mt-0 text-uppercase font-28">Latest <span class="text-theme-colored font-weight-400">offers</span> <span class="font-30 text-theme-colored">.</span></h2>
+                            <h2 class="mt-0 text-uppercase font-28">Featured <span class="text-theme-colored font-weight-400">offers</span> <span class="font-30 text-theme-colored">.</span></h2>
                         </div>
                     </div>
                 </div>
@@ -110,11 +110,11 @@ $this->layout = 'pages';
                 <div class="section-title text-center">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-uppercase mt-0 line-height-1">Services</h2>
+                            <h2 class="text-uppercase mt-0 line-height-1">About us</h2>
                             <div class="title-icon">
                                 <img class="mb-10" src="images/title-icon.png" alt="">
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
+                            <p>We offer our customers the best of everything from prescribed <br/> medicine,cosmetics and personal care products.</p>
                         </div>
                     </div>
                 </div>
