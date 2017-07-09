@@ -22,7 +22,7 @@
             echo $this->Form->control('order');
             echo $this->Form->control('title');
             echo $this->Form->control('subtitle');
-            echo $this->Form->control('locale');
+            echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
             echo $this->Form->input('photo', ['type' => 'file']);
             $this->Form->input('dir', ['type' => 'hidden']);
             echo $this->Ck->input('text');

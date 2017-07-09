@@ -23,7 +23,7 @@
             echo $this->Form->control('title_2');
             echo $this->Form->control('title_3');
             echo $this->Form->control('title_4');
-            echo $this->Form->control('locale');
+            echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
             echo $this->Form->input('photo', ['type' => 'file']);
             $this->Form->input('dir', ['type' => 'hidden']);
         ?>

@@ -34,7 +34,7 @@
             echo $this->Form->input('photo', ['type' => 'file']);
             $this->Form->input('dir', ['type' => 'hidden']);
             echo $this->Ck->input('text');
-            echo $this->Form->control('locale');
+            echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
