@@ -1,18 +1,13 @@
-<?php
-/**
-  * @var \App\View\AppView $this
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<section class="content-header">
+    <legend><?= __('Add Magazine') ?></legend>
+    <ol class="breadcrumb">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Magazines'), ['action' => 'index']) ?></li>
-    </ul>
-</nav>
+    </ol>
+</section>
 <div class="magazines form large-9 medium-8 columns content">
     <?= $this->Form->create($magazine, ['type' => 'file']) ?>
     <fieldset>
-        <legend><?= __('Add Magazine') ?></legend>
         <?php
             echo $this->Form->control('title');
             echo $this->Form->control('description');
