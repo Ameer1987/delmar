@@ -62,6 +62,14 @@ class MagazinesTable extends Table
                 ],
             ],
         ]);
+        $this->addBehavior('Timestamp', [
+            'events' => [
+                'Model.beforeSave' => [
+                    'created_at' => 'new',
+                ],
+                
+            ]
+        ]);
     }
 
     /**
