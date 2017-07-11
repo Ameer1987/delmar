@@ -18,15 +18,15 @@
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
                                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                                 <th scope="col"><?= $this->Paginator->sort('description') ?></th>
-                                <th scope="col"><?= $this->Paginator->sort('cover_img') ?></th>
+<!--                                <th scope="col"><?= $this->Paginator->sort('cover_img') ?></th>
                                 <th scope="col"><?= $this->Paginator->sort('cover_dir') ?></th>
                                 <th scope="col"><?= $this->Paginator->sort('pdf') ?></th>
                                 <th scope="col"><?= $this->Paginator->sort('pdf_dir') ?></th>
                                 <th scope="col"><?= $this->Paginator->sort('folder') ?></th>
-                                <th scope="col"><?= $this->Paginator->sort('folder_dir') ?></th>
+                                <th scope="col"><?= $this->Paginator->sort('folder_dir') ?></th>-->
                                 <th scope="col"><?= $this->Paginator->sort('order') ?></th>
                                 <th scope="col"><?= $this->Paginator->sort('created_at') ?></th>
                                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -35,15 +35,15 @@
                         <tbody>
             <?php foreach ($magazines as $magazine): ?>
                             <tr>
-                                <td><?= $this->Number->format($magazine->id) ?></td>
+                                <!--<td><?= $this->Number->format($magazine->id) ?></td>-->
                                 <td><?= h($magazine->title) ?></td>
                                 <td><?= h($magazine->description) ?></td>
-                                <td><?= h($magazine->cover_img) ?></td>
+<!--                                <td><?= h($magazine->cover_img) ?></td>
                                 <td><?= h($magazine->cover_dir) ?></td>
                                 <td><?= h($magazine->pdf) ?></td>
                                 <td><?= h($magazine->pdf_dir) ?></td>
                                 <td><?= h($magazine->folder) ?></td>
-                                <td><?= h($magazine->folder_dir) ?></td>
+                                <td><?= h($magazine->folder_dir) ?></td>-->
                                 <td><?= h($magazine->order) ?></td>
                                 <td><?= h($magazine->created_at) ?></td>
                                 <td class="actions">
