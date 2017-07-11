@@ -94,10 +94,10 @@ class MagazinesTable extends Table
 //            ->requirePresence('order', 'create')
 //            ->notEmpty('order');
 
-        $validator
-            ->dateTime('created_at')
-            ->requirePresence('created_at', 'create')
-            ->notEmpty('created_at');
+//        $validator
+//            ->dateTime('created_at')
+//            ->requirePresence('created_at', 'create')
+//            ->notEmpty('created_at');
 
         return $validator;
     }
