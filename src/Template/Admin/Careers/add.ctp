@@ -21,7 +21,7 @@
             echo $this->Form->control('salary');
             echo $this->Form->control('longitude');
             echo $this->Form->control('latitude');
-            echo $this->Form->control('created_at');
+//            echo $this->Form->control('created_at');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
