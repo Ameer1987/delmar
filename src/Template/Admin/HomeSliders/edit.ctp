@@ -22,12 +22,12 @@
             echo $this->Ck->input('layer3');
             echo $this->Form->control('layer4');
             echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
-            echo $this->Form->input('photo', ['type' => 'file']);
-            $this->Form->input('dir', ['type' => 'hidden']);
+            echo $this->Form->control('photo', array('type' => 'file', 'nameCallback' => "as"));
+            $this->Form->control('dir', ['type' => 'hidden']);
             echo $this->Form->select('align', ['right'=> 'right','left' =>'left', 'center' => 'center']);
             echo $this->Form->select('border', ['circular'=> 'circular','rectangular' =>'rectangular']);
             echo $this->Form->control('border');
-            echo $this->Form->control('blog_id', ['options' => $blogs]);
+            echo $this->Form->control('blog_id', array('options' => $blogs,'empty' => " "));
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
