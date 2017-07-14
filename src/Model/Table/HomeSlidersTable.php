@@ -38,7 +38,6 @@ class HomeSlidersTable extends Table
 
         $this->belongsTo('Blogs', [
             'foreignKey' => 'blog_id',
-            'joinType' => 'INNER'
         ]);
         $this->addBehavior('Josegonzalez/Upload.Upload', [
             'photo' => [
@@ -49,6 +48,9 @@ class HomeSlidersTable extends Table
                     'size' => 'photo_size', // defaults to `size`
                     'type' => 'photo_type', // defaults to `type`
                 ],
+                'nameCallback' => function ($data, $settings) {
+                    return strtolower($data['name']);
+                },
             ],
         ]);
     }
