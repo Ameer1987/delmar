@@ -8,7 +8,7 @@
     <ul class="list angle-double-right">
         <li><strong>Address:</strong> <?= $Contacts['address'] ?></li>
         <li><strong>Phone:</strong> <?= $Contacts['hotline'] ?></li>
-        <li><strong>Email:</strong><a href="mailto:<?= $Contacts['email'] ?>"> <?= $Contacts['email'] ?></a></li>
+        <li><strong>Email:</strong><a href="mailto:<?= $Contacts['email_contacts'] ?>"> <?= $Contacts['email_contacts'] ?></a></li>
     </ul>
 </div>
 <div class="col-md-4">
