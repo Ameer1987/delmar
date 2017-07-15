@@ -3,7 +3,7 @@
         <div class="row border-bottom-black">
             <div class="col-sm-6 col-md-4">
                 <div class="widget dark">
-                    <img src="images/logo-wide-white.png" class="mt-10 mb-20" alt="Delmar & Attalla" 
+                    <img src="../images/logo-wide-white.png" class="mt-10 mb-20" alt="Delmar & Attalla" 
                          title="Delmar & Attalla" style="max-height: 95px;">
                     <p><?= $Contacts['address'] ?></p>
                     <ul class="list-inline mt-5">
