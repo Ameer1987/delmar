@@ -98,7 +98,7 @@ $this->layout = 'pages';
                         </div>
                     </div>
                     <div class="col-md-8 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="owl-carousel-1col owl-dots-bottom-right" data-dots="true">
+                        <div class="owl-carousel-1col owl-dots-bottom-right" data-dots="true" data-duration="100000000000">
                             <?= $this->element('slider_branches') ?>
                         </div>
                     </div>
