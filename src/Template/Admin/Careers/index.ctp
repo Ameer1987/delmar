@@ -27,8 +27,6 @@
                                 <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
                                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                                 <th scope="col"><?= $this->Paginator->sort('salary') ?></th>
-                                <!--<th scope="col"><?= $this->Paginator->sort('longitude') ?></th>-->
-                                <!--<th scope="col"><?= $this->Paginator->sort('latitude') ?></th>-->
                                 <th scope="col"><?= $this->Paginator->sort('created_at') ?></th>
                                 <th scope="col" class="actions"><?= __('Actions') ?></th>
                             </tr>

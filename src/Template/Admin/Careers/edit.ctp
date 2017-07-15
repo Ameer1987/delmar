@@ -23,8 +23,7 @@
             echo $this->Form->control('title');
             echo $this->Ck->input('description');
             echo $this->Form->control('salary');
-            echo $this->Form->control('longitude');
-            echo $this->Form->control('latitude');
+            echo $this->Form->control('location');
             echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
 
 //            echo $this->Form->control('created_at');

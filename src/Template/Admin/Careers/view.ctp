@@ -25,12 +25,8 @@
             <td><?= h($career->salary) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Longitude') ?></th>
-            <td><?= h($career->longitude) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Latitude') ?></th>
-            <td><?= h($career->latitude) ?></td>
+            <th scope="row"><?= __('Location') ?></th>
+            <td><?= h($career->location) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Locale') ?></th>
