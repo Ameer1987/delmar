@@ -3,7 +3,8 @@
         <div class="row border-bottom-black">
             <div class="col-sm-6 col-md-4">
                 <div class="widget dark">
-                    <img class="mt-10 mb-20" alt="" src="images/logo-wide-white.png">
+                    <img src="images/logo-wide-white.png" class="mt-10 mb-20" alt="Delmar & Attalla" 
+                         title="Delmar & Attalla" style="max-height: 95px;">
                     <p><?= $Contacts['address'] ?></p>
                     <ul class="list-inline mt-5">
                         <li class="m-0 pl-10 pr-10"><i class="fa fa-phone text-theme-colored mr-5"></i><?= $Contacts['hotline'] ?></li>
