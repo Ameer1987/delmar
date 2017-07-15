@@ -28,7 +28,7 @@
             echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
             echo $this->Ck->input('text');
             echo $this->Form->control('name');
-            echo $this->Form->control('blog_id', ['options' => $blogs]);
+            echo $this->Form->control('blog_id', array('options' => $blogs,'empty' => " "));
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

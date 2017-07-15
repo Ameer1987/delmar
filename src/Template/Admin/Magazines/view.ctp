@@ -49,6 +49,10 @@
             <td><?= h($magazine->folder_dir) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Locale') ?></th>
+            <td><?= h($magazine->locale) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Order') ?></th>
             <td><?= h($magazine->order) ?></td>
         </tr>

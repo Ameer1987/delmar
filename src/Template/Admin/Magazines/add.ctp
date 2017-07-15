@@ -1,3 +1,9 @@
+<?php
+
+/**
+  * @var \App\View\AppView $this
+  */
+?>
 <section class="content-header">
     <legend><?= __('Add Magazine') ?></legend>
     <ol class="breadcrumb">
@@ -18,6 +24,8 @@
             echo $this->Form->input('folder', ['type' => 'file']);
             $this->Form->input('folder_dir', ['type' => 'hidden']);
             echo $this->Form->control('order');
+            echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
+
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

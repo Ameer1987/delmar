@@ -28,7 +28,7 @@
             echo $this->Ck->input('text');
             echo $this->Form->control('header_icon');
             echo $this->Form->control('header_title');
-            echo $this->Form->control('blog_id', ['options' => $blogs]);
+            echo $this->Form->control('blog_id', array('options' => $blogs,'empty' => " "));
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

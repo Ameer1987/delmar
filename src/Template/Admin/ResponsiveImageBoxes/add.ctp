@@ -17,7 +17,7 @@
             $this->Form->input('dir', ['type' => 'hidden']);
             echo $this->Form->control('subtitle');
             echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
-            echo $this->Form->control('blog_id', ['options' => $blogs]);
+            echo $this->Form->control('blog_id', array('options' => $blogs,'empty' => " "));
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
