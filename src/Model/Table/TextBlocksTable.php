@@ -38,7 +38,7 @@ class TextBlocksTable extends Table
 
         $this->belongsTo('Blogs', [
             'foreignKey' => 'blog_id',
-            'joinType' => 'INNER'
+//            'joinType' => 'INNER'
         ]);
         
         $this->addBehavior('Josegonzalez/Upload.Upload', [
