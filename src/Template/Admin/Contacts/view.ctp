@@ -55,8 +55,16 @@
             <td><?= h($contact->mob) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Email') ?></th>
-            <td><?= h($contact->email) ?></td>
+            <th scope="row"><?= __('Email contacts') ?></th>
+            <td><?= h($contact->email_contacts) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Email consultation') ?></th>
+            <td><?= h($contact->email_consultation) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Email career') ?></th>
+            <td><?= h($contact->email_career) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Longitude') ?></th>

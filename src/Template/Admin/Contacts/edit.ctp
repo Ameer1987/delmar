@@ -25,7 +25,9 @@
             echo $this->Form->control('tel1');
             echo $this->Form->control('tel2');
             echo $this->Form->control('mob');
-            echo $this->Form->control('email');
+            echo $this->Form->control('email_contacts');
+            echo $this->Form->control('email_consultation');
+            echo $this->Form->control('email_career');
             echo $this->Form->control('longitude');
             echo $this->Form->control('latitude');
             echo $this->Form->control('hotline');

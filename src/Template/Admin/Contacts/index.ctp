@@ -31,7 +31,7 @@
             <?php foreach ($contacts as $contact): ?>
                             <tr>
                                 <td><?= $this->Html->link($contact->name, ['action' => 'view', $contact->id]) ?></td>
-                                <td><?= h($contact->email) ?></td>
+                                <td><?= h($contact->email_contacts) ?></td>
                                 <td><?= $contact->has('blog') ? $this->Html->link($contact->blog->title, ['controller' => 'Blogs', 'action' => 'view', $contact->blog->id]) : '' ?></td>
                                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $contact->id]) ?>
