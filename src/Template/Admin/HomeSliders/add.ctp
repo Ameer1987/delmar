@@ -24,7 +24,7 @@
             $this->Form->input('dir', ['type' => 'hidden']);
             echo $this->Form->select('align', ['right'=> 'right','left' =>'left', 'center' => 'center']);
             echo $this->Form->select('border', ['circular'=> 'circular','rectangular' =>'rectangular']);
-            echo $this->Form->control('blog_id', ['options' => $blogs]);
+            echo $this->Form->control('blog_id', array('options' => $blogs,'empty' => " "));
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

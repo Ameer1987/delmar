@@ -20,7 +20,7 @@
             echo $this->Form->control('avatar');
             echo $this->Ck->input('text');
             echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
-            echo $this->Form->control('blog_id', ['options' => $blogs]);
+            echo $this->Form->control('blog_id', array('options' => $blogs,'empty' => " "));
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
