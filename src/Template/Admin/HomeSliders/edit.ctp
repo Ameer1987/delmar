@@ -24,9 +24,8 @@
             echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic', 'English']));
             echo $this->Form->control('photo', array('type' => 'file', 'nameCallback' => "as"));
             $this->Form->control('dir', ['type' => 'hidden']);
-            echo $this->Form->select('align', ['right'=> 'right','left' =>'left', 'center' => 'center']);
-            echo $this->Form->select('border', ['circular'=> 'circular','rectangular' =>'rectangular']);
-            echo $this->Form->control('border');
+            echo $this->Form->control('align',array('label' => 'Align','options' => ['right', 'left', 'center']));
+            echo $this->Form->control('border', array('label' => 'Border','options' => ['circular','rectangular']));
             echo $this->Form->control('blog_id', array('options' => $blogs,'empty' => " "));
         ?>
     </fieldset>
