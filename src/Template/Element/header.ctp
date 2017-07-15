@@ -49,7 +49,7 @@
             <div class="container">
                 <nav id="menuzord-right" class="menuzord blue">
                     <a class="menuzord-brand pull-left flip" href="javascript:void(0)" style="margin: 5px 0 0 0;">
-                        <img src="images/logo-wide.png" alt="Delmar & Attalla" title="Delmar & Attalla" style="max-height: 65px;">
+                        <img src="../images/logo-wide.png" alt="Delmar & Attalla" title="Delmar & Attalla" style="max-height: 65px;">
                     </a>
                     <ul class="menuzord-menu onepage-nav">
                         <li class="active"><a href="#home">Home</a></li>
