@@ -98,7 +98,7 @@ $this->layout = 'pages';
                         </div>
                     </div>
                     <div class="col-md-8 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="owl-carousel-1col owl-dots-bottom-right" data-dots="true">
+                        <div class="owl-carousel-1col owl-dots-bottom-right" data-dots="true" data-duration="100000000000">
                             <?= $this->element('slider_branches') ?>
                         </div>
                     </div>
@@ -188,15 +188,15 @@ $this->layout = 'pages';
     <?php endif; ?>
 
     <!-- Divider: Statistics -->
-    <?php if ($Statistics['title_1'] || $Statistics['title_2'] || $Statistics['title_3'] || $Statistics['title_4'] || $Statistics['number_1'] || $Statistics['number_2'] || $Statistics['number_3'] || $Statistics['number_4']): ?>
-        <section class="divider parallax layer-overlay overlay-white-8" data-bg-img="<?= str_replace("webroot/", "", $Statistics['dir']) . $Statistics['photo'] ?>">
+    <?php // if ($Statistics['title_1'] || $Statistics['title_2'] || $Statistics['title_3'] || $Statistics['title_4'] || $Statistics['number_1'] || $Statistics['number_2'] || $Statistics['number_3'] || $Statistics['number_4']): ?>
+<!--        <section class="divider parallax layer-overlay overlay-white-8" data-bg-img="<?php // echo str_replace("webroot/", "", $Statistics['dir']) . $Statistics['photo'];     ?>">
             <div class="container">
                 <div class="row">
-                    <?= $this->element('statistics') ?>
+    <?php // echo $this->element('statistics'); ?>
                 </div>
             </div>
-        </section>
-    <?php endif; ?>
+        </section>-->
+    <?php // endif; ?>
 
     <!-- Divider: testimonials -->
     <?php if (count($Testimonials) > 0): ?>

@@ -34,6 +34,11 @@
         <?= $this->Html->css('css-plugin-collections.css') ?>
         <?= $this->Html->css('menuzord-skins/menuzord-border-bottom.css') ?>
         <?= $this->Html->css('style-main.css') ?>
+        <?php if ($dir == "rtl"): ?>
+            <?= $this->Html->css('bootstrap-rtl.min.css') ?>
+            <?= $this->Html->css('style-main-rtl.css') ?>
+            <?= $this->Html->css('style-main-rtl-extra.css') ?>
+        <?php endif; ?>
         <?= $this->Html->css('preloader.css') ?>
         <?= $this->Html->css('custom-bootstrap-margin-padding.css') ?>
         <?= $this->Html->css('responsive.css') ?>
@@ -54,7 +59,7 @@
         <?= $this->fetch('css') ?>
         <?= $this->fetch('script') ?>
     </head>
-    <body class="">
+    <body class="<?= $dir ?>">
         <?= $this->Flash->render() ?>
         <div id="wrapper" class="clearfix">
             <?= $this->element('preloader') ?>
