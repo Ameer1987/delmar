@@ -87,7 +87,7 @@ $this->layout = 'pages';
                                         <span> <?= $Contacts['hotline'] ?> </span>
                                     </li>
                                     <li class="clearfix line-height-1" style="border: none;"> 
-                                        <span><a href="mailto:<?= $Contacts['email'] ?>"> Email: <?= $Contacts['email'] ?> </a></span>
+                                        <span><a href="mailto:<?= $Contacts['email_contacts'] ?>"> Email: <?= $Contacts['email_contacts'] ?> </a></span>
                                     </li>
                                 </ul>
                             </div>
@@ -139,27 +139,29 @@ $this->layout = 'pages';
     </section>
 
     <!-- Section: magazines  -->
-    <section id="magazines">
-        <div class="container">
-            <div class="section-title text-center">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h2 class="text-uppercase mt-0 line-height-1">Magazines</h2>
-                        <div class="title-icon">
-                            <img class="mb-10" src="images/title-icon.png" alt="">
+    <?php if (count($Magazines) > 0): ?>
+        <section id="magazines">
+            <div class="container">
+                <div class="section-title text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h2 class="text-uppercase mt-0 line-height-1">Magazines</h2>
+                            <div class="title-icon">
+                                <img class="mb-10" src="images/title-icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row multi-row-clearfix">
+                    <div class="col-md-12">
+                        <div class="owl-carousel-3col" data-nav="true" data-duration="100000000000">
+                            <?= $this->element('magazines') ?>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row multi-row-clearfix">
-                <div class="col-md-12">
-                    <div class="owl-carousel-3col" data-nav="true" data-duration="100000000000">
-                        <?= $this->element('magazines') ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    <?php endif; ?>
 
     <!-- Section: Doctors -->
     <?php if (count($ResponsiveImageBoxes) > 0): ?>
@@ -189,7 +191,7 @@ $this->layout = 'pages';
 
     <!-- Divider: Statistics -->
     <?php // if ($Statistics['title_1'] || $Statistics['title_2'] || $Statistics['title_3'] || $Statistics['title_4'] || $Statistics['number_1'] || $Statistics['number_2'] || $Statistics['number_3'] || $Statistics['number_4']): ?>
-<!--        <section class="divider parallax layer-overlay overlay-white-8" data-bg-img="<?php // echo str_replace("webroot/", "", $Statistics['dir']) . $Statistics['photo'];     ?>">
+<!--        <section class="divider parallax layer-overlay overlay-white-8" data-bg-img="<?php // echo str_replace("webroot/", "", $Statistics['dir']) . $Statistics['photo'];                              ?>">
             <div class="container">
                 <div class="row">
     <?php // echo $this->element('statistics'); ?>
@@ -264,23 +266,43 @@ $this->layout = 'pages';
     <?php endif; ?>
 
     <!-- Section: career  -->
-    <section id="career">
-        <div class="container">
-            <div class="section-title text-center">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h2 class="text-uppercase mt-0 line-height-1">Career</h2>
-                        <div class="title-icon">
-                            <img class="mb-10" src="images/title-icon.png" alt="">
+    <?php if (count($Careers) > 0): ?>
+        <section id="career">
+            <div class="container">
+                <div class="section-title text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h2 class="text-uppercase mt-0 line-height-1">Career</h2>
+                            <div class="title-icon">
+                                <img class="mb-10" src="images/title-icon.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="container">
+                    <?= $this->element('career') ?>
+                </div>
             </div>
+        </section>
+    <?php else: ?>
+        <section id="career">
             <div class="container">
-                <?= $this->element('career') ?>
+                <div class="section-title text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h2 class="text-uppercase mt-0 line-height-1">Career</h2>
+                            <div class="title-icon">
+                                <img class="mb-10" src="images/title-icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <?= $this->element('upload_cv') ?>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    <?php endif; ?>
 </div>
 <!-- end main-content -->
 
