@@ -21,7 +21,7 @@
             echo $this->Form->control('layer2');
             echo $this->Ck->input('layer3');
             echo $this->Form->control('layer4');
-            echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
+            echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic', 'English']));
             echo $this->Form->control('photo', array('type' => 'file', 'nameCallback' => "as"));
             $this->Form->control('dir', ['type' => 'hidden']);
             echo $this->Form->select('align', ['right'=> 'right','left' =>'left', 'center' => 'center']);

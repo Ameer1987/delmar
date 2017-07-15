@@ -23,7 +23,7 @@
             echo $this->Form->control('latitude');
             echo $this->Form->control('google_map_title');
             echo $this->Form->control('google_map_desc');
-            echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
+            echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic', 'English']));
             echo $this->Form->input('photo', ['type' => 'file']);
             $this->Form->input('dir', ['type' => 'hidden']);
             echo $this->Ck->input('text');

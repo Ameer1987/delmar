@@ -31,7 +31,7 @@
             echo $this->Form->control('longitude');
             echo $this->Form->control('latitude');
             echo $this->Form->control('hotline');
-            echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
+            echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic', 'English']));
             echo $this->Ck->input('text');
             echo $this->Form->control('name');
             echo $this->Form->control('blog_id', array('options' => $blogs,'empty' => " "));

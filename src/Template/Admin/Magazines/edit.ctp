@@ -29,7 +29,7 @@
             echo $this->Form->input('folder', ['type' => 'file']);
             $this->Form->input('folder_dir', ['type' => 'hidden']);
             echo $this->Form->control('order');
-            echo $this->Form->select('locale', ['Arabic'=> 'Arabic','English' =>'English']);
+            echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic', 'English']));
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
