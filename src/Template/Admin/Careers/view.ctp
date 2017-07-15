@@ -33,6 +33,10 @@
             <td><?= h($career->latitude) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Locale') ?></th>
+            <td><?= h($career->locale) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($career->id) ?></td>
         </tr>
