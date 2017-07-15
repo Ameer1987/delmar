@@ -8,7 +8,7 @@
                     <p><?= $Contacts['address'] ?></p>
                     <ul class="list-inline mt-5">
                         <li class="m-0 pl-10 pr-10"><i class="fa fa-phone text-theme-colored mr-5"></i><?= $Contacts['hotline'] ?></li>
-                        <li class="m-0 pl-10 pr-10"><a href="mailto:<?= $Contacts['email'] ?>"><i class="fa fa-envelope-o text-theme-colored mr-5"></i><?= $Contacts['email'] ?></a></li>
+                        <li class="m-0 pl-10 pr-10"><a href="mailto:<?= $Contacts['email_contacts'] ?>"><i class="fa fa-envelope-o text-theme-colored mr-5"></i><?= $Contacts['email_contacts'] ?></a></li>
                         <li class="m-0 pl-10 pr-10"><i class="fa fa-globe text-theme-colored mr-5"></i> <a class="text-gray" href="http://www.delmar-attalla.com">www.delmar-attalla.com </a> </li>
                     </ul>
                 </div>
