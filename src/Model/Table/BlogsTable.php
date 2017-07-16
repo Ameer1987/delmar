@@ -69,11 +69,47 @@ class BlogsTable extends Table {
         ]);
 
         $this->addBehavior('Josegonzalez/Upload.Upload', [
-            'photo' => [
+            'main_img' => [
                 'fields' => [
                     // if these fields or their defaults exist
                     // the values will be set.
-                    'dir' => 'dir', // defaults to `dir`
+                    'dir' => 'main_dir', // defaults to `dir`
+                    'size' => 'photo_size', // defaults to `size`
+                    'type' => 'photo_type', // defaults to `type`
+                ],
+            ],
+            'img_1' => [
+                'fields' => [
+                    // if these fields or their defaults exist
+                    // the values will be set.
+                    'dir' => 'dir_1', // defaults to `dir`
+                    'size' => 'photo_size', // defaults to `size`
+                    'type' => 'photo_type', // defaults to `type`
+                ],
+            ],
+            'img_2' => [
+                'fields' => [
+                    // if these fields or their defaults exist
+                    // the values will be set.
+                    'dir' => 'dir_2', // defaults to `dir`
+                    'size' => 'photo_size', // defaults to `size`
+                    'type' => 'photo_type', // defaults to `type`
+                ],
+            ],
+            'img_3' => [
+                'fields' => [
+                    // if these fields or their defaults exist
+                    // the values will be set.
+                    'dir' => 'dir_3', // defaults to `dir`
+                    'size' => 'photo_size', // defaults to `size`
+                    'type' => 'photo_type', // defaults to `type`
+                ],
+            ],
+            'img_4' => [
+                'fields' => [
+                    // if these fields or their defaults exist
+                    // the values will be set.
+                    'dir' => 'dir_4', // defaults to `dir`
                     'size' => 'photo_size', // defaults to `size`
                     'type' => 'photo_type', // defaults to `type`
                 ],
