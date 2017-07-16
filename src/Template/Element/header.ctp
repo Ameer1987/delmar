@@ -51,7 +51,7 @@
                     <a class="menuzord-brand pull-left flip" href="/" style="margin: 5px 0 0 0;">
                         <img src="../../images/logo-wide.png" alt="Delmar & Attalla" title="Delmar & Attalla" style="max-height: 65px;">
                     </a>
-                    <?php $prefix = $this->request->params['action'] != "home" ? "/pages/home" : ""; ?>
+                    <?php $prefix = $this->request->params['action'] != "home" ? "/" : ""; ?>
                     <ul class="menuzord-menu onepage-nav">
                         <li class="active"><a href="<?= $prefix ?>#home">Home</a></li>
                         <li><a href="<?= $prefix ?>#about">About</a></li>
