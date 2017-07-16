@@ -10,7 +10,7 @@
                     <h6 class="sub-title"><?= $ResponsiveImageBox['subtitle'] ?></h6>
 
                     <?php if ($ResponsiveImageBox['blog_id']): ?>
-                        <a class="btn btn-theme-colored btn-sm" href="#">view details</a>
+                        <a class="btn btn-theme-colored btn-sm" href="<?= $this->Url->build(["controller" => "Pages", "action" => "viewBlog", $ResponsiveImageBox['blog_id']]) ?>">view details</a>
                     <?php endif; ?>
                 </div>
             </div>
