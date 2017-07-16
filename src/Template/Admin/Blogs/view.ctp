@@ -11,6 +11,10 @@
         <li><?= $this->Form->postLink(__('Delete Blog'), ['action' => 'delete', $blog->id], ['confirm' => __('Are you sure you want to delete # {0}?', $blog->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Blogs'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Blog'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Block Tabs'), ['controller' => 'BlockTabs', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Block Tab'), ['controller' => 'BlockTabs', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Contacts'), ['controller' => 'Contacts', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Contact'), ['controller' => 'Contacts', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Home Boxes'), ['controller' => 'HomeBoxes', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Home Box'), ['controller' => 'HomeBoxes', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Home Sliders'), ['controller' => 'HomeSliders', 'action' => 'index']) ?> </li>
@@ -21,24 +25,64 @@
         <li><?= $this->Html->link(__('New Responsive Image Box'), ['controller' => 'ResponsiveImageBoxes', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Small Image Boxes'), ['controller' => 'SmallImageBoxes', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Small Image Box'), ['controller' => 'SmallImageBoxes', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Social Links'), ['controller' => 'SocialLinks', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Social Link'), ['controller' => 'SocialLinks', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Text Blocks'), ['controller' => 'TextBlocks', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Text Block'), ['controller' => 'TextBlocks', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="blogs view large-9 medium-8 columns content">
     <h3><?= h($blog->title) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Title') ?></th>
-            <td><?= h($blog->title) ?></td>
+            <th scope="row"><?= __('Title 1') ?></th>
+            <td><?= h($blog->title_1) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Photo') ?></th>
-            <td><?= h($blog->photo) ?></td>
+            <th scope="row"><?= __('Title 2') ?></th>
+            <td><?= h($blog->title_2) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Dir') ?></th>
-            <td><?= h($blog->dir) ?></td>
+            <th scope="row"><?= __('Title 3') ?></th>
+            <td><?= h($blog->title_3) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Main Img') ?></th>
+            <td><?= h($blog->main_img) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Main Dir') ?></th>
+            <td><?= h($blog->main_dir) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Img 1') ?></th>
+            <td><?= h($blog->img_1) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Dir 1') ?></th>
+            <td><?= h($blog->dir_1) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Img 2') ?></th>
+            <td><?= h($blog->img_2) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Dir 2') ?></th>
+            <td><?= h($blog->dir_2) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Img 3') ?></th>
+            <td><?= h($blog->img_3) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Dir 3') ?></th>
+            <td><?= h($blog->dir_3) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Img 4') ?></th>
+            <td><?= h($blog->img_4) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Dir 4') ?></th>
+            <td><?= h($blog->dir_4) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Locale') ?></th>
@@ -52,10 +96,122 @@
             <th scope="row"><?= __('Order') ?></th>
             <td><?= $this->Number->format($blog->order) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Created At') ?></th>
+            <td><?= h($blog->created_at) ?></td>
+        </tr>
     </table>
     <div class="row">
-        <h4><?= __('Text') ?></h4>
-        <?= $this->Text->autoParagraph(h($blog->text)); ?>
+        <h4><?= __('Desc 1') ?></h4>
+        <?= $this->Text->autoParagraph(h($blog->desc_1)); ?>
+    </div>
+    <div class="row">
+        <h4><?= __('Desc 2') ?></h4>
+        <?= $this->Text->autoParagraph(h($blog->desc_2)); ?>
+    </div>
+    <div class="row">
+        <h4><?= __('Desc 3') ?></h4>
+        <?= $this->Text->autoParagraph(h($blog->desc_3)); ?>
+    </div>
+    <div class="related">
+        <h4><?= __('Related Block Tabs') ?></h4>
+        <?php if (!empty($blog->block_tabs)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Order') ?></th>
+                <th scope="col"><?= __('Title') ?></th>
+                <th scope="col"><?= __('Subtitle') ?></th>
+                <th scope="col"><?= __('Text') ?></th>
+                <th scope="col"><?= __('Locale') ?></th>
+                <th scope="col"><?= __('Photo') ?></th>
+                <th scope="col"><?= __('Dir') ?></th>
+                <th scope="col"><?= __('Header Icon') ?></th>
+                <th scope="col"><?= __('Header Title') ?></th>
+                <th scope="col"><?= __('Blog Id') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($blog->block_tabs as $blockTabs): ?>
+            <tr>
+                <td><?= h($blockTabs->id) ?></td>
+                <td><?= h($blockTabs->order) ?></td>
+                <td><?= h($blockTabs->title) ?></td>
+                <td><?= h($blockTabs->subtitle) ?></td>
+                <td><?= h($blockTabs->text) ?></td>
+                <td><?= h($blockTabs->locale) ?></td>
+                <td><?= h($blockTabs->photo) ?></td>
+                <td><?= h($blockTabs->dir) ?></td>
+                <td><?= h($blockTabs->header_icon) ?></td>
+                <td><?= h($blockTabs->header_title) ?></td>
+                <td><?= h($blockTabs->blog_id) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'BlockTabs', 'action' => 'view', $blockTabs->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'BlockTabs', 'action' => 'edit', $blockTabs->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'BlockTabs', 'action' => 'delete', $blockTabs->id], ['confirm' => __('Are you sure you want to delete # {0}?', $blockTabs->id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+    <div class="related">
+        <h4><?= __('Related Contacts') ?></h4>
+        <?php if (!empty($blog->contacts)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Facebook') ?></th>
+                <th scope="col"><?= __('Twitter') ?></th>
+                <th scope="col"><?= __('Google Plus') ?></th>
+                <th scope="col"><?= __('Instagram') ?></th>
+                <th scope="col"><?= __('Linkedin') ?></th>
+                <th scope="col"><?= __('Address') ?></th>
+                <th scope="col"><?= __('Tel1') ?></th>
+                <th scope="col"><?= __('Tel2') ?></th>
+                <th scope="col"><?= __('Mob') ?></th>
+                <th scope="col"><?= __('Email Contacts') ?></th>
+                <th scope="col"><?= __('Email Consultation') ?></th>
+                <th scope="col"><?= __('Email Career') ?></th>
+                <th scope="col"><?= __('Longitude') ?></th>
+                <th scope="col"><?= __('Latitude') ?></th>
+                <th scope="col"><?= __('Hotline') ?></th>
+                <th scope="col"><?= __('Locale') ?></th>
+                <th scope="col"><?= __('Text') ?></th>
+                <th scope="col"><?= __('Name') ?></th>
+                <th scope="col"><?= __('Blog Id') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($blog->contacts as $contacts): ?>
+            <tr>
+                <td><?= h($contacts->id) ?></td>
+                <td><?= h($contacts->facebook) ?></td>
+                <td><?= h($contacts->twitter) ?></td>
+                <td><?= h($contacts->google_plus) ?></td>
+                <td><?= h($contacts->instagram) ?></td>
+                <td><?= h($contacts->linkedin) ?></td>
+                <td><?= h($contacts->address) ?></td>
+                <td><?= h($contacts->tel1) ?></td>
+                <td><?= h($contacts->tel2) ?></td>
+                <td><?= h($contacts->mob) ?></td>
+                <td><?= h($contacts->email_contacts) ?></td>
+                <td><?= h($contacts->email_consultation) ?></td>
+                <td><?= h($contacts->email_career) ?></td>
+                <td><?= h($contacts->longitude) ?></td>
+                <td><?= h($contacts->latitude) ?></td>
+                <td><?= h($contacts->hotline) ?></td>
+                <td><?= h($contacts->locale) ?></td>
+                <td><?= h($contacts->text) ?></td>
+                <td><?= h($contacts->name) ?></td>
+                <td><?= h($contacts->blog_id) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'Contacts', 'action' => 'view', $contacts->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Contacts', 'action' => 'edit', $contacts->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Contacts', 'action' => 'delete', $contacts->id], ['confirm' => __('Are you sure you want to delete # {0}?', $contacts->id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
     </div>
     <div class="related">
         <h4><?= __('Related Home Boxes') ?></h4>
@@ -243,32 +399,34 @@
         <?php endif; ?>
     </div>
     <div class="related">
-        <h4><?= __('Related Social Links') ?></h4>
-        <?php if (!empty($blog->social_links)): ?>
+        <h4><?= __('Related Text Blocks') ?></h4>
+        <?php if (!empty($blog->text_blocks)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Facebook') ?></th>
-                <th scope="col"><?= __('Twitter') ?></th>
-                <th scope="col"><?= __('Google Plus') ?></th>
-                <th scope="col"><?= __('Instagram') ?></th>
-                <th scope="col"><?= __('Linkedin') ?></th>
+                <th scope="col"><?= __('Order') ?></th>
+                <th scope="col"><?= __('Title') ?></th>
+                <th scope="col"><?= __('Photo') ?></th>
+                <th scope="col"><?= __('Dir') ?></th>
+                <th scope="col"><?= __('Text') ?></th>
+                <th scope="col"><?= __('Locale') ?></th>
                 <th scope="col"><?= __('Blog Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
-            <?php foreach ($blog->social_links as $socialLinks): ?>
+            <?php foreach ($blog->text_blocks as $textBlocks): ?>
             <tr>
-                <td><?= h($socialLinks->id) ?></td>
-                <td><?= h($socialLinks->facebook) ?></td>
-                <td><?= h($socialLinks->twitter) ?></td>
-                <td><?= h($socialLinks->google_plus) ?></td>
-                <td><?= h($socialLinks->instagram) ?></td>
-                <td><?= h($socialLinks->linkedin) ?></td>
-                <td><?= h($socialLinks->blog_id) ?></td>
+                <td><?= h($textBlocks->id) ?></td>
+                <td><?= h($textBlocks->order) ?></td>
+                <td><?= h($textBlocks->title) ?></td>
+                <td><?= h($textBlocks->photo) ?></td>
+                <td><?= h($textBlocks->dir) ?></td>
+                <td><?= h($textBlocks->text) ?></td>
+                <td><?= h($textBlocks->locale) ?></td>
+                <td><?= h($textBlocks->blog_id) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'SocialLinks', 'action' => 'view', $socialLinks->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'SocialLinks', 'action' => 'edit', $socialLinks->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'SocialLinks', 'action' => 'delete', $socialLinks->id], ['confirm' => __('Are you sure you want to delete # {0}?', $socialLinks->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['controller' => 'TextBlocks', 'action' => 'view', $textBlocks->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'TextBlocks', 'action' => 'edit', $textBlocks->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'TextBlocks', 'action' => 'delete', $textBlocks->id], ['confirm' => __('Are you sure you want to delete # {0}?', $textBlocks->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
