@@ -112,4 +112,21 @@ class PagesController extends AppController {
         $this->set('lang', $lang);
     }
 
+    public function viewBlog($blog_id) {
+        $this->setLang($this->request);
+
+        $Blog = TableRegistry::get('Blogs')->find('all')
+                ->where(['Blogs.id' => $blog_id])
+        ;
+        $this->set('Blog', $Blog->first());
+
+        $Contacts = TableRegistry::get('Contacts')->find('all');
+        $this->set('Contacts', $Contacts->first());
+
+        $lang = $this->lang == "English" ? "en" : "ar";
+        $dir = $this->lang == "English" ? "ltr" : "rtl";
+        $this->set('dir', $dir);
+        $this->set('lang', $lang);
+    }
+
 }
