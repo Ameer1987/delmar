@@ -78,10 +78,10 @@ $this->layout = 'pages';
                                     </li>
                                 </ul>
                             </div>
-                            <a target="_blank" href="<?= $this->Url->build(["controller" => "Pages", "action" => "contactNow"]); ?>" class="btn btn-dark btn-theme-colored btn-sm mt-10" style="font-size: 16px;">Get your nearest branch</a>
+                            <a href="<?= $this->Url->build(["controller" => "Pages", "action" => "contactNow"]); ?>" class="btn btn-dark btn-theme-colored btn-sm mt-10" style="font-size: 16px;">Get your nearest branch</a>
                             <h5 class="mt-30"><i class="fa fa-pencil-square-o text-theme-colored"></i> Need Help?</h5>
                             <p class="mt-0">For any needed information, feedback or complaints.</p>
-                            <a target="_blank" href="<?= $this->Url->build(["controller" => "Pages", "action" => "contactNow"]); ?>" class="btn btn-dark btn-theme-colored btn-sm">Contact Now</a>
+                            <a href="<?= $this->Url->build(["controller" => "Pages", "action" => "contactNow"]); ?>" class="btn btn-dark btn-theme-colored btn-sm">Contact Now</a>
                         </div>
                     </div>
                     <div class="col-md-8 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
