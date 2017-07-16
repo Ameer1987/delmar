@@ -12,7 +12,10 @@
                             <div class="text-white" style="margin-bottom: 11px;"><?= $HomeBox['text'] ?></div>
 
                             <?php if ($HomeBox['avatar']): ?>
-                                <a href="#" class="btn btn-border btn-circled btn-transparent btn-sm"><?= $HomeBox['avatar'] ?></a>
+                                <a href="<?= $this->Url->build(["controller" => "Pages", "action" => "viewBlog", $HomeBox['blog_id']]); ?>" 
+                                   class="btn btn-border btn-circled btn-transparent btn-sm">
+                                    <?= $HomeBox['avatar'] ?>
+                                </a>
                             <?php endif; ?>
                         </div>
                     </div>
