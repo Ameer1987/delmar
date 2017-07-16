@@ -9,7 +9,7 @@
                 <p class="desc mb-10"><?= $SmallImageBox['text'] ?></p>
 
                 <?php if ($SmallImageBox['blog_id']): ?>
-                    <a href="#" class="btn-read-more">Read more</a>
+                    <a href="<?= $this->Url->build(["controller" => "Pages", "action" => "viewBlog", $SmallImageBox['blog_id']]) ?>" class="btn-read-more">Read more</a>
                 <?php endif; ?>
             </div>
         </div>
