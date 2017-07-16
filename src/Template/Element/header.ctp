@@ -48,20 +48,21 @@
         <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
             <div class="container">
                 <nav id="menuzord-right" class="menuzord blue">
-                    <a class="menuzord-brand pull-left flip" href="javascript:void(0)" style="margin: 5px 0 0 0;">
+                    <a class="menuzord-brand pull-left flip" href="/" style="margin: 5px 0 0 0;">
                         <img src="../../images/logo-wide.png" alt="Delmar & Attalla" title="Delmar & Attalla" style="max-height: 65px;">
                     </a>
+                    <?php $prefix = $this->request->params['action'] != "home" ? "/pages/home" : ""; ?>
                     <ul class="menuzord-menu onepage-nav">
-                        <li class="active"><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contacts">Contact</a></li>
-                        <li><a href="#branches">Branches</a></li>
-                        <li><a href="#offers">Offers</a></li>
-                        <li><a href="#consultation">Consultation</a></li>
-                        <li><a href="#magazines">Magazines</a></li>
-                        <li><a href="#doctors">Doctors</a></li>
-                        <li><a href="#news">News</a></li>
-                        <li><a href="#career">Career</a></li>
+                        <li class="active"><a href="<?= $prefix ?>#home">Home</a></li>
+                        <li><a href="<?= $prefix ?>#about">About</a></li>
+                        <li><a href="<?= $prefix ?>#contacts">Contact</a></li>
+                        <li><a href="<?= $prefix ?>#branches">Branches</a></li>
+                        <li><a href="<?= $prefix ?>#offers">Offers</a></li>
+                        <li><a href="<?= $prefix ?>#consultation">Consultation</a></li>
+                        <li><a href="<?= $prefix ?>#magazines">Magazines</a></li>
+                        <li><a href="<?= $prefix ?>#doctors">Doctors</a></li>
+                        <li><a href="<?= $prefix ?>#news">News</a></li>
+                        <li><a href="<?= $prefix ?>#career">Career</a></li>
                     </ul>
                 </nav>
             </div>
