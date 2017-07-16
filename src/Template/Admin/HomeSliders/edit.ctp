@@ -21,11 +21,11 @@
             echo $this->Form->control('layer2');
             echo $this->Ck->input('layer3');
             echo $this->Form->control('layer4');
-            echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic', 'English']));
+            echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic'=> 'Arabic','English' =>'English']));
             echo $this->Form->control('photo', array('type' => 'file', 'nameCallback' => "as"));
             $this->Form->control('dir', ['type' => 'hidden']);
-            echo $this->Form->control('align',array('label' => 'Align','options' => ['right', 'left', 'center']));
-            echo $this->Form->control('border', array('label' => 'Border','options' => ['circular','rectangular']));
+            echo $this->Form->control('align',array('label' => 'Align','options' => ['right' => 'right', 'left' => 'left', 'center' =>'center']));
+            echo $this->Form->control('border', array('label' => 'Border','options' => ['circular' => 'circular','rectangular' => 'rectangular']));
             echo $this->Form->control('blog_id', array('options' => $blogs,'empty' => " "));
         ?>
     </fieldset>

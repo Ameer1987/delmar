@@ -24,7 +24,7 @@
             echo $this->Ck->input('description');
             echo $this->Form->control('salary');
             echo $this->Form->control('location');
-            echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic', 'English']));
+            echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic'=> 'Arabic','English' =>'English']));
 
 //            echo $this->Form->control('created_at');
         ?>

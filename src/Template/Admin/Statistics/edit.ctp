@@ -18,7 +18,7 @@
             echo $this->Form->control('title_2');
             echo $this->Form->control('title_3');
             echo $this->Form->control('title_4');
-            echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic', 'English']));
+            echo $this->Form->control('locale',array('label' => 'Locale','options' => [''Arabic' =>'Arabic', 'English' =>'English']));
             echo $this->Form->input('photo', ['type' => 'file']);
             $this->Form->input('dir', ['type' => 'hidden']);
         ?>
