@@ -40,7 +40,7 @@ class BlogsTable extends Table
 
         $this->setTable('blogs');
         
-        $this->setDisplayField('title');
+        $this->setDisplayField('title_1');
         $this->setPrimaryKey('id');
 
         $this->hasMany('BlockTabs', [
