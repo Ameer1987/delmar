@@ -118,7 +118,9 @@
                                  data-splitout="none" 
                                  data-responsive_offset="on"
                                  style="z-index: 5; white-space: nowrap; letter-spacing:1px;">
-                                <a class="btn btn-colored btn-lg btn-theme-colored pl-20 pr-20" href="#"><?= $HomeSlider['layer4'] ?></a> 
+                                <a class="btn btn-colored btn-lg btn-theme-colored pl-20 pr-20" href="<?= $this->Url->build(["controller" => "Pages", "action" => "viewBlog", $HomeSlider['blog_id']]) ?>">
+                                    <?= $HomeSlider['layer4'] ?>
+                                </a> 
                             </div>
                         <?php endif; ?>
                     </li>
