@@ -4,7 +4,7 @@
             <div class="icon-box left media p-0">
 
                 <?php $cursor = $TextBlock['blog_id'] ? 'cursor: pointer;' : "cursor: default;"; ?>
-                <?php $href = $TextBlock['blog_id'] ? $this->Url->build(["controller" => "Pages", "action" => "viewBlog", $TextBlock['blog_id']]) : ""; ?>
+                <?php $href = $TextBlock['blog_id'] ? $this->Url->build(["controller" => "Pages", "action" => "viewBlog", $TextBlock['blog_id']]) : "javascript:void(0)"; ?>
                 <a href="<?= $href ?>" class="media-left pull-left" style="<?= $cursor ?>">
                     <img src="<?= str_replace("webroot/", "", $TextBlock['dir']) . $TextBlock['photo'] ?>" alt="" width="64">
                 </a>
