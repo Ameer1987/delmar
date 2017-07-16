@@ -1,17 +1,4 @@
 <?php
-/**
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @since         0.10.0
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
 $this->layout = 'pages';
 ?>
 
@@ -190,15 +177,15 @@ $this->layout = 'pages';
     <?php endif; ?>
 
     <!-- Divider: Statistics -->
-    <?php // if ($Statistics['title_1'] || $Statistics['title_2'] || $Statistics['title_3'] || $Statistics['title_4'] || $Statistics['number_1'] || $Statistics['number_2'] || $Statistics['number_3'] || $Statistics['number_4']): ?>
-<!--        <section class="divider parallax layer-overlay overlay-white-8" data-bg-img="<?php // echo str_replace("webroot/", "", $Statistics['dir']) . $Statistics['photo'];                              ?>">
+    <?php // if ($Statistics['title_1'] || $Statistics['title_2'] || $Statistics['title_3'] || $Statistics['title_4'] || $Statistics['number_1'] || $Statistics['number_2'] || $Statistics['number_3'] || $Statistics['number_4']):  ?>
+<!--        <section class="divider parallax layer-overlay overlay-white-8" data-bg-img="<?php // echo str_replace("webroot/", "", $Statistics['dir']) . $Statistics['photo'];                                                                        ?>">
             <div class="container">
                 <div class="row">
-    <?php // echo $this->element('statistics'); ?>
+    <?php // echo $this->element('statistics');  ?>
                 </div>
             </div>
         </section>-->
-    <?php // endif; ?>
+    <?php // endif;  ?>
 
     <!-- Divider: testimonials -->
     <?php if (count($Testimonials) > 0): ?>
