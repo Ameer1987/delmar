@@ -24,7 +24,7 @@
                     <p class="mt-10"><?= $LargeImageBox['text'] ?></p>
 
                     <?php if ($LargeImageBox['blog_id']): ?>
-                        <a href="#" class="btn-read-more">Read more</a>
+                        <a href="<?= $this->Url->build(["controller" => "Pages", "action" => "viewBlog", $LargeImageBox['blog_id']]) ?>" class="btn-read-more">Read more</a>
                     <?php endif; ?>
 
                     <div class="clearfix"></div>
