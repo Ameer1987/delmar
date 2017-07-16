@@ -28,7 +28,7 @@
                             </p>
 
                             <?php if ($BlockTab['blog_id']): ?>
-                                <a class="btn btn-dark btn-theme-colored" href="#">View Details</a>
+                                <a class="btn btn-dark btn-theme-colored" href="<?= $this->Url->build(["controller" => "Pages", "action" => "viewBlog", $BlockTab['blog_id']]) ?>">View Details</a>
                             <?php endif; ?>
                         </div>
                     </div>
