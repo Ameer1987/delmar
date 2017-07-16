@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Model\Table;
 
 use Cake\ORM\Query;
@@ -10,14 +9,14 @@ use Cake\Validation\Validator;
 /**
  * Blogs Model
  *
- * @property |\Cake\ORM\Association\HasMany $BlockTabs
+ * @property \App\Model\Table\BlockTabsTable|\Cake\ORM\Association\HasMany $BlockTabs
+ * @property |\Cake\ORM\Association\HasMany $Contacts
  * @property \App\Model\Table\HomeBoxesTable|\Cake\ORM\Association\HasMany $HomeBoxes
  * @property \App\Model\Table\HomeSlidersTable|\Cake\ORM\Association\HasMany $HomeSliders
  * @property \App\Model\Table\LargeImageBoxesTable|\Cake\ORM\Association\HasMany $LargeImageBoxes
  * @property \App\Model\Table\ResponsiveImageBoxesTable|\Cake\ORM\Association\HasMany $ResponsiveImageBoxes
- * @property |\Cake\ORM\Association\HasMany $Services
  * @property \App\Model\Table\SmallImageBoxesTable|\Cake\ORM\Association\HasMany $SmallImageBoxes
- * @property \App\Model\Table\SocialLinksTable|\Cake\ORM\Association\HasMany $SocialLinks
+ * @property |\Cake\ORM\Association\HasMany $TextBlocks
  *
  * @method \App\Model\Entity\Blog get($primaryKey, $options = [])
  * @method \App\Model\Entity\Blog newEntity($data = null, array $options = [])
@@ -27,7 +26,8 @@ use Cake\Validation\Validator;
  * @method \App\Model\Entity\Blog[] patchEntities($entities, array $data, array $options = [])
  * @method \App\Model\Entity\Blog findOrCreate($search, callable $callback = null, $options = [])
  */
-class BlogsTable extends Table {
+class BlogsTable extends Table
+{
 
     /**
      * Initialize method
@@ -46,6 +46,9 @@ class BlogsTable extends Table {
         $this->hasMany('BlockTabs', [
             'foreignKey' => 'blog_id'
         ]);
+        $this->hasMany('Contacts', [
+            'foreignKey' => 'blog_id'
+        ]);
         $this->hasMany('HomeBoxes', [
             'foreignKey' => 'blog_id'
         ]);
@@ -58,13 +61,10 @@ class BlogsTable extends Table {
         $this->hasMany('ResponsiveImageBoxes', [
             'foreignKey' => 'blog_id'
         ]);
-        $this->hasMany('Services', [
-            'foreignKey' => 'blog_id'
-        ]);
         $this->hasMany('SmallImageBoxes', [
             'foreignKey' => 'blog_id'
         ]);
-        $this->hasMany('SocialLinks', [
+        $this->hasMany('TextBlocks', [
             'foreignKey' => 'blog_id'
         ]);
 
@@ -131,7 +131,8 @@ class BlogsTable extends Table {
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator) {
+    public function validationDefault(Validator $validator)
+    {
 //        $validator
 //            ->integer('id')
 //            ->allowEmpty('id', 'create');
@@ -142,24 +143,77 @@ class BlogsTable extends Table {
 //            ->notEmpty('order');
 //
 //        $validator
-//            ->requirePresence('title', 'create')
-//            ->notEmpty('title');
-//
-////        $validator
-////            ->requirePresence('photo', 'create')
-////            ->notEmpty('photo');
-////
-////        $validator
-////            ->requirePresence('dir', 'create')
-////            ->notEmpty('dir');
+//            ->requirePresence('title_1', 'create')
+//            ->notEmpty('title_1');
 //
 //        $validator
-//            ->requirePresence('text', 'create')
-//            ->notEmpty('text');
+//            ->requirePresence('title_2', 'create')
+//            ->notEmpty('title_2');
+//
+//        $validator
+//            ->requirePresence('title_3', 'create')
+//            ->notEmpty('title_3');
+//
+//        $validator
+//            ->requirePresence('desc_1', 'create')
+//            ->notEmpty('desc_1');
+//
+//        $validator
+//            ->requirePresence('desc_2', 'create')
+//            ->notEmpty('desc_2');
+//
+//        $validator
+//            ->requirePresence('desc_3', 'create')
+//            ->notEmpty('desc_3');
+//
+//        $validator
+//            ->requirePresence('main_img', 'create')
+//            ->notEmpty('main_img');
+//
+//        $validator
+//            ->requirePresence('main_dir', 'create')
+//            ->notEmpty('main_dir');
+//
+//        $validator
+//            ->requirePresence('img_1', 'create')
+//            ->notEmpty('img_1');
+//
+//        $validator
+//            ->requirePresence('dir_1', 'create')
+//            ->notEmpty('dir_1');
+//
+//        $validator
+//            ->requirePresence('img_2', 'create')
+//            ->notEmpty('img_2');
+//
+//        $validator
+//            ->requirePresence('dir_2', 'create')
+//            ->notEmpty('dir_2');
+//
+//        $validator
+//            ->requirePresence('img_3', 'create')
+//            ->notEmpty('img_3');
+//
+//        $validator
+//            ->requirePresence('dir_3', 'create')
+//            ->notEmpty('dir_3');
+//
+//        $validator
+//            ->requirePresence('img_4', 'create')
+//            ->notEmpty('img_4');
+//
+//        $validator
+//            ->requirePresence('dir_4', 'create')
+//            ->notEmpty('dir_4');
 //
 //        $validator
 //            ->requirePresence('locale', 'create')
 //            ->notEmpty('locale');
+//
+//        $validator
+//            ->dateTime('created_at')
+//            ->requirePresence('created_at', 'create')
+//            ->notEmpty('created_at');
 
         return $validator;
     }
