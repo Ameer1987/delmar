@@ -28,11 +28,9 @@
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                             <tr>
-                                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
                                 <th scope="col"><?= $this->Paginator->sort('order') ?></th>
-                                <th scope="col"><?= $this->Paginator->sort('title') ?></th>
-                                <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
-                                <!--<th scope="col"><?= $this->Paginator->sort('dir') ?></th>-->
+                                <th scope="col"><?= $this->Paginator->sort('title_1') ?></th>
+                                <th scope="col"><?= $this->Paginator->sort('main_img') ?></th>
                                 <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
                                 <th scope="col" class="actions"><?= __('Actions') ?></th>
                             </tr>
@@ -40,11 +38,9 @@
                         <tbody>
             <?php foreach ($blogs as $blog): ?>
                             <tr>
-                                <!--<td><?= $this->Number->format($blog->id) ?></td>-->
                                 <td><?= $this->Number->format($blog->order) ?></td>
-                                <td><?= h($blog->title) ?></td>
-                                <td><?= h($blog->photo) ?></td>
-                                <!--<td><?= h($blog->dir) ?></td>-->
+                                <td><?= h($blog->title_1) ?></td>
+                                <td><?= h($blog->main_img) ?></td>
                                 <td><?= h($blog->locale) ?></td>
                                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $blog->id]) ?>
