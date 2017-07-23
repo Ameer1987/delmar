@@ -29,7 +29,7 @@ $this->layout = 'pages';
                 <div class="section-title text-center">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-uppercase mt-0 line-height-1">About us</h2>
+                            <h2 class="text-uppercase mt-0 line-height-1"><?= __('About us') ?></h2>
                             <div class="title-icon">
                                 <img class="mb-10" src="images/title-icon.png" alt="">
                             </div>
@@ -52,7 +52,7 @@ $this->layout = 'pages';
             <div class="section-title text-center">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h2 class="text-uppercase mt-0 line-height-1">Our branches</h2>
+                        <h2 class="text-uppercase mt-0 line-height-1"><?= __('Our branches') ?></h2>
                         <div class="title-icon">
                             <img class="mb-10" src="images/title-icon.png" alt="">
                         </div>
