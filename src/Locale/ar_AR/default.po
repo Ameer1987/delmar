@@ -1,0 +1,29 @@
+msgid "Home"
+msgstr "الرئيسية"
+
+msgid "About"
+msgstr "عن الموقع"
+
+msgid "Contact"
+msgstr "اتصل بنا"
+
+msgid "Branches"
+msgstr "فروعنا"
+
+msgid "Offers"
+msgstr "عروض"
+
+msgid "Consultation"
+msgstr "الاستشارة"
+
+msgid "Magazines"
+msgstr "المجلة"
+
+msgid "Doctors"
+msgstr "الأطباء"
+
+msgid "News"
+msgstr "اخبار"
+
+msgid "Career"
+msgstr "وظائف"
