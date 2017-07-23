@@ -1,6 +1,12 @@
 msgid "Home"
 msgstr "الرئيسية"
 
+msgid "ENG"
+msgstr "الإنجليزية"
+
+msgid "ARA"
+msgstr "العربية"
+
 msgid "About"
 msgstr "عن الموقع"
 
