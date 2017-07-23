@@ -16,6 +16,9 @@ msgstr "About us"
 msgid "Contact"
 msgstr "Contact"
 
+msgid "Contact Us"
+msgstr "Contact Us"
+
 msgid "Branches"
 msgstr "Branches"
 
