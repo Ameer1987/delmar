@@ -16,6 +16,9 @@ msgstr "من نحن"
 msgid "Contact"
 msgstr "اتصل بنا"
 
+msgid "Contact Us"
+msgstr "اتصل بنا"
+
 msgid "Branches"
 msgstr "فروعنا"
 
