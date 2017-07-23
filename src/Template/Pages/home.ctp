@@ -52,7 +52,7 @@ $this->layout = 'pages';
             <div class="section-title text-center">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h2 class="text-uppercase mt-0 line-height-1"><?= __('Our branches') ?></h2>
+                        <h2 class="text-uppercase mt-0 line-height-1"><?= __('Contact Us') ?> - <?= __('Our branches') ?></h2>
                         <div class="title-icon">
                             <img class="mb-10" src="images/title-icon.png" alt="">
                         </div>
@@ -64,7 +64,7 @@ $this->layout = 'pages';
                 <div class="row">
                     <div class="col-md-4 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="border-10px p-30 bg-white">
-                            <h5><i class="fa fa-clock-o text-theme-colored"></i> Contact Us </h5>
+                            <h5><i class="fa fa-clock-o text-theme-colored"></i><?= __('Contact Us') ?></h5>
                             <div class="opening-hours text-left">
                                 <ul class="list-unstyled">
                                     <li class="clearfix"> 
