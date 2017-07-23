@@ -18,6 +18,7 @@ namespace App\Controller;
 
 use Cake\ORM\TableRegistry;
 use Cake\Routing\Router;
+use Cake\I18n\I18n;
 
 /**
  * Static content controller
@@ -47,6 +48,7 @@ class PagesController extends AppController {
         }
 
         $this->lang = $request->session()->read('lang');
+        I18n::locale($this->lang == "English" ? "en_GB" : "ar_AR");
     }
 
     public function home() {
