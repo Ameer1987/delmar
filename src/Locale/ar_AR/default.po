@@ -1,19 +1,25 @@
-msgid "Home"
-msgstr "الرئيسية"
-
 msgid "ENG"
 msgstr "الإنجليزية"
 
 msgid "ARA"
 msgstr "العربية"
 
+msgid "Home"
+msgstr "الرئيسية"
+
 msgid "About"
 msgstr "عن الموقع"
+
+msgid "About us"
+msgstr "من نحن"
 
 msgid "Contact"
 msgstr "اتصل بنا"
 
 msgid "Branches"
+msgstr "فروعنا"
+
+msgid "Our branches"
 msgstr "فروعنا"
 
 msgid "Offers"
