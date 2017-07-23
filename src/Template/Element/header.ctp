@@ -53,16 +53,16 @@
                     </a>
                     <?php $prefix = $this->request->params['action'] != "home" ? "/" : ""; ?>
                     <ul class="menuzord-menu onepage-nav">
-                        <li class="active"><a href="<?= $prefix ?>#home">Home</a></li>
-                        <li><a href="<?= $prefix ?>#about">About</a></li>
-                        <li><a href="<?= $prefix ?>#contacts">Contact</a></li>
-                        <li><a href="<?= $prefix ?>#branches">Branches</a></li>
-                        <li><a href="<?= $prefix ?>#offers">Offers</a></li>
-                        <li><a href="<?= $prefix ?>#consultation">Consultation</a></li>
-                        <li><a href="<?= $prefix ?>#magazines">Magazines</a></li>
-                        <li><a href="<?= $prefix ?>#doctors">Doctors</a></li>
-                        <li><a href="<?= $prefix ?>#news">News</a></li>
-                        <li><a href="<?= $prefix ?>#career">Career</a></li>
+                        <li class="active"><a href="<?= $prefix ?>#home"><?= __('Home') ?></a></li>
+                        <li><a href="<?= $prefix ?>#about"><?= __('About') ?></a></li>
+                        <li><a href="<?= $prefix ?>#contacts"><?= __('Contact') ?></a></li>
+                        <li><a href="<?= $prefix ?>#branches"><?= __('Branches') ?></a></li>
+                        <li><a href="<?= $prefix ?>#offers"><?= __('Offers') ?></a></li>
+                        <li><a href="<?= $prefix ?>#consultation"><?= __('Consultation') ?></a></li>
+                        <li><a href="<?= $prefix ?>#magazines"><?= __('Magazines') ?></a></li>
+                        <li><a href="<?= $prefix ?>#doctors"><?= __('Doctors') ?></a></li>
+                        <li><a href="<?= $prefix ?>#news"><?= __('News') ?></a></li>
+                        <li><a href="<?= $prefix ?>#career"><?= __('Career') ?></a></li>
                     </ul>
                 </nav>
             </div>
