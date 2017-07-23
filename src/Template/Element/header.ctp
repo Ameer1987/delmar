@@ -16,14 +16,14 @@
                 <div class="col-md-8">
                     <div id="locale-switcher" class="btn-group">
                         <a class="btn dropdown-toggle current-lang" data-toggle="dropdown" href="#">
-                            <?= strtoupper(substr($this->request->session()->read('lang'), 0, 3)) ?>
+                            <?= __(strtoupper(substr($this->request->session()->read('lang'), 0, 3))) ?>
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <?php foreach (['English', 'Arabic'] as $locale): ?>
                                 <li <?= $locale == $this->request->session()->read('lang') ? 'class="active"' : '' ?>>
                                     <a href="<?= $this->Url->build(["controller" => 'Pages', "action" => 'switchLang', $locale]) ?>">
-                                        <?= strtoupper(substr($locale, 0, 3)) ?>
+                                        <?= __(strtoupper(substr($locale, 0, 3))) ?>
                                     </a>
                                 </li>
                             <?php endforeach; ?>
