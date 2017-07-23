@@ -1,20 +1,26 @@
-msgid "Home"
-msgstr "Home"
-
 msgid "ENG"
 msgstr "ENG"
 
 msgid "ARA"
 msgstr "ARA"
 
+msgid "Home"
+msgstr "Home"
+
 msgid "About"
 msgstr "About"
+
+msgid "About us"
+msgstr "About us"
 
 msgid "Contact"
 msgstr "Contact"
 
 msgid "Branches"
 msgstr "Branches"
+
+msgid "Our branches"
+msgstr "Our branches"
 
 msgid "Offers"
 msgstr "Offers"
