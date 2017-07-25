@@ -53,7 +53,7 @@
                     </a>
                     <?php $prefix = $this->request->params['action'] != "home" ? "/" : ""; ?>
                     <ul class="menuzord-menu onepage-nav">
-                        <li class="active"><a href="<?= $prefix ?>#home"><?= __('Home') ?></a></li>
+                        <li><a href="<?= $prefix ?>#home"><?= __('Home') ?></a></li>
                         <li><a href="<?= $prefix ?>#about"><?= __('About') ?></a></li>
                         <li><a href="<?= $prefix ?>#contacts"><?= __('Contact') ?></a></li>
                         <li><a href="<?= $prefix ?>#branches"><?= __('Branches') ?></a></li>
@@ -75,4 +75,8 @@
         $('.onepage-nav').find('li').removeClass('active');
         $(this).addClass('active');
     })
+
+    if (window.location.hash) {
+        $('.onepage-nav').find('[href$="' + window.location.hash + '"]').click();
+    }
 </script>
