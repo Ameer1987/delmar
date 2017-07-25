@@ -61,9 +61,8 @@ class UsersTable extends Table {
      * @return \Cake\Validation\Validator
      */
     public function validationDefault(Validator $validator) {
-//        $validator
-//                ->integer('id')
-//                ->allowEmpty('id', 'create');
+        $validator
+                ->allowEmpty('photo');
 //
 //        $validator
 //                ->requirePresence('name', 'create')

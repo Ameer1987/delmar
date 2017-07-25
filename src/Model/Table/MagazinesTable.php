@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Table;
 
 use Cake\ORM\Query;
@@ -17,8 +18,7 @@ use Cake\Validation\Validator;
  * @method \App\Model\Entity\Magazine[] patchEntities($entities, array $data, array $options = [])
  * @method \App\Model\Entity\Magazine findOrCreate($search, callable $callback = null, $options = [])
  */
-class MagazinesTable extends Table
-{
+class MagazinesTable extends Table {
 
     /**
      * Initialize method
@@ -26,8 +26,7 @@ class MagazinesTable extends Table
      * @param array $config The configuration for the Table.
      * @return void
      */
-    public function initialize(array $config)
-    {
+    public function initialize(array $config) {
         parent::initialize($config);
 
         $this->setTable('magazines');
@@ -67,7 +66,6 @@ class MagazinesTable extends Table
                 'Model.beforeSave' => [
                     'created_at' => 'new',
                 ],
-                
             ]
         ]);
     }
@@ -78,12 +76,13 @@ class MagazinesTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator)
-    {
+    public function validationDefault(Validator $validator) {
         $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
-
+                ->allowEmpty('photo');
+        $validator
+                ->allowEmpty('pdf');
+        $validator
+                ->allowEmpty('folder');
 //        $validator
 //            ->requirePresence('title', 'create')
 //            ->notEmpty('title');
@@ -119,7 +118,6 @@ class MagazinesTable extends Table
 //        $validator
 //            ->requirePresence('order', 'create')
 //            ->notEmpty('order');
-
 //        $validator
 //            ->dateTime('created_at')
 //            ->requirePresence('created_at', 'create')
@@ -127,4 +125,5 @@ class MagazinesTable extends Table
 
         return $validator;
     }
+
 }

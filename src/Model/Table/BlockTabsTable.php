@@ -62,6 +62,8 @@ class BlockTabsTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
+        $validator
+                ->allowEmpty('photo');
 //        $validator
 //            ->integer('id')
 //            ->allowEmpty('id', 'create');

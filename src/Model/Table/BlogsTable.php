@@ -133,6 +133,18 @@ class BlogsTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
+        
+        $validator
+                ->allowEmpty('main_img');
+        $validator
+                ->allowEmpty('img_1');
+        $validator
+                ->allowEmpty('img_2');
+        $validator
+                ->allowEmpty('img_3');
+        $validator
+                ->allowEmpty('img_4');
+        
 //        $validator
 //            ->integer('id')
 //            ->allowEmpty('id', 'create');
