@@ -99,7 +99,7 @@ class PagesController extends AppController {
         $this->set('lang', $lang);
     }
 
-    public function contactNow() {
+    public function nearestBranch() {
         $this->setLang($this->request);
 
         $Contacts = TableRegistry::get('Contacts')->find('all');
@@ -107,6 +107,18 @@ class PagesController extends AppController {
 
         $SliderBranches = TableRegistry::get('SliderBranches')->find('all');
         $this->set('SliderBranches', $SliderBranches->toArray());
+
+        $lang = $this->lang == "English" ? "en" : "ar";
+        $dir = $this->lang == "English" ? "ltr" : "rtl";
+        $this->set('dir', $dir);
+        $this->set('lang', $lang);
+    }
+
+    public function contactNow() {
+        $this->setLang($this->request);
+
+        $Contacts = TableRegistry::get('Contacts')->find('all');
+        $this->set('Contacts', $Contacts->first());
 
         $lang = $this->lang == "English" ? "en" : "ar";
         $dir = $this->lang == "English" ? "ltr" : "rtl";
