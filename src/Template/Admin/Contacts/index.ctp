@@ -1,86 +1,69 @@
+<!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1><?= __('Contacts') ?></h1>
-    <ol class="breadcrumb">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
-    </ol>
+  <h1>
+    Contacts
+    <div class="pull-right"><?= $this->Html->link(__('New'), ['action' => 'add'], ['class'=>'btn btn-success btn-xs']) ?></div>
+  </h1>
 </section>
 
 <!-- Main content -->
 <section class="content">
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="box">
-                <div class="box-header">
-                    <h3 class="box-title"><?= __('Contacts data') ?></h3>
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                            <tr>
-                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
-                                <th scope="col"><?= $this->Paginator->sort('name') ?></th>
-                                <th scope="col"><?= $this->Paginator->sort('email') ?></th>
-                                <th scope="col"><?= $this->Paginator->sort('blog_id') ?></th>
-                                <th scope="col" class="actions"><?= __('Actions') ?></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-            <?php foreach ($contacts as $contact): ?>
-                            <tr>
-                                <td><?= $this->Html->link($contact->name, ['action' => 'view', $contact->id]) ?></td>
-                                <td><?= h($contact->email_contacts) ?></td>
-                                <td><?= $contact->has('blog') ? $this->Html->link($contact->blog->title, ['controller' => 'Blogs', 'action' => 'view', $contact->blog->id]) : '' ?></td>
-                                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $contact->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $contact->id]) ?>
-                                </td>
-                            </tr>
-            <?php endforeach; ?>
-                        </tbody>
-
-                    </table>
-                </div>
-                <!-- /.box-body -->
-            </div>
-            <!-- /.box -->
-
-
-            <!-- /.box -->
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title"><?= __('List of') ?> Contacts</h3>
+          <div class="box-tools">
+            <form action="<?php echo $this->Url->build(); ?>" method="POST">
+              <div class="input-group input-group-sm"  style="width: 180px;">
+                <input type="text" name="search" class="form-control" placeholder="<?= __('Fill in to start search') ?>">
+                <span class="input-group-btn">
+                <button class="btn btn-info btn-flat" type="submit"><?= __('Filter') ?></button>
+                </span>
+              </div>
+            </form>
+          </div>
         </div>
-        <!-- /.col -->
+        <!-- /.box-header -->
+        <div class="box-body table-responsive no-padding">
+          <table class="table table-hover">
+            <tr>
+              <th><?= $this->Paginator->sort('id') ?></th>
+              <th><?= $this->Paginator->sort('facebook') ?></th>
+              <th><?= $this->Paginator->sort('twitter') ?></th>
+              <th><?= $this->Paginator->sort('google_plus') ?></th>
+              <th><?= $this->Paginator->sort('instagram') ?></th>
+              <th><?= $this->Paginator->sort('linkedin') ?></th>
+              <th><?= $this->Paginator->sort('address') ?></th>
+              <th><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($contacts as $contact): ?>
+              <tr>
+                <td><?= $this->Number->format($contact->id) ?></td>
+                <td><?= h($contact->facebook) ?></td>
+                <td><?= h($contact->twitter) ?></td>
+                <td><?= h($contact->google_plus) ?></td>
+                <td><?= h($contact->instagram) ?></td>
+                <td><?= h($contact->linkedin) ?></td>
+                <td><?= h($contact->address) ?></td>
+                <td class="actions" style="white-space:nowrap">
+                  <?= $this->Html->link(__('View'), ['action' => 'view', $contact->id], ['class'=>'btn btn-info btn-xs']) ?>
+                  <?= $this->Html->link(__('Edit'), ['action' => 'edit', $contact->id], ['class'=>'btn btn-warning btn-xs']) ?>
+                  <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $contact->id], ['confirm' => __('Confirm to delete this entry?'), 'class'=>'btn btn-danger btn-xs']) ?>
+                </td>
+              </tr>
+            <?php endforeach; ?>
+          </table>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer clearfix">
+          <ul class="pagination pagination-sm no-margin pull-right">
+            <?php echo $this->Paginator->numbers(); ?>
+          </ul>
+        </div>
+      </div>
+      <!-- /.box -->
     </div>
-    <!-- /.row -->
+  </div>
 </section>
 <!-- /.content -->
-
-<?php
-$this->Html->css([
-    'AdminLTE./plugins/datatables/dataTables.bootstrap',
-  ],
-  ['block' => 'css']);
-
-$this->Html->script([
-  'AdminLTE./plugins/datatables/jquery.dataTables.min',
-  'AdminLTE./plugins/datatables/dataTables.bootstrap.min',
-],
-['block' => 'script']);
-?>
-
-<?php $this->start('scriptBotton'); ?>
-<script>
-    $(function () {
-        $("#example1").DataTable();
-        $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false
-        });
-    });
-</script>
-<?php $this->end(); ?>

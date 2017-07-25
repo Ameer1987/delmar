@@ -1,72 +1,87 @@
-<?php
-/**
-  * @var \App\View\AppView $this
-  * @var \App\Model\Entity\Statistic $statistic
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Statistic'), ['action' => 'edit', $statistic->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Statistic'), ['action' => 'delete', $statistic->id], ['confirm' => __('Are you sure you want to delete # {0}?', $statistic->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Statistics'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Statistic'), ['action' => 'add']) ?> </li>
-    </ul>
-</nav>
-<div class="statistics view large-9 medium-8 columns content">
-    <h3><?= h($statistic->id) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Number 1') ?></th>
-            <td><?= h($statistic->number_1) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Number 2') ?></th>
-            <td><?= h($statistic->number_2) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Number 3') ?></th>
-            <td><?= h($statistic->number_3) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Number 4') ?></th>
-            <td><?= h($statistic->number_4) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Title 1') ?></th>
-            <td><?= h($statistic->title_1) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Title 2') ?></th>
-            <td><?= h($statistic->title_2) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Title 3') ?></th>
-            <td><?= h($statistic->title_3) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Title 4') ?></th>
-            <td><?= h($statistic->title_4) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Locale') ?></th>
-            <td><?= h($statistic->locale) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Photo') ?></th>
-            <td><?= h($statistic->photo) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Dir') ?></th>
-            <td><?= h($statistic->dir) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($statistic->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Order') ?></th>
-            <td><?= $this->Number->format($statistic->order) ?></td>
-        </tr>
-    </table>
+<section class="content-header">
+  <h1>
+    <?php echo __('Statistic'); ?>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+    <?= $this->Html->link('<i class="fa fa-dashboard"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+    </li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-solid">
+            <div class="box-header with-border">
+                <i class="fa fa-info"></i>
+                <h3 class="box-title"><?php echo __('Information'); ?></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <dl class="dl-horizontal">
+                                                                                                                <dt><?= __('Number 1') ?></dt>
+                                        <dd>
+                                            <?= h($statistic->number_1) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Number 2') ?></dt>
+                                        <dd>
+                                            <?= h($statistic->number_2) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Number 3') ?></dt>
+                                        <dd>
+                                            <?= h($statistic->number_3) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Number 4') ?></dt>
+                                        <dd>
+                                            <?= h($statistic->number_4) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Title 1') ?></dt>
+                                        <dd>
+                                            <?= h($statistic->title_1) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Title 2') ?></dt>
+                                        <dd>
+                                            <?= h($statistic->title_2) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Title 3') ?></dt>
+                                        <dd>
+                                            <?= h($statistic->title_3) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Title 4') ?></dt>
+                                        <dd>
+                                            <?= h($statistic->title_4) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Locale') ?></dt>
+                                        <dd>
+                                            <?= h($statistic->locale) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Photo') ?></dt>
+                                        <dd>
+                                            <?= h($statistic->photo) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Dir') ?></dt>
+                                        <dd>
+                                            <?= h($statistic->dir) ?>
+                                        </dd>
+                                                                                                                                    
+                                            
+                                                                                                                                                            <dt><?= __('Order') ?></dt>
+                                <dd>
+                                    <?= $this->Number->format($statistic->order) ?>
+                                </dd>
+                                                                                                
+                                            
+                                            
+                                    </dl>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+    <!-- ./col -->
 </div>
+<!-- div -->
+
+</section>

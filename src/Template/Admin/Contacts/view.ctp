@@ -1,102 +1,115 @@
-<?php
-/**
-  * @var \App\View\AppView $this
-  * @var \App\Model\Entity\Contact $contact
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Contact'), ['action' => 'edit', $contact->id]) ?> </li>
-        <!--<li><?= $this->Form->postLink(__('Delete Contact'), ['action' => 'delete', $contact->id], ['confirm' => __('Are you sure you want to delete # {0}?', $contact->id)]) ?> </li>-->
-        <li><?= $this->Html->link(__('List Contacts'), ['action' => 'index']) ?> </li>
-        <!--<li><?= $this->Html->link(__('New Contact'), ['action' => 'add']) ?> </li>-->
-        <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?> </li>
-    </ul>
-</nav>
-<div class="contacts view large-9 medium-8 columns content">
-    <h3><?= h($contact->name) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Facebook') ?></th>
-            <td><?= h($contact->facebook) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Twitter') ?></th>
-            <td><?= h($contact->twitter) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Google Plus') ?></th>
-            <td><?= h($contact->google_plus) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Instagram') ?></th>
-            <td><?= h($contact->instagram) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Linkedin') ?></th>
-            <td><?= h($contact->linkedin) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Address') ?></th>
-            <td><?= h($contact->address) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Tel1') ?></th>
-            <td><?= h($contact->tel1) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Tel2') ?></th>
-            <td><?= h($contact->tel2) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Mob') ?></th>
-            <td><?= h($contact->mob) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Email contacts') ?></th>
-            <td><?= h($contact->email_contacts) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Email consultation') ?></th>
-            <td><?= h($contact->email_consultation) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Email career') ?></th>
-            <td><?= h($contact->email_career) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Longitude') ?></th>
-            <td><?= h($contact->longitude) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Latitude') ?></th>
-            <td><?= h($contact->latitude) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Hotline') ?></th>
-            <td><?= h($contact->hotline) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Locale') ?></th>
-            <td><?= h($contact->locale) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Name') ?></th>
-            <td><?= h($contact->name) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Blog') ?></th>
-            <td><?= $contact->has('blog') ? $this->Html->link($contact->blog->title, ['controller' => 'Blogs', 'action' => 'view', $contact->blog->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($contact->id) ?></td>
-        </tr>
-    </table>
-    <div class="row">
-        <h4><?= __('Text') ?></h4>
-        <?= $this->Text->autoParagraph(h($contact->text)); ?>
+<section class="content-header">
+  <h1>
+    <?php echo __('Contact'); ?>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+    <?= $this->Html->link('<i class="fa fa-dashboard"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+    </li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-solid">
+            <div class="box-header with-border">
+                <i class="fa fa-info"></i>
+                <h3 class="box-title"><?php echo __('Information'); ?></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <dl class="dl-horizontal">
+                                                                                                                <dt><?= __('Facebook') ?></dt>
+                                        <dd>
+                                            <?= h($contact->facebook) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Twitter') ?></dt>
+                                        <dd>
+                                            <?= h($contact->twitter) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Google Plus') ?></dt>
+                                        <dd>
+                                            <?= h($contact->google_plus) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Instagram') ?></dt>
+                                        <dd>
+                                            <?= h($contact->instagram) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Linkedin') ?></dt>
+                                        <dd>
+                                            <?= h($contact->linkedin) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Address') ?></dt>
+                                        <dd>
+                                            <?= h($contact->address) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Tel1') ?></dt>
+                                        <dd>
+                                            <?= h($contact->tel1) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Tel2') ?></dt>
+                                        <dd>
+                                            <?= h($contact->tel2) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Mob') ?></dt>
+                                        <dd>
+                                            <?= h($contact->mob) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Email Contacts') ?></dt>
+                                        <dd>
+                                            <?= h($contact->email_contacts) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Email Consultation') ?></dt>
+                                        <dd>
+                                            <?= h($contact->email_consultation) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Email Career') ?></dt>
+                                        <dd>
+                                            <?= h($contact->email_career) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Longitude') ?></dt>
+                                        <dd>
+                                            <?= h($contact->longitude) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Latitude') ?></dt>
+                                        <dd>
+                                            <?= h($contact->latitude) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Hotline') ?></dt>
+                                        <dd>
+                                            <?= h($contact->hotline) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Locale') ?></dt>
+                                        <dd>
+                                            <?= h($contact->locale) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Name') ?></dt>
+                                        <dd>
+                                            <?= h($contact->name) ?>
+                                        </dd>
+                                                                                                                                                    <dt><?= __('Blog') ?></dt>
+                                <dd>
+                                    <?= $contact->has('blog') ? $contact->blog->title_1 : '' ?>
+                                </dd>
+                                                                                                
+                                            
+                                                                                                                                            
+                                            
+                                            
+                                                                        <dt><?= __('Text') ?></dt>
+                            <dd>
+                            <?= $this->Text->autoParagraph(h($contact->text)); ?>
+                            </dd>
+                                                            </dl>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
     </div>
+    <!-- ./col -->
 </div>
+<!-- div -->
+
+</section>

@@ -1,48 +1,63 @@
-<?php
-/**
-  * @var \App\View\AppView $this
-  * @var \App\Model\Entity\Career $career
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Career'), ['action' => 'edit', $career->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Career'), ['action' => 'delete', $career->id], ['confirm' => __('Are you sure you want to delete # {0}?', $career->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Careers'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Career'), ['action' => 'add']) ?> </li>
-    </ul>
-</nav>
-<div class="careers view large-9 medium-8 columns content">
-    <h3><?= h($career->title) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Title') ?></th>
-            <td><?= h($career->title) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Salary') ?></th>
-            <td><?= h($career->salary) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Location') ?></th>
-            <td><?= h($career->location) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Locale') ?></th>
-            <td><?= h($career->locale) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($career->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Created At') ?></th>
-            <td><?= h($career->created_at) ?></td>
-        </tr>
-    </table>
-    <div class="row">
-        <h4><?= __('Description') ?></h4>
-        <?= $this->Text->autoParagraph(h($career->description)); ?>
+<section class="content-header">
+  <h1>
+    <?php echo __('Career'); ?>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+    <?= $this->Html->link('<i class="fa fa-dashboard"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+    </li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-solid">
+            <div class="box-header with-border">
+                <i class="fa fa-info"></i>
+                <h3 class="box-title"><?php echo __('Information'); ?></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <dl class="dl-horizontal">
+                                                                                                                <dt><?= __('Title') ?></dt>
+                                        <dd>
+                                            <?= h($career->title) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Salary') ?></dt>
+                                        <dd>
+                                            <?= h($career->salary) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Location') ?></dt>
+                                        <dd>
+                                            <?= h($career->location) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Locale') ?></dt>
+                                        <dd>
+                                            <?= h($career->locale) ?>
+                                        </dd>
+                                                                                                                                    
+                                            
+                                                                                                                                            
+                                                                                                        <dt><?= __('Created At') ?></dt>
+                                <dd>
+                                    <?= h($career->created_at) ?>
+                                </dd>
+                                                                                                    
+                                            
+                                                                        <dt><?= __('Description') ?></dt>
+                            <dd>
+                            <?= $this->Text->autoParagraph(h($career->description)); ?>
+                            </dd>
+                                                            </dl>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
     </div>
+    <!-- ./col -->
 </div>
+<!-- div -->
+
+</section>

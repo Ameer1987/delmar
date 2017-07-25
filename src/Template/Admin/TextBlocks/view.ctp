@@ -1,54 +1,67 @@
-<?php
-/**
-  * @var \App\View\AppView $this
-  * @var \App\Model\Entity\TextBlock $textBlock
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Text Block'), ['action' => 'edit', $textBlock->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Text Block'), ['action' => 'delete', $textBlock->id], ['confirm' => __('Are you sure you want to delete # {0}?', $textBlock->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Text Blocks'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Text Block'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?> </li>
-    </ul>
-</nav>
-<div class="textBlocks view large-9 medium-8 columns content">
-    <h3><?= h($textBlock->title) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Title') ?></th>
-            <td><?= h($textBlock->title) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Photo') ?></th>
-            <td><?= h($textBlock->photo) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Dir') ?></th>
-            <td><?= h($textBlock->dir) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Locale') ?></th>
-            <td><?= h($textBlock->locale) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Blog') ?></th>
-            <td><?= $textBlock->has('blog') ? $this->Html->link($textBlock->blog->title, ['controller' => 'Blogs', 'action' => 'view', $textBlock->blog->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($textBlock->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Order') ?></th>
-            <td><?= $this->Number->format($textBlock->order) ?></td>
-        </tr>
-    </table>
-    <div class="row">
-        <h4><?= __('Text') ?></h4>
-        <?= $this->Text->autoParagraph(h($textBlock->text)); ?>
+<section class="content-header">
+  <h1>
+    <?php echo __('Text Block'); ?>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+    <?= $this->Html->link('<i class="fa fa-dashboard"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+    </li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-solid">
+            <div class="box-header with-border">
+                <i class="fa fa-info"></i>
+                <h3 class="box-title"><?php echo __('Information'); ?></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <dl class="dl-horizontal">
+                                                                                                                <dt><?= __('Title') ?></dt>
+                                        <dd>
+                                            <?= h($textBlock->title) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Photo') ?></dt>
+                                        <dd>
+                                            <?= h($textBlock->photo) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Dir') ?></dt>
+                                        <dd>
+                                            <?= h($textBlock->dir) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Locale') ?></dt>
+                                        <dd>
+                                            <?= h($textBlock->locale) ?>
+                                        </dd>
+                                                                                                                                                    <dt><?= __('Blog') ?></dt>
+                                <dd>
+                                    <?= $textBlock->has('blog') ? $textBlock->blog->title_1 : '' ?>
+                                </dd>
+                                                                                                
+                                            
+                                                                                                                                                            <dt><?= __('Order') ?></dt>
+                                <dd>
+                                    <?= $this->Number->format($textBlock->order) ?>
+                                </dd>
+                                                                                                
+                                            
+                                            
+                                                                        <dt><?= __('Text') ?></dt>
+                            <dd>
+                            <?= $this->Text->autoParagraph(h($textBlock->text)); ?>
+                            </dd>
+                                                            </dl>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
     </div>
+    <!-- ./col -->
 </div>
+<!-- div -->
+
+</section>

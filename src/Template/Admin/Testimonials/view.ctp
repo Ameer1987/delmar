@@ -1,48 +1,63 @@
-<?php
-/**
-  * @var \App\View\AppView $this
-  * @var \App\Model\Entity\Testimonial $testimonial
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Testimonial'), ['action' => 'edit', $testimonial->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Testimonial'), ['action' => 'delete', $testimonial->id], ['confirm' => __('Are you sure you want to delete # {0}?', $testimonial->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Testimonials'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Testimonial'), ['action' => 'add']) ?> </li>
-    </ul>
-</nav>
-<div class="testimonials view large-9 medium-8 columns content">
-    <h3><?= h($testimonial->id) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Author Name') ?></th>
-            <td><?= h($testimonial->author_name) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Locale') ?></th>
-            <td><?= h($testimonial->locale) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Photo') ?></th>
-            <td><?= h($testimonial->photo) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Dir') ?></th>
-            <td><?= h($testimonial->dir) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($testimonial->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Order') ?></th>
-            <td><?= $this->Number->format($testimonial->order) ?></td>
-        </tr>
-    </table>
-    <div class="row">
-        <h4><?= __('Text') ?></h4>
-        <?= $this->Text->autoParagraph(h($testimonial->text)); ?>
+<section class="content-header">
+  <h1>
+    <?php echo __('Testimonial'); ?>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+    <?= $this->Html->link('<i class="fa fa-dashboard"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+    </li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-solid">
+            <div class="box-header with-border">
+                <i class="fa fa-info"></i>
+                <h3 class="box-title"><?php echo __('Information'); ?></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <dl class="dl-horizontal">
+                                                                                                                <dt><?= __('Author Name') ?></dt>
+                                        <dd>
+                                            <?= h($testimonial->author_name) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Locale') ?></dt>
+                                        <dd>
+                                            <?= h($testimonial->locale) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Photo') ?></dt>
+                                        <dd>
+                                            <?= h($testimonial->photo) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Dir') ?></dt>
+                                        <dd>
+                                            <?= h($testimonial->dir) ?>
+                                        </dd>
+                                                                                                                                    
+                                            
+                                                                                                                                                            <dt><?= __('Order') ?></dt>
+                                <dd>
+                                    <?= $this->Number->format($testimonial->order) ?>
+                                </dd>
+                                                                                                
+                                            
+                                            
+                                                                        <dt><?= __('Text') ?></dt>
+                            <dd>
+                            <?= $this->Text->autoParagraph(h($testimonial->text)); ?>
+                            </dd>
+                                                            </dl>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
     </div>
+    <!-- ./col -->
 </div>
+<!-- div -->
+
+</section>

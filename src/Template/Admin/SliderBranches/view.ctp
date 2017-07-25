@@ -1,60 +1,83 @@
-<?php
-/**
-  * @var \App\View\AppView $this
-  * @var \App\Model\Entity\SliderBranch $sliderBranch
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Slider Branch'), ['action' => 'edit', $sliderBranch->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Slider Branch'), ['action' => 'delete', $sliderBranch->id], ['confirm' => __('Are you sure you want to delete # {0}?', $sliderBranch->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Slider Branches'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Slider Branch'), ['action' => 'add']) ?> </li>
-    </ul>
-</nav>
-<div class="sliderBranches view large-9 medium-8 columns content">
-    <h3><?= h($sliderBranch->title) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Title') ?></th>
-            <td><?= h($sliderBranch->title) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Subtitle') ?></th>
-            <td><?= h($sliderBranch->subtitle) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Longitude') ?></th>
-            <td><?= h($sliderBranch->longitude) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Latitude') ?></th>
-            <td><?= h($sliderBranch->latitude) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Locale') ?></th>
-            <td><?= h($sliderBranch->locale) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Photo') ?></th>
-            <td><?= h($sliderBranch->photo) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Dir') ?></th>
-            <td><?= h($sliderBranch->dir) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($sliderBranch->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Order') ?></th>
-            <td><?= $this->Number->format($sliderBranch->order) ?></td>
-        </tr>
-    </table>
-    <div class="row">
-        <h4><?= __('Text') ?></h4>
-        <?= $this->Text->autoParagraph(h($sliderBranch->text)); ?>
+<section class="content-header">
+  <h1>
+    <?php echo __('Slider Branch'); ?>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+    <?= $this->Html->link('<i class="fa fa-dashboard"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+    </li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-solid">
+            <div class="box-header with-border">
+                <i class="fa fa-info"></i>
+                <h3 class="box-title"><?php echo __('Information'); ?></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <dl class="dl-horizontal">
+                                                                                                                <dt><?= __('Title') ?></dt>
+                                        <dd>
+                                            <?= h($sliderBranch->title) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Subtitle') ?></dt>
+                                        <dd>
+                                            <?= h($sliderBranch->subtitle) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Longitude') ?></dt>
+                                        <dd>
+                                            <?= h($sliderBranch->longitude) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Latitude') ?></dt>
+                                        <dd>
+                                            <?= h($sliderBranch->latitude) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Google Map Title') ?></dt>
+                                        <dd>
+                                            <?= h($sliderBranch->google_map_title) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Locale') ?></dt>
+                                        <dd>
+                                            <?= h($sliderBranch->locale) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Photo') ?></dt>
+                                        <dd>
+                                            <?= h($sliderBranch->photo) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Dir') ?></dt>
+                                        <dd>
+                                            <?= h($sliderBranch->dir) ?>
+                                        </dd>
+                                                                                                                                    
+                                            
+                                                                                                                                                            <dt><?= __('Order') ?></dt>
+                                <dd>
+                                    <?= $this->Number->format($sliderBranch->order) ?>
+                                </dd>
+                                                                                                
+                                            
+                                            
+                                                                        <dt><?= __('Text') ?></dt>
+                            <dd>
+                            <?= $this->Text->autoParagraph(h($sliderBranch->text)); ?>
+                            </dd>
+                                                    <dt><?= __('Google Map Desc') ?></dt>
+                            <dd>
+                            <?= $this->Text->autoParagraph(h($sliderBranch->google_map_desc)); ?>
+                            </dd>
+                                                            </dl>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
     </div>
+    <!-- ./col -->
 </div>
+<!-- div -->
+
+</section>

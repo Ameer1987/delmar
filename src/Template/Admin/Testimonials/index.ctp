@@ -1,90 +1,67 @@
+<!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1><?= __('Testimonials') ?></h1>
-    <ol class="breadcrumb">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Testimonial'), ['action' => 'add']) ?></li>
-    </ol>
+  <h1>
+    Testimonials
+    <div class="pull-right"><?= $this->Html->link(__('New'), ['action' => 'add'], ['class'=>'btn btn-success btn-xs']) ?></div>
+  </h1>
 </section>
 
 <!-- Main content -->
 <section class="content">
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="box">
-                <div class="box-header">
-                    <h3 class="box-title"><?= __('Testimonials data') ?></h3>
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
-                                <th scope="col"><?= $this->Paginator->sort('order') ?></th>
-                                <th scope="col"><?= $this->Paginator->sort('author_name') ?></th>
-                                <th scope="col"><?= $this->Paginator->sort('locale') ?></th>
-                                <th scope="col"><?= $this->Paginator->sort('photo') ?></th>
-                                <!--<th scope="col"><?= $this->Paginator->sort('dir') ?></th>-->
-                                <th scope="col" class="actions"><?= __('Actions') ?></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-            <?php foreach ($testimonials as $testimonial): ?>
-                            <tr>
-                                <!--<td><?= $this->Number->format($testimonial->id) ?></td>-->
-                                <td><?= $this->Number->format($testimonial->order) ?></td>
-                                <td><?= h($testimonial->author_name) ?></td>
-                                <td><?= h($testimonial->locale) ?></td>
-                                <td><?= h($testimonial->photo) ?></td>
-                                <!--<td><?= h($testimonial->dir) ?></td>-->
-                                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $testimonial->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $testimonial->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $testimonial->id], ['confirm' => __('Are you sure you want to delete # {0}?', $testimonial->id)]) ?>
-                                </td>
-                            </tr>
-            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- /.box-body -->
-            </div>
-            <!-- /.box -->
-
-
-            <!-- /.box -->
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title"><?= __('List of') ?> Testimonials</h3>
+          <div class="box-tools">
+            <form action="<?php echo $this->Url->build(); ?>" method="POST">
+              <div class="input-group input-group-sm"  style="width: 180px;">
+                <input type="text" name="search" class="form-control" placeholder="<?= __('Fill in to start search') ?>">
+                <span class="input-group-btn">
+                <button class="btn btn-info btn-flat" type="submit"><?= __('Filter') ?></button>
+                </span>
+              </div>
+            </form>
+          </div>
         </div>
-        <!-- /.col -->
+        <!-- /.box-header -->
+        <div class="box-body table-responsive no-padding">
+          <table class="table table-hover">
+            <tr>
+              <th><?= $this->Paginator->sort('id') ?></th>
+              <th><?= $this->Paginator->sort('order') ?></th>
+              <th><?= $this->Paginator->sort('author_name') ?></th>
+              <th><?= $this->Paginator->sort('locale') ?></th>
+              <th><?= $this->Paginator->sort('photo') ?></th>
+              <th><?= $this->Paginator->sort('dir') ?></th>
+              <th><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($testimonials as $testimonial): ?>
+              <tr>
+                <td><?= $this->Number->format($testimonial->id) ?></td>
+                <td><?= $this->Number->format($testimonial->order) ?></td>
+                <td><?= h($testimonial->author_name) ?></td>
+                <td><?= h($testimonial->locale) ?></td>
+                <td><?= h($testimonial->photo) ?></td>
+                <td><?= h($testimonial->dir) ?></td>
+                <td class="actions" style="white-space:nowrap">
+                  <?= $this->Html->link(__('View'), ['action' => 'view', $testimonial->id], ['class'=>'btn btn-info btn-xs']) ?>
+                  <?= $this->Html->link(__('Edit'), ['action' => 'edit', $testimonial->id], ['class'=>'btn btn-warning btn-xs']) ?>
+                  <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $testimonial->id], ['confirm' => __('Confirm to delete this entry?'), 'class'=>'btn btn-danger btn-xs']) ?>
+                </td>
+              </tr>
+            <?php endforeach; ?>
+          </table>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer clearfix">
+          <ul class="pagination pagination-sm no-margin pull-right">
+            <?php echo $this->Paginator->numbers(); ?>
+          </ul>
+        </div>
+      </div>
+      <!-- /.box -->
     </div>
-    <!-- /.row -->
+  </div>
 </section>
 <!-- /.content -->
-
-<?php
-$this->Html->css([
-    'AdminLTE./plugins/datatables/dataTables.bootstrap',
-  ],
-  ['block' => 'css']);
-
-$this->Html->script([
-  'AdminLTE./plugins/datatables/jquery.dataTables.min',
-  'AdminLTE./plugins/datatables/dataTables.bootstrap.min',
-],
-['block' => 'script']);
-?>
-
-<?php $this->start('scriptBotton'); ?>
-<script>
-    $(function () {
-        $("#example1").DataTable();
-        $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false
-        });
-    });
-</script>
-<?php $this->end(); ?>

@@ -1,68 +1,83 @@
-<?php
-/**
-  * @var \App\View\AppView $this
-  * @var \App\Model\Entity\Magazine $magazine
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Magazine'), ['action' => 'edit', $magazine->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Magazine'), ['action' => 'delete', $magazine->id], ['confirm' => __('Are you sure you want to delete # {0}?', $magazine->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Magazines'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Magazine'), ['action' => 'add']) ?> </li>
-    </ul>
-</nav>
-<div class="magazines view large-9 medium-8 columns content">
-    <h3><?= h($magazine->title) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Title') ?></th>
-            <td><?= h($magazine->title) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Description') ?></th>
-            <td><?= h($magazine->description) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Cover Img') ?></th>
-            <td><?= h($magazine->cover_img) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Cover Dir') ?></th>
-            <td><?= h($magazine->cover_dir) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Pdf') ?></th>
-            <td><?= h($magazine->pdf) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Pdf Dir') ?></th>
-            <td><?= h($magazine->pdf_dir) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Folder') ?></th>
-            <td><?= h($magazine->folder) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Folder Dir') ?></th>
-            <td><?= h($magazine->folder_dir) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Locale') ?></th>
-            <td><?= h($magazine->locale) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Order') ?></th>
-            <td><?= h($magazine->order) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($magazine->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Created At') ?></th>
-            <td><?= h($magazine->created_at) ?></td>
-        </tr>
-    </table>
+<section class="content-header">
+  <h1>
+    <?php echo __('Magazine'); ?>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+    <?= $this->Html->link('<i class="fa fa-dashboard"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+    </li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-solid">
+            <div class="box-header with-border">
+                <i class="fa fa-info"></i>
+                <h3 class="box-title"><?php echo __('Information'); ?></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <dl class="dl-horizontal">
+                                                                                                                <dt><?= __('Title') ?></dt>
+                                        <dd>
+                                            <?= h($magazine->title) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Description') ?></dt>
+                                        <dd>
+                                            <?= h($magazine->description) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Cover Img') ?></dt>
+                                        <dd>
+                                            <?= h($magazine->cover_img) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Cover Dir') ?></dt>
+                                        <dd>
+                                            <?= h($magazine->cover_dir) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Pdf') ?></dt>
+                                        <dd>
+                                            <?= h($magazine->pdf) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Pdf Dir') ?></dt>
+                                        <dd>
+                                            <?= h($magazine->pdf_dir) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Folder') ?></dt>
+                                        <dd>
+                                            <?= h($magazine->folder) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Folder Dir') ?></dt>
+                                        <dd>
+                                            <?= h($magazine->folder_dir) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Order') ?></dt>
+                                        <dd>
+                                            <?= h($magazine->order) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Locale') ?></dt>
+                                        <dd>
+                                            <?= h($magazine->locale) ?>
+                                        </dd>
+                                                                                                                                    
+                                            
+                                                                                                                                            
+                                                                                                        <dt><?= __('Created At') ?></dt>
+                                <dd>
+                                    <?= h($magazine->created_at) ?>
+                                </dd>
+                                                                                                    
+                                            
+                                    </dl>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+    <!-- ./col -->
 </div>
+<!-- div -->
+
+</section>

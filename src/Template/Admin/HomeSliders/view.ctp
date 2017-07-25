@@ -1,70 +1,83 @@
-<?php
-/**
-  * @var \App\View\AppView $this
-  * @var \App\Model\Entity\HomeSlider $homeSlider
-  */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Home Slider'), ['action' => 'edit', $homeSlider->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Home Slider'), ['action' => 'delete', $homeSlider->id], ['confirm' => __('Are you sure you want to delete # {0}?', $homeSlider->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Home Sliders'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Home Slider'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?> </li>
-    </ul>
-</nav>
-<div class="homeSliders view large-9 medium-8 columns content">
-    <h3><?= h($homeSlider->id) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Layer1') ?></th>
-            <td><?= h($homeSlider->layer1) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Layer2') ?></th>
-            <td><?= h($homeSlider->layer2) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Layer3') ?></th>
-            <td><?= h($homeSlider->layer3) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Layer4') ?></th>
-            <td><?= h($homeSlider->layer4) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Locale') ?></th>
-            <td><?= h($homeSlider->locale) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Photo') ?></th>
-            <td><?= h($homeSlider->photo) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Dir') ?></th>
-            <td><?= h($homeSlider->dir) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Align') ?></th>
-            <td><?= h($homeSlider->align) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Border') ?></th>
-            <td><?= h($homeSlider->border) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Blog') ?></th>
-            <td><?= $homeSlider->has('blog') ? $this->Html->link($homeSlider->blog->title, ['controller' => 'Blogs', 'action' => 'view', $homeSlider->blog->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($homeSlider->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Order') ?></th>
-            <td><?= $this->Number->format($homeSlider->order) ?></td>
-        </tr>
-    </table>
+<section class="content-header">
+  <h1>
+    <?php echo __('Home Slider'); ?>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+    <?= $this->Html->link('<i class="fa fa-dashboard"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
+    </li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-solid">
+            <div class="box-header with-border">
+                <i class="fa fa-info"></i>
+                <h3 class="box-title"><?php echo __('Information'); ?></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <dl class="dl-horizontal">
+                                                                                                                <dt><?= __('Layer1') ?></dt>
+                                        <dd>
+                                            <?= h($homeSlider->layer1) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Layer2') ?></dt>
+                                        <dd>
+                                            <?= h($homeSlider->layer2) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Layer3') ?></dt>
+                                        <dd>
+                                            <?= h($homeSlider->layer3) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Layer4') ?></dt>
+                                        <dd>
+                                            <?= h($homeSlider->layer4) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Locale') ?></dt>
+                                        <dd>
+                                            <?= h($homeSlider->locale) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Photo') ?></dt>
+                                        <dd>
+                                            <?= h($homeSlider->photo) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Dir') ?></dt>
+                                        <dd>
+                                            <?= h($homeSlider->dir) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Align') ?></dt>
+                                        <dd>
+                                            <?= h($homeSlider->align) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Border') ?></dt>
+                                        <dd>
+                                            <?= h($homeSlider->border) ?>
+                                        </dd>
+                                                                                                                                                    <dt><?= __('Blog') ?></dt>
+                                <dd>
+                                    <?= $homeSlider->has('blog') ? $homeSlider->blog->title_1 : '' ?>
+                                </dd>
+                                                                                                
+                                            
+                                                                                                                                                            <dt><?= __('Order') ?></dt>
+                                <dd>
+                                    <?= $this->Number->format($homeSlider->order) ?>
+                                </dd>
+                                                                                                
+                                            
+                                            
+                                    </dl>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+    <!-- ./col -->
 </div>
+<!-- div -->
+
+</section>
