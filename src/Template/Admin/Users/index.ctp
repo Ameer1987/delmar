@@ -32,8 +32,6 @@
               <th><?= $this->Paginator->sort('name') ?></th>
               <th><?= $this->Paginator->sort('username') ?></th>
               <th><?= $this->Paginator->sort('email') ?></th>
-              <th><?= $this->Paginator->sort('password') ?></th>
-              <th><?= $this->Paginator->sort('role') ?></th>
               <th><?= $this->Paginator->sort('photo') ?></th>
               <th><?= __('Actions') ?></th>
             </tr>
@@ -43,8 +41,6 @@
                 <td><?= h($user->name) ?></td>
                 <td><?= h($user->username) ?></td>
                 <td><?= h($user->email) ?></td>
-                <td><?= h($user->password) ?></td>
-                <td><?= h($user->role) ?></td>
                 <td><?= h($user->photo) ?></td>
                 <td class="actions" style="white-space:nowrap">
                   <?= $this->Html->link(__('View'), ['action' => 'view', $user->id], ['class'=>'btn btn-info btn-xs']) ?>
