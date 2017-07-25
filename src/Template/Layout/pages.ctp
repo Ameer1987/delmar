@@ -34,6 +34,7 @@
         <?= $this->Html->css('css-plugin-collections.css') ?>
         <?= $this->Html->css('menuzord-skins/menuzord-border-bottom.css') ?>
         <?= $this->Html->css('style-main.css') ?>
+        <?= $this->Html->css('style.css') ?>
         <?php if ($dir == "rtl"): ?>
             <?= $this->Html->css('bootstrap-rtl.min.css') ?>
             <?= $this->Html->css('style-main-rtl.css') ?>
@@ -62,7 +63,7 @@
     <body class="<?= $dir ?>">
         <?= $this->Flash->render() ?>
         <div id="wrapper" class="clearfix">
-            <?= $this->element('preloader') ?>
+            <?php echo $this->element('preloader'); ?>
 
             <?= $this->element('header') ?>
 
