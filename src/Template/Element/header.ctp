@@ -69,3 +69,10 @@
         </div>
     </div>
 </header>
+
+<script>
+    $('.onepage-nav').on('click', 'li', function () {
+        $('.onepage-nav').find('li').removeClass('active');
+        $(this).addClass('active');
+    })
+</script>
