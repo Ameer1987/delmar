@@ -27,34 +27,6 @@ $this->layout = 'pages';
 </style>
 <!-- Start main-content -->
 <div class="main-content">
-    <!-- Divider: Google Map -->
-    <section>
-        <div class="container-fluid pt-0 pb-0">
-            <div class="row">
-                <?php foreach ($SliderBranches as $SliderBranch): ?>
-                    <?php $branchLocation = json_encode(array($SliderBranch['google_map_title'], $SliderBranch['latitude'], $SliderBranch['longitude'])); ?>
-                    <?php $branchInfo = json_encode(array($SliderBranch['google_map_desc'])); ?>
-                    <?php $branchMarker = json_encode(array('../images/map-marker.png')); ?>
-                    <input type="hidden" class="branch_location" value='<?= $branchLocation ?>' />
-                    <input type="hidden" class="branch_info" value='<?= $branchInfo ?>' />
-                    <input type="hidden" class="branch_marker" value='<?= $branchMarker ?>' />
-                <?php endforeach; ?>
-                <!-- Google Map HTML Codes -->
-                <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
-                <div 
-                    id="map-canvas-multipointer"
-                    data-mapstyle="default"
-                    data-height="500"
-                    data-zoom="12"
-                    data-marker="../images/map-marker.png">
-                </div>
-                <!-- Google Map Javascript Codes -->
-                <script src="http://maps.google.com/maps/api/js?key=AIzaSyA7H5g416Y6e69e_1fj7uYamnxsGFk3-L8&libraries=places"></script>
-                <script src="../js/google-map-init-multilocation.js"></script>
-            </div>
-        </div>
-    </section>
-
     <!-- Divider: Contact -->
     <section class="divider">
         <div class="container">
