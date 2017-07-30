@@ -78,7 +78,7 @@ class MagazinesTable extends Table {
      */
     public function validationDefault(Validator $validator) {
         $validator
-                ->allowEmpty('photo');
+                ->allowEmpty('cover_img');
         $validator
                 ->allowEmpty('pdf');
         $validator
