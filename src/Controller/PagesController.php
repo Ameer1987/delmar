@@ -72,8 +72,8 @@ class PagesController extends AppController {
         $ResponsiveImageBoxes = TableRegistry::get('ResponsiveImageBoxes')->find('all');
         $this->set('ResponsiveImageBoxes', $ResponsiveImageBoxes->toArray());
 
-        $Statistics = TableRegistry::get('Statistics')->find('all');
-        $this->set('Statistics', $Statistics->first());
+//        $Statistics = TableRegistry::get('Statistics')->find('all');
+//        $this->set('Statistics', $Statistics->first());
 
         $Testimonials = TableRegistry::get('Testimonials')->find('all');
         $this->set('Testimonials', $Testimonials->toArray());
@@ -130,8 +130,8 @@ class PagesController extends AppController {
         $this->setLang($this->request);
 
         $Blog = TableRegistry::get('Blogs')->find('all')
-                ->where(['Blogs.id' => $blog_id])
-        ;
+                ->where(['Blogs.id' => $blog_id]);
+
         $this->set('Blog', $Blog->first());
 
         $Contacts = TableRegistry::get('Contacts')->find('all');
