@@ -2,30 +2,30 @@
     <img class="img-fullwidth" src="images/h3.jpg" alt="">
 </div>
 <div class="col-md-4">
-    <h3 class="line-bottom mt-0 mb-30">Consultation</h3>
+    <h3 class="line-bottom mt-0 mb-30"><?= __('Consultation') ?></h3>
     <!--<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Incidunt quasi tenetur perspiciatis deserunt.</p>-->
-    <p>Please send us any questions related to your health and beauty care and our experts will be happy to help you.</p>
+    <p><?= __('consultation_text') ?></p>
     <ul class="list angle-double-right">
-        <li><strong>Address:</strong> <?= $Contacts['address'] ?></li>
-        <li><strong>Phone:</strong> <?= $Contacts['hotline'] ?></li>
-        <li><strong>Email:</strong><a href="mailto:<?= $Contacts['email_contacts'] ?>"> <?= $Contacts['email_contacts'] ?></a></li>
+        <li><strong><?= __('Address:') ?></strong> <?= $Contacts['address'] ?></li>
+        <li><strong><?= __('Phone:') ?></strong> <?= $Contacts['hotline'] ?></li>
+        <li><strong><?= __('Email:') ?></strong><a class="small" href="mailto:<?= $Contacts['email_contacts'] ?>"> <?= $Contacts['email_contacts'] ?></a></li>
     </ul>
 </div>
 <div class="col-md-4">
-    <h3 class="line-bottom mt-0 mb-10 mt-sm-30">Ask our doctors:</h3>
+    <h3 class="line-bottom mt-0 mb-10 mt-sm-30"><?= __('Ask our doctors') ?></h3>
     <!-- Contact Form -->
     <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php" method="post">
         <div class="row">
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label>Name <small>*</small></label>
-                    <input name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
+                    <label><?= __('Name') ?>: <small>*</small></label>
+                    <input name="form_name" class="form-control" type="text" placeholder="<?= __('Enter') ?> <?= __('Name') ?>" required="">
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label>Email <small>*</small></label>
-                    <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                    <label><?= __('Email') ?>: <small>*</small></label>
+                    <input name="form_email" class="form-control required email" type="email" placeholder="<?= __('Enter') ?> <?= __('Email') ?>">
                 </div>
             </div>
         </div>
@@ -33,26 +33,26 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label>Subject <small>*</small></label>
-                    <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject">
+                    <label><?= __('Subject') ?>: <small>*</small></label>
+                    <input name="form_subject" class="form-control required" type="text" placeholder="<?= __('Enter') ?> <?= __('Subject') ?>">
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label>Phone</label>
-                    <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                    <label><?= __('Phone') ?>:</label>
+                    <input name="form_phone" class="form-control" type="text" placeholder="<?= __('Enter') ?> <?= __('Phone') ?>">
                 </div>
             </div>
         </div>
 
         <div class="form-group">
-            <label>Message</label>
-            <textarea name="form_message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
+            <label><?= __('Message') ?>:</label>
+            <textarea name="form_message" class="form-control required" rows="5" placeholder="<?= __('Enter') ?> <?= __('Message') ?>"></textarea>
         </div>
         <div class="form-group">
             <input name="form_botcheck" class="form-control" type="hidden" value="" />
-            <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait...">Send your message</button>
-            <button type="reset" class="btn btn-default btn-flat btn-theme-colored">Reset</button>
+            <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="<?= __('Please wait...') ?>"><?= __('Send your message') ?></button>
+            <button type="reset" class="btn btn-default btn-flat btn-theme-colored"><?= __('Reset') ?></button>
         </div>
     </form>
 
