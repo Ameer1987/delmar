@@ -13,11 +13,17 @@ msgstr "About"
 msgid "About us"
 msgstr "About us"
 
+msgid "About us intro"
+msgstr "We offer our customers the best of everything from prescribed <br/> medicine,cosmetics and personal care products."
+
 msgid "Contact"
 msgstr "Contact"
 
 msgid "Contact Us"
 msgstr "Contact Us"
+
+msgid "Email:"
+msgstr "Email:"
 
 msgid "Branches"
 msgstr "Branches"
@@ -25,8 +31,26 @@ msgstr "Branches"
 msgid "Our branches"
 msgstr "Our branches"
 
+msgid "Get your nearest branch"
+msgstr "Get your nearest branch"
+
+msgid "Need Help?"
+msgstr "Need Help?"
+
+msgid "For any needed information"
+msgstr "For any needed information, feedback or complaints."
+
+msgid "Contact Now"
+msgstr "Contact Now"
+
 msgid "Offers"
 msgstr "Offers"
+
+msgid "Featured"
+msgstr "Featured"
+
+msgid "offers"
+msgstr "offers"
 
 msgid "Consultation"
 msgstr "Consultation"
