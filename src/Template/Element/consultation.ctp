@@ -6,8 +6,8 @@
     <!--<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Incidunt quasi tenetur perspiciatis deserunt.</p>-->
     <p><?= __('consultation_text') ?></p>
     <ul class="list angle-double-right">
-        <li><strong><?= __('Address') ?>:</strong> <?= $Contacts['address'] ?></li>
-        <li><strong><?= __('Phone') ?>:</strong> <?= $Contacts['hotline'] ?></li>
+        <li><strong><?= __('Address') ?>:</strong> <?= $this->request->session()->read('lang') == "English" ? $Contacts['address_en'] : $Contacts['address_ar'] ?></li>
+        <li><strong><?= __('Phone') ?>:</strong> <?= $this->request->session()->read('lang') == "English" ? $Contacts['hotline_en'] : $Contacts['hotline_ar'] ?></li>
         <li><strong><?= __('Email') ?>:</strong><a class="small" href="mailto:<?= $Contacts['email_contacts'] ?>"> <?= $Contacts['email_contacts'] ?></a></li>
     </ul>
 </div>
