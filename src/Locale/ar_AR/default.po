@@ -97,6 +97,18 @@ msgstr "المجلة"
 msgid "Doctors"
 msgstr "الأطباء"
 
+msgid "Recommended Doctors"
+msgstr "الأطباء"
+
+msgid "Recommended Doctors intro"
+msgstr "قائمة من الأطباء الذين نوصي بهم لعملائنا"
+
+msgid "Testimonials"
+msgstr "الشهادات"
+
+msgid "Latest News"
+msgstr "أحدث الأخبار"
+
 msgid "News"
 msgstr "اخبار"
 
