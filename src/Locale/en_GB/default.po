@@ -22,9 +22,6 @@ msgstr "Contact"
 msgid "Contact Us"
 msgstr "Contact Us"
 
-msgid "Email:"
-msgstr "Email:"
-
 msgid "Branches"
 msgstr "Branches"
 
