@@ -33,7 +33,7 @@ $this->layout = 'pages';
                             <div class="title-icon">
                                 <img class="mb-10" src="images/title-icon.png" alt="">
                             </div>
-                            <p>We offer our customers the best of everything from prescribed <br/> medicine,cosmetics and personal care products.</p>
+                            <p><?= __('About us intro') ?></p>
                         </div>
                     </div>
                 </div>
@@ -66,22 +66,28 @@ $this->layout = 'pages';
                         <div class="border-10px p-30 bg-white">
                             <h5><i class="fa fa-clock-o text-theme-colored"></i><?= __('Contact Us') ?></h5>
                             <div class="opening-hours text-left">
+                                <?php $textAlign = $this->request->session()->read('lang') == "English" ? '' : "text-align: right;" ?>
                                 <ul class="list-unstyled">
                                     <li class="clearfix"> 
-                                        <span> <?= $Contacts['address'] ?> </span>
+                                        <span style="<?= $textAlign ?>"> <?= $Contacts['address'] ?> </span>
                                     </li>
                                     <li class="clearfix line-height-1"> 
-                                        <span> <?= $Contacts['hotline'] ?> </span>
+                                        <span style="<?= $textAlign ?>"> <?= $Contacts['hotline'] ?> </span>
                                     </li>
                                     <li class="clearfix line-height-1" style="border: none;"> 
-                                        <span><a href="mailto:<?= $Contacts['email_contacts'] ?>"> Email: <?= $Contacts['email_contacts'] ?> </a></span>
+                                        <span style="<?= $textAlign ?>" class="small">
+                                            <a href="mailto:<?= $Contacts['email_contacts'] ?>"> 
+                                                <?= __('Email:') ?> 
+                                                <?= $Contacts['email_contacts'] ?>
+                                            </a>
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
-                            <a href="<?= $this->Url->build(["controller" => "Pages", "action" => "nearestBranch"]); ?>" class="btn btn-dark btn-theme-colored btn-sm mt-10" style="font-size: 16px;">Get your nearest branch</a>
-                            <h5 class="mt-30"><i class="fa fa-pencil-square-o text-theme-colored"></i> Need Help?</h5>
-                            <p class="mt-0">For any needed information, feedback or complaints.</p>
-                            <a href="<?= $this->Url->build(["controller" => "Pages", "action" => "contactNow"]); ?>" class="btn btn-dark btn-theme-colored btn-sm">Contact Now</a>
+                            <a href="<?= $this->Url->build(["controller" => "Pages", "action" => "nearestBranch"]); ?>" class="btn btn-dark btn-theme-colored btn-sm mt-10" style="font-size: 16px;"><?= __('Get your nearest branch') ?></a>
+                            <h5 class="mt-30"><i class="fa fa-pencil-square-o text-theme-colored"></i> <?= __('Need Help?') ?></h5>
+                            <p class="mt-0"><?= __('For any needed information') ?></p>
+                            <a href="<?= $this->Url->build(["controller" => "Pages", "action" => "contactNow"]); ?>" class="btn btn-dark btn-theme-colored btn-sm"><?= __('Contact Now') ?></a>
                         </div>
                     </div>
                     <div class="col-md-8 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
@@ -101,7 +107,7 @@ $this->layout = 'pages';
                 <div class="section-title">
                     <div class="row">
                         <div class="col-md-6">
-                            <h2 class="mt-0 text-uppercase font-28">Featured <span class="text-theme-colored font-weight-400">offers</span> <span class="font-30 text-theme-colored">.</span></h2>
+                            <h2 class="mt-0 text-uppercase font-28"><?= __('Featured') ?> <span class="text-theme-colored font-weight-400"><?= __('offers') ?></span></h2>
                         </div>
                     </div>
                 </div>
