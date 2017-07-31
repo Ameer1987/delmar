@@ -172,6 +172,8 @@ msgstr "Headquarter Location"
 msgid "Call center"
 msgstr "Call center"
 
+msgid "Enter a location"
+msgstr "Enter a location"
 
 
 
