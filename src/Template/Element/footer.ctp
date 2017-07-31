@@ -15,19 +15,19 @@
             </div>
             <div class="col-sm-6 col-md-4">
                 <div class="widget dark">
-                    <h5 class="widget-title mb-10 line-bottom">Connect With Us</h5>
+                    <h5 class="widget-title mb-10 line-bottom"><?= __('Connect With Us') ?></h5>
                     <ul class="list-inline mt-5">
-                        <li class="m-0 pl-10 pr-10"><a target="_blank" href="<?= $Contacts['facebook'] ?>"> <i class="fa fa-facebook text-theme-colored mr-15" style="width: 10px;"></i>Follow us facebook </a></li>
-                        <li class="m-0 pl-10 pr-10"><a target="_blank" href="<?= $Contacts['twitter'] ?>"> <i class="fa fa-twitter text-theme-colored mr-15" style="width: 10px;"></i>Follow us on twitter </a></li>
-                        <li class="m-0 pl-10 pr-10"><a target="_blank" href="<?= $Contacts['linkedin'] ?>"> <i class="fa fa-linkedin text-theme-colored mr-15" style="width: 10px;"></i>Follow us on linkedin </a></li>
+                        <li class="m-0 pl-10 pr-10"><a target="_blank" href="<?= $Contacts['facebook'] ?>"> <i class="fa fa-facebook text-theme-colored mr-15" style="width: 10px;"></i><?= __('Follow us on facebook') ?></a></li>
+                        <li class="m-0 pl-10 pr-10"><a target="_blank" href="<?= $Contacts['twitter'] ?>"> <i class="fa fa-twitter text-theme-colored mr-15" style="width: 10px;"></i><?= __('Follow us on twitter') ?></a></li>
+                        <li class="m-0 pl-10 pr-10"><a target="_blank" href="<?= $Contacts['linkedin'] ?>"> <i class="fa fa-linkedin text-theme-colored mr-15" style="width: 10px;"></i><?= __('Follow us on linkedin') ?></a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-sm-6 col-md-4">
                 <div class="widget dark">
-                    <h5 class="widget-title line-bottom">About us</h5>
+                    <h5 class="widget-title line-bottom"><?= __('About us') ?></h5>
                     <p>
-                        We Provide high international quality level of humanitarian service 24 hour multiple branches. Adhere to scientific standards of customer service from good reception and provide all the needs and continuous monitoring and the integration between the pharmacist and the doctor to serve the customer.
+                        <?= __('About us text') ?>
                     </p>
                 </div>
             </div>
