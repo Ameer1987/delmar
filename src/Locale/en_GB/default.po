@@ -97,6 +97,18 @@ msgstr "Magazines"
 msgid "Doctors"
 msgstr "Doctors"
 
+msgid "Recommended Doctors"
+msgstr "Recommended Doctors"
+
+msgid "Recommended Doctors intro"
+msgstr "A list of VIP doctors we recommend for our customers"
+
+msgid "Testimonials"
+msgstr "Testimonials"
+
+msgid "Latest News"
+msgstr "Latest News"
+
 msgid "News"
 msgstr "News"
 
