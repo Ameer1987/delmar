@@ -55,6 +55,39 @@ msgstr "offers"
 msgid "Consultation"
 msgstr "Consultation"
 
+msgid "consultation_text"
+msgstr "Please send us any questions related to your health and beauty care and our experts will be happy to help you."
+
+msgid "Address"
+msgstr "Address"
+
+msgid "Phone"
+msgstr "Phone"
+
+msgid "Ask our doctors"
+msgstr "Ask our doctors"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Subject"
+msgstr "Subject"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Enter"
+msgstr "Enter"
+
+msgid "Send your message"
+msgstr "Send your message"
+
+msgid "Reset"
+msgstr "Reset"
+
 msgid "Magazines"
 msgstr "Magazines"
 
