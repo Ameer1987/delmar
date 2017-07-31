@@ -17,9 +17,9 @@
                 <div class="widget dark">
                     <h5 class="widget-title mb-10 line-bottom"><?= __('Connect With Us') ?></h5>
                     <ul class="list-inline mt-5">
-                        <li class="m-0 pl-10 pr-10"><a target="_blank" href="<?= $Contacts['facebook'] ?>"> <i class="fa fa-facebook text-theme-colored mr-15" style="width: 10px;"></i><?= __('Follow us on facebook') ?></a></li>
-                        <li class="m-0 pl-10 pr-10"><a target="_blank" href="<?= $Contacts['twitter'] ?>"> <i class="fa fa-twitter text-theme-colored mr-15" style="width: 10px;"></i><?= __('Follow us on twitter') ?></a></li>
-                        <li class="m-0 pl-10 pr-10"><a target="_blank" href="<?= $Contacts['linkedin'] ?>"> <i class="fa fa-linkedin text-theme-colored mr-15" style="width: 10px;"></i><?= __('Follow us on linkedin') ?></a></li>
+                        <li class="m-0 pl-10 pr-10" style="width: 100%;"><a target="_blank" href="<?= $Contacts['facebook'] ?>"> <i class="fa fa-facebook text-theme-colored mr-15 ml-15" style="width: 10px;"></i><?= __('Follow us on facebook') ?></a></li>
+                        <li class="m-0 pl-10 pr-10" style="width: 100%;"><a target="_blank" href="<?= $Contacts['twitter'] ?>"> <i class="fa fa-twitter text-theme-colored mr-15 ml-15" style="width: 10px;"></i><?= __('Follow us on twitter') ?></a></li>
+                        <li class="m-0 pl-10 pr-10" style="width: 100%;"><a target="_blank" href="<?= $Contacts['linkedin'] ?>"> <i class="fa fa-linkedin text-theme-colored mr-15 ml-15" style="width: 10px;"></i><?= __('Follow us on linkedin') ?></a></li>
                     </ul>
                 </div>
             </div>
