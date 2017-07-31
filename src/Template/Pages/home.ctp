@@ -77,7 +77,7 @@ $this->layout = 'pages';
                                     <li class="clearfix line-height-1" style="border: none;"> 
                                         <span style="<?= $textAlign ?>" class="small">
                                             <a href="mailto:<?= $Contacts['email_contacts'] ?>"> 
-                                                <?= __('Email:') ?> 
+                                                <?= __('Email') ?>: 
                                                 <?= $Contacts['email_contacts'] ?>
                                             </a>
                                         </span>
