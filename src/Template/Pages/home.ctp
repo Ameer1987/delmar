@@ -138,7 +138,7 @@ $this->layout = 'pages';
                 <div class="section-title text-center">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-uppercase mt-0 line-height-1">Magazines</h2>
+                            <h2 class="text-uppercase mt-0 line-height-1"><?= __('Magazines') ?></h2>
                             <div class="title-icon">
                                 <img class="mb-10" src="images/title-icon.png" alt="">
                             </div>
@@ -163,11 +163,11 @@ $this->layout = 'pages';
                 <div class="section-title text-center">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-uppercase mt-0 line-height-1">Recommended Doctors</h2>
+                            <h2 class="text-uppercase mt-0 line-height-1"><?= __('Recommended Doctors') ?></h2>
                             <div class="title-icon">
                                 <img class="mb-10" src="images/title-icon.png" alt="">
                             </div>
-                            <p>A list of VIP doctors we recommend for our customers</p>
+                            <p><?= __('Recommended Doctors intro') ?></p>
                         </div>
                     </div>
                 </div>
@@ -200,7 +200,7 @@ $this->layout = 'pages';
                 <div class="section-title text-center">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h2 class="mt-0 text-uppercase font-28">Testimonials <span class="font-30 text-theme-colored"></span></h2>
+                            <h2 class="mt-0 text-uppercase font-28"><?= __('Testimonials') ?><span class="font-30 text-theme-colored"></span></h2>
                         </div>
                     </div>
                 </div>
@@ -222,7 +222,7 @@ $this->layout = 'pages';
                 <div class="section-title text-center">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-uppercase mt-0 line-height-1">Latest News</h2>
+                            <h2 class="text-uppercase mt-0 line-height-1"><?= __('Latest News') ?></h2>
                             <div class="title-icon">
                                 <img class="mb-10" src="images/title-icon.png" alt="">
                             </div>
@@ -265,7 +265,7 @@ $this->layout = 'pages';
                 <div class="section-title text-center">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-uppercase mt-0 line-height-1">Career</h2>
+                            <h2 class="text-uppercase mt-0 line-height-1"><?= __('Career') ?></h2>
                             <div class="title-icon">
                                 <img class="mb-10" src="images/title-icon.png" alt="">
                             </div>
@@ -283,7 +283,7 @@ $this->layout = 'pages';
                 <div class="section-title text-center">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-uppercase mt-0 line-height-1">Career</h2>
+                            <h2 class="text-uppercase mt-0 line-height-1"><?= __('Career') ?></h2>
                             <div class="title-icon">
                                 <img class="mb-10" src="images/title-icon.png" alt="">
                             </div>
