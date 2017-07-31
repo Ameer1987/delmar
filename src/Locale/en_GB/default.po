@@ -157,5 +157,21 @@ msgstr "Follow us on linkedin"
 msgid "About us text"
 msgstr "We Provide high international quality level of humanitarian service 24 hour multiple branches. Adhere to scientific standards of customer service from good reception and provide all the needs and continuous monitoring and the integration between the pharmacist and the doctor to serve the customer."
 
+msgid "Send Us a Message"
+msgstr "Send Us a Message"
+
+msgid "Get in touch with us"
+msgstr "Get in touch with us"
+
+msgid "For any inquiries"
+msgstr "For any inquiries, please feel free to contact us using any of the contacts below."
+
+msgid "Headquarter Location"
+msgstr "Headquarter Location"
+
+msgid "Call center"
+msgstr "Call center"
+
+
 
 
