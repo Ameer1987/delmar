@@ -34,7 +34,7 @@
               <th><?= $this->Paginator->sort('google_plus') ?></th>
               <th><?= $this->Paginator->sort('instagram') ?></th>
               <th><?= $this->Paginator->sort('linkedin') ?></th>
-              <th><?= $this->Paginator->sort('address') ?></th>
+              <th><?= $this->Paginator->sort('address_en') ?></th>
               <th><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($contacts as $contact): ?>
@@ -45,7 +45,7 @@
                 <td><?= h($contact->google_plus) ?></td>
                 <td><?= h($contact->instagram) ?></td>
                 <td><?= h($contact->linkedin) ?></td>
-                <td><?= h($contact->address) ?></td>
+                <td><?= h($contact->address_en) ?></td>
                 <td class="actions" style="white-space:nowrap">
                   <?= $this->Html->link(__('View'), ['action' => 'view', $contact->id], ['class'=>'btn btn-info btn-xs']) ?>
                   <?= $this->Html->link(__('Edit'), ['action' => 'edit', $contact->id], ['class'=>'btn btn-warning btn-xs']) ?>

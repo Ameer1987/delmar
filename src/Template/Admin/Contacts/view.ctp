@@ -41,9 +41,13 @@
                                         <dd>
                                             <?= h($contact->linkedin) ?>
                                         </dd>
-                                                                                                                                                            <dt><?= __('Address') ?></dt>
+                                                                                                                                                            <dt><?= __('Address En') ?></dt>
                                         <dd>
-                                            <?= h($contact->address) ?>
+                                            <?= h($contact->address_en) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Address Ar') ?></dt>
+                                        <dd>
+                                            <?= h($contact->address_ar) ?>
                                         </dd>
                                                                                                                                                             <dt><?= __('Tel1') ?></dt>
                                         <dd>
@@ -69,21 +73,13 @@
                                         <dd>
                                             <?= h($contact->email_career) ?>
                                         </dd>
-                                                                                                                                                            <dt><?= __('Longitude') ?></dt>
+                                                                                                                                                            <dt><?= __('Hotline En') ?></dt>
                                         <dd>
-                                            <?= h($contact->longitude) ?>
+                                            <?= h($contact->hotline_en) ?>
                                         </dd>
-                                                                                                                                                            <dt><?= __('Latitude') ?></dt>
+                                                                                                                                                            <dt><?= __('Hotline Ar') ?></dt>
                                         <dd>
-                                            <?= h($contact->latitude) ?>
-                                        </dd>
-                                                                                                                                                            <dt><?= __('Hotline') ?></dt>
-                                        <dd>
-                                            <?= h($contact->hotline) ?>
-                                        </dd>
-                                                                                                                                                            <dt><?= __('Locale') ?></dt>
-                                        <dd>
-                                            <?= h($contact->locale) ?>
+                                            <?= h($contact->hotline_ar) ?>
                                         </dd>
                                                                                                                                                             <dt><?= __('Name') ?></dt>
                                         <dd>
