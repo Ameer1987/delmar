@@ -1,44 +1,57 @@
-<?php
-
-/**
-  * @var \App\View\AppView $this
-  */
-?>
 <section class="content-header">
-    <legend><?= __('Add Contact') ?></legend>
-    <ol class="breadcrumb">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Contacts'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
-    </ol>
+  <h1>
+    Contact
+    <small><?= __('Add') ?></small>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+    <?= $this->Html->link('<i class="fa fa-dashboard"></i> '.__('Back'), ['action' => 'index'], ['escape' => false]) ?>
+    </li>
+  </ol>
 </section>
 
-<div class="contacts form large-9 medium-8 columns content">
-    <?= $this->Form->create($contact) ?>
-    <fieldset>
-        <?php
-            echo $this->Form->control('facebook');
-            echo $this->Form->control('twitter');
-            echo $this->Form->control('google_plus');
-            echo $this->Form->control('instagram');
-            echo $this->Form->control('linkedin');
-            echo $this->Form->control('address');
-            echo $this->Form->control('tel1');
-            echo $this->Form->control('tel2');
-            echo $this->Form->control('mob');
-            echo $this->Form->control('email_contacts');
-            echo $this->Form->control('email_consultation');
-            echo $this->Form->control('email_career');
-            echo $this->Form->control('longitude');
-            echo $this->Form->control('latitude');
-            echo $this->Form->control('hotline');
-            echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic', 'English']));
+<!-- Main content -->
+<section class="content">
+  <div class="row">
+    <!-- left column -->
+    <div class="col-md-12">
+      <!-- general form elements -->
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title"><?= __('Form') ?></h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <?= $this->Form->create($contact, array('role' => 'form')) ?>
+          <div class="box-body">
+          <?php
+            echo $this->Form->input('facebook');
+            echo $this->Form->input('twitter');
+            echo $this->Form->input('google_plus');
+            echo $this->Form->input('instagram');
+            echo $this->Form->input('linkedin');
+            echo $this->Form->input('address_en');
+            echo $this->Form->input('address_ar');
+            echo $this->Form->input('tel1');
+            echo $this->Form->input('tel2');
+            echo $this->Form->input('mob');
+            echo $this->Form->input('email_contacts');
+            echo $this->Form->input('email_consultation');
+            echo $this->Form->input('email_career');
+            echo $this->Form->input('hotline_en');
+            echo $this->Form->input('hotline_ar');
             echo $this->Ck->input('text');
             echo $this->Form->control('name');
             echo $this->Form->control('blog_id', array('options' => $blogs,'empty' => " "));
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
-</div>
+
+          ?>
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer">
+            <?= $this->Form->button(__('Save')) ?>
+          </div>
+        <?= $this->Form->end() ?>
+      </div>
+    </div>
+  </div>
+</section>
