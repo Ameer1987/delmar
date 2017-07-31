@@ -145,5 +145,21 @@ msgstr "الحد الأقصى لحجم ملف التحميل: 2 ميغابايت
 msgid "Apply Now"
 msgstr "قدم الآن"
 
+msgid "Connect With Us"
+msgstr "التواصل معنا"
+
+msgid "Follow us on facebook"
+msgstr "متابعتنا علي فيسبوك"
+
+msgid "Follow us on twitter"
+msgstr "متابعتنا علي تويتر"
+
+msgid "Follow us on linkedin"
+msgstr "متابعتنا علي لينكدان"
+
+msgid "About us text"
+msgstr "تقديم خدمه إنسانيه بمستوى جوده عالمى على مدار 24ساعه بفروعها المتعدده . الآلتزام بالمعايير العلميه لخدمه العميل من حسن اللقاء وتوفير كافه الاحتياجات والمتابعه المستمره والتكامل بين الصيدلى والطبيب لخدمه العميل . "
+
+
 
 
