@@ -6,9 +6,9 @@
     <!--<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Incidunt quasi tenetur perspiciatis deserunt.</p>-->
     <p><?= __('consultation_text') ?></p>
     <ul class="list angle-double-right">
-        <li><strong><?= __('Address:') ?></strong> <?= $Contacts['address'] ?></li>
-        <li><strong><?= __('Phone:') ?></strong> <?= $Contacts['hotline'] ?></li>
-        <li><strong><?= __('Email:') ?></strong><a class="small" href="mailto:<?= $Contacts['email_contacts'] ?>"> <?= $Contacts['email_contacts'] ?></a></li>
+        <li><strong><?= __('Address') ?>:</strong> <?= $Contacts['address'] ?></li>
+        <li><strong><?= __('Phone') ?>:</strong> <?= $Contacts['hotline'] ?></li>
+        <li><strong><?= __('Email') ?>:</strong><a class="small" href="mailto:<?= $Contacts['email_contacts'] ?>"> <?= $Contacts['email_contacts'] ?></a></li>
     </ul>
 </div>
 <div class="col-md-4">
