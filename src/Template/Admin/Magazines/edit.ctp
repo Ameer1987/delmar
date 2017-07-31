@@ -22,11 +22,11 @@
         <?php
             echo $this->Form->control('title');
             echo $this->Form->control('description');
-            echo $this->Form->input('cover_img', ['type' => 'file']);
+            echo $this->Form->control('cover_img', ['type' => 'file']);
             $this->Form->input('cover_dir', ['type' => 'hidden']);
-            echo $this->Form->input('pdf', ['type' => 'file']);
+            echo $this->Form->control('pdf', ['type' => 'file']);
             $this->Form->input('pdf_dir', ['type' => 'hidden']);
-            echo $this->Form->input('folder', ['type' => 'file']);
+            echo $this->Form->control('folder', ['type' => 'file']);
             $this->Form->input('folder_dir', ['type' => 'hidden']);
             echo $this->Form->control('order');
             echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic' =>'Arabic', 'English' =>'English']));

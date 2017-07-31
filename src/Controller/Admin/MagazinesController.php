@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller\Admin;
 
 use App\Controller\AppController;
@@ -10,16 +11,14 @@ use App\Controller\AppController;
  *
  * @method \App\Model\Entity\Magazine[] paginate($object = null, array $settings = [])
  */
-class MagazinesController extends AppController
-{
+class MagazinesController extends AppController {
 
     /**
      * Index method
      *
      * @return \Cake\Http\Response|void
      */
-    public function index()
-    {
+    public function index() {
         $magazines = $this->paginate($this->Magazines);
 
         $this->set(compact('magazines'));
@@ -33,8 +32,7 @@ class MagazinesController extends AppController
      * @return \Cake\Http\Response|void
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
-    {
+    public function view($id = null) {
         $magazine = $this->Magazines->get($id, [
             'contain' => []
         ]);
@@ -48,14 +46,22 @@ class MagazinesController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
-    {
+    public function add() {
         $magazine = $this->Magazines->newEntity();
         if ($this->request->is('post')) {
             $magazine = $this->Magazines->patchEntity($magazine, $this->request->getData());
             if ($this->Magazines->save($magazine)) {
                 $this->Flash->success(__('The magazine has been saved.'));
-
+                $extension = pathinfo($magazine['folder'], PATHINFO_EXTENSION);
+                if ($extension == 'zip') {
+                    $zip = new \ZipArchive();
+                    if ($zip->open($magazine['folder_dir'] . $magazine['folder']) === TRUE) {
+                        $zip->extractTo($magazine['folder_dir']);
+                        $zip->close();
+                    } else {
+                        echo 'Failed to open the archive!';
+                    }
+                }
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The magazine could not be saved. Please, try again.'));
@@ -71,8 +77,7 @@ class MagazinesController extends AppController
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
-    {
+    public function edit($id = null) {
         $magazine = $this->Magazines->get($id, [
             'contain' => []
         ]);
@@ -80,7 +85,16 @@ class MagazinesController extends AppController
             $magazine = $this->Magazines->patchEntity($magazine, $this->request->getData());
             if ($this->Magazines->save($magazine)) {
                 $this->Flash->success(__('The magazine has been saved.'));
-
+                $extension = pathinfo($magazine['folder'], PATHINFO_EXTENSION);
+                if ($extension == 'zip') {
+                    $zip = new \ZipArchive();
+                    if ($zip->open($magazine['folder_dir'] . $magazine['folder']) === TRUE) {
+                        $zip->extractTo($magazine['folder_dir']);
+                        $zip->close();
+                    } else {
+                        echo 'Failed to open the archive!';
+                    }
+                }
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The magazine could not be saved. Please, try again.'));
@@ -96,8 +110,7 @@ class MagazinesController extends AppController
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
-    {
+    public function delete($id = null) {
         $this->request->allowMethod(['post', 'delete']);
         $magazine = $this->Magazines->get($id);
         if ($this->Magazines->delete($magazine)) {
@@ -108,4 +121,5 @@ class MagazinesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
 }
