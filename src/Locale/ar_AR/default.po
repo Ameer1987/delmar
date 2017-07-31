@@ -114,3 +114,36 @@ msgstr "اخبار"
 
 msgid "Career"
 msgstr "وظائف"
+
+msgid "Send your C.V"
+msgstr "إرسال C.V"
+
+msgid "Send your C.V text"
+msgstr "الرجاء ارسال لنا C.V الخاص بك وسوف نتصل بك في أقرب فرصة تكون لدينا وظيفة شاغرة."
+
+msgid "Sex"
+msgstr "النوع"
+
+msgid "Male"
+msgstr "ذكر"
+
+msgid "Female"
+msgstr "انثي"
+
+msgid "Job title"
+msgstr "الوظيفة"
+
+msgid "cover letter"
+msgstr "رسالة غلاف يتم إرسالها إلى صاحب العمل"
+
+msgid "C/V Upload"
+msgstr "تحميل C/V"
+
+msgid "Maximum upload size"
+msgstr "الحد الأقصى لحجم ملف التحميل: 2 ميغابايت"
+
+msgid "Apply Now"
+msgstr "قدم الآن"
+
+
+
