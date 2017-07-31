@@ -32,7 +32,7 @@ $this->layout = 'pages';
         <div class="container">
             <div class="row pt-30">
                 <div class="col-md-6">
-                    <h3 class="line-bottom mt-0 mb-30">Send Us a Message:</h3>
+                    <h3 class="line-bottom mt-0 mb-30"><?= __('Send Us a Message') ?>:</h3>
 
                     <!-- Contact Form -->
                     <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php" method="post">
@@ -40,14 +40,14 @@ $this->layout = 'pages';
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label>Name <small>*</small></label>
-                                    <input name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
+                                    <label><?= __('Name') ?><small>*</small></label>
+                                    <input name="form_name" class="form-control" type="text" placeholder="<?= __('Enter') ?> <?= __('Name') ?>" required="">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label>Email <small>*</small></label>
-                                    <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                                    <label><?= __('Email') ?> <small>*</small></label>
+                                    <input name="form_email" class="form-control required email" type="email" placeholder="<?= __('Enter') ?> <?= __('Email') ?>">
                                 </div>
                             </div>
                         </div>
@@ -55,26 +55,26 @@ $this->layout = 'pages';
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label>Subject <small>*</small></label>
-                                    <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject">
+                                    <label><?= __('Subject') ?> <small>*</small></label>
+                                    <input name="form_subject" class="form-control required" type="text" placeholder="<?= __('Enter') ?> <?= __('Subject') ?>">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label>Phone</label>
-                                    <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                                    <label><?= __('Phone') ?></label>
+                                    <input name="form_phone" class="form-control" type="text" placeholder="<?= __('Enter') ?> <?= __('Phone') ?>">
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label>Message</label>
-                            <textarea name="form_message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
+                            <label><?= __('Message') ?></label>
+                            <textarea name="form_message" class="form-control required" rows="5" placeholder="<?= __('Enter') ?> <?= __('Message') ?>"></textarea>
                         </div>
                         <div class="form-group">
                             <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                            <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait...">Send your message</button>
-                            <button type="reset" class="btn btn-default btn-flat btn-theme-colored">Reset</button>
+                            <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="<?= __('Please wait...') ?>"><?= __('Send your message') ?></button>
+                            <button type="reset" class="btn btn-default btn-flat btn-theme-colored"><?= __('Reset') ?></button>
                         </div>
                     </form>
 
@@ -106,8 +106,8 @@ $this->layout = 'pages';
                     </script>
                 </div>
                 <div class="col-md-6">
-                    <h3 class="line-bottom mt-0">Get in touch with us</h3>
-                    <p>For any inquiries, please feel free to contact us using any of the contacts below.</p>
+                    <h3 class="line-bottom mt-0"><?= __('Get in touch with us') ?></h3>
+                    <p><?= __('For any inquiries') ?></p>
                     <ul class="styled-icons icon-dark icon-sm icon-circled mb-20">
                         <li><a target="_blank" href="<?= $Contacts['facebook'] ?>" data-bg-color="#3B5998"><i class="fa fa-facebook"></i></a></li>
                         <li><a target="_blank" href="<?= $Contacts['twitter'] ?>" data-bg-color="#02B0E8"><i class="fa fa-twitter"></i></a></li>
@@ -118,20 +118,20 @@ $this->layout = 'pages';
 
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-20" href="#"> <i class="pe-7s-map-2 text-theme-colored"></i></a>
                         <div class="media-body">
-                            <h5 class="mt-0">Headquarter Location</h5>
+                            <h5 class="mt-0"><?= __('Headquarter Location') ?></h5>
                             <p><?= $Contacts['address'] ?></p>
                         </div>
                     </div>
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-15" href="#"> <i class="pe-7s-call text-theme-colored"></i></a>
                         <div class="media-body">
-                            <h5 class="mt-0">Call center</h5>
+                            <h5 class="mt-0"><?= __('Call center') ?></h5>
                             <p><?= $Contacts['hotline'] ?></p>
                         </div>
                     </div>
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-15" href="#"> <i class="pe-7s-mail text-theme-colored"></i></a>
                         <div class="media-body">
-                            <h5 class="mt-0">Email Address</h5>
-                            <p><a href="mailto:<?= $Contacts['email_contacts'] ?>">Email: <?= $Contacts['email_contacts'] ?></a></p>
+                            <h5 class="mt-0"><?= __('Email') ?></h5>
+                            <p><a href="mailto:<?= $Contacts['email_contacts'] ?>"><?= $Contacts['email_contacts'] ?></a></p>
                         </div>
                     </div>
                 </div>

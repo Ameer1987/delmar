@@ -13,6 +13,9 @@ msgstr "About"
 msgid "About us"
 msgstr "About us"
 
+msgid "About us intro"
+msgstr "We offer our customers the best of everything from prescribed <br/> medicine,cosmetics and personal care products."
+
 msgid "Contact"
 msgstr "Contact"
 
@@ -25,11 +28,65 @@ msgstr "Branches"
 msgid "Our branches"
 msgstr "Our branches"
 
+msgid "Get your nearest branch"
+msgstr "Get your nearest branch"
+
+msgid "Need Help?"
+msgstr "Need Help?"
+
+msgid "For any needed information"
+msgstr "For any needed information, feedback or complaints."
+
+msgid "Contact Now"
+msgstr "Contact Now"
+
 msgid "Offers"
 msgstr "Offers"
 
+msgid "Featured"
+msgstr "Featured"
+
+msgid "offers"
+msgstr "offers"
+
 msgid "Consultation"
 msgstr "Consultation"
+
+msgid "consultation_text"
+msgstr "Please send us any questions related to your health and beauty care and our experts will be happy to help you."
+
+msgid "Address"
+msgstr "Address"
+
+msgid "Phone"
+msgstr "Phone"
+
+msgid "Ask our doctors"
+msgstr "Ask our doctors"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Subject"
+msgstr "Subject"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Enter"
+msgstr "Enter"
+
+msgid "Send your message"
+msgstr "Send your message"
+
+msgid "Please wait..."
+msgstr "Please wait..."
+
+msgid "Reset"
+msgstr "Reset"
 
 msgid "Magazines"
 msgstr "Magazines"
@@ -37,9 +94,86 @@ msgstr "Magazines"
 msgid "Doctors"
 msgstr "Doctors"
 
+msgid "Recommended Doctors"
+msgstr "Recommended Doctors"
+
+msgid "Recommended Doctors intro"
+msgstr "A list of VIP doctors we recommend for our customers"
+
+msgid "Testimonials"
+msgstr "Testimonials"
+
+msgid "Latest News"
+msgstr "Latest News"
+
 msgid "News"
 msgstr "News"
 
 msgid "Career"
 msgstr "Career"
+
+msgid "Send your C.V"
+msgstr "Send your C.V"
+
+msgid "Send your C.V text"
+msgstr "Please send us your C.V and we will contact you as soon as we have a job vacancy."
+
+msgid "Sex"
+msgstr "Sex"
+
+msgid "Male"
+msgstr "Male"
+
+msgid "Female"
+msgstr "Female"
+
+msgid "Job title"
+msgstr "Job title"
+
+msgid "cover letter"
+msgstr "Your cover letter/message sent to the employer"
+
+msgid "C/V Upload"
+msgstr "C/V Upload"
+
+msgid "Maximum upload size"
+msgstr "Maximum upload file size: 2 MB"
+
+msgid "Apply Now"
+msgstr "Apply Now"
+
+msgid "Connect With Us"
+msgstr "Connect With Us"
+
+msgid "Follow us on facebook"
+msgstr "Follow us on facebook"
+
+msgid "Follow us on twitter"
+msgstr "Follow us on twitter"
+
+msgid "Follow us on linkedin"
+msgstr "Follow us on linkedin"
+
+msgid "About us text"
+msgstr "We Provide high international quality level of humanitarian service 24 hour multiple branches. Adhere to scientific standards of customer service from good reception and provide all the needs and continuous monitoring and the integration between the pharmacist and the doctor to serve the customer."
+
+msgid "Send Us a Message"
+msgstr "Send Us a Message"
+
+msgid "Get in touch with us"
+msgstr "Get in touch with us"
+
+msgid "For any inquiries"
+msgstr "For any inquiries, please feel free to contact us using any of the contacts below."
+
+msgid "Headquarter Location"
+msgstr "Headquarter Location"
+
+msgid "Call center"
+msgstr "Call center"
+
+msgid "Enter a location"
+msgstr "Enter a location"
+
+
 

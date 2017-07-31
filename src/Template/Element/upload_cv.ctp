@@ -1,51 +1,51 @@
 <div class="row">
     <div class="col-md-12">
         <div class="bg-lightest border-1px p-30 mb-0">
-            <h3 class="text-theme-colored mt-0 pt-5"> Send your C.V</h3>
+            <h3 class="text-theme-colored mt-0 pt-5"> <?= __('Send your C.V') ?> </h3>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+            <p><?= __('Send your C.V text') ?></p>
             <form id="job_apply_form" name="job_apply_form" action="includes/job.php" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label>Name <small>*</small></label>
-                            <input name="form_name" type="text" placeholder="Enter Name" required="" class="form-control">
+                            <label><?= __('Name') ?> <small>*</small></label>
+                            <input name="form_name" type="text" placeholder="<?= __('Enter') ?> <?= __('Name') ?>" required="" class="form-control">
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label>Email <small>*</small></label>
-                            <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                            <label><?= __('Email') ?> <small>*</small></label>
+                            <input name="form_email" class="form-control required email" type="email" placeholder="<?= __('Enter') ?> <?= __('Email') ?>">
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label>Sex <small>*</small></label>
+                            <label><?= __('Sex') ?> <small>*</small></label>
                             <select name="form_sex" class="form-control required">
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
+                                <option value="Male"><?= __('Male') ?></option>
+                                <option value="Female"><?= __('Female') ?></option>
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label>Job title <small>*</small></label>
-                            <input name="form_job" type="text" placeholder="Enter Job" required="" class="form-control">
+                            <label><?= __('Job title') ?> <small>*</small></label>
+                            <input name="form_job" type="text" placeholder="<?= __('Enter') ?> <?= __('Job title') ?>" required="" class="form-control">
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Message <small>*</small></label>
-                    <textarea name="form_message" class="form-control required" rows="5" placeholder="Your cover letter/message sent to the employer"></textarea>
+                    <label><?= __('Message') ?> <small>*</small></label>
+                    <textarea name="form_message" class="form-control required" rows="5" placeholder="<?= __('cover letter') ?>"></textarea>
                 </div>
                 <div class="form-group">
-                    <label>C/V Upload</label>
+                    <label><?= __('C/V Upload') ?></label>
                     <input name="form_attachment" class="file" type="file" multiple data-show-upload="false" data-show-caption="true">
-                    <small>Maximum upload file size: 2 MB</small>
+                    <small><?= __('Maximum upload size') ?></small>
                 </div>
                 <div class="form-group">
                     <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                    <button type="submit" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" data-loading-text="Please wait...">Apply Now</button>
+                    <button type="submit" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" data-loading-text="<?= __('Please wait...') ?>"><?= __('Apply Now') ?></button>
                 </div>
             </form>
         </div>

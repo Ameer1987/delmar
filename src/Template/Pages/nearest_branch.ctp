@@ -40,7 +40,7 @@ $this->layout = 'pages';
                     <input type="hidden" class="branch_marker" value='<?= $branchMarker ?>' />
                 <?php endforeach; ?>
                 <!-- Google Map HTML Codes -->
-                <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+                <input id="pac-input" class="controls" type="text" placeholder="<?= __('Enter a location') ?>">
                 <div 
                     id="map-canvas-multipointer"
                     data-mapstyle="default"
@@ -60,8 +60,8 @@ $this->layout = 'pages';
         <div class="container">
             <div class="row pt-30">
                 <div class="col-md-6">
-                    <h3 class="line-bottom mt-0">Get in touch with us</h3>
-                    <p>For any inquiries, please feel free to contact us using any of the contacts below.</p>
+                    <h3 class="line-bottom mt-0"><?= __('Get in touch with us') ?></h3>
+                    <p><?= __('For any inquiries') ?></p>
                     <ul class="styled-icons icon-dark icon-sm icon-circled mb-20">
                         <li><a target="_blank" href="<?= $Contacts['facebook'] ?>" data-bg-color="#3B5998"><i class="fa fa-facebook"></i></a></li>
                         <li><a target="_blank" href="<?= $Contacts['twitter'] ?>" data-bg-color="#02B0E8"><i class="fa fa-twitter"></i></a></li>
@@ -72,20 +72,20 @@ $this->layout = 'pages';
 
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-20" href="#"> <i class="pe-7s-map-2 text-theme-colored"></i></a>
                         <div class="media-body">
-                            <h5 class="mt-0">Headquarter Location</h5>
+                            <h5 class="mt-0"><?= __('Headquarter Location') ?></h5>
                             <p><?= $Contacts['address'] ?></p>
                         </div>
                     </div>
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-15" href="#"> <i class="pe-7s-call text-theme-colored"></i></a>
                         <div class="media-body">
-                            <h5 class="mt-0">Call center</h5>
+                            <h5 class="mt-0"><?= __('Call center') ?></h5>
                             <p><?= $Contacts['hotline'] ?></p>
                         </div>
                     </div>
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-15" href="#"> <i class="pe-7s-mail text-theme-colored"></i></a>
                         <div class="media-body">
-                            <h5 class="mt-0">Email Address</h5>
-                            <p><a href="mailto:<?= $Contacts['email_contacts'] ?>">Email: <?= $Contacts['email_contacts'] ?></a></p>
+                            <h5 class="mt-0"><?= __('Email') ?></h5>
+                            <p><a href="mailto:<?= $Contacts['email_contacts'] ?>"><?= $Contacts['email_contacts'] ?></a></p>
                         </div>
                     </div>
                 </div>

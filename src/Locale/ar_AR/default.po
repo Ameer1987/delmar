@@ -13,6 +13,9 @@ msgstr "عن الموقع"
 msgid "About us"
 msgstr "من نحن"
 
+msgid "About us intro"
+msgstr "نحن نقدم لعملائنا الأفضل في كل شيء من أدوية موصوفة, <br/> ومستحضرات تجميل ومنتجات العناية الشخصية"
+
 msgid "Contact"
 msgstr "اتصل بنا"
 
@@ -25,11 +28,65 @@ msgstr "فروعنا"
 msgid "Our branches"
 msgstr "فروعنا"
 
+msgid "Get your nearest branch"
+msgstr "الوصول الي أقرب فرع"
+
+msgid "Need Help?"
+msgstr "تحتاج مساعدة؟"
+
+msgid "For any needed information"
+msgstr "للحصول علي أي معلمومات, للاقتراحات و الشكاوي."
+
+msgid "Contact Now"
+msgstr "اتصل الان"
+
 msgid "Offers"
 msgstr "عروض"
 
+msgid "Featured"
+msgstr "عروض"
+
+msgid "offers"
+msgstr "مميزة"
+
 msgid "Consultation"
 msgstr "الاستشارة"
+
+msgid "consultation_text"
+msgstr "يرجى ان ترسل لنا أي أسئلة تتعلق بصحتك أوالجمال والرعاية وخبرائنا سيكونون سعداء لمساعدتك."
+
+msgid "Address"
+msgstr "العنوان"
+
+msgid "Phone"
+msgstr "التليفون"
+
+msgid "Ask our doctors"
+msgstr "اسأل أطبائنا"
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "Subject"
+msgstr "الموضوع"
+
+msgid "Message"
+msgstr "الرسالة"
+
+msgid "Email"
+msgstr "البريد الالكتروني"
+
+msgid "Enter"
+msgstr "أدخل"
+
+msgid "Send your message"
+msgstr "ارسال"
+
+msgid "Please wait..."
+msgstr "برجاء الإنتظار..."
+
+msgid "Reset"
+msgstr "الغاء"
 
 msgid "Magazines"
 msgstr "المجلة"
@@ -37,8 +94,86 @@ msgstr "المجلة"
 msgid "Doctors"
 msgstr "الأطباء"
 
+msgid "Recommended Doctors"
+msgstr "الأطباء"
+
+msgid "Recommended Doctors intro"
+msgstr "قائمة من الأطباء الذين نوصي بهم لعملائنا"
+
+msgid "Testimonials"
+msgstr "الشهادات"
+
+msgid "Latest News"
+msgstr "أحدث الأخبار"
+
 msgid "News"
 msgstr "اخبار"
 
 msgid "Career"
 msgstr "وظائف"
+
+msgid "Send your C.V"
+msgstr "إرسال C.V"
+
+msgid "Send your C.V text"
+msgstr "الرجاء ارسال لنا C.V الخاص بك وسوف نتصل بك في أقرب فرصة تكون لدينا وظيفة شاغرة."
+
+msgid "Sex"
+msgstr "النوع"
+
+msgid "Male"
+msgstr "ذكر"
+
+msgid "Female"
+msgstr "انثي"
+
+msgid "Job title"
+msgstr "الوظيفة"
+
+msgid "cover letter"
+msgstr "رسالة غلاف يتم إرسالها إلى صاحب العمل"
+
+msgid "C/V Upload"
+msgstr "تحميل C/V"
+
+msgid "Maximum upload size"
+msgstr "الحد الأقصى لحجم ملف التحميل: 2 ميغابايت"
+
+msgid "Apply Now"
+msgstr "قدم الآن"
+
+msgid "Connect With Us"
+msgstr "التواصل معنا"
+
+msgid "Follow us on facebook"
+msgstr "متابعتنا علي فيسبوك"
+
+msgid "Follow us on twitter"
+msgstr "متابعتنا علي تويتر"
+
+msgid "Follow us on linkedin"
+msgstr "متابعتنا علي لينكدان"
+
+msgid "About us text"
+msgstr "تقديم خدمه إنسانيه بمستوى جوده عالمى على مدار 24ساعه بفروعها المتعدده . الآلتزام بالمعايير العلميه لخدمه العميل من حسن اللقاء وتوفير كافه الاحتياجات والمتابعه المستمره والتكامل بين الصيدلى والطبيب لخدمه العميل . "
+
+msgid "Send Us a Message"
+msgstr "أرسل لنا رسالة"
+
+msgid "Get in touch with us"
+msgstr "تواصل معنا"
+
+msgid "For any inquiries"
+msgstr " للمزيد من الاستفسارات، لا تتردد في الاتصال بنا باستخدام أي من وسائل الاتصال التالية."
+
+msgid "Headquarter Location"
+msgstr "المقر الرئيسي"
+
+msgid "Call center"
+msgstr "خدمة العملاء"
+
+msgid "Enter a location"
+msgstr "أدخل موقعك"
+
+
+
