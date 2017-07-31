@@ -55,6 +55,39 @@ msgstr "مميزة"
 msgid "Consultation"
 msgstr "الاستشارة"
 
+msgid "consultation_text"
+msgstr "يرجى ان ترسل لنا أي أسئلة تتعلق بصحتك أوالجمال والرعاية وخبرائنا سيكونون سعداء لمساعدتك."
+
+msgid "Address"
+msgstr "العنوان"
+
+msgid "Phone"
+msgstr "التليفون"
+
+msgid "Ask our doctors"
+msgstr "اسأل أطبائنا"
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "Subject"
+msgstr "الموضوع"
+
+msgid "Message"
+msgstr "الرسالة"
+
+msgid "Email"
+msgstr "البريد الالكتروني"
+
+msgid "Enter"
+msgstr "أدخل"
+
+msgid "Send your message"
+msgstr "ارسال"
+
+msgid "Reset"
+msgstr "الغاء"
+
 msgid "Magazines"
 msgstr "المجلة"
 
