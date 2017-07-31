@@ -85,6 +85,9 @@ msgstr "أدخل"
 msgid "Send your message"
 msgstr "ارسال"
 
+msgid "Please wait..."
+msgstr "برجاء الإنتظار..."
+
 msgid "Reset"
 msgstr "الغاء"
 
