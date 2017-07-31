@@ -85,6 +85,9 @@ msgstr "Enter"
 msgid "Send your message"
 msgstr "Send your message"
 
+msgid "Please wait..."
+msgstr "Please wait..."
+
 msgid "Reset"
 msgstr "Reset"
 
