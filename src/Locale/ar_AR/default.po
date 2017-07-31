@@ -172,6 +172,8 @@ msgstr "المقر الرئيسي"
 msgid "Call center"
 msgstr "خدمة العملاء"
 
+msgid "Enter a location"
+msgstr "أدخل موقعك"
 
 
 
