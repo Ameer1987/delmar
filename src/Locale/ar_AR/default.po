@@ -22,9 +22,6 @@ msgstr "اتصل بنا"
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
-msgid "Email:"
-msgstr "البريد الالكتروني: "
-
 msgid "Branches"
 msgstr "فروعنا"
 
