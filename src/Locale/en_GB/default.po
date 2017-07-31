@@ -115,3 +115,35 @@ msgstr "News"
 msgid "Career"
 msgstr "Career"
 
+msgid "Send your C.V"
+msgstr "Send your C.V"
+
+msgid "Send your C.V text"
+msgstr "Please send us your C.V and we will contact you as soon as we have a job vacancy."
+
+msgid "Sex"
+msgstr "Sex"
+
+msgid "Male"
+msgstr "Male"
+
+msgid "Female"
+msgstr "Female"
+
+msgid "Job title"
+msgstr "Job title"
+
+msgid "cover letter"
+msgstr "Your cover letter/message sent to the employer"
+
+msgid "C/V Upload"
+msgstr "C/V Upload"
+
+msgid "Maximum upload size"
+msgstr "Maximum upload file size: 2 MB"
+
+msgid "Apply Now"
+msgstr "Apply Now"
+
+
+
