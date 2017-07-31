@@ -145,5 +145,20 @@ msgstr "Maximum upload file size: 2 MB"
 msgid "Apply Now"
 msgstr "Apply Now"
 
+msgid "Connect With Us"
+msgstr "Connect With Us"
+
+msgid "Follow us on facebook"
+msgstr "Follow us on facebook"
+
+msgid "Follow us on twitter"
+msgstr "Follow us on twitter"
+
+msgid "Follow us on linkedin"
+msgstr "Follow us on linkedin"
+
+msgid "About us text"
+msgstr "We Provide high international quality level of humanitarian service 24 hour multiple branches. Adhere to scientific standards of customer service from good reception and provide all the needs and continuous monitoring and the integration between the pharmacist and the doctor to serve the customer."
+
 
 
