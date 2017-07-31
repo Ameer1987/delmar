@@ -35,11 +35,8 @@ class PagesController extends AppController {
         $this->request->session()->write('lang', $locale);
 
         $refer_url = $this->referer('/', true);
-        $parse_url_params = Router::parse($refer_url);
 
-        return $this->redirect(
-                        ['controller' => $parse_url_params['controller'], 'action' => $parse_url_params['action']]
-        );
+        return $this->redirect($refer_url);
     }
 
     public function setLang($request) {
