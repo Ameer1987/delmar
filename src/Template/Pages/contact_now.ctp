@@ -119,13 +119,13 @@ $this->layout = 'pages';
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-20" href="#"> <i class="pe-7s-map-2 text-theme-colored"></i></a>
                         <div class="media-body">
                             <h5 class="mt-0"><?= __('Headquarter Location') ?></h5>
-                            <p><?= $Contacts['address'] ?></p>
+                            <p><?= $this->request->session()->read('lang') == "English" ? $Contacts['address_en'] : $Contacts['address_ar'] ?></p>
                         </div>
                     </div>
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-15" href="#"> <i class="pe-7s-call text-theme-colored"></i></a>
                         <div class="media-body">
                             <h5 class="mt-0"><?= __('Call center') ?></h5>
-                            <p><?= $Contacts['hotline'] ?></p>
+                            <p><?= $this->request->session()->read('lang') == "English" ? $Contacts['hotline_en'] : $Contacts['hotline_ar'] ?></p>
                         </div>
                     </div>
                     <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-15" href="#"> <i class="pe-7s-mail text-theme-colored"></i></a>
