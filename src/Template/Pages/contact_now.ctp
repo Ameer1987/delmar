@@ -35,7 +35,7 @@ $this->layout = 'pages';
                     <h3 class="line-bottom mt-0 mb-30"><?= __('Send Us a Message') ?>:</h3>
 
                     <!-- Contact Form -->
-                    <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php" method="post">
+                    <form id="contact_form" name="contact_form" class="" action="/pages/send-mail-contact" method="post">
 
                         <div class="row">
                             <div class="col-sm-6">
@@ -85,7 +85,7 @@ $this->layout = 'pages';
                                 var form_btn = $(form).find('button[type="submit"]');
                                 var form_result_div = '#form-result';
                                 $(form_result_div).remove();
-                                form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+                                form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none; cursor: pointer;"></div>');
                                 var form_btn_old_msg = form_btn.html();
                                 form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
                                 $(form).ajaxSubmit({
@@ -95,10 +95,9 @@ $this->layout = 'pages';
                                             $(form).find('.form-control').val('');
                                         }
                                         form_btn.prop('disabled', false).html(form_btn_old_msg);
-                                        $(form_result_div).html(data.message).fadeIn('slow');
-                                        setTimeout(function () {
-                                            $(form_result_div).fadeOut('slow')
-                                        }, 6000);
+                                        $(form_result_div).html(data.message).fadeIn('slow').on('click', function () {
+                                            $(this).fadeOut();
+                                        });
                                     }
                                 });
                             }
