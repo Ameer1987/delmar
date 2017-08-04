@@ -19,6 +19,7 @@ namespace App\Controller;
 use Cake\ORM\TableRegistry;
 use Cake\Routing\Router;
 use Cake\I18n\I18n;
+use Cake\Mailer\Email;
 
 /**
  * Static content controller
@@ -138,6 +139,76 @@ class PagesController extends AppController {
         $dir = $this->lang == "English" ? "ltr" : "rtl";
         $this->set('dir', $dir);
         $this->set('lang', $lang);
+    }
+
+    public function sendMailConsultation() {
+        $this->autoRender = false;
+
+        $Contacts = TableRegistry::get('Contacts')->find('all')->first()->toArray();
+        $data = $this->request->getData();
+
+        $email = new Email('default');
+        $emailStr = 'Name: ' . $data['form_name'] . '<br /> Email: ' . $data['form_email']
+                . '<br /> Subject: ' . $data['form_subject'] . '<br /> Phone: ' . $data['form_phone']
+                . '<br /> Message: ' . $data['form_message'];
+        $email->from(['no-reply@delmar-attalla.com' => 'Delmar & Attalla'])
+                ->to($Contacts['email_consultation'])
+                ->subject('Consultation')
+                ->emailFormat('html')
+                ->send($emailStr);
+
+        $status_array = array(
+            'message' => 'Thanks for contacting us, your email was sent successfully and our team will contact you as soon as possible.',
+            'status' => true
+        );
+        echo json_encode($status_array);
+    }
+
+    public function sendMailContact() {
+        $this->autoRender = false;
+
+        $Contacts = TableRegistry::get('Contacts')->find('all')->first()->toArray();
+        $data = $this->request->getData();
+
+        $email = new Email('default');
+        $emailStr = 'Name: ' . $data['form_name'] . '<br /> Email: ' . $data['form_email']
+                . '<br /> Subject: ' . $data['form_subject'] . '<br /> Phone: ' . $data['form_phone']
+                . '<br /> Message: ' . $data['form_message'];
+        $email->from(['no-reply@delmar-attalla.com' => 'Delmar & Attalla'])
+                ->to($Contacts['email_contacts'])
+                ->subject('Contact us')
+                ->emailFormat('html')
+                ->send($emailStr);
+
+        $status_array = array(
+            'message' => 'Thanks for contacting us, your email was sent successfully and our team will contact you as soon as possible.',
+            'status' => true
+        );
+        echo json_encode($status_array);
+    }
+
+    public function sendMailCareer() {
+        $this->autoRender = false;
+
+        $Contacts = TableRegistry::get('Contacts')->find('all')->first()->toArray();
+        $data = $this->request->getData();
+
+        $email = new Email('default');
+        $emailStr = 'Name: ' . $data['form_name'] . '<br /> Email: ' . $data['form_email']
+                . '<br /> Sex: ' . $data['form_sex'] . '<br /> Job: ' . $data['form_job']
+                . '<br /> Message: ' . $data['form_message'];
+        $email->from(['no-reply@delmar-attalla.com' => 'Delmar & Attalla'])
+                ->to($Contacts['email_career'])
+                ->subject('C.V ' . $data['form_job'])
+                ->emailFormat('html')
+                ->attachments([$data['form_attachment']['name'] => $data['form_attachment']['tmp_name']])
+                ->send($emailStr);
+
+        $status_array = array(
+            'message' => 'Thanks for contacting us, your email was sent successfully and our team will contact you as soon as possible.',
+            'status' => true
+        );
+        echo json_encode($status_array);
     }
 
 }
