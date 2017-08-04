@@ -8,28 +8,28 @@
                     <dl class="dl-horizontal">
                         <dt><i class="fa fa-calendar text-theme-colored mt-5 font-15"></i></dt>
                         <dd>
-                            <h5 class="mt-0">Date Posted:</h5>
+                            <h5 class="mt-0"><?= __('Date Posted') ?>:</h5>
                             <p><?= $Career['created_at'] ?></p>
                         </dd>
                     </dl>
                     <dl class="dl-horizontal">
                         <dt><i class="fa fa-map-marker text-theme-colored mt-5 font-15"></i></dt>
                         <dd>
-                            <h5 class="mt-0">Location:</h5>
+                            <h5 class="mt-0"><?= __('Location') ?>:</h5>
                             <p><?= $Career['location'] ?></p>
                         </dd>
                     </dl>
                     <dl class="dl-horizontal">
                         <dt><i class="fa fa-user text-theme-colored mt-5 font-15"></i></dt>
                         <dd>
-                            <h5 class="mt-0">Job Title:</h5>
+                            <h5 class="mt-0"><?= __('Job title') ?>:</h5>
                             <p><?= $Career['title'] ?></p>
                         </dd>
                     </dl>
                     <dl class="dl-horizontal">
                         <dt><i class="fa fa-money text-theme-colored mt-5 font-15"></i></dt>
                         <dd>
-                            <h5 class="mt-0">Salary:</h5>
+                            <h5 class="mt-0"><?= __('Salary') ?>:</h5>
                             <p><?= $Career['salary'] ?></p>
                         </dd>
                     </dl>
