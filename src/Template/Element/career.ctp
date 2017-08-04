@@ -33,56 +33,56 @@
                             <p><?= $Career['salary'] ?></p>
                         </dd>
                     </dl>
-                    <a class="btn btn-dark mt-20" data-toggle="modal" data-target="#myModal-<?= $index ?>" href="#">Apply Now</a>
+                    <a class="btn btn-dark mt-20" data-toggle="modal" data-target="#myModal-<?= $index ?>" href="#"><?= __('Apply Now') ?></a>
                     <!-- Modal -->
                     <div class="modal fade" id="myModal-<?= $index ?>" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content p-30 pt-10">
-                                <h3 class="text-center text-theme-colored mb-20">Apply Now</h3>
-                                <form id="job_apply_form_<?= $index ?>" name="job_apply_form_<?= $index ?>" action="includes/job.php" method="post" enctype="multipart/form-data">
+                                <h3 class="text-center text-theme-colored mb-20"><?= __('Apply Now') ?></h3>
+                                <form id="job_apply_form_<?= $index ?>" name="job_apply_form_<?= $index ?>" action="/pages/send-mail-career" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>Name <small>*</small></label>
-                                                <input name="form_name" type="text" placeholder="Enter Name" required="" class="form-control">
+                                                <label><?= __('Name') ?><small>*</small></label>
+                                                <input name="form_name" type="text" placeholder="<?= __('Enter') ?> <?= __('Name') ?>" required="" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label for="form_email">Email <small>*</small></label>
-                                                <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                                                <label for="form_email"><?= __('Email') ?><small>*</small></label>
+                                                <input name="form_email" class="form-control required email" type="email" placeholder="<?= __('Enter') ?> <?= __('Email') ?>">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">               
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>Sex <small>*</small></label>
+                                                <label><?= __('Sex') ?><small>*</small></label>
                                                 <select name="form_sex" class="form-control required">
-                                                    <option value="Male">Male</option>
-                                                    <option value="Female">Female</option>
+                                                    <option value="Male"><?= __('Male') ?></option>
+                                                    <option value="Female"><?= __('Female') ?></option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>Job title <small>*</small></label>
-                                                <input name="form_job" type="text" placeholder="Enter Job" required="" class="form-control" value="<?= $Career['title'] ?>">
+                                                <label><?= __('Job title') ?><small>*</small></label>
+                                                <input name="form_job" type="text" placeholder="<?= __('Enter') ?> <?= __('Job title') ?>" required="" class="form-control" value="<?= $Career['title'] ?>">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label>Message <small>*</small></label>
-                                        <textarea name="form_message" class="form-control required" rows="5" placeholder="Your cover letter/message sent to the employer"></textarea>
+                                        <label><?= __('Message') ?><small>*</small></label>
+                                        <textarea name="form_message" class="form-control required" rows="5" placeholder="<?= __('cover letter') ?>"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label>C/V Upload</label>
+                                        <label><?= __('C/V Upload') ?></label>
                                         <input name="form_attachment" class="file" type="file" multiple data-show-upload="false" data-show-caption="true">
-                                        <small>Maximum upload file size: 2 MB</small>
+                                        <small><?= __('Maximum upload size') ?></small>
                                     </div>
                                     <div class="form-group">
                                         <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                                        <button type="submit" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" data-loading-text="Please wait...">Apply Now</button>
+                                        <button type="submit" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" data-loading-text="<?= __('Please wait...') ?>"><?= __('Apply Now') ?></button>
                                     </div>
                                 </form>
                             </div>
@@ -112,7 +112,7 @@
             var form_btn = $(form).find('button[type="submit"]');
             var form_result_div = '#form-result';
             $(form_result_div).remove();
-            form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+            form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none; cursor: pointer;"></div>');
             var form_btn_old_msg = form_btn.html();
             form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
             $(form).ajaxSubmit({
@@ -122,10 +122,9 @@
                         $(form).find('.form-control').val('');
                     }
                     form_btn.prop('disabled', false).html(form_btn_old_msg);
-                    $(form_result_div).html(data.message).fadeIn('slow');
-                    setTimeout(function () {
-                        $(form_result_div).fadeOut('slow')
-                    }, 6000);
+                    $(form_result_div).html(data.message).fadeIn('slow').on('click', function () {
+                        $(this).fadeOut();
+                    });
                 }
             });
         }
