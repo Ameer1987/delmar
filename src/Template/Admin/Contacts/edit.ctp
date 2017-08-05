@@ -37,9 +37,9 @@
             echo $this->Form->input('linkedin');
             echo $this->Form->input('address_en');
             echo $this->Form->input('address_ar');
-            echo $this->Form->input('tel1');
-            echo $this->Form->input('tel2');
-            echo $this->Form->input('mob');
+//            echo $this->Form->input('tel1');
+//            echo $this->Form->input('tel2');
+//            echo $this->Form->input('mob');
             echo $this->Form->input('email_contacts');
             echo $this->Form->input('email_consultation');
             echo $this->Form->input('email_career');
