@@ -1,8 +1,8 @@
 <section class="content-header">
-    <legend><?= __('Add Text Block') ?></legend>
+    <legend><?= __('Add About Us') ?></legend>
     <ol class="breadcrumb">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Text Blocks'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List About Us'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ol>

@@ -1,5 +1,5 @@
 <section class="content-header">
-    <legend><?= __('Edit Text Block') ?></legend>
+    <legend><?= __('Edit About Us') ?></legend>
     <ol class="breadcrumb">
         <li><?= $this->Form->postLink(
                 __('Delete'),
@@ -7,7 +7,7 @@
                 ['confirm' => __('Are you sure you want to delete # {0}?', $textBlock->id)]
             )
         ?></li>
-        <li><?= $this->Html->link(__('List Text Blocks'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List About Us'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ol>
