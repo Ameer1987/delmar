@@ -47,7 +47,6 @@
             echo $this->Form->input('hotline_ar');
             echo $this->Ck->input('text');
             echo $this->Form->input('name');
-            echo $this->Form->input('blog_id', ['options' => $blogs, 'empty' => true]);
           ?>
           </div>
           <!-- /.box-body -->
