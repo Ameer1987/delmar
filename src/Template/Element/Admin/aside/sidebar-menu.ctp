@@ -18,8 +18,8 @@ if (file_exists($file)) {
             <li><?= $this->Html->link(__('List Home Boxes'), ['controller' => 'HomeBoxes', 'action' => 'index']) ?></li>
             <li><?= $this->Html->link(__('List Home Sliders'), ['controller' => 'HomeSliders', 'action' => 'index']) ?></li>
             <li><?= $this->Html->link(__('List Large Image Boxes'), ['controller' => 'LargeImageBoxes', 'action' => 'index']) ?></li>
-            <li><?= $this->Html->link(__('List Responsive Image Boxes'), ['controller' => 'ResponsiveImageBoxes', 'action' => 'index']) ?></li>
-            <li><?= $this->Html->link(__('List Small Image Boxes'), ['controller' => 'SmallImageBoxes', 'action' => 'index']) ?></li>
+            <li><?= $this->Html->link(__('List Vip Doctors'), ['controller' => 'ResponsiveImageBoxes', 'action' => 'index']) ?></li>
+            <li><?= $this->Html->link(__('List Featured Offerss'), ['controller' => 'SmallImageBoxes', 'action' => 'index']) ?></li>
             <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
             <li><?= $this->Html->link(__('List Block Tabs'), ['controller' => 'BlockTabs', 'action' => 'index']) ?></li>
             <li><?= $this->Html->link(__('List Contacts'), ['controller' => 'Contacts', 'action' => 'index']) ?></li>

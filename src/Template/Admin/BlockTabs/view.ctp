@@ -1,6 +1,6 @@
 <section class="content-header">
   <h1>
-    <?php echo __('Block Tab'); ?>
+    <?php echo __('News Tab'); ?>
   </h1>
   <ol class="breadcrumb">
     <li>

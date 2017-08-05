@@ -7,11 +7,11 @@
         <li><?= $this->Html->link(__('New Home Box'), ['controller' => 'HomeBoxes', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Home Sliders'), ['controller' => 'HomeSliders', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Home Slider'), ['controller' => 'HomeSliders', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Large Image Boxes'), ['controller' => 'LargeImageBoxes', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Large Image Box'), ['controller' => 'LargeImageBoxes', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Responsive Image Boxes'), ['controller' => 'ResponsiveImageBoxes', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Responsive Image Box'), ['controller' => 'ResponsiveImageBoxes', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Small Image Boxes'), ['controller' => 'SmallImageBoxes', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List News Sliders'), ['controller' => 'LargeImageBoxes', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New News Slider'), ['controller' => 'LargeImageBoxes', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Vip Doctors'), ['controller' => 'ResponsiveImageBoxes', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Vip Doctor'), ['controller' => 'ResponsiveImageBoxes', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Featured Offerss'), ['controller' => 'SmallImageBoxes', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Small Image Box'), ['controller' => 'SmallImageBoxes', 'action' => 'add']) ?></li>
     </ol>
 </section>

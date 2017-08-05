@@ -117,7 +117,7 @@
             <div class="box">
                 <div class="box-header">
                     <i class="fa fa-share-alt"></i>
-                    <h3 class="box-title"><?= __('Related {0}', ['Block Tabs']) ?></h3>
+                    <h3 class="box-title"><?= __('Related {0}', ['News Tabs']) ?></h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
@@ -765,7 +765,7 @@
             <div class="box">
                 <div class="box-header">
                     <i class="fa fa-share-alt"></i>
-                    <h3 class="box-title"><?= __('Related {0}', ['Large Image Boxes']) ?></h3>
+                    <h3 class="box-title"><?= __('Related {0}', ['News Sliders']) ?></h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
@@ -882,7 +882,7 @@
             <div class="box">
                 <div class="box-header">
                     <i class="fa fa-share-alt"></i>
-                    <h3 class="box-title"><?= __('Related {0}', ['Responsive Image Boxes']) ?></h3>
+                    <h3 class="box-title"><?= __('Related {0}', ['Vip Doctors']) ?></h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
@@ -999,7 +999,7 @@
             <div class="box">
                 <div class="box-header">
                     <i class="fa fa-share-alt"></i>
-                    <h3 class="box-title"><?= __('Related {0}', ['Small Image Boxes']) ?></h3>
+                    <h3 class="box-title"><?= __('Related {0}', ['Featured Offerss']) ?></h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
@@ -1116,7 +1116,7 @@
             <div class="box">
                 <div class="box-header">
                     <i class="fa fa-share-alt"></i>
-                    <h3 class="box-title"><?= __('Related {0}', ['Text Blocks']) ?></h3>
+                    <h3 class="box-title"><?= __('Related {0}', ['About Us']) ?></h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
