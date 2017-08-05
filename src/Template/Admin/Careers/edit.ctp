@@ -25,8 +25,7 @@
             echo $this->Form->control('salary');
             echo $this->Form->control('location');
             echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic'=> 'Arabic','English' =>'English']));
-
-//            echo $this->Form->control('created_at');
+            echo $this->Form->control('created_at', array('label' => 'Posted date'));
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
