@@ -11,8 +11,9 @@
                     <div class="entry-meta media mt-0 no-bg no-border">
                         <div class="entry-date media-left text-center flip bg-theme-colored pt-5 pr-15 pb-5 pl-15">
                             <ul>
-                                <li class="font-16 text-white font-weight-600 border-bottom"><?= date("d", strtotime($LargeImageBox['blog']['updated_at'])) ?></li>
-                                <li class="font-12 text-white text-uppercase"><?= date("M", strtotime($LargeImageBox['blog']['updated_at'])) ?></li>
+                                <?php $date = str_replace("/", "-", $LargeImageBox['blog']['created_at']); ?>
+                                <li class="font-16 text-white font-weight-600 border-bottom"><?= date("d", strtotime($date)) ?></li>
+                                <li class="font-12 text-white text-uppercase"><?= date("M", strtotime($date)) ?></li>
                             </ul>
                         </div>
                         <div class="media-body pl-15">
