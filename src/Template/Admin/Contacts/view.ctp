@@ -50,7 +50,7 @@
                                             <?= h($contact->address_ar) ?>
                                         </dd>
                                                                                                                                                             <dt><?= __('Tel1') ?></dt>
-                                        <dd>
+<!--                                        <dd>
                                             <?= h($contact->tel1) ?>
                                         </dd>
                                                                                                                                                             <dt><?= __('Tel2') ?></dt>
@@ -61,7 +61,7 @@
                                         <dd>
                                             <?= h($contact->mob) ?>
                                         </dd>
-                                                                                                                                                            <dt><?= __('Email Contacts') ?></dt>
+                                                                                                                                                            <dt><?= __('Email Contacts') ?></dt>-->
                                         <dd>
                                             <?= h($contact->email_contacts) ?>
                                         </dd>
