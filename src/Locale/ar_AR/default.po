@@ -91,6 +91,9 @@ msgstr "الغاء"
 msgid "Magazines"
 msgstr "المجلة"
 
+msgid "Download as pdf"
+msgstr "تحميل"
+
 msgid "Doctors"
 msgstr "الأطباء"
 

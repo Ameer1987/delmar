@@ -11,7 +11,11 @@
                 <div class="details p-15 pt-10 pb-10">
                     <h4 class="title"><?= $Magazine['title'] ?></h4>
                     <h6 class="sub-title"><?= $Magazine['description'] ?></h6>
-                    <a class="btn btn-theme-colored btn-sm" href="#">Download as pdf</a>
+                    <a class="btn btn-theme-colored btn-sm" 
+                       href="<?= str_replace("webroot/", "", $Magazine['pdf_dir']) . $Magazine['pdf'] ?>"
+                       download="<?= str_replace("webroot/", "", $Magazine['pdf_dir']) . $Magazine['pdf'] ?>">
+                           <?= __('Download as pdf') ?>
+                    </a>
                 </div>
             </div>
         </div>

@@ -91,6 +91,9 @@ msgstr "Reset"
 msgid "Magazines"
 msgstr "Magazines"
 
+msgid "Download as pdf"
+msgstr "Download as pdf"
+
 msgid "Doctors"
 msgstr "Doctors"
 
