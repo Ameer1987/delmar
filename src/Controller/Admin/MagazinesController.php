@@ -56,7 +56,7 @@ class MagazinesController extends AppController {
                 if ($extension == 'zip') {
                     $zip = new \ZipArchive();
                     if ($zip->open($magazine['folder_dir'] . $magazine['folder']) === TRUE) {
-                        $zip->extractTo($magazine['folder_dir']);
+                        $zip->extractTo($magazine['folder_dir'] . '/magazine_' . $magazine['id']);
                         $zip->close();
                     } else {
                         echo 'Failed to open the archive!';
@@ -89,7 +89,7 @@ class MagazinesController extends AppController {
                 if ($extension == 'zip') {
                     $zip = new \ZipArchive();
                     if ($zip->open($magazine['folder_dir'] . $magazine['folder']) === TRUE) {
-                        $zip->extractTo($magazine['folder_dir']);
+                        $zip->extractTo($magazine['folder_dir'] . '/magazine_' . $magazine['id']);
                         $zip->close();
                     } else {
                         echo 'Failed to open the archive!';
