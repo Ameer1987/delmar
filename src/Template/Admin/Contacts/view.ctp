@@ -85,9 +85,7 @@
                                         <dd>
                                             <?= h($contact->name) ?>
                                         </dd>
-                                                                                                                                                    <dt><?= __('Blog') ?></dt>
                                 <dd>
-                                    <?= $contact->has('blog') ? $contact->blog->title_1 : '' ?>
                                 </dd>
                                                                                                 
                                             
