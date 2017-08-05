@@ -1,6 +1,6 @@
 <section class="content-header">
   <h1>
-    <?php echo __('Small Image Box'); ?>
+    <?php echo __('Featured Offer'); ?>
   </h1>
   <ol class="breadcrumb">
     <li>
