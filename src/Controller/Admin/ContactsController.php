@@ -20,9 +20,6 @@ class ContactsController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
-            'contain' => ['Blogs']
-        ];
         $contacts = $this->paginate($this->Contacts);
 
         $this->set(compact('contacts'));
@@ -39,7 +36,7 @@ class ContactsController extends AppController
     public function view($id = null)
     {
         $contact = $this->Contacts->get($id, [
-            'contain' => ['Blogs']
+            'contain' => []
         ]);
 
         $this->set('contact', $contact);
@@ -49,22 +46,21 @@ class ContactsController extends AppController
     /**
      * Add method
      *
-     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
+     * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
     public function add()
     {
         $contact = $this->Contacts->newEntity();
         if ($this->request->is('post')) {
-            $contact = $this->Contacts->patchEntity($contact, $this->request->getData());
+            $contact = $this->Contacts->patchEntity($contact, $this->request->data);
             if ($this->Contacts->save($contact)) {
-                $this->Flash->success(__('The contact has been saved.'));
-
+                $this->Flash->success(__('The {0} has been saved.', 'Contact'));
                 return $this->redirect(['action' => 'index']);
+            } else {
+                $this->Flash->error(__('The {0} could not be saved. Please, try again.', 'Contact'));
             }
-            $this->Flash->error(__('The contact could not be saved. Please, try again.'));
         }
-        $blogs = $this->Contacts->Blogs->find('list', ['limit' => 200]);
-        $this->set(compact('contact', 'blogs'));
+        $this->set(compact('contact'));
         $this->set('_serialize', ['contact']);
     }
 
@@ -72,7 +68,7 @@ class ContactsController extends AppController
      * Edit method
      *
      * @param string|null $id Contact id.
-     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
+     * @return \Cake\Network\Response|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function edit($id = null)
@@ -81,16 +77,15 @@ class ContactsController extends AppController
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $contact = $this->Contacts->patchEntity($contact, $this->request->getData());
+            $contact = $this->Contacts->patchEntity($contact, $this->request->data);
             if ($this->Contacts->save($contact)) {
-                $this->Flash->success(__('The contact has been saved.'));
-
+                $this->Flash->success(__('The {0} has been saved.', 'Contact'));
                 return $this->redirect(['action' => 'index']);
+            } else {
+                $this->Flash->error(__('The {0} could not be saved. Please, try again.', 'Contact'));
             }
-            $this->Flash->error(__('The contact could not be saved. Please, try again.'));
         }
-        $blogs = $this->Contacts->Blogs->find('list', ['limit' => 200]);
-        $this->set(compact('contact', 'blogs'));
+        $this->set(compact('contact'));
         $this->set('_serialize', ['contact']);
     }
 
@@ -98,7 +93,7 @@ class ContactsController extends AppController
      * Delete method
      *
      * @param string|null $id Contact id.
-     * @return \Cake\Http\Response|null Redirects to index.
+     * @return \Cake\Network\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function delete($id = null)
@@ -106,11 +101,10 @@ class ContactsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $contact = $this->Contacts->get($id);
         if ($this->Contacts->delete($contact)) {
-            $this->Flash->success(__('The contact has been deleted.'));
+            $this->Flash->success(__('The {0} has been deleted.', 'Contact'));
         } else {
-            $this->Flash->error(__('The contact could not be deleted. Please, try again.'));
+            $this->Flash->error(__('The {0} could not be deleted. Please, try again.', 'Contact'));
         }
-
         return $this->redirect(['action' => 'index']);
     }
 }
