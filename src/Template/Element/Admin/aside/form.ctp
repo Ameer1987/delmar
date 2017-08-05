@@ -7,6 +7,7 @@ if (file_exists($file)) {
     echo ob_get_clean();
 } else {
 ?>
+
 <!--<form action="#" method="get" class="sidebar-form">
     <div class="input-group">
         <input type="text" name="q" class="form-control" placeholder="Search...">
