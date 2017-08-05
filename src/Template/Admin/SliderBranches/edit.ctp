@@ -1,5 +1,5 @@
 <section class="content-header">
-    <legend><?= __('Edit Slider Branch') ?></legend>
+    <legend><?= __('Edit Branch') ?></legend>
     <ol class="breadcrumb">
         <li><?= $this->Form->postLink(
                 __('Delete'),
@@ -7,7 +7,7 @@
                 ['confirm' => __('Are you sure you want to delete # {0}?', $sliderBranch->id)]
             )
         ?></li>
-        <li><?= $this->Html->link(__('List Slider Branches'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Branches'), ['action' => 'index']) ?></li>
     </ol>
 </section>
 

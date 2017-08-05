@@ -1,8 +1,8 @@
 <section class="content-header">
-        <legend><?= __('Add Block Tab') ?></legend>
+        <legend><?= __('Add News Tab') ?></legend>
     <ol class="breadcrumb">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Block Tabs'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List News Tabs'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ol>

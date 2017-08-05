@@ -1,8 +1,8 @@
 <section class="content-header">
-    <legend><?= __('Add Large Image Box') ?></legend>
+    <legend><?= __('Add News Slider') ?></legend>
     <ol class="breadcrumb">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Large Image Boxes'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List News Sliders'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ol>

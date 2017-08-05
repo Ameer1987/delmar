@@ -1,8 +1,8 @@
 <section class="content-header">
-    <legend><?= __('Add Small Image Box') ?></legend>
+    <legend><?= __('Add Featured Offer') ?></legend>
     <ol class="breadcrumb">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Small Image Boxes'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Featured Offers'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ol>

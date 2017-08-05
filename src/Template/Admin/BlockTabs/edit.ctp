@@ -1,5 +1,5 @@
 <section class="content-header">
-        <legend><?= __('Edit Block Tab') ?></legend>
+        <legend><?= __('Edit News Tab') ?></legend>
     <ol class="breadcrumb">
         <li><?= $this->Form->postLink(
                 __('Delete'),
@@ -7,7 +7,7 @@
                 ['confirm' => __('Are you sure you want to delete # {0}?', $blockTab->id)]
             )
         ?></li>
-        <li><?= $this->Html->link(__('List Block Tabs'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List News Tabs'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ol>

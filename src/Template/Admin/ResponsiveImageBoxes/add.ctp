@@ -1,8 +1,8 @@
 <section class="content-header">
-    <legend><?= __('Add Responsive Image Box') ?></legend>
+    <legend><?= __('Add Vip Doctor') ?></legend>
     <ol class="breadcrumb">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Responsive Image Boxes'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Vip Doctors'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ol>

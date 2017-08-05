@@ -1,8 +1,8 @@
 <section class="content-header">
-    <legend><?= __('Add Slider Branch') ?></legend>
+    <legend><?= __('Add Branch') ?></legend>
     <ol class="breadcrumb">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Slider Branches'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Branches'), ['action' => 'index']) ?></li>
     </ol>
 </section>
 <div class="sliderBranches form large-9 medium-8 columns content">

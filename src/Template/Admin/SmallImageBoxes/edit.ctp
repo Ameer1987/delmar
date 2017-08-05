@@ -1,5 +1,5 @@
 <section class="content-header">
-    <legend><?= __('Edit Small Image Box') ?></legend>
+    <legend><?= __('Edit Featured Offer') ?></legend>
     <ol class="breadcrumb">
         <li><?= $this->Form->postLink(
                 __('Delete'),
@@ -7,7 +7,7 @@
                 ['confirm' => __('Are you sure you want to delete # {0}?', $smallImageBox->id)]
             )
         ?></li>
-        <li><?= $this->Html->link(__('List Small Image Boxes'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Featured Offers'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
     </ol>

@@ -1,6 +1,6 @@
 <section class="content-header">
   <h1>
-    <?php echo __('Responsive Image Box'); ?>
+    <?php echo __('Vip Doctor'); ?>
   </h1>
   <ol class="breadcrumb">
     <li>
