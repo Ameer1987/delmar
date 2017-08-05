@@ -28,10 +28,11 @@ if (file_exists($file)) {
             <li><?= $this->Html->link(__('List Testimonials'), ['controller' => 'Testimonials', 'action' => 'index']) ?></li>
             <li><?= $this->Html->link(__('List Text Blocks'), ['controller' => 'TextBlocks', 'action' => 'index']) ?></li>
             <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
+            <li><?= $this->Html->link(__('List Icons'), ['controller' => 'Users', 'action' => 'icons']) ?></li>
             <li><?= $this->Html->link(__('List Magazines'), ['controller' => 'Magazines', 'action' => 'index']) ?></li>
             <li><?= $this->Html->link(__('List Careers'), ['controller' => 'Careers', 'action' => 'index']) ?></li>
         </ul>
     </li>
-    
+
 </ul>
 <?php } ?>
