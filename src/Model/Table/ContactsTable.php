@@ -9,8 +9,6 @@ use Cake\Validation\Validator;
 /**
  * Contacts Model
  *
- * @property \App\Model\Table\BlogsTable|\Cake\ORM\Association\BelongsTo $Blogs
- *
  * @method \App\Model\Entity\Contact get($primaryKey, $options = [])
  * @method \App\Model\Entity\Contact newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\Contact[] newEntities(array $data, array $options = [])
@@ -36,10 +34,10 @@ class ContactsTable extends Table
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
-        $this->belongsTo('Blogs', [
-            'foreignKey' => 'blog_id',
-//            'joinType' => 'INNER'
-        ]);
+//        $this->belongsTo('Blogs', [
+//            'foreignKey' => 'blog_id',
+////            'joinType' => 'INNER'
+//        ]);
         
         $this->addBehavior('Josegonzalez/Upload.Upload', [
             'photo' => [
@@ -146,7 +144,7 @@ class ContactsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->isUnique(['email']));
-        $rules->add($rules->existsIn(['blog_id'], 'Blogs'));
+//        $rules->add($rules->existsIn(['blog_id'], 'Blogs'));
 
         return $rules;
     }
