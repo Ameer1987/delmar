@@ -142,6 +142,15 @@ msgstr "Maximum upload file size: 2 MB"
 msgid "Apply Now"
 msgstr "Apply Now"
 
+msgid "Date Posted"
+msgstr "Date Posted"
+
+msgid "Location"
+msgstr "Location"
+
+msgid "Salary"
+msgstr "Salary"
+
 msgid "Connect With Us"
 msgstr "Connect With Us"
 

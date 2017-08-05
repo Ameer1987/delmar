@@ -5,9 +5,9 @@
                 <div class="widget dark">
                     <img src="../../images/logo-wide-white.png" class="mt-10 mb-20" alt="Delmar & Attalla" 
                          title="Delmar & Attalla" style="max-height: 95px;">
-                    <p><?= $Contacts['address'] ?></p>
+                    <p><?= $this->request->session()->read('lang') == "English" ? $Contacts['address_en'] : $Contacts['address_ar'] ?></p>
                     <ul class="list-inline mt-5">
-                        <li class="m-0 pl-10 pr-10"><i class="fa fa-phone text-theme-colored mr-5"></i><?= $Contacts['hotline'] ?></li>
+                        <li class="m-0 pl-10 pr-10"><i class="fa fa-phone text-theme-colored mr-5"></i><?= $this->request->session()->read('lang') == "English" ? $Contacts['hotline_en'] : $Contacts['hotline_ar'] ?></li>
                         <li class="m-0 pl-10 pr-10"><a href="mailto:<?= $Contacts['email_contacts'] ?>"><i class="fa fa-envelope-o text-theme-colored mr-5"></i><?= $Contacts['email_contacts'] ?></a></li>
                         <li class="m-0 pl-10 pr-10"><i class="fa fa-globe text-theme-colored mr-5"></i> <a class="text-gray" href="http://www.delmar-attalla.com">www.delmar-attalla.com </a> </li>
                     </ul>

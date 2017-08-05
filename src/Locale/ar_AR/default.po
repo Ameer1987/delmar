@@ -142,6 +142,15 @@ msgstr "الحد الأقصى لحجم ملف التحميل: 2 ميغابايت
 msgid "Apply Now"
 msgstr "قدم الآن"
 
+msgid "Date Posted"
+msgstr "تاريخ الإعلان"
+
+msgid "Location"
+msgstr "الموقع"
+
+msgid "Salary"
+msgstr "المرتب"
+
 msgid "Connect With Us"
 msgstr "التواصل معنا"
 

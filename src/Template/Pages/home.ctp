@@ -69,10 +69,10 @@ $this->layout = 'pages';
                                 <?php $textAlign = $this->request->session()->read('lang') == "English" ? '' : "text-align: right;" ?>
                                 <ul class="list-unstyled">
                                     <li class="clearfix"> 
-                                        <span style="<?= $textAlign ?>"> <?= $Contacts['address'] ?> </span>
+                                        <span style="<?= $textAlign ?>"> <?= $this->request->session()->read('lang') == "English" ? $Contacts['address_en'] : $Contacts['address_ar'] ?> </span>
                                     </li>
                                     <li class="clearfix line-height-1"> 
-                                        <span style="<?= $textAlign ?>"> <?= $Contacts['hotline'] ?> </span>
+                                        <span style="<?= $textAlign ?>"> <?= $this->request->session()->read('lang') == "English" ? $Contacts['hotline_en'] : $Contacts['hotline_ar'] ?> </span>
                                     </li>
                                     <li class="clearfix line-height-1" style="border: none;"> 
                                         <span style="<?= $textAlign ?>" class="small">
