@@ -12,20 +12,13 @@ use Cake\ORM\Entity;
  * @property string $google_plus
  * @property string $instagram
  * @property string $linkedin
- * @property string $address
- * @property string $tel1
- * @property string $tel2
- * @property string $mob
- * @property string $email
- * @property string $longitude
- * @property string $latitude
- * @property string $hotline
- * @property string $locale
- * @property string $text
- * @property string $name
- * @property int $blog_id
- *
- * @property \App\Model\Entity\Blog $blog
+ * @property string $address_en
+ * @property string $address_ar
+ * @property string $email_contacts
+ * @property string $email_consultation
+ * @property string $email_career
+ * @property string $hotline_en
+ * @property string $hotline_ar
  */
 class Contact extends Entity
 {
