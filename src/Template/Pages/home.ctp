@@ -38,9 +38,7 @@ $this->layout = 'pages';
                     </div>
                 </div>
                 <div class="section-content">
-                    <div class="row" style="display: inline;">
-                        <?= $this->element('text_blocks') ?>
-                    </div>
+                    <?= $this->element('text_blocks') ?>
                 </div>
             </div>
         </section>
