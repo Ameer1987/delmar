@@ -52,4 +52,8 @@ class Blog extends Entity
         '*' => true,
         'id' => false
     ];
+    
+    protected function _getLabel() {
+        return $this->_properties['title_1'] . ' ' . $this->_properties['title_2'] . ' ' . $this->_properties['title_3'];
+    }
 }
