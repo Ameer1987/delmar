@@ -13,7 +13,7 @@
     </ol>
 </section>
 <div class="textBlocks form large-9 medium-8 columns content">
-    <?= $this->Form->create($textBlock) ?>
+    <?= $this->Form->create($textBlock, ['type' => 'file']) ?>
     <fieldset>
         <?php
             echo $this->Form->control('order');
