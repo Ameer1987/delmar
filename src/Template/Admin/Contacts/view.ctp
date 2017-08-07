@@ -49,19 +49,19 @@
                                         <dd>
                                             <?= h($contact->address_ar) ?>
                                         </dd>
-                                                                                                                                                            <dt><?= __('Tel1') ?></dt>
-<!--                                        <dd>
-                                            <?= h($contact->tel1) ?>
-                                        </dd>
-                                                                                                                                                            <dt><?= __('Tel2') ?></dt>
+<!--                                                                                                                                                            <dt><?php // echo __('Tel1') ?></dt>
                                         <dd>
-                                            <?= h($contact->tel2) ?>
+                                            <?php // echo h($contact->tel1) ?>
                                         </dd>
-                                                                                                                                                            <dt><?= __('Mob') ?></dt>
+                                                                                                                                                            <dt><?php // echo __('Tel2') ?></dt>
                                         <dd>
-                                            <?= h($contact->mob) ?>
+                                            <?php // echo h($contact->tel2) ?>
                                         </dd>
-                                                                                                                                                            <dt><?= __('Email Contacts') ?></dt>-->
+                                                                                                                                                            <dt><?php // echo __('Mob') ?></dt>
+                                        <dd>
+                                            <?php // echo h($contact->mob) ?>
+                                        </dd>-->
+                                                                                                                                                            <dt><?= __('Email Contacts') ?></dt>
                                         <dd>
                                             <?= h($contact->email_contacts) ?>
                                         </dd>
