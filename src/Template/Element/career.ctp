@@ -8,8 +8,9 @@
                     <dl class="dl-horizontal">
                         <dt><i class="fa fa-calendar text-theme-colored mt-5 font-15"></i></dt>
                         <dd>
+                            <?php $date = str_replace("/", "-", $Career['created_at']); ?>
                             <h5 class="mt-0"><?= __('Date Posted') ?>:</h5>
-                            <p><?= $Career['created_at'] ?></p>
+                            <p><?= date("Y-m-d", strtotime($date)) ?></p>
                         </dd>
                     </dl>
                     <dl class="dl-horizontal">

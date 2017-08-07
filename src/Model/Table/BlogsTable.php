@@ -10,7 +10,6 @@ use Cake\Validation\Validator;
  * Blogs Model
  *
  * @property \App\Model\Table\BlockTabsTable|\Cake\ORM\Association\HasMany $BlockTabs
- * @property |\Cake\ORM\Association\HasMany $Contacts
  * @property \App\Model\Table\HomeBoxesTable|\Cake\ORM\Association\HasMany $HomeBoxes
  * @property \App\Model\Table\HomeSlidersTable|\Cake\ORM\Association\HasMany $HomeSliders
  * @property \App\Model\Table\LargeImageBoxesTable|\Cake\ORM\Association\HasMany $LargeImageBoxes
@@ -40,13 +39,10 @@ class BlogsTable extends Table
 
         $this->setTable('blogs');
         
-        $this->setDisplayField('title_1');
+        $this->setDisplayField('label');
         $this->setPrimaryKey('id');
 
         $this->hasMany('BlockTabs', [
-            'foreignKey' => 'blog_id'
-        ]);
-        $this->hasMany('Contacts', [
             'foreignKey' => 'blog_id'
         ]);
         $this->hasMany('HomeBoxes', [

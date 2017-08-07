@@ -36,7 +36,7 @@ class BlogsController extends AppController
     public function view($id = null)
     {
         $blog = $this->Blogs->get($id, [
-            'contain' => ['BlockTabs', 'Contacts', 'HomeBoxes', 'HomeSliders', 'LargeImageBoxes', 'ResponsiveImageBoxes', 'SmallImageBoxes', 'TextBlocks']
+            'contain' => ['BlockTabs', 'HomeBoxes', 'HomeSliders', 'LargeImageBoxes', 'ResponsiveImageBoxes', 'SmallImageBoxes', 'TextBlocks']
         ]);
 
         $this->set('blog', $blog);
