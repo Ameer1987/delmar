@@ -63,7 +63,7 @@
     <body class="<?= $dir ?>">
         <?= $this->Flash->render() ?>
         <div id="wrapper" class="clearfix">
-            <?php echo $this->element('preloader'); ?>
+            <?php // echo $this->element('preloader'); ?>
 
             <?= $this->element('header') ?>
 
