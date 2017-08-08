@@ -13,7 +13,7 @@
             echo $this->Form->control('order');
             echo $this->Form->control('author_name');
             echo $this->Ck->input('text');
-            echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic', 'English']));
+            echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic' =>'Arabic', 'English' =>'English']));
             echo $this->Form->input('photo', ['type' => 'file']);
             $this->Form->input('dir', ['type' => 'hidden']);
         ?>

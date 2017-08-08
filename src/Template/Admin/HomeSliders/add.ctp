@@ -19,7 +19,7 @@
             echo $this->Form->control('layer2');
             echo $this->Ck->input('layer3');
             echo $this->Form->control('layer4');
-            echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic', 'English']));
+            echo $this->Form->control('locale',array('label' => 'Locale','options' => ['Arabic' =>'Arabic', 'English' =>'English']));
             echo $this->Form->input('photo', ['type' => 'file']);
             $this->Form->input('dir', ['type' => 'hidden']);
             echo $this->Form->control('align',array('label' => 'Align','options' => ['right', 'left', 'center']));
