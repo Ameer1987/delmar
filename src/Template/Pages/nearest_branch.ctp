@@ -32,12 +32,14 @@ $this->layout = 'pages';
         <div class="container-fluid pt-0 pb-0">
             <div class="row">
                 <?php foreach ($SliderBranches as $SliderBranch): ?>
-                    <?php $branchLocation = json_encode(array($SliderBranch['google_map_title'], $SliderBranch['latitude'], $SliderBranch['longitude'])); ?>
-                    <?php $branchInfo = json_encode(array($SliderBranch['google_map_desc'])); ?>
-                    <?php $branchMarker = json_encode(array('../images/map-marker.png')); ?>
-                    <input type="hidden" class="branch_location" value='<?= $branchLocation ?>' />
-                    <input type="hidden" class="branch_info" value='<?= $branchInfo ?>' />
-                    <input type="hidden" class="branch_marker" value='<?= $branchMarker ?>' />
+                    <?php if ($SliderBranch['locale'] == $this->request->session()->read('lang')): ?>
+                        <?php $branchLocation = json_encode(array($SliderBranch['google_map_title'], $SliderBranch['latitude'], $SliderBranch['longitude'])); ?>
+                        <?php $branchInfo = json_encode(array($SliderBranch['google_map_desc'])); ?>
+                        <?php $branchMarker = json_encode(array('../images/map-marker.png')); ?>
+                        <input type="hidden" class="branch_location" value='<?= $branchLocation ?>' />
+                        <input type="hidden" class="branch_info" value='<?= $branchInfo ?>' />
+                        <input type="hidden" class="branch_marker" value='<?= $branchMarker ?>' />
+                    <?php endif; ?>
                 <?php endforeach; ?>
                 <!-- Google Map HTML Codes -->
                 <input id="pac-input" class="controls" type="text" placeholder="<?= __('Enter a location') ?>">
