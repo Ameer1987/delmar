@@ -53,7 +53,7 @@ msgid "Consultation"
 msgstr "Consultation"
 
 msgid "consultation_text"
-msgstr "Please send us any questions related to your health and beauty care and our experts will be happy to help you."
+msgstr "Please send us any questions related to your health and beauty care and our experts will be happy to help you. Please contact us for reservations of doctors."
 
 msgid "Address"
 msgstr "Address"
