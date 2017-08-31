@@ -85,7 +85,7 @@ class PagesController extends AppController {
         $SliderBranches = TableRegistry::get('SliderBranches')->find('all');
         $this->set('SliderBranches', $SliderBranches->toArray());
 
-        $Magazines = TableRegistry::get('Magazines')->find('all');
+        $Magazines = TableRegistry::get('Magazines')->find('all', ['order' => ['order' => 'ASC']]);
         $this->set('Magazines', $Magazines->toArray());
 
         $Careers = TableRegistry::get('Careers')->find('all');
