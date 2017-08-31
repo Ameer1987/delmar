@@ -7,7 +7,7 @@
                 <?php if ($HomeSlider['locale'] == $this->request->session()->read('lang')): ?>
                     <?php $index ++; ?>
                     <?php $borderRadius = $HomeSlider['border'] == "circular" ? "border-radius:45px;" : "" ?>
-                    <li data-index="rs-<?= $index ?>" data-transition="random" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-thumb="images/bg/bg14.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-description="">
+                    <li data-index="rs-<?= $index ?>" data-transition="fade" data-slotamount="7"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-thumb="images/bg/bg14.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-description="">
                         <!-- MAIN IMAGE -->
                         <img src="<?= str_replace("webroot/", "", $HomeSlider['dir']) . $HomeSlider['photo'] ?>"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
                         <!-- LAYERS -->
