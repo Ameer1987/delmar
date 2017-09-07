@@ -42,7 +42,7 @@ class PagesController extends AppController {
 
     public function setLang($request) {
         if (null === $request->session()->read('lang')) {
-            $request->session()->write('lang', 'English');
+            $request->session()->write('lang', 'Arabic');
         }
 
         $this->lang = $request->session()->read('lang');
